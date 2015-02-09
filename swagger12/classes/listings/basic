@@ -1,0 +1,17 @@
+{
+  "swaggerVersion": "1.2",
+  "basepath": "https://edgews02.byu.edu:8280/universityapi/v1/classes",
+  "apis": [
+    {
+      "path": "/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a collection of classes",
+          "type": "string",
+          "nickname": "get_classes"
+        }
+      ]
+    }
+  ]
+}
