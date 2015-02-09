@@ -3,7 +3,7 @@
   "swaggerVersion": "1.2",
   "apis": [
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/BYU-API/master/swagger12/classes/listings/basic?token=AJ-NXfWrTRx1Uza_UrXsJ7EYDayO3SXfks5U35F4wA%3D%3D",
+      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/basic",
       "description": "Operations for scheduled courses (also known sections)"
     }
   ],
