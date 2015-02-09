@@ -1,10 +1,10 @@
 {
   "swaggerVersion": "1.2",
   "basepath": "https://edgews02.byu.edu:8280/universityapi/v1",
-  "resourcePath": "/classes",
   "apis": [
     {
       "path": "/classes",
+      "description": "Operations on a Collection of Classes
       "operations": [
         {
           "method": "GET",
@@ -17,6 +17,29 @@
           "summary": "Schedule a new section",
           "type": "string",
           "nickname": "schedule_class"
+        }
+      ]
+    },
+    {
+      "path": "/classes/{year_term},{curriculum_id},{title_code},{section_number}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a class",
+          "type": "string",
+          "nickname": "get_class"
+        },
+        {
+          "method": "PUT",
+          "summary": "Update a class",
+          "type": "string",
+          "nickname": "modify_class"
+        },
+        {
+          "method": "DELETE",
+          "summary": "Cancel a class",
+          "type": "string",
+          "nickname": "cancel_class"
         }
       ]
     }
