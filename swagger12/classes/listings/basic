@@ -4,7 +4,7 @@
   "apis": [
     {
       "path": "/classes",
-      "description": "Operations on a Collection of Classes
+      "description": "Operations on a Collection of Classes",
       "operations": [
         {
           "method": "GET",
