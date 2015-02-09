@@ -11,6 +11,12 @@
           "summary": "Retrieve a collection of classes",
           "type": "string",
           "nickname": "get_classes"
+        },
+        {
+          "method": "POST",
+          "summary": "Schedule a new section",
+          "type": "string",
+          "nickname": "schedule_class"
         }
       ]
     }
