@@ -3,7 +3,7 @@
   "basepath": "https://edgews02.byu.edu:8280/universityapi/v1",
   "apis": [
     {
-      "path": "/classes",
+      "path": "/",
       "description": "Operations on a Collection of Classes",
       "operations": [
         {
@@ -21,7 +21,8 @@
       ]
     },
     {
-      "path": "/classes/{year_term},{curriculum_id},{title_code},{section_number}",
+      "path": "/{year_term},{curriculum_id},{title_code},{section_number}",
+      "description": "Operations on a Class Item",
       "operations": [
         {
           "method": "GET",
@@ -31,7 +32,7 @@
         },
         {
           "method": "PUT",
-          "summary": "Update a class",
+          "summary": "Modify a class",
           "type": "string",
           "nickname": "modify_class"
         },

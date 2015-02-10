@@ -1,0 +1,106 @@
+{
+  "mappings: [
+    {
+      "url_segment": "/classes/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/api-docs"
+    },
+    {
+      "url_segment": "/classes/api-docs/basic",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/basic"
+    },
+    {
+      "url_segment": "/classes/api-docs/add-permission-codes",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/add-permission-codes"
+    },
+    {
+      "url_segment": "/classes/api-docs/assigned-instructors",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/assigned-instructors"
+    },
+    {
+      "url_segment": "/classes/api-docs/class-limitations",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/class-limitations"
+    },
+    {
+      "url_segment": "/classes/api-docs/class-schedules",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/class-schedules"
+    },
+    {
+      "url_segment": "/classes/api-docs/course-limitations",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/course-limitations"
+    },
+    {
+      "url_segment": "/classes/api-docs/enrolled-students",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/enrolled-students"
+    },
+    {
+      "url_segment": "/classes/api-docs/linked-classes",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/linked-classes"
+    },
+    {
+      "url_segment": "/classes/api-docs/notes",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/notes"
+    },
+    {
+      "url_segment": "/classes/api-docs/permission-to-add-codes",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/permission-to-add-codes"
+    },
+    {
+      "url_segment": "/classes/api-docs/prerequisites",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/prerequisites"
+    },
+    {
+      "url_segment": "/classes/api-docs/section-headers",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/section-headers"
+    },
+    {
+      "url_segment": "/classes/api-docs/supplemental-counts",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/supplemental-counts"
+    },
+    {
+      "url_segment": "/classes/api-docs/waitlisted-students",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/waitlisted-students"
+    },
+    {
+      "url_segment": "/classes/api-docs/enrolled-student-logs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/enrolled-student-logs"
+    },
+    {
+      "url_segment": "/classes/api-docs/waitlisted-student-logs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/waitlisted-student-logs"
+    }
+  ]
+}
