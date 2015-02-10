@@ -1,8 +1,7 @@
 {
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
-  "basepath": "https://edgews02.byu.edu:3000/byuapi",
-  "resourcePath": "/classes",
+  "basepath": "https://edgews02.byu.edu:3000/byuapi/classes",
   "apis": [
     {
       "path": "/",
