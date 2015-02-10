@@ -65,7 +65,7 @@
     {
       "path": "/waitlisted-student-logs",
       "description": "Operations on the Log of Waitlist actions for a Class"
-    },
+    }
   ],
   "authorizations": {
     "oauth2": {
