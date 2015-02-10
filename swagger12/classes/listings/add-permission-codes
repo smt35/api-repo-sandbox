@@ -5,65 +5,14 @@
   "resourcePath": "/classes",
   "apis": [
     {
-      "path": "/",
-      "description": "Operations on a Collection of Classes",
+      "path": "/{year_term},{curriculum_id},{title_code},{section_number}/add-permission-codes",
+      "description": "Operations on a collection of Add Permission Codes for a Class",
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a collection of Classes",
+          "summary": "Retrieve the Add Permission Codes for a Class",
           "type": "string",
-          "nickname": "getClasses",
-          "responseMessages": [
-            {
-              "code": 200,
-              "message": "Successful"
-            }
-          ]
-        },
-        {
-          "method": "POST",
-          "summary": "Schedule a new section",
-          "type": "string",
-          "nickname": "scheduleClass",
-          "parameters": [
-            {
-              "name": "body",
-              "description": "Request Body",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            }
-          ]
-          "responseMessages": [
-            {
-              "code": 200,
-              "message": "Successful"
-            }
-          ]
-        },
-        {
-          "method": "OPTIONS",
-          "summary": "What can you do with a collection of Classes",
-          "type": "string",
-          "nickname": "classCollectionOptions",
-          "responseMessages": [
-            {
-              "code": 200,
-              "message": "Successful"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "/{year_term},{curriculum_id},{title_code},{section_number}",
-      "description": "Operations on a Class Item",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "Retrieve a class",
-          "type": "string",
-          "nickname": "getClass",
+          "nickname": "getAddPermissionCodes",
           "parameters": [
             {
               "name": "year_term",
@@ -103,9 +52,9 @@
         },
         {
           "method": "PUT",
-          "summary": "Modify a class",
+          "summary": "Modify the Add Permission Codes for a Class",
           "type": "string",
-          "nickname": "modifyClass",
+          "nickname": "modifyAddPermissionCodes",
           "parameters": [
             {
               "name": "body",
@@ -151,52 +100,10 @@
           ]
         },
         {
-          "method": "DELETE",
-          "summary": "Cancel a class",
-          "type": "string",
-          "nickname": "cancelClass",
-          "parameters": [
-            {
-              "name": "year_term",
-              "description": "Enrollment period, example: 20151 is Winter 2015",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "curriculum_id",
-              "description": "Unique, meaningless number assigned to a curriculum unit",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "title_code",
-              "description": "Unique, sequential number added to a curriculum unit to designate a course",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "section_number",
-              "description": "Unique, sequential number assigned as a course is scheduled",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 200,
-              "message": "Successful"
-            }
-          ]
-        },
-        {
           "method": "OPTIONS",
-          "summary": "What can you do with a Class item?",
+          "summary": "What can you do with the collection of Add Permission Codes for a Class?",
           "type": "string",
-          "nickname": "classItemOptions",
+          "nickname": "addPermissionCodesCollectionOptions",
           "parameters": [
             {
               "name": "year_term",
