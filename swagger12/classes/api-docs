@@ -43,27 +43,27 @@
       "description": "Operations on the collection of Permission-To-Add tokens generated for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/prerequisites",
+      "path": "/prerequisites",
       "description": "Operations on the collection of Prerequisites for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/section-headers",
+      "path": "/section-headers",
       "description": "Operations on the Section Headers for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/supplemental-counts",
+      "path": "/supplemental-counts",
       "description": "Operations on the Supplemental Counts for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/waitlisted-students",
+      "path": "/waitlisted-students",
       "description": "Operations on the collection of Students waiting to enroll for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/enrolled-student-logs",
+      "path": "/enrolled-student-logs",
       "description": "Operations on the Logs of student enrollment actions for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/waitlisted-student-logs",
+      "path": "/waitlisted-student-logs",
       "description": "Operations on the Log of Waitlist actions for a Class"
     },
   ],
