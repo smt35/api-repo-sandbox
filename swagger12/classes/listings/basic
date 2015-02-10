@@ -33,7 +33,7 @@
               "type": "string",
               "paramType": "body"
             }
-          ]
+          ],
           "responseMessages": [
             {
               "code": 200,
