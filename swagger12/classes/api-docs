@@ -3,43 +3,43 @@
   "swaggerVersion": "1.2",
   "apis": [
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/basic",
+      "path": "/basic",
       "description": "Operations on collections of Classes"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/add-permission-codes",
+      "path": "/add-permission-codes",
       "description": "Operations on the collection of Add Permission Codes for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/assigned-instructors",
+      "path": "/assigned-instructors",
       "description": "Operations on the Instructors for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/class-limitations",
+      "path": "/class-limitations",
       "description": "Operations on the Class Limitations for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/class-schedules",
+      "path": "/class-schedules",
       "description": "Operations on the Schedule for a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/course-limitations",
+      "path": "/course-limitations",
       "description": "Operations on the Course Limitations associated with a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/enrolled-students",
+      "path": "/enrolled-students",
       "description": "Operations on the collection of Students enrolled in a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/linked-classes",
+      "path": "/linked-classes",
       "description": "Operations on the collection of Classes linked a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/notes",
+      "path": "/notes",
       "description": "Operations on the notes attached to a Class"
     },
     {
-      "path": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/permission-to-add-codes",
+      "path": "/permission-to-add-codes",
       "description": "Operations on the collection of Permission-To-Add tokens generated for a Class"
     },
     {

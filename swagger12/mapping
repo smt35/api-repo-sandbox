@@ -1,5 +1,5 @@
 {
-  "mappings: [
+  "mappings": [
     {
       "url_segment": "/classes/api-docs",
       "method": "GET",
