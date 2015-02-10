@@ -1,0 +1,7 @@
+{
+  "supported_methods": [
+    "GET",
+    "POST",
+    "OPTIONS"
+  ]
+}
