@@ -12,7 +12,7 @@
           "method": "GET",
           "summary": "Retrieve a collection of Classes",
           "type": "string",
-          "nickname": "getClasses",
+          "nickname": "getClasses"
         }
       ]
     }
