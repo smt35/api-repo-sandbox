@@ -13,7 +13,26 @@
           "summary": "Retrieve a collection of Classes",
           "type": "string",
           "nickname": "getClasses"
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can you do with a collection of Classes",
+          "type": "string",
+          "nickname": "classCollectionOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "string"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "string"
+            }
+          ]
         }
+
       ]
     }
   ]
