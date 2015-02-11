@@ -114,13 +114,24 @@
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
+    },
+    {
+      "url_segment": "/dwadtest/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwadtest/api-docs"
+    },
+    {
+      "url_segment": "/dwadtest/api-docs/resource1",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwadtest/listings/resource1"
+    },
+    {
+      "url_segment": "/dwadtest/api-docs/resource2",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwadtest/listings/resource2"
     }
   ]
 }
-
-/classes/:class_id?*
-/classes?field_sets=basic,assigned_instructors
-/classes/*?*
-/classes/:class_id/assigned-instructors
-/classes/20151,00493,000,001?field_sets=basic,assigned_instructors,enrolled_students
-/classes/20151,00493,000,001?*
