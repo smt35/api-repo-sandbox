@@ -144,7 +144,7 @@
       "url_segment": "/dwadtest",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwadtest/dwadtest"
     }
   ]
 }

@@ -1,0 +1,58 @@
+{ "dwadtest": {
+    "links": [
+      { "rel": "self",
+        "href": "https://api.byu.edu/byuapi/dwadtest",
+        "method": "GET"
+      },
+      { "rel": "dwadtest.add",
+        "href": "https://api.byu.edu/byuapi/dwadtest",
+        "method": "POST"
+      }
+    ],
+    "metadata": {
+      "collection_size": 5,
+      "page_start": 1,
+      "page_end": 5,
+      "page_size": 50,
+      "default_page_size": 50,
+      "max_page_size": 1000,
+      "field_sets_returned": [
+        "basic"
+      ],
+      "field_sets_available": [
+        "basic",
+        "resource2"
+      ],
+      "default_field_sets": [
+        "basic"
+      ]
+    },
+    "values": [
+      { "links": [
+          { "rel": "self",
+            "href": "https://api.byu.edu/dwadtest/1",
+            "method": "GET"
+          },
+          { "rel": "dwadtest.modify",
+            "href": "https://api.byu.edu/dwadtest/1",
+            "method": "PUT"
+          },
+          { "rel": "dwadtest.delete",
+            "href": "https://api.byu.edu/dwadtest/1",
+            "method": "DELETE"
+          }
+        ],
+        "basic": {
+          "dwad_key": {
+            "value": "1",
+            "api_type": "key"
+          },
+          "location": {
+            "value": "Spokane, Washington",
+            "api_type": "modifiable"
+          }
+        }
+      }
+    ]
+  }
+}
