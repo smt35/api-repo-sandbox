@@ -1,7 +1,7 @@
 {
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
-  "basepath": "http://edgews02.byu.edu:3000/byuapi/dwadtest",
+  "basepath": "http://edgewso2.byu.edu:3000/byuapi/dwadtest",
   "resourcePath": "/resource2",
   "apis": [
     {

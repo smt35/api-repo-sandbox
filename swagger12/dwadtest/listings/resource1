@@ -1,7 +1,7 @@
 {
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
-  "basepath": "http://edge-ws02.byu.edu:3000/byuapi/dwadtest",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/dwadtest",
   "resourcePath": "/resource1",
   "apis": [
     {
@@ -12,7 +12,7 @@
           "method": "GET",
           "summary": "Retrieve a collection of Classes",
           "type": "string",
-          "nickname": "getHelp"
+          "nickname": "getClasses"
         }
       ]
     }
