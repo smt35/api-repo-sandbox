@@ -147,7 +147,7 @@
               "type": "string",
               "paramType": "query"
             }
-          ],
+          ]
         },
         {
           "method": "POST",
