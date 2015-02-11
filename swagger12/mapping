@@ -117,3 +117,10 @@
     }
   ]
 }
+
+/classes/:class_id?*
+/classes?field_sets=basic,assigned_instructors
+/classes/*?*
+/classes/:class_id/assigned-instructors
+/classes/20151,00493,000,001?field_sets=basic,assigned_instructors,enrolled_students
+/classes/20151,00493,000,001?*
