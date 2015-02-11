@@ -148,43 +148,6 @@
               "paramType": "query"
             }
           ],
-          "responseMessages": [
-            {
-              "code": "200",
-              "message": "Successful",
-              "responseModel": "string"
-            },
-            {
-              "code": "204",
-              "message": "page_start is too large for the collection returned",
-              "responseModel": "string"
-            },
-            {
-              "code": "400",
-              "message": "Invalid Request - unable to interpret request",
-              "responseModel": "string"
-            },
-            {
-              "code": "401",
-              "message": "Authentication required to access data",
-              "responseModel": "string"
-            },
-            {
-              "code": "403",
-              "message": "Access denied to protected data",
-              "responseModel": "string"
-            },
-            {
-              "code": "404",
-              "message": "No Classes satisfy the query parameters - the collection is empty",
-              "responseModel": "string"
-            },
-            {
-              "code": "409",
-              "message": "Query parameters conflict or are malformed",
-              "responseModel": "string"
-            }
-          ]
         },
         {
           "method": "POST",
@@ -199,51 +162,13 @@
               "type": "string",
               "paramType": "body"
             }
-          ],
-          "responseMessages": [
-            {
-              "code": "201",
-              "message": "Class successfully scheduled"
-            },
-            {
-              "code": "400",
-              "message": "Invalid Request - unable to interpret request",
-              "responseModel": "string"
-            },
-            {
-              "code": "401",
-              "message": "Authentication required to schedule a new class",
-              "responseModel": "string"
-            },
-            {
-              "code": "403",
-              "message": "Access denied - not authorized to schedule a new class",
-              "responseModel": "string"
-            },
-            {
-              "code": "409",
-              "message": "Body of the request contains conflicting, malformed, or invalid data",
-              "responseModel": "string"
-            }
           ]
         },
         {
           "method": "OPTIONS",
           "summary": "What can you do with a collection of Classes",
           "type": "string",
-          "nickname": "classCollectionOptions",
-          "responseMessages": [
-            {
-              "code": "200",
-              "message": "Successful",
-              "responseModel": "string"
-            },
-            {
-              "code": "400",
-              "message": "Invalid Request - unable to interpret request",
-              "responseModel": "string"
-            }
-          ]
+          "nickname": "classCollectionOptions"
         }
       ]
     }
