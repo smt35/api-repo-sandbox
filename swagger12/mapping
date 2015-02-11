@@ -103,7 +103,7 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/classes/listings/waitlisted-student-logs"
     },
     {
-      "url_segment": "/classes/v1/",
+      "url_segment": "/classes",
       "method": "OPTIONS",
       "return_code": 200,
       "return_header": "Allow: GET,POST,OPTIONS",
