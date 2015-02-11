@@ -1,7 +1,7 @@
 {
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
-  "basepath": "http://edgews02.byu.edu:3000/byuapi/classes",
+  "basepath": "http://edgewso2.byu.edu:3000/byuapi/classes",
   "resourcePath": "/add-permission-codes",
   "apis": [
     {

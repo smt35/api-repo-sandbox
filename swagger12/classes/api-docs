@@ -5,6 +5,10 @@
     {
       "path": "/basic",
       "description": "Operations on collections of Classes"
+    },
+    {
+      "path": "/add-permission-codes",
+      "description": "Operations on the collection of Add Permission Codes for a Class"
     }
   ],
   "authorizations": {
