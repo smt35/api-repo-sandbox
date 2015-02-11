@@ -16,7 +16,7 @@
           "parameters": [
             {
               "name": "year_term",
-              "description": ""Enrollment period in which the class is offered",
+              "description": "Enrollment period in which the class is offered",
               "required": false,
               "type": "string",
               "paramType": "query"
