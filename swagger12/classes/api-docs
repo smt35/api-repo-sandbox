@@ -5,66 +5,6 @@
     {
       "path": "/basic",
       "description": "Operations on collections of Classes"
-    },
-    {
-      "path": "/add-permission-codes",
-      "description": "Operations on the collection of Add Permission Codes for a Class"
-    },
-    {
-      "path": "/assigned-instructors",
-      "description": "Operations on the Instructors for a Class"
-    },
-    {
-      "path": "/class-limitations",
-      "description": "Operations on the Class Limitations for a Class"
-    },
-    {
-      "path": "/class-schedules",
-      "description": "Operations on the Schedule for a Class"
-    },
-    {
-      "path": "/course-limitations",
-      "description": "Operations on the Course Limitations associated with a Class"
-    },
-    {
-      "path": "/enrolled-students",
-      "description": "Operations on the collection of Students enrolled in a Class"
-    },
-    {
-      "path": "/linked-classes",
-      "description": "Operations on the collection of Classes linked a Class"
-    },
-    {
-      "path": "/notes",
-      "description": "Operations on the notes attached to a Class"
-    },
-    {
-      "path": "/permission-to-add-codes",
-      "description": "Operations on the collection of Permission-To-Add tokens generated for a Class"
-    },
-    {
-      "path": "/prerequisites",
-      "description": "Operations on the collection of Prerequisites for a Class"
-    },
-    {
-      "path": "/section-headers",
-      "description": "Operations on the Section Headers for a Class"
-    },
-    {
-      "path": "/supplemental-counts",
-      "description": "Operations on the Supplemental Counts for a Class"
-    },
-    {
-      "path": "/waitlisted-students",
-      "description": "Operations on the collection of Students waiting to enroll for a Class"
-    },
-    {
-      "path": "/enrolled-student-logs",
-      "description": "Operations on the Logs of student enrollment actions for a Class"
-    },
-    {
-      "path": "/waitlisted-student-logs",
-      "description": "Operations on the Log of Waitlist actions for a Class"
     }
   ],
   "authorizations": {
