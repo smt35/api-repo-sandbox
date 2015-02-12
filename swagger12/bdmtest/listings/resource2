@@ -1,0 +1,147 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edgewso2.byu.edu:3000/byuapi/bdmtest",
+  "resourcePath": "/resource2",
+  "apis": [
+    {
+      "path": "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-students",
+      "description": "Operations on the collection of Students enrolled in a Class",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve the Students enrolled in a Class",
+          "type": "string",
+          "nickname": "getEnrolledStudents",
+          "parameters": [
+            {
+              "name": "year_term",
+              "description": "Enrollment period, example: 20151 is Winter 2015",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "curriculum_id",
+              "description": "Unique, meaningless number assigned to a curriculum unit",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "title_code",
+              "description": "Unique, sequential number added to a curriculum unit to designate a course",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "section_number",
+              "description": "Unique, sequential number assigned as a course is scheduled",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Successful"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Modify the Student Enrollments for a Class",
+          "type": "string",
+          "nickname": "modifyEnrolledStudents",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "year_term",
+              "description": "Enrollment period, example: 20151 is Winter 2015",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "curriculum_id",
+              "description": "Unique, meaningless number assigned to a curriculum unit",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "title_code",
+              "description": "Unique, sequential number added to a curriculum unit to designate a course",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "section_number",
+              "description": "Unique, sequential number assigned as a course is scheduled",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Successful"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can you do with the collection of Enrolled Students for a Class?",
+          "type": "string",
+          "nickname": "enrolledStudentsOptions",
+          "parameters": [
+            {
+              "name": "year_term",
+              "description": "Enrollment period, example: 20151 is Winter 2015",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "curriculum_id",
+              "description": "Unique, meaningless number assigned to a curriculum unit",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "title_code",
+              "description": "Unique, sequential number added to a curriculum unit to designate a course",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "section_number",
+              "description": "Unique, sequential number assigned as a course is scheduled",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "message": "Successful"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

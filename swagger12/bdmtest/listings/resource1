@@ -1,0 +1,39 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/bdmtest",
+  "resourcePath": "/resource1",
+  "apis": [
+    {
+      "path": "/",
+      "description": "Operations on a Collection of Classes",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a collection of Classes",
+          "type": "string",
+          "nickname": "getClasses"
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can you do with a collection of Classes",
+          "type": "string",
+          "nickname": "classCollectionOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "string"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "string"
+            }
+          ]
+        }
+
+      ]
+    }
+  ]
+}
