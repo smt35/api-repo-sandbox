@@ -165,14 +165,14 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/bdmtest/listings/resource2"
     },
     {
-      "url_segment": "/bdmtest/v1",
+      "url_segment": "/bdmtest",
       "method": "OPTIONS",
       "return_code": 200,
       "return_header": "Allow: GET,POST,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
     },
     {
-      "url_segment": "/bdmtest/v1",
+      "url_segment": "/bdmtest",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/bdmtest/bdmtest"
