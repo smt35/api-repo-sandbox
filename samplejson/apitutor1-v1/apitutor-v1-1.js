@@ -40,7 +40,7 @@
       "vehicle_year": "2003",
       "make": "Chevrolet",
       "model": "Sierra",
-      "color": "Tan"
+      "color": "Tan",
       "owner_id": "586586586",
       "owner_name": "Daffy Duck",
       "created_by_id": "586586586",
