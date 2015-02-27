@@ -23,7 +23,7 @@
       "vehicle_year": "1997",
       "make": "Ford",
       "model": "Ranger",
-      "color": "Blue"
+      "color": "Blue",
       "owner_id": "586586586",
       "owner_name": "Daffy Duck",
       "created_by_id": "586586586",
