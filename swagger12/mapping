@@ -188,6 +188,12 @@
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor1-v1/listings/basic.swag12"
+    },
+    {
+      "url_segment": "/tutorial-cars/v1",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1-v1/apitutor-v1-1.js"
     }
   ]
 }
