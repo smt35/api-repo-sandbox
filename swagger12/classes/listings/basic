@@ -228,6 +228,96 @@
           ]
         },
         {
+          "method": "PUT",
+          "summary": "Modify a specific Class (defined by query parameters)",
+          "type": "string",
+          "nickname": "modifyClassByQuery",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "year_term",
+              "description": "Enrollment period in which the class is offered",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "teaching_area",
+              "description": "The subject area of the class offering",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "catalog_number",
+              "description": "The catalog number of the class offering",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "catalog_suffix",
+              "description": "The catalog suffix of the class offering",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "section_number",
+              "description": "The section designator",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "context",
+              "description": "Defines a group of field sets to be modified",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "field_sets",
+              "description": "List of field sets to be modified",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Class successfully modified"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "string"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to modify a class",
+              "responseModel": "string"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to modify a class",
+              "responseModel": "string"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "string"
+            }
+          ]
+        },
+        {
           "method": "OPTIONS",
           "summary": "What can you do with a collection of Classes",
           "type": "string",
@@ -370,6 +460,13 @@
               "paramType": "path"
             },
             {
+              "name": "context",
+              "description": "Defines a group of field sets to be modified",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
               "name": "field_sets",
               "description": "List of field sets to be modified",
               "required": false,
@@ -443,7 +540,7 @@
           "responseMessages": [
             {
               "code": "200",
-              "message": "Class successfully deleted",
+              "message": "Class successfully cancelled",
               "responseModel": "string"
             },
             {
@@ -453,12 +550,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to delete the class",
+              "message": "Authentication required to cancel the class",
               "responseModel": "string"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to delete the class",
+              "message": "Access denied - not authorized to cancel the class",
               "responseModel": "string"
             },
             {
