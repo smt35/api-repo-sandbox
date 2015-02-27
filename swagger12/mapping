@@ -176,6 +176,18 @@
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/bdmtest/bdmtest"
+    },
+    {
+      "url_segment": "/apitutor1-v1/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor1-v1/api-docs.swag12"
+    },
+    {
+      "url_segment": "/apitutor1-v1/api-docs/basic",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor1-v1/listings/basic.swag12"
     }
   ]
 }

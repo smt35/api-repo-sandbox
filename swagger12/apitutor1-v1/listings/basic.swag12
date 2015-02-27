@@ -154,7 +154,7 @@
     "options": {
       "id": "options",
       "description": "Array of options",
-      "type": "array"
+      "type": "array",
       "items": {
         "type": "string"
       }
