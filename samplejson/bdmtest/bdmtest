@@ -1,0 +1,58 @@
+{ "bdmtest": {
+    "links": [
+      { "rel": "self",
+        "href": "https://api.byu.edu/byuapi/bdmtest",
+        "method": "GET"
+      },
+      { "rel": "bdmtest.add",
+        "href": "https://api.byu.edu/byuapi/bdmtest",
+        "method": "POST"
+      }
+    ],
+    "metadata": {
+      "collection_size": 5,
+      "page_start": 1,
+      "page_end": 5,
+      "page_size": 50,
+      "default_page_size": 50,
+      "max_page_size": 1000,
+      "field_sets_returned": [
+        "basic"
+      ],
+      "field_sets_available": [
+        "basic",
+        "resource2"
+      ],
+      "default_field_sets": [
+        "basic"
+      ]
+    },
+    "values": [
+      { "links": [
+          { "rel": "self",
+            "href": "https://api.byu.edu/bdmtest/1",
+            "method": "GET"
+          },
+          { "rel": "bdmtest.modify",
+            "href": "https://api.byu.edu/bdmtest/1",
+            "method": "PUT"
+          },
+          { "rel": "bdmtest.delete",
+            "href": "https://api.byu.edu/bdmtest/1",
+            "method": "DELETE"
+          }
+        ],
+        "basic": {
+          "bdm_key": {
+            "value": "1",
+            "api_type": "key"
+          },
+          "location": {
+            "value": "Spokane, Washington",
+            "api_type": "modifiable"
+          }
+        }
+      }
+    ]
+  }
+}
