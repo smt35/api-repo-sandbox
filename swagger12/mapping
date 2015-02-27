@@ -199,6 +199,7 @@
       "url_segment": "/tutorial-cars/v1",
       "method": "OPTIONS",
       "return_code": 200,
+      "return_header": "Allow: GET,POST,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
     }
   ]
