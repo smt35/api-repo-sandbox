@@ -5,75 +5,26 @@
   "resourcePath": "/basic",
   "apis": [
     {
-      "path": "/",
-      "description": "Operations on a Collection of Cars",
+      "path": "/{vin}",
+      "description": "Operations on a Cars Item",
       "operations": [
         {
           "method": "GET",
-          "summary": "Retrieve a collection of Cars",
-          "nickname": "getCarsCollection",
+          "summary": "Retrieve a Car",
+          "nickname": "getCarsItem",
           "parameters": [
             {
-              "name": "plate_state",
-              "description": "License Plate State",
-              "required": false,
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
               "type": "string",
-              "paramType": "query"
-            },
-            {
-              "name": "plate_number",
-              "description": "License Plate Number",
-              "required": false,
-              "type": "string",
-              "paramType": "query"
-            },
-            {
-              "name": "vehicle_type",
-              "description": "Type of Vehicle",
-              "required": false,
-              "type": "string",
-              "paramType": "query"
-            },
-            {
-              "name": "vehicle_year",
-              "description": "Model Year of the Vehicle",
-              "required": false,
-              "type": "string",
-              "paramType": "query"
-            },
-            {
-              "name": "make",
-              "description": "Make of the Vehicle",
-              "required": false,
-              "type": "string",
-              "paramType": "query"
-            },
-            {
-              "name": "model",
-              "description": "Model of the Vehicle",
-              "required": false,
-              "type": "string",
-              "paramType": "query"
-            },
-            {
-              "name": "color",
-              "description": "Color of the Vehicle",
-              "required": false,
-              "type": "string",
-              "paramType": "query"
-            },
-            {
-              "name": "owner_id",
-              "description": "The ID of the owner of the vehicle",
-              "required": false,
-              "type": "string",
-              "paramType": "query"
+              "paramType": "path"
             }
           ],
           "responseMessages": [
             {
               "code": "200",
-              "message": "Collection Retrieved",
+              "message": "Item Retrieved",
               "responseModel": "cars"
             },
             {
@@ -93,21 +44,23 @@
             },
             {
               "code": "404",
-              "message": "No Cars satisfy the query parameters - the collection is empty",
-              "responseModel": "error"
-            },
-            {
-              "code": "409",
-              "message": "Query parameters conflict or are malformed",
+              "message": "No Cars found - invalid VIN",
               "responseModel": "error"
             }
           ]
         },
         {
-          "method": "POST",
-          "summary": "Add a Car(s)",
-          "nickname": "postCars",
+          "method": "PUT",
+          "summary": "Modify a Car",
+          "nickname": "putCars",
           "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
             {
               "name": "body",
               "description": "Request Body",
@@ -118,8 +71,8 @@
           ],
           "responseMessages": [
             {
-              "code": "201",
-              "message": "Car successfully added",
+              "code": "200",
+              "message": "Car successfully modified",
               "responseModel": "cars"
             },
             {
@@ -129,12 +82,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to add a car",
+              "message": "Authentication required to modify a car",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to add a car",
+              "message": "Access denied - not authorized to modify a car",
               "responseModel": "error"
             },
             {
@@ -145,9 +98,45 @@
           ]
         },
         {
+          "method": "DELETE",
+          "summary": "Delete a Car",
+          "nickname": "deleteCars",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Car successfully modified",
+              "responseModel": "error"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete a car",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete a car",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
           "method": "OPTIONS",
-          "summary": "What can you do with a collection of Cars",
-          "nickname": "carsCollectionOptions",
+          "summary": "What can you do with a Cars Item",
+          "nickname": "carsItemOptions",
           "responseMessages": [
             {
               "code": "200",
