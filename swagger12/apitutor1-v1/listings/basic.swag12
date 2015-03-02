@@ -114,8 +114,7 @@
               "required": true,
               "type": "cars",
               "paramType": "body"
-            },
-
+            }
           ],
           "responseMessages": [
             {
@@ -179,7 +178,7 @@
               "required": true,
               "type": "string",
               "paramType": "path"
-            },
+            }
           ],
           "responseMessages": [
             {
