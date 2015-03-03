@@ -296,6 +296,15 @@
           "method": "OPTIONS",
           "summary": "What can you do with a Cars Item",
           "nickname": "carsItemOptions",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
           "responseMessages": [
             {
               "code": "200",
