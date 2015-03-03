@@ -1,5 +1,5 @@
 { "cars": [
-    { "vin": "36HAT24A6NP92884",
+    { "vin": "73",
       "plate_state": "MN",
       "plate_number": "669GLG",
       "vehicle_type": "Truck/SUV",
@@ -10,7 +10,7 @@
       "owner_id": "485720485",
       "owner_name": "Miss Daisy",
       "created_by_id": "485720485",
-      "created_by_name": "Miss Dais",
+      "created_by_name": "Miss Daisy",
       "created_date_time": "2014-05-11T13:45:53.09Z",
       "updated_by_id": "783783783",
       "updated_by_name": "Daisy Duck",

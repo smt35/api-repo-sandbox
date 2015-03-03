@@ -1,0 +1,8 @@
+{
+  "supported_methods": [
+    "GET",
+    "PUT",
+    "DELETE",
+    "OPTIONS"
+  ]
+}
