@@ -5,6 +5,165 @@
   "resourcePath": "/basic",
   "apis": [
     {
+      "path": "/",
+      "description": "Operations on a Collection of Cars",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a collection of Cars",
+          "nickname": "getCarsCollection",
+          "parameters": [
+            {
+              "name": "plate_state",
+              "description": "License Plate State",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "plate_number",
+              "description": "License Plate Number",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "vehicle_type",
+              "description": "Type of Vehicle",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "vehicle_year",
+              "description": "Model Year of the Vehicle",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "make",
+              "description": "Make of the Vehicle",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "model",
+              "description": "Model of the Vehicle",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "color",
+              "description": "Color of the Vehicle",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "owner_id",
+              "description": "The ID of the owner of the vehicle",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Collection Retrieved",
+              "responseModel": "cars"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Cars satisfy the query parameters - the collection is empty",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Query parameters conflict or are malformed",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Add a Car(s)",
+          "nickname": "postCars",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "cars",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Car successfully added",
+              "responseModel": "cars"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add a car",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add a car",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can you do with a collection of Cars",
+          "nickname": "carsCollectionOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "path": "/{vin}",
       "description": "Operations on a Cars Item",
       "operations": [
@@ -152,50 +311,5 @@
         }
       ]
     }
-  ],
-  "models": {
-    "error": {
-      "id": "error",
-      "description": "Additional explanation for error conditions",
-      "required": [
-        "return_code",
-        "explanation",
-        "error_data"
-      ],
-      "properties": {
-        "return_code": {
-          "description": "The HTTP Status code",
-          "type": "integer",
-          "format": "int32"
-        },
-        "explanation": {
-          "description": "Detailed explanation of the error",
-          "type": "string"
-        },
-        "error_data": {
-          "description": "When appropriate, the data value that caused the error",
-          "type": "string"
-        }
-      }
-    },
-    "options": {
-      "id": "options",
-      "description": "Array of options",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "cars": {
-      "id": "cars",
-      "description": "Collection of Cars",
-      "properties":  {
-        "plate_state": {
-          "type": "string",
-          "description": "License Plate State",
-          "maxLength": 2
-        }
-      }
-    }
-  }
+  ]
 }
