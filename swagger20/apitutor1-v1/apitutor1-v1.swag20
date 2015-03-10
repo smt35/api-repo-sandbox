@@ -18,6 +18,7 @@
             "get": {
                 "summary": "Cars",
                 "description": "Returns a collection of Cars",
+                "operationId": "getCars",
                 "parameters": [
                     {
                         "name": "plate_state",
@@ -77,7 +78,7 @@
                     }
                 ],
                 "tags": [
-                    "API Tutorial"
+                    "Cars"
                 ],
                 "responses": {
                     "200": {
@@ -127,6 +128,7 @@
             "post": {
                 "summary": "Cars",
                 "description": "Create a new Car",
+                "operationId": "createCar",
                 "parameters": [
                     {
                         "name": "car",
@@ -134,12 +136,12 @@
                         "description": "The Car to be added",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/cars"
                         }
                     }
                 ],
                 "tags": [
-                    "API Tutorial"
+                    "Cars"
                 ],
                 "responses": {
                     "200": {
@@ -183,8 +185,9 @@
             "options": {
                 "summary": "Cars",
                 "description": "What can this endpoint do?",
+                "operationId": "carsOptions",
                 "tags": [
-                    "API Tutorial"
+                    "Cars"
                 ],
                 "responses": {
                     "200": {
@@ -224,6 +227,7 @@
             "get": {
                 "summary": "Cars",
                 "description": "Returns a specific Car",
+                "operationId": "getCar",
                 "parameters": [
                     {
                         "name": "vin",
@@ -234,7 +238,7 @@
                     }
                 ],
                 "tags": [
-                    "API Tutorial"
+                    "Cars"
                 ],
                 "responses": {
                     "200": {
@@ -278,6 +282,7 @@
             "delete": {
                 "summary": "Cars",
                 "description": "Delete a specific Car",
+                "operationId": "deleteCar",
                 "parameters": [
                     {
                         "name": "vin",
@@ -288,7 +293,7 @@
                     }
                 ],
                 "tags": [
-                    "API Tutorial"
+                    "Cars"
                 ],
                 "responses": {
                     "204": {
@@ -323,6 +328,7 @@
             "put": {
                 "summary": "Cars",
                 "description": "Modify a specific Car",
+                "operationId": "modifyCar",
                 "parameters": [
                     {
                         "name": "vin",
@@ -337,12 +343,12 @@
                         "description": "The Car to be modified",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/cars"
                         }
                     }
                 ],
                 "tags": [
-                    "API Tutorial"
+                    "Cars"
                 ],
                 "responses": {
                     "200": {
@@ -416,134 +422,86 @@
             ],
             "properties": {
                 "vin": {
-                    "$ref": "#/definitions/attr.vin"
+                    "description": "Vehicle Identification Number",
+                    "type": "string",
+                    "maxLength": 16
                 },
                 "plate_state": {
-                    "$ref": "#/definitions/attr.plate_state"
+                    "description": "License Plate State",
+                    "type": "string",
+                    "maxLength": 2
                 },
                 "plate_number": {
-                    "$ref": "#/definitions/attr.plate_number"
+                    "description": "License Plate Number",
+                    "type": "string"
                 },
                 "vehicle_type": {
-                    "$ref": "#/definitions/attr.vehicle_type"
+                    "description": "Type of Vehicle",
+                    "type": "string",
+                    "enum": [
+                        "Car/Sedan/Coupe",
+                        "Delivery/Service Truck",
+                        "Moped/Scooter",
+                        "Motorcycle",
+                        "Other",
+                        "Truck/SUV"
+                    ]
                 },
                 "vehicle_year": {
-                    "$ref": "#/definitions/attr.vehicle_year"
+                    "description": "Model Year of the Vehicle",
+                    "type": "string",
+                    "maxLength": 4
                 },
                 "make": {
-                    "$ref": "#/definitions/attr.make"
+                    "description": "Make of the Vehicle",
+                    "type": "string"
                 },
                 "model": {
-                    "$ref": "#/definitions/attr.model"
+                    "description": "Model of the Vehicle",
+                    "type": "string"
                 },
                 "color": {
-                    "$ref": "#/definitions/attr.color"
+                    "description": "Color of the Vehicle",
+                    "type": "string"
                 },
                 "owner_id": {
-                    "$ref": "#/definitions/attr.owner_id"
+                    "description": "The ID of the owner of the vehicle",
+                    "type": "string",
+                    "maxLength": 9
                 },
                 "owner_name": {
-                    "$ref": "#/definitions/attr.owner_name"
+                    "description": "The name of the owner of the vehicle",
+                    "type": "string"
                 },
                 "created_by_id": {
-                    "$ref": "#/definitions/attr.created_by_id"
+                    "description": "The ID of the person that created the vehicle entry",
+                    "type": "string",
+                    "maxLength": 9
                 },
                 "created_by_name": {
-                    "$ref": "#/definitions/attr.created_by_name"
+                    "description": "The name of the person that created the vehicle entry",
+                    "type": "string"
                 },
                 "created_date_time": {
-                    "$ref": "#/definitions/attr.created_date_time"
+                    "description": "When the vehicle entry was created",
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "updated_by_id": {
-                    "$ref": "#/definitions/attr.updated_by_id"
+                    "description": "The ID of the person that last updated the vehicle entry",
+                    "type": "string",
+                    "maxLength": 9
                 },
                 "updated_by_name": {
-                    "$ref": "#/definitions/attr.updated_by_name"
+                    "description": "The name of the person that last updated the vehicle entry",
+                    "type": "string"
                 },
                 "updated_date_time": {
-                    "$ref": "#/definitions/attr.updated_date_time"
+                    "description": "When the vehicle entry was last updated",
+                    "type": "string",
+                    "format": "date-time"
                 }
             }
-        },
-        "attr.color": {
-            "description": "Color of the Vehicle",
-            "type": "string"
-        },
-        "attr.created_by_id": {
-            "description": "The ID of the person that created the vehicle entry",
-            "type": "string",
-            "maxLength": 9
-        },
-        "attr.created_by_name": {
-            "description": "The name of the person that created the vehicle entry",
-            "type": "string"
-        },
-        "attr.created_date_time": {
-            "description": "When the vehicle entry was created",
-            "type": "string",
-            "format": "date-time"
-        },
-        "attr.make": {
-            "description": "Make of the Vehicle",
-            "type": "string"
-        },
-        "attr.model": {
-            "description": "Model of the Vehicle",
-            "type": "string"
-        },
-        "attr.owner_id": {
-            "description": "The ID of the owner of the vehicle",
-            "type": "string",
-            "maxLength": 9
-        },
-        "attr.owner_name": {
-            "description": "The name of the owner of the vehicle",
-            "type": "string"
-        },
-        "attr.plate_number": {
-            "description": "License Plate Number",
-            "type": "string"
-        },
-        "attr.plate_state": {
-            "description": "License Plate State",
-            "type": "string",
-            "maxLength": 2
-        },
-        "attr.updated_by_id": {
-            "description": "The ID of the person that last updated the vehicle entry",
-            "type": "string",
-            "maxLength": 9
-        },
-        "attr.updated_by_name": {
-            "description": "The name of the person that last updated the vehicle entry",
-            "type": "string"
-        },
-        "attr.updated_date_time": {
-            "description": "When the vehicle entry was last updated",
-            "type": "string",
-            "format": "date-time"
-        },
-        "attr.vehicle_type": {
-            "description": "Type of Vehicle",
-            "type": "string",
-            "enum": [
-                "Car/Sedan/Coupe",
-                "Delivery/Service Truck",
-                "Moped/Scooter",
-                "Motorcycle",
-                "Other",
-                "Truck/SUV"
-            ]
-        },
-        "attr.vehicle_year": {
-            "description": "Model Year of the Vehicle",
-            "type": "string",
-            "maxLength": 4
-        },
-        "attr.vin": {
-            "description": "Vehicle Identification Number",
-            "type": "string",
-            "maxLength": 16
         },
         "error": {
             "description": "Error Information",
