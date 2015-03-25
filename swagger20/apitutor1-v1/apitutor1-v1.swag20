@@ -136,7 +136,7 @@
                         "description": "The Car to be added",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/car"
                         }
                     }
                 ],
@@ -147,7 +147,7 @@
                     "200": {
                         "description": "Car Added",
                         "schema": {
-                            "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/car"
                         }
                     },
                     "400": {
@@ -244,7 +244,7 @@
                     "200": {
                         "description": "Item Retrieved",
                         "schema": {
-                            "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/car"
                         }
                     },
                     "400": {
@@ -343,7 +343,7 @@
                         "description": "The Car to be modified",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/car"
                         }
                     }
                 ],
@@ -354,7 +354,7 @@
                     "200": {
                         "description": "Car Modified",
                         "schema": {
-                            "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/car"
                         }
                     },
                     "400": {
@@ -388,6 +388,55 @@
                         }
                     }
                 }
+            },
+            "options": {
+                "summary": "Cars",
+                "description": "What can this endpoint do?",
+                "operationId": "carOptions",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Supported HTTP Methods",
+                        "schema": {
+                            "$ref": "#/definitions/methods"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
             }
         }
     },
@@ -396,10 +445,10 @@
             "description": "A collection of Cars",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/item.cars"
+                "$ref": "#/definitions/car"
             }
         },
-        "item.cars": {
+        "car": {
             "description": "Car Item",
             "type": "object",
             "required": [

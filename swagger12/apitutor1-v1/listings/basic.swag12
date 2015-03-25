@@ -105,14 +105,14 @@
         },
         {
           "method": "POST",
-          "summary": "Add a Car(s)",
-          "nickname": "postCars",
+          "summary": "Add a Car",
+          "nickname": "postCar",
           "parameters": [
             {
               "name": "body",
               "description": "Request Body",
               "required": true,
-              "type": "cars",
+              "type": "car",
               "paramType": "body"
             }
           ],
@@ -120,7 +120,7 @@
             {
               "code": "201",
               "message": "Car successfully added",
-              "responseModel": "cars"
+              "responseModel": "car"
             },
             {
               "code": "400",
