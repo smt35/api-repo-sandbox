@@ -11,7 +11,7 @@
         {
           "method": "GET",
           "summary": "Retrieve a collection of Cars",
-          "nickname": "getCarsCollection",
+          "nickname": "getCars",
           "parameters": [
             {
               "name": "plate_state",
@@ -105,8 +105,8 @@
         },
         {
           "method": "POST",
-          "summary": "Add a Car",
-          "nickname": "postCar",
+          "summary": "Create a new Car",
+          "nickname": "createCar",
           "parameters": [
             {
               "name": "body",
@@ -119,7 +119,7 @@
           "responseMessages": [
             {
               "code": "201",
-              "message": "Car successfully added",
+              "message": "Car Added",
               "responseModel": "car"
             },
             {
@@ -146,8 +146,8 @@
         },
         {
           "method": "OPTIONS",
-          "summary": "What can you do with a collection of Cars",
-          "nickname": "carsCollectionOptions",
+          "summary": "What can you do with this endpoint",
+          "nickname": "carsOptions",
           "responseMessages": [
             {
               "code": "200",

@@ -144,7 +144,7 @@
                     "Cars"
                 ],
                 "responses": {
-                    "200": {
+                    "201": {
                         "description": "Car Added",
                         "schema": {
                             "$ref": "#/definitions/car"
@@ -198,18 +198,6 @@
                     },
                     "400": {
                         "description": "Invalid Request - unable to interpret request",
-                        "schema": {
-                            "$ref": "#/definitions/error"
-                        }
-                    },
-                    "401": {
-                        "description": "Authentication required to access data",
-                        "schema": {
-                            "$ref": "#/definitions/error"
-                        }
-                    },
-                    "403": {
-                        "description": "Access denied to protected data",
                         "schema": {
                             "$ref": "#/definitions/error"
                         }
@@ -414,18 +402,6 @@
                     },
                     "400": {
                         "description": "Invalid Request - unable to interpret request",
-                        "schema": {
-                            "$ref": "#/definitions/error"
-                        }
-                    },
-                    "401": {
-                        "description": "Authentication required to access data",
-                        "schema": {
-                            "$ref": "#/definitions/error"
-                        }
-                    },
-                    "403": {
-                        "description": "Access denied to protected data",
                         "schema": {
                             "$ref": "#/definitions/error"
                         }
