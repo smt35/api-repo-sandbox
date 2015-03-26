@@ -364,6 +364,24 @@
     "car": {
       "id": "car",
       "description": "Car Item",
+      "required": [
+        "vin",
+        "plate_state",
+        "plate_number",
+        "vehicle_type",
+        "vehicle_year",
+        "make",
+        "model",
+        "color",
+        "owner_id",
+        "owner_name",
+        "created_by_id",
+        "created_by_name",
+        "created_date_time",
+        "updated_by_id",
+        "updated_by_name",
+        "updated_date_time"
+      ],
       "properties": {
         "vin": {
           "type": "string",
