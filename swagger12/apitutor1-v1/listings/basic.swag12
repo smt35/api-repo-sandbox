@@ -76,7 +76,7 @@
               "type": "integer",
               "format": "int32",
               "paramType": "query",
-              "defaultValue": 1
+              "defaultValue": "1"
             },
             {
               "name": "page_size",
@@ -85,7 +85,7 @@
               "type": "integer",
               "format": "int32",
               "paramType": "query",
-              "defaultValue": 50
+              "defaultValue": "50"
             }
           ],
           "responseMessages": [
