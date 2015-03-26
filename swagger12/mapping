@@ -229,7 +229,7 @@
     {
       "url_segment": "/tutorial-cars/v1/73",
       "method": "DELETE",
-      "return_code": 200,
+      "return_code": 204,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1-v1/apitutor-v1-3.js"
     },
     {
