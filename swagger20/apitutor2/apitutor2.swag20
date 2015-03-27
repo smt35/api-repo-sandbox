@@ -9,7 +9,7 @@
     "schemes": [
         "https"
     ],
-    "basePath": "/byuapi/tutorial-cars/v1",
+    "basePath": "/byuapi/tutorial2-cars",
     "produces": [
         "application/json"
     ],
@@ -93,7 +93,7 @@
                         "type": "integer",
                         "format": "int32",
                         "default": 50
-                    }
+                    }                    
                 ],
                 "tags": [
                     "Cars"
@@ -203,7 +203,6 @@
             "options": {
                 "summary": "Cars",
                 "description": "What can this endpoint do?",
-                "operationId": "carsOptions",
                 "tags": [
                     "Cars"
                 ],
@@ -349,7 +348,7 @@
                         "description": "The Car to be modified",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/car"
+                             "$ref": "#/definitions/car"
                         }
                     }
                 ],
@@ -406,30 +405,30 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
-                    },
+                    }
                 ],
                 "tags": [
                     "Cars"
                 ],
                 "responses": {
                     "200": {
-                        "description": "Supported HTTP Methods",
-                        "schema": {
-                            "$ref": "#/definitions/methods"
-                        }
-                    },
+                         "description": "Supported HTTP Methods",
+                         "schema": {
+                             "$ref": "#/definitions/methods"
+                         }
+                     },
                     "400": {
-                        "description": "Invalid Request - unable to interpret request",
-                        "schema": {
-                            "$ref": "#/definitions/error"
-                        }
-                    },
+                         "description": "Invalid Request - unable to interpret request",
+                         "schema": {
+                             "$ref": "#/definitions/error"
+                         }
+                     },
                     "default": {
-                        "description": "Unexpected error",
-                        "schema": {
-                            "$ref": "#/definitions/error"
-                        }
-                    }
+                         "description": "Unexpected error",
+                         "schema": {
+                             "$ref": "#/definitions/error"
+                         }
+                     }
                 }
             }
         }
@@ -437,13 +436,50 @@
     "definitions": {
         "cars": {
             "description": "A collection of Cars",
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/car"
+            "type": "object",
+            "required": [
+                "values"
+            ],
+            "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact the entire Cars collection",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/links"
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/definitions/top_level_metadata"
+                },
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/car"
+                    }
+                }
             }
         },
         "car": {
             "description": "Car Item",
+            "type": "object",
+            "required": [
+              "basic"
+            ],
+            "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact an item in the Cars collection",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/links"
+                    }
+                },
+                "basic": {
+                    "$ref": "#/definitions/basic"
+                }
+            }
+        },
+        "basic": {
+            "description": "Car Basic Item",
             "type": "object",
             "required": [
                 "vin",
@@ -543,6 +579,71 @@
                     "description": "When the vehicle entry was last updated",
                     "type": "string",
                     "format": "date-time"
+                }
+            }
+        },
+        "links": {
+            "description": "Hypermedia links format",
+            "type": "object",
+            "required": [
+                "rel",
+                "href",
+                "method"
+            ],
+            "properties": {
+                "rel": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "method": {
+                    "type": "string",
+                    "enum": [
+                        "DELETE",
+                        "GET",
+                        "OPTIONS",
+                        "POST",
+                        "PUT"
+                    ]
+                }
+            }
+        },
+        "top_level_metadata": {
+            "type": "object",
+            "required": [
+                "collection_size",
+                "page_start",
+                "page_end",
+                "page_size",
+                "default_page_size",
+                "maximum_page_size"
+            ],
+            "properties": {
+                "collection_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_start": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_end": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "default_page_size": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "maximum_page_size": {
+                    "type": "integer",
+                    "minimum": 0
                 }
             }
         },
