@@ -11,7 +11,7 @@
         {
           "method": "GET",
           "summary": "Retrieve a collection of Cars",
-          "nickname": "getCarsCollection",
+          "nickname": "getCars",
           "parameters": [
             {
               "name": "plate_state",
@@ -68,6 +68,24 @@
               "required": false,
               "type": "string",
               "paramType": "query"
+            },
+            {
+              "name": "page_start",
+              "description": "Specifies how far to skip into a large set",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "paramType": "query",
+              "defaultValue": "1"
+            },
+            {
+              "name": "page_size",
+              "description": "Specifies how many items to return from a large set",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "paramType": "query",
+              "defaultValue": "50"
             }
           ],
           "responseMessages": [
@@ -105,22 +123,22 @@
         },
         {
           "method": "POST",
-          "summary": "Add a Car(s)",
-          "nickname": "postCars",
+          "summary": "Create a new Car",
+          "nickname": "createCar",
           "parameters": [
             {
               "name": "body",
               "description": "Request Body",
               "required": true,
-              "type": "cars",
+              "type": "car",
               "paramType": "body"
             }
           ],
           "responseMessages": [
             {
               "code": "201",
-              "message": "Car successfully added",
-              "responseModel": "cars"
+              "message": "Car Added",
+              "responseModel": "car"
             },
             {
               "code": "400",
@@ -146,8 +164,8 @@
         },
         {
           "method": "OPTIONS",
-          "summary": "What can you do with a collection of Cars",
-          "nickname": "carsCollectionOptions",
+          "summary": "What can this endpoint do?",
+          "nickname": "carsOptions",
           "responseMessages": [
             {
               "code": "200",
@@ -165,12 +183,12 @@
     },
     {
       "path": "/{vin}",
-      "description": "Operations on a Cars Item",
+      "description": "Operations on a Car Item",
       "operations": [
         {
           "method": "GET",
           "summary": "Retrieve a Car",
-          "nickname": "getCarsItem",
+          "nickname": "getCar",
           "parameters": [
             {
               "name": "vin",
@@ -184,7 +202,7 @@
             {
               "code": "200",
               "message": "Item Retrieved",
-              "responseModel": "cars"
+              "responseModel": "car"
             },
             {
               "code": "400",
@@ -209,9 +227,44 @@
           ]
         },
         {
+          "method": "DELETE",
+          "summary": "Delete a Car",
+          "nickname": "deleteCar",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Car successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete a car",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete a car",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
           "method": "PUT",
           "summary": "Modify a Car",
-          "nickname": "putCars",
+          "nickname": "modifyCar",
           "parameters": [
             {
               "name": "vin",
@@ -224,7 +277,7 @@
               "name": "body",
               "description": "Request Body",
               "required": true,
-              "type": "cars",
+              "type": "car",
               "paramType": "body"
             }
           ],
@@ -232,7 +285,7 @@
             {
               "code": "200",
               "message": "Car successfully modified",
-              "responseModel": "cars"
+              "responseModel": "car"
             },
             {
               "code": "400",
@@ -257,45 +310,9 @@
           ]
         },
         {
-          "method": "DELETE",
-          "summary": "Delete a Car",
-          "nickname": "deleteCars",
-          "parameters": [
-            {
-              "name": "vin",
-              "description": "Vehicle Identification Number",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": "200",
-              "message": "Car successfully modified",
-              "responseModel": "error"
-            },
-            {
-              "code": "400",
-              "message": "Invalid Request - unable to interpret request",
-              "responseModel": "error"
-            },
-            {
-              "code": "401",
-              "message": "Authentication required to delete a car",
-              "responseModel": "error"
-            },
-            {
-              "code": "403",
-              "message": "Access denied - not authorized to delete a car",
-              "responseModel": "error"
-            }
-          ]
-        },
-        {
           "method": "OPTIONS",
-          "summary": "What can you do with a Cars Item",
-          "nickname": "carsItemOptions",
+          "summary": "What can this endpoint do?",
+          "nickname": "carOptions",
           "parameters": [
             {
               "name": "vin",
@@ -356,12 +373,219 @@
     },
     "cars": {
       "id": "cars",
-      "description": "Collection of Cars",
-      "properties":  {
+      "description": "A collection of Cars",
+      "type": "object",
+      "required": [
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Cars collection",
+          "type": "array",
+          "items": {
+            "$ref": "links"
+          }
+        },
+        "metadata": {
+            "$ref": "top_level_metadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "car"
+          }
+        }
+      }
+    },
+    "car": {
+      "id": "car",
+      "description": "Car Item",
+      "type": "object",
+      "required": [
+        "basic"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact an item in the Cars collection",
+          "type": "array",
+          "items": {
+            "$ref": "links"
+          }
+        },
+        "basic": {
+          "$ref": "basic"
+        }
+      }
+    },
+    "links": {
+      "id": "links",
+      "description": "Hypermedia links format",
+      "type": "object",
+      "required": [
+        "rel",
+        "href",
+        "method"
+      ],
+      "properties": {
+        "rel": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string",
+          "format": "uri"
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "DELETE",
+            "GET",
+            "OPTIONS",
+            "POST",
+            "PUT"
+          ]
+        }
+      }
+    },
+    "top_level_metadata": {
+      "id": "top_level_metadata",
+      "description": "Metadata about collection",
+      "type": "object",
+      "required": [
+        "collection_size",
+        "page_start",
+        "page_end",
+        "page_size",
+        "default_page_size",
+        "maximum_page_size"
+      ],
+      "properties": {
+        "collection_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_end": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "default_page_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maximum_page_size": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "basic": {
+      "id": "basic",
+      "description": "Car Basic Item",
+      "required": [
+        "vin",
+        "plate_state",
+        "plate_number",
+        "vehicle_type",
+        "vehicle_year",
+        "make",
+        "model",
+        "color",
+        "owner_id",
+        "owner_name",
+        "created_by_id",
+        "created_by_name",
+        "created_date_time",
+        "updated_by_id",
+        "updated_by_name",
+        "updated_date_time"
+      ],
+      "properties": {
+        "vin": {
+          "type": "string",
+          "description": "Vehicle Identification Number",
+          "maxLength": 16
+        },
         "plate_state": {
           "type": "string",
-          "description": "License Plate State",
+          "description": "License plate State",
           "maxLength": 2
+        },
+        "plate_number": {
+          "type": "string",
+          "description": "License Plate Number"
+        },
+        "vehicle_type": {
+          "type": "string",
+          "description": "Type of Vehicle",
+          "enum": [
+            "Car/Sedan/Coupe",
+            "Delivery/Service Truck",
+            "Moped/Scooter",
+            "Motorcycle",
+            "Other",
+            "Truck/SUV"
+          ]
+        },
+        "vehicle_year": {
+          "type": "string",
+          "description": "Model Year of the Vehicle",
+          "maxLength": 4
+        },
+        "make": {
+          "type": "string",
+          "description": "Make of the Vehicle"
+        },
+        "model": {
+          "type": "string",
+          "description": "Model of the Vehicle"
+        },
+        "color": {
+          "type": "string",
+          "description": "Color of the Vehicle"
+        },
+        "owner_id": {
+          "type": "string",
+          "description": "The ID of the owner of the vehicle",
+          "maxLength": 9
+        },
+        "owner_name": {
+          "type": "string",
+          "description": "The name of the owner of the vehicle"
+        },
+        "created_by_id": {
+          "type": "string",
+          "description": "The ID of the person that created the vehicle entry",
+          "maxLength": 9
+        },
+        "created_by_name": {
+          "type": "string",
+          "description": "The name of the person that created the vehicle entry"
+        },
+        "created_date_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the vehicle entry was created"
+        },
+        "updated_by_id": {
+          "type": "string",
+          "description": "The ID of the person that last updated the vehicle entry",
+          "maxLength": 9
+        },
+        "updated_by_name": {
+          "type": "string",
+          "description": "The name of the person that last updated the vehicle entry"
+        },
+        "updated_date_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the vehicle entry was last updated"
         }
       }
     }

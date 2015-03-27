@@ -9,7 +9,7 @@
     "schemes": [
         "https"
     ],
-    "basePath": "/byuapitutorial/cars/v1",
+    "basePath": "/byuapi/tutorial-cars/v1",
     "produces": [
         "application/json"
     ],
