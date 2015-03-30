@@ -271,7 +271,7 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-3.js"
     },
     {
-      "url_segment": "/tutorial2-cars/v1/73",
+      "url_segment": "/tutorial2-cars/73",
       "method": "PUT",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-3.js"
