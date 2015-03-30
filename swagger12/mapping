@@ -196,12 +196,6 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-1.js"
     },
     {
-      "url_segment": "/tutorial1-cars/?plate_state=MN&plate_number=669GLG&&&&&&",
-      "method": "GET",
-      "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-2.js"
-    },
-    {
       "url_segment": "/tutorial1-cars/",
       "method": "POST",
       "return_code": 201,
@@ -250,6 +244,50 @@
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor2/listings/basic.swag12"
+    },
+    {
+      "url_segment": "/tutorial2-cars",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-1.js"
+    },
+    {
+      "url_segment": "/tutorial2-cars/",
+      "method": "POST",
+      "return_code": 201,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-2.js"
+    },
+    {
+      "url_segment": "/tutorial2-cars",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,POST,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
+    },
+    {
+      "url_segment": "/tutorial2-cars/73",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-2.js"
+    },
+    {
+      "url_segment": "/tutorial2-cars/73",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-2.js"
+    },
+    {
+      "url_segment": "/tutorial2-cars/73",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-3.js"
+    },
+    {
+      "url_segment": "/tutorial2-cars/73",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
     }
   ]
 }
