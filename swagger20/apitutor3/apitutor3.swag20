@@ -520,7 +520,7 @@
                     "$ref": "#/definitions/model"
                 },
                 "color": {
-                    "$ref": "#/definitions/color
+                    "$ref": "#/definitions/color"
                 },
                 "owner_id": {
                     "$ref": "#/definitions/owner_id"
@@ -631,7 +631,7 @@
             }
         },
         "vin": {
-            "description": "Vehicle Identification Number"
+            "description": "Vehicle Identification Number",
             "type": "object",
             "required": [
                 "value",
