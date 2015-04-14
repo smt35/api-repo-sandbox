@@ -40,7 +40,7 @@
         "tutorial2-cars.delete": { "rel": "tutorial2-cars.delete",
           "href": "https://edge-wso2.byu.edu:3000/byuapi/tutorial2-cars/1FTBE14A4NP05962",
           "method": "DELETE",
-          "title": "tutorial2-cars.deleteCar
+          "title": "tutorial2-cars.deleteCar"
         },
         "tutorial2-owners.info": { "rel": "tutorial2-owners.info",
           "href": "https://edge-wso2.byu.edu:3000/byuapi/tutorial2-owners/783783783",
@@ -86,7 +86,7 @@
         "tutorial2-cars.delete": { "rel": "tutorial2-cars.delete",
           "href": "https://edge-wso2.byu.edu:3000/byuapi/tutorial2-cars/1DTGR14A6NP38861",
           "method": "DELETE",
-          "title": "tutorial2-cars.deleteCar
+          "title": "tutorial2-cars.deleteCar"
         },
         "tutorial2-owners.info": { "rel": "tutorial2-owners.info",
           "href": "https://edge-wso2.byu.edu:3000/byuapi/tutorial2-owners/586586586",
