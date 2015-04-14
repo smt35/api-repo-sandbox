@@ -49,7 +49,7 @@
             "value": "UT",
             "api_type": "modifiable",
             "description": "Utah",
-            "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate-state"
+            "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate_state"
           },
           "plate_number": {
             "value": "Q580RT",
