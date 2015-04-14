@@ -381,9 +381,14 @@
       "properties": {
         "links": {
           "description": "Hypermedia Links that impact the entire Cars collection",
-          "type": "array",
-          "items": {
-            "$ref": "links"
+          "type": "object",
+          "properties": {
+            "tutorial2-cars.info": {
+              "$ref": "link"
+            },
+            "tutorial2-cars.create": {
+              "$ref": "link"
+            }
           }
         },
         "metadata": {
@@ -407,9 +412,23 @@
       "properties": {
         "links": {
           "description": "Hypermedia Links that impact an item in the Cars collection",
-          "type": "array",
-          "items": {
-            "$ref": "links"
+          "type": "object",
+          "properties": {
+            "tutorial2-cars.info": {
+              "$ref": "link"
+            },
+            "tutorial2-cars.modify": {
+              "$ref": "link"
+            },
+            "tutorial2-cars.sell": {
+              "$ref": "link"
+            },
+            "tutorial2-cars.delete": {
+              "$ref": "link"
+            },
+            "tutorial2-owners.info": {
+              "$ref": "link"
+            }
           }
         },
         "basic": {
@@ -417,15 +436,10 @@
         }
       }
     },
-    "links": {
-      "id": "links",
+    "link": {
+      "id": "link",
       "description": "Hypermedia links format",
       "type": "object",
-      "required": [
-        "rel",
-        "href",
-        "method"
-      ],
       "properties": {
         "rel": {
           "type": "string"
@@ -443,6 +457,9 @@
             "POST",
             "PUT"
           ]
+        },
+        "title": {
+          "type": "string"
         }
       }
     },
@@ -450,14 +467,6 @@
       "id": "top_level_metadata",
       "description": "Metadata about collection",
       "type": "object",
-      "required": [
-        "collection_size",
-        "page_start",
-        "page_end",
-        "page_size",
-        "default_page_size",
-        "maximum_page_size"
-      ],
       "properties": {
         "collection_size": {
           "type": "integer",
@@ -491,20 +500,7 @@
       "required": [
         "vin",
         "plate_state",
-        "plate_number",
-        "vehicle_type",
-        "vehicle_year",
-        "make",
-        "model",
-        "color",
-        "owner_id",
-        "owner_name",
-        "created_by_id",
-        "created_by_name",
-        "created_date_time",
-        "updated_by_id",
-        "updated_by_name",
-        "updated_date_time"
+        "plate_number"
       ],
       "properties": {
         "vin": {

@@ -622,14 +622,6 @@
         },
         "top_level_metadata": {
             "type": "object",
-            "required": [
-                "collection_size",
-                "page_start",
-                "page_end",
-                "page_size",
-                "default_page_size",
-                "maximum_page_size"
-            ],
             "properties": {
                 "collection_size": {
                     "type": "integer",
