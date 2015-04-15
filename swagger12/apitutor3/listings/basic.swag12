@@ -381,9 +381,14 @@
       "properties": {
         "links": {
           "description": "Hypermedia Links that impact the entire Cars collection",
-          "type": "array",
-          "items": {
-            "$ref": "links"
+          "type": "object",
+          "properties": {
+            "tutorial3-cars.info": {
+              "$ref": "link"
+            },
+            "tutorial3-cars.create": {
+              "$ref": "link"
+            }
           }
         },
         "metadata": {
@@ -407,9 +412,23 @@
       "properties": {
         "links": {
           "description": "Hypermedia Links that impact an item in the Cars collection",
-          "type": "array",
-          "items": {
-            "$ref": "links"
+          "type": "object",
+          "properties": {
+            "tutorial3-cars.info": {
+              "$ref": "link"
+            },
+            "tutorial3-cars.modify": {
+              "$ref": "link"
+            },
+            "tutorial3-cars.sell": {
+              "$ref": "link"
+            },
+            "tutorial3-cars.delete": {
+              "$ref": "link"
+            },
+            "tutorial3-owners.info": {
+              "$ref": "link"
+            }
           }
         },
         "basic": {
@@ -417,14 +436,15 @@
         }
       }
     },
-    "links": {
+    "link": {
       "id": "links",
       "description": "Hypermedia links format",
       "type": "object",
       "required": [
         "rel",
         "href",
-        "method"
+        "method",
+        "title"
       ],
       "properties": {
         "rel": {
@@ -443,6 +463,9 @@
             "POST",
             "PUT"
           ]
+        },
+        "title": {
+          "type": "string"
         }
       }
     },
@@ -491,20 +514,7 @@
       "required": [
         "vin",
         "plate_state",
-        "plate_number",
-        "vehicle_type",
-        "vehicle_year",
-        "make",
-        "model",
-        "color",
-        "owner_id",
-        "owner_name",
-        "created_by_id",
-        "created_by_name",
-        "created_date_time",
-        "updated_by_id",
-        "updated_by_name",
-        "updated_date_time"
+        "plate_number"
       ],
       "properties": {
         "vin": {

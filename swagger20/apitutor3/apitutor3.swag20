@@ -443,9 +443,14 @@
             "properties": {
                 "links": {
                     "description": "Hypermedia Links that impact the entire Cars collection",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/links"
+                    "type": "object",
+                    "properties": {
+                        "tutorial3-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial3-cars.create": {
+                            "$ref": "#/definitions/link"
+                        }
                     }
                 },
                 "metadata": {
@@ -468,9 +473,23 @@
             "properties": {
                 "links": {
                     "description": "Hypermedia Links that impact an item in the Cars collection",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/links"
+                    "type": "object",
+                    "properties": {
+                        "tutorial2-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial2-cars.modify": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial2-cars.sell": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial2-cars.delete": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial2-owners.info": {
+                            "$ref": "#/definitions/link"
+                        }
                     }
                 },
                 "basic": {
@@ -484,18 +503,7 @@
             "required": [
                 "vin",
                 "plate_state",
-                "plate_number",
-                "vehicle_type",
-                "vehicle_year",
-                "make",
-                "model",
-                "color",
-                "owner_id",
-                "owner_name",
-                "created_by_id",
-                "created_date_time",
-                "updated_by_id",
-                "updated_date_time"
+                "plate_number"
             ],
             "properties": {
                 "vin": {
@@ -542,13 +550,14 @@
                 }
             }
         },
-        "links": {
+        "link": {
             "description": "Hypermedia links format",
             "type": "object",
             "required": [
                 "rel",
                 "href",
-                "method"
+                "method",
+                "title"
             ],
             "properties": {
                 "rel": {
@@ -567,6 +576,9 @@
                         "POST",
                         "PUT"
                     ]
+                },
+                "title": {
+                    "type": "string"
                 }
             }
         },
