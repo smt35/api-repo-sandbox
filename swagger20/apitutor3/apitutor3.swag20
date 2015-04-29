@@ -446,7 +446,7 @@
                     "type": "object",
                     "properties": {
                         "tutorial3-cars.info": {
-                            "$ref": "#/definitions/link"
+                            "$ref": "/definitions/link"#
                         },
                         "tutorial3-cars.create": {
                             "$ref": "#/definitions/link"
@@ -528,7 +528,7 @@
                     "$ref": "#/definitions/model"
                 },
                 "color": {
-                    "$ref": "#/definitions/color"
+                    "$ref": "/definitions/color#"
                 },
                 "owner_id": {
                     "$ref": "#/definitions/owner_id"
