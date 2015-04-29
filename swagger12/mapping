@@ -368,7 +368,7 @@
       "method": "OPTIONS",
       "return_code": 200,
       "return_header": "Allow: GET,OPTIONS",
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-options"
     }
   ]
 }
