@@ -1,0 +1,343 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
+  "resourcePath": "/archives",
+  "apis": [
+    {
+      "path": "/archives/{event_dt}",
+      "description": "Operations to retrieve events of the Event Hub archive in the University API Tutorial",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve Events from the Event Archive. Most events are available for 45 days.",
+          "nickname": "getArchives",
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Limits the list where the domain attribute matches the string expression.  The string may include wild characters ('*').  Since domains contain an embedded dot (\".\"), the period must be explicitly expressed in the search string.  For example, 'edu.byu' will limit the search to a specific domain, 'edu.*' will limit the search to all 'edu' domains, and '*.byu*' will limit the search to any domain that starts with 'byu' in the first part of the domain.",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "entity",
+              "description": "Limits the list where the entity attribute matches the string expression.  The string may include wild characters ('*').",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "event_dt",
+              "description": "Defines a date-time range for the search. The expected parameter should be of the format '(start_dt, end_dt)'. The dates should be standard ISO format expressed in zulu time. Maximum time span is one day.",
+              "required": true,
+              "type": "string",
+              "format": "date-time",
+              "paramType": "query"
+            },
+            {
+              "name": "event_type",
+              "description": "",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "page_start",
+              "description": "Specifies how far to skip into a large set",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "paramType": "query",
+              "defaultValue": "1"
+            },
+            {
+              "name": "page_size",
+              "description": "Specifies how many items to return from a large set",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "paramType": "query",
+              "defaultValue": "50"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Events Retrieved",
+              "responseModel": "events"
+            },
+            {
+              "code": "204",
+              "message": "No results found with search criteria"
+            },
+            {
+              "code": "400",
+              "message": "Unknown parameter in search criteria",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "events": {
+      "id": "events",
+      "description": "A collection of events",
+      "type": "object",
+      "required": [
+        "events"
+      ],
+      "properties": {
+        "events": {
+          "$ref": "events_array"
+        }
+      }
+    },
+    "event": {
+      "id": "event",
+      "description": "Event",
+      "type": "object",
+      "required": [
+        "event"
+      ],
+      "properties": {
+        "event": {
+          "$ref": "event_array"
+        }
+      }
+    },
+    "event_array": {
+      "id": "event_array",
+      "description": "An event array",
+      "type": "array",
+      "items": {
+        "$ref": "event_item"
+      }
+    },
+    "event_item": {
+      "id": "event_item",
+      "description": "An event item",
+      "type": "object",
+      "properties": {
+        "event_header": {
+          "$ref": "event_header"
+        },
+        "filters": {
+          "$ref": "filters"
+        },
+        "event_body": {
+          "$ref": "event_body"
+        },
+        "history": {
+          "$ref": "history"
+        }
+      }
+    },
+    "event_header": {
+      "id": "event_header",
+      "description": "Event Header",
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        },
+        "entity": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "source_dt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "event_dt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "dispatch_id": {
+          "type": "string"
+        }
+      }
+    },
+    "filters": {
+      "id": "filters",
+      "description": "filters",
+      "type": "object",
+      "properties": {
+        "filters": {
+          "$ref": "filter"
+        }
+      }
+    },
+    "filter": {
+      "id": "filter",
+      "description": "filter",
+      "type": "object",
+      "properties": {
+        "filter": {
+          "$ref": "filter_array"
+        }
+      }
+    },
+    "filter_array": {
+      "id": "filter_array",
+      "description": "filter_array",
+      "type": "array",
+      "items": {
+        "$ref": "filter_item"
+      }
+    },
+    "filter_item": {
+      "id": "filter_item",
+      "description": "filter_item",
+      "type": "object",
+      "properties": {
+        "filter_name": {
+          "type": "string"
+        },
+        "filter_value": {
+          "type": "string"
+        }
+      }
+    },
+    "event_body": {
+      "id": "event_body",
+      "description": "event body",
+      "type": "object",
+      "properties": {
+        "properties": {
+          "person_id": {
+            "id": "person_id",
+            "type": "string"
+          },
+          "student_name": {
+            "id": "student_name",
+            "type": "string"
+          },
+          "year_term": {
+            "id": "year_term",
+            "type": "string"
+          },
+          "curriculum_id": {
+            "id": "curriculum_id",
+            "type": "string"
+          },
+          "title_code": {
+            "id": "title_code",
+            "type": "string"
+          },
+          "section_number": {
+            "id": "section_number",
+            "type": "string"
+          },
+          "teaching_area": {
+            "id": "teaching_area",
+            "type": "string"
+          },
+          "catalog_number": {
+            "id": "catalog_number",
+            "type": "string"
+          },
+          "credit_hours": {
+            "id": "credit_hours",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "history": {
+      "id": "history",
+      "type": "object",
+      "description": "history",
+      "properties": {
+        "event_header": {
+          "$ref": "event_header"
+        }
+      }
+    },
+    "event_header": {
+      "id": "event_header",
+      "type": "array",
+      "items": {
+        "$ref": "event_header_item"
+      }
+    },
+    "event_header_item": {
+      "id": "event_header_item",
+      "type": "object",
+      "description": "event_header_item",
+      "properties": {
+        "domain": {
+          "id": "domain",
+          "type": "string",
+          "format": "uri"
+        },
+        "entity": {
+          "id": "entity",
+          "type": "string"
+        },
+        "event_type": {
+          "id": "event_type",
+          "type": "string"
+        },
+        "source_dt": {
+          "id": "source_dt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "event_dt": {
+          "id": "event_dt",
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_id": {
+          "id": "source_id",
+          "type": "string"
+        },
+        "event_id": {
+          "id": "event_id",
+          "type": "string"
+        },
+        "dispatch_id": {
+          "id": "dispatch_id",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
