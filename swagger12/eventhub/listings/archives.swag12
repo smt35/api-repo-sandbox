@@ -123,6 +123,14 @@
         }
       }
     },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "events": {
       "id": "events",
       "description": "A collection of events",

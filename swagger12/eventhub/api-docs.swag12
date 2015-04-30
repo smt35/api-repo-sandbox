@@ -13,6 +13,10 @@
     {
       "path": "/entities",
       "description": "Operations on entities of the Event Hub in the University API Tutorial"
+    },
+    {
+      "path": "/event-types",
+      "description": "Operations on event types of the Event Hub in the University API Tutorial"
     }
   ],
   "authorizations": {

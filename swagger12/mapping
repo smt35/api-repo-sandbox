@@ -445,6 +445,44 @@
       "return_code": 200,
       "return_header": "Allow: DELETE,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/delete-options"
+    },
+    {
+      "url_segment": "/eventhub/api-docs/event-types",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/eventhub/listings/event-types.swag12"
+    },
+    {
+      "url_segment": "/eventhub/event-types",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-6.js"
+    },
+    {
+      "url_segment": "/eventhub/event-types",
+      "method": "POST",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-7.js"
+    },
+    {
+      "url_segment": "/eventhub/event-types",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,POST,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
+    },
+    {
+      "url_segment": "/eventhub/event-types/edu.byu/AIM%20WaitListing/Add%20Class",
+      "method": "DELETE",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-7.js"
+    },
+    {
+      "url_segment": "/eventhub/event-types/edu.byu/AIM%20WaitListing/Add%20Class",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/put-delete-options"
     }
   ]
 }

@@ -2,19 +2,31 @@
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
   "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
-  "resourcePath": "/entities",
+  "resourcePath": "/event-types",
   "apis": [
     {
-      "path": "/entities",
-      "description": "Manage the entities visible on the Administrative Portal",
+      "path": "/event-types",
+      "description": "Manage the event-types visible on the Administrative Portal",
       "operations": [
         {
           "method": "GET",
-          "summary": "Lists the set of entities visible on the Administrative Portal.",
-          "nickname": "getEntities",
+          "summary": "Lists the set of event-types visible on the Administrative Portal.",
+          "nickname": "getEventTypes",
           "parameters": [
             {
+              "name": "domain",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
               "name": "entity",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "event-type",
               "required": false,
               "type": "string",
               "paramType": "query"
@@ -23,33 +35,38 @@
           "responseMessages": [
             {
               "code": "200",
-              "message": "entities Retrieved",
-              "responseModel": "entities"
+              "message": "event-types Retrieved",
+              "responseModel": "event-types"
             },
             {
               "code": "204",
               "message": "No results found"
+            },
+            {
+              "code": "400",
+              "message": "Unknown parameter in search criteria",
+              "responseModel": "error"
             }
           ]
         },
         {
           "method": "POST",
-          "summary": "Defines a new Entity.",
-          "nickname": "createEntity",
+          "summary": "Defines a new event type.",
+          "nickname": "createEventType",
           "parameters": [
             {
               "name": "body",
               "description": "Request Body",
               "required": true,
-              "type": "entity_definition_item",
+              "type": "event_type_definition_create",
               "paramType": "body"
             }
           ],
           "responseMessages": [
             {
               "code": "201",
-              "message": "Entity Added",
-              "responseModel": "entity_definition_item"
+              "message": "Event type Added",
+              "responseModel": "event_type_definition_create"
             },
             {
               "code": "400",
@@ -58,12 +75,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to add an entity",
+              "message": "Authentication required to add a event type",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to add an entity",
+              "message": "Access denied - not authorized to add a event type",
               "responseModel": "error"
             },
             {
@@ -76,7 +93,7 @@
         {
           "method": "OPTIONS",
           "summary": "What can this endpoint do?",
-          "nickname": "entitiesOptions",
+          "nickname": "eventTypesOptions",
           "responseMessages": [
             {
               "code": "200",
@@ -93,13 +110,13 @@
       ]
     },
     {
-      "path": "/entities/{domain}/{entity}",
-      "description": "Manage a specific entitiy visible on the Administrative Portal",
+      "path": "/event-types/{domain}/{entity}/{event_type}",
+      "description": "Manage a specific event type visible on the Administrative Portal",
       "operations": [
         {
-          "method": "DELETE",
-          "summary": "Delete a entity",
-          "nickname": "deleteEntity",
+          "method": "PUT",
+          "summary": "Modify an event type",
+          "nickname": "modifyEventType",
           "parameters": [
             {
               "name": "domain",
@@ -114,12 +131,27 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            },
+            {
+              "name": "event_type",
+              "description": "event_type",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "event_type_definition_create",
+              "paramType": "body"
             }
           ],
           "responseMessages": [
             {
-              "code": "204",
-              "message": "Entity successfully removed"
+              "code": "200",
+              "message": "Event type successfully modified",
+              "responseModel": "event_type_definition_create"
             },
             {
               "code": "400",
@@ -128,25 +160,25 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to delete an entity",
+              "message": "Authentication required to modify an event type",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to delete an entity",
+              "message": "Access denied - not authorized to modify an event type",
               "responseModel": "error"
             },
             {
-              "code": "404",
-              "message": "Entity not found",
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
               "responseModel": "error"
             }
           ]
         },
         {
-          "method": "OPTIONS",
-          "summary": "What can this endpoint do?",
-          "nickname": "entityOptions",
+          "method": "DELETE",
+          "summary": "Delete an event type",
+          "nickname": "deleteEventType",
           "parameters": [
             {
               "name": "domain",
@@ -158,6 +190,67 @@
             {
               "name": "entity",
               "description": "entity",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "event_type",
+              "description": "event_type",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Event type successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete an event type",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete an event type",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "Event type not found",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "eventTypeOptions",
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "entity",
+              "description": "entity",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "event_type",
+              "description": "event_type",
               "required": true,
               "type": "string",
               "paramType": "path"
@@ -212,73 +305,95 @@
         "type": "string"
       }
     },
-    "entities": {
-      "id": "entities",
+    "event-types": {
+      "id": "event-types",
       "type": "object",
       "properties": {
-        "entities": {
-          "$ref": "entity_definition"
+        "event_types": {
+          "$ref": "event_type_definition"
         }
       },
       "required": [
-        "entities"
+        "event_types"
       ]
     },
-    "entity_definition" : {
-      "id": "entity_definition",
+    "event_type_definition": {
+      "id": "event_type_definition",
       "type": "object",
       "properties": {
-        "entity_definition": {
-          "$ref": "entity_array"
+        "event_type_definition": {
+          "$ref": "event_type_array"
         }
       },
       "required": [
-        "entity_definition"
+        "event_type_definition"
       ]
     },
-    "entity_array": {
-      "id": "entity_array",
+    "event_type_array": {
+      "id": "event_type_array",
       "type": "array",
       "items": [
         {
-          "$ref": "entity"
+          "$ref": "event"
         }
       ]
     },
-    "entity_definition_item" : {
-      "id": "entity_definition_item",
+    "event_type_definition_create": {
+      "id": "event_type_definition_create",
       "type": "object",
       "properties": {
-        "entity_definition": {
-          "$ref": "entity"
+        "event_type_definition": {
+          "$ref": "event"
         }
       },
       "required": [
-        "entity_definition"
+        "event_type_definition"
       ]
     },
-    "entity": {
-      "id": "entity",
+    "event": {
+      "id": "event",
       "type": "object",
       "properties": {
+        "domain": {
+          "type": "string"
+        },
         "entity": {
+          "type": "string"
+        },
+        "event_type": {
           "type": "string"
         },
         "description": {
           "type": "string"
         },
-        "domain": {
-          "type": "string"
-        },
-        "entity_ega": {
-          "type": "string"
+        "filter_names": {
+          "$ref": "filter_names"
         }
       },
       "required": [
-        "entity",
-        "description",
         "domain",
-        "entity_ega"
+        "entity",
+        "event_type",
+        "description",
+        "filter_names"
+      ]
+    },
+    "filter_names": {
+      "id": "filter_names",
+      "type": "object",
+      "properties": {
+        "filter_name": {
+          "$ref": "filter_name"
+        }
+      }
+    },
+    "filter_name": {
+      "id": "filter_name",
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
       ]
     }
   }

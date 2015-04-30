@@ -177,6 +177,14 @@
         }
       }
     },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "domains": {
       "id": "domains",
       "description": "domains",
