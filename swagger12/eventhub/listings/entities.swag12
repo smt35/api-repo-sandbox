@@ -1,0 +1,277 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
+  "resourcePath": "/entities",
+  "apis": [
+    {
+      "path": "/entities",
+      "description": "Manage the entities visible on the Administrative Portal",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Lists the set of entities visible on the Administrative Portal.",
+          "nickname": "getEntities",
+          "parameters": [
+            {
+              "name": "entity",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "entities Retrieved",
+              "responseModel": "entities"
+            },
+            {
+              "code": "204",
+              "message": "No results found"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Defines a new Entity.",
+          "nickname": "createEntity",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "entity_definition_item",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Entity Added",
+              "responseModel": "entity_definition_item"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add a entity",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add a entity",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "entitiesOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/entities/{domain}/{entity}",
+      "description": "Manage a specific entitiy visible on the Administrative Portal",
+      "operations": [
+        {
+          "method": "DELETE",
+          "summary": "Delete a entity",
+          "nickname": "deleteEntity",
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "entity",
+              "description": "entity",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Entity successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete a entity",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete a entity",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "Entity not found",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "entityOptions",
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "entity",
+              "description": "entity",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "entities": {
+      "id": "entities",
+      "type": "object",
+      "properties": {
+        "entities": {
+          "$ref": "entity_definition"
+        }
+      },
+      "required": [
+        "entities"
+      ]
+    },
+    "entity_definition" : {
+      "id": "entity_definition",
+      "type": "object",
+      "properties": {
+        "entity_definition": {
+          "$ref": "entity_array"
+        }
+      },
+      "required": [
+        "entity_definition"
+      ]
+    },
+    "entity_array": {
+      "id": "entity_array",
+      "type": "array",
+      "items": [
+        {
+          "$ref": "entity"
+        }
+      ]
+    },
+    "entity_definition_item" : {
+      "id": "entity_definition_item",
+      "type": "object",
+      "properties": {
+        "entity_definition": {
+          "$ref": "entity"
+        }
+      },
+      "required": [
+        "entity_definition"
+      ]
+    },
+    "entity": {
+      "id": "entity",
+      "type": "object",
+      "properties": {
+        "entity": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        },
+        "entity_ega": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "entity",
+        "description",
+        "domain",
+        "entity_ega"
+      ]
+    }
+  }
+}

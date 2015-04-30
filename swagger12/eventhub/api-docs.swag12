@@ -9,6 +9,10 @@
     {
       "path": "/domains",
       "description": "Operations on domains of the Event Hub in the University API Tutorial"
+    },
+    {
+      "path": "/entities",
+      "description": "Operations on entities of the Event Hub in the University API Tutorial"
     }
   ],
   "authorizations": {
