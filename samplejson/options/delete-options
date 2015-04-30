@@ -1,6 +1,6 @@
 {
   "supported_methods": [
-    "GET",
+    "DELETE",
     "OPTIONS"
   ]
 }
