@@ -17,7 +17,7 @@
     "updated_date_time": "2014-09-15T08:12:44.03Z"
   },
   { "vin": "1DTGR14A6NP38861",
-    "plate_state": "UT",
+    "plate_state": "WY",
     "plate_number": "C49D3T",
     "vehicle_type": "Truck/SUV",
     "vehicle_year": "1997",
