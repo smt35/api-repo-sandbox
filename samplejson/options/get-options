@@ -1,7 +1,6 @@
 {
   "supported_methods": [
     "GET",
-    "OPTIONS",
-    "TEST"
+    "OPTIONS"
   ]
 }
