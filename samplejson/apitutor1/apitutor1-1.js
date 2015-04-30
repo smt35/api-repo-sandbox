@@ -17,7 +17,7 @@
     "updated_date_time": "2014-09-15T08:12:44.03Z"
   },
   { "vin": "1DTGR14A6NP38861",
-    "plate_state": "UT",
+    "plate_state": "ND",
     "plate_number": "C49D3T",
     "vehicle_type": "Truck/SUV",
     "vehicle_year": "1996",
@@ -48,23 +48,6 @@
     "created_date_time": "2014-05-11T13:45:53.09Z",
     "updated_by_id": "783783783",
     "updated_by_name": "Daisy Duck",
-    "updated_date_time": "2014-09-15T08:12:44.03Z"
-  },
-    { "vin": "1CRTAYLORNX78232",
-    "plate_state": "UT",
-    "plate_number": "POKEMO",
-    "vehicle_type": "Truck/SUV",
-    "vehicle_year": "1903",
-    "make": "MARVELlet",
-    "model": "PIKACHU",
-    "color": "Tan",
-    "owner_id": "333336586",
-    "owner_name": "taylor cow",
-    "created_by_id": "333336586",
-    "created_by_name": "taylor cow",
-    "created_date_time": "2014-05-11T13:45:53.09Z",
-    "updated_by_id": "333333783",
-    "updated_by_name": "taylor cow",
     "updated_date_time": "2014-09-15T08:12:44.03Z"
   }
 ]
