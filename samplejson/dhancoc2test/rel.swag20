@@ -1,0 +1,490 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Relationship",
+        "description": "Relationship Resource",
+        "version": "v1"
+    },
+    "host": "y-tst.byu.edu",
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/ry/ae/prod/person/cgi/relationship.cgi",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "Relationship",
+                "description": "Returns a collection of Relationships",
+                "operationId": "getRelationships",
+                "parameters": [
+                    {
+                        "name": "rel_type",
+                        "in": "query",
+                        "description": "rel_type",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "rel_identity_id",
+                        "in": "query",
+                        "description": "rel_identity_id",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "rel_person_id",
+                        "in": "query",
+                        "description": "rel_person_id",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Relationship"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Collection Retrieved",
+                        "schema": {
+                            "$ref": "#/definitions/relationships"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "404": {
+                        "description": "No Relationships satisfy the query parameters - the collection is empty",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Relationship",
+                "description": "Add a new Relationship",
+                "operationId": "addRelationship",
+                "parameters": [
+                    {
+                        "name": "relationship",
+                        "in": "body",
+                        "description": "The Relationship to be added",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/relationship"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Relationship"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Relationship Added",
+                        "schema": {
+                            "$ref": "#/definitions/relationship"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Request Body conflicts or is malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "options": {
+                "summary": "Relationship",
+                "description": "What can this endpoint do?",
+                "operationId": "relationshipOptions",
+                "tags": [
+                    "Relationship"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Supported HTTP Methods",
+                        "schema": {
+                            "$ref": "#/definitions/methods"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{person_id}": {
+            "get": {
+                "summary": "Relationships",
+                "description": "Returns a specific Relationship",
+                "operationId": "getRelationship",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "path",
+                        "description": "person_id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Relationship"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Item Retrieved",
+                        "schema": {
+                            "$ref": "#/definitions/relationship"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "404": {
+                        "description": "No Relationships satisfy the request - the collection is empty",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Relationship",
+                "description": "Delete a specific Relationship",
+                "operationId": "deleteRelationshipr",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "path",
+                        "description": "person_id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Relationship"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Relationship successfully removed"
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Relationship",
+                "description": "Modify a specific Relationship",
+                "operationId": "modifyRelationship",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "path",
+                        "description": "person_id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "rel_person_id",
+                        "in": "body",
+                        "description": "rel_person_id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/relationship"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Relationship"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Relationship Modified",
+                        "schema": {
+                            "$ref": "#/definitions/relationship"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Request Body conflicts or is malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "options": {
+                "summary": "Relationship",
+                "description": "What can this endpoint do?",
+                "operationId": "relationshipOptions",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "path",
+                        "description": "person_id",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Relationship"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Supported HTTP Methods",
+                        "schema": {
+                            "$ref": "#/definitions/methods"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "relationships": {
+            "description": "A collection of Relationships",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/relationship"
+            }
+        },
+        "relationship": {
+            "description": "Relationship",
+            "type": "object",
+            "required": [
+                "relationshipsSaved",
+                "maximumAllowedRelationships"
+            ],
+            "properties": {
+                "relationshipsSaved": {
+                    "description": "Number of Saved Relationships for Person",
+                    "type": "string",
+                    "maxLength": 2
+                },
+                "spouse": {
+                    "description": "If Person has a Saved Spouse Relationship",
+                    "type": "string",
+                    "maxLength": 1
+                },
+                "relationshipInformation": {
+                    "description": "Array of ALL Saved Relationships",
+                    "type": "array",
+                    "items": {
+                        "preferredName": {
+                            "description": "Relative's Preferred Name",
+                            "type": "string",
+                            "maxLength": 30
+                        },
+                        "relationship": {
+                            "description": "Relationship Type",
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "maritalStatus": {
+                            "description": "Marital Status",
+                            "type": "string",
+                            "maxLength": 10
+                        },
+                        "age": {
+                            "description": "Age of Person",
+                            "type": "string",
+                            "maxLength": 3
+                        },
+                        "gender": {
+                            "description": "Gender",
+                            "type": "string",
+                            "maxLength": 1
+                        },
+                        "studentRole": {
+                            "description": "Status as a Student",
+                            "type": "string"
+                        },
+                        "employeeRole": {
+                            "description": "Status as an Employee",
+                            "type": "string"
+                        },
+                        "person_id": {
+                            "description": "person_id",
+                            "type": "string",
+                            "maxLength": 9
+                        },
+                        "verified": {
+                            "description": "Status of Verification",
+                            "type": "string",
+                            "maxLength": 10
+                        }
+                    }
+                },
+                "maximumAllowedRelationships": {
+                    "description": "Maximum Number of Saved Relationships Allowed",
+                    "type": "string",
+                    "maxLength": 2
+                }
+            }
+        },
+        "error": {
+            "description": "Error Information",
+            "type": "object",
+            "properties": {
+                "return_code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "explanation": {
+                    "type": "string"
+                },
+                "error_data": {
+                    "type": "string"
+                }
+            }
+        },
+        "methods": {
+            "description": "Supported HTTP Methods",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}
