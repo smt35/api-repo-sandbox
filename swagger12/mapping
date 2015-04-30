@@ -483,6 +483,43 @@
       "return_code": 200,
       "return_header": "Allow: PUT,DELETE,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/put-delete-options"
+    },
+    {
+      "url_segment": "/eventhub/api-docs/events",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/eventhub/listings/events.swag12"
+    },
+    {
+      "url_segment": "/eventhub/events",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-1.js"
+    },
+    {
+      "url_segment": "/eventhub/events",
+      "method": "POST",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-8.js"
+    },
+    {
+      "url_segment": "/eventhub/events",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,POST,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
+    },
+    {
+      "url_segment": "/eventhub/events/cea9a774-dfe8-4dfd-8a2a-bb2edc984407",
+      "method": "PUT",
+      "return_code": 200
+    },
+    {
+      "url_segment": "/eventhub/events/cea9a774-dfe8-4dfd-8a2a-bb2edc984407",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: PUT,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/put-options"
     }
   ]
 }

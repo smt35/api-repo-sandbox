@@ -1,0 +1,468 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
+  "resourcePath": "/events",
+  "apis": [
+    {
+      "path": "/events",
+      "description": "Allows a business application to retrieve its next group of events from the Event Hub.",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a collection of events",
+          "nickname": "getEvents",
+          "parameters": [
+            {
+              "name": "count",
+              "description": "Defines how many events to return. Defaults to 1.",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "paramType": "query",
+              "defaultValue": "1"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Collection Retrieved",
+              "responseModel": "events"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Cars satisfy the query parameters - the collection is empty",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Query parameters conflict or are malformed",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Create a new event",
+          "nickname": "createEvent",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "events",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Event raised",
+              "responseModel": "events_return"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add an event",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add an event",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "eventsOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{event_id}",
+      "description": "Operations on an event item",
+      "operations": [
+        {
+          "method": "PUT",
+          "summary": "Acknowledge an event",
+          "nickname": "acknowledgeEvent",
+          "parameters": [
+            {
+              "name": "event_id",
+              "description": "event_id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Event Item Retrieved"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No events found - invalid event_id",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "eventOptions",
+          "parameters": [
+            {
+              "name": "event_id",
+              "description": "event_id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "events": {
+      "id": "events",
+      "type": "object",
+      "properties": {
+        "events": {
+          "$ref": "event"
+        }
+      },
+      "required": [
+        "events"
+      ]
+    },
+    "event": {
+      "id": "event",
+      "type": "object",
+      "properties": {
+        "event": {
+          "$ref": "event_array"
+        }
+      },
+      "required": [
+        "event"
+      ]
+    },
+    "event_array": {
+      "id": "event_array",
+      "type": "array",
+      "items": {
+        "$ref": "event"
+      }
+    },
+    "event_item": {
+      "id": "event_item",
+      "type": "object",
+      "properties": {
+        "event_header": {
+          "$ref": "event_header"
+        },
+        "filters": {
+          "$ref": "filters"
+        },
+        "event_body": {
+          "$ref": "event_body"
+        },
+        "history": {
+          "$ref": "history"
+        }
+      },
+      "required": [
+        "event_header",
+        "filters",
+        "event_body",
+        "history"
+      ]
+    },
+    "event_header": {
+      "id": "event_header",
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        },
+        "entity": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "source_dt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "event_dt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "event_id": {
+          "type": "string"
+        },
+        "dispatch_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain",
+        "entity",
+        "event_type",
+        "source_dt",
+        "event_dt",
+        "source_id",
+        "event_id",
+        "dispatch_id",
+        "0"
+      ]
+    },
+    "filters": {
+      "id": "filters",
+      "type": "object",
+      "properties": {
+        "filter": {
+          "$ref": "filter_array"
+        }
+      }
+    },
+    "filter_array": {
+      "id": "filter",
+      "type": "array",
+      "items": {
+        "$ref": "filter"
+      }
+    },
+    "filter": {
+      "id": "filter",
+      "type": "object",
+      "properties": {
+        "filter_name": {
+          "type": "string"
+        },
+        "filter_value": {
+          "type": "string"
+        }
+      }
+    },
+    "event_body": {
+      "id": "event_body",
+      "type": "object",
+      "properties": {
+        "person_id": {
+          "type": "string"
+        },
+        "student_name": {
+          "type": "string"
+        },
+        "year_term": {
+          "type": "string"
+        },
+        "curriculum_id": {
+          "type": "string"
+        },
+        "title_code": {
+          "type": "string"
+        },
+        "section_number": {
+          "type": "string"
+        },
+        "teaching_area": {
+          "type": "string"
+        },
+        "catalog_number": {
+          "type": "string"
+        },
+        "credit_hours": {
+          "type": "string"
+        }
+      }
+    },
+    "history": {
+      "id": "history",
+      "type": "object",
+      "properties": {
+        "event_header": {
+          "$ref": "event_header_array"
+        }
+      }
+    },
+    "event_header_array": {
+      "id": "event_header_array",
+      "type": "array",
+      "items": {
+        "$ref": "event_header"
+      }
+    }
+  },
+  "events_return" : {
+    "id": "events_return",
+    "type": "object",
+    "properties": {
+      "events_return": {
+        "$ref": "event_return"
+      }
+    },
+    "required": [
+      "events_return"
+    ]
+  },
+  "event_return": {
+    "id": "event_return",
+    "type": "object",
+    "properties": {
+      "event_return": {
+        "$ref": "event_return_array"
+      }
+    },
+    "required": [
+      "event_return"
+    ]
+  },
+  "event_return_array": {
+    "id": "event_return_array",
+    "type": "array",
+    "items": {
+      "$ref": "event_return_item"
+    }
+  },
+  "event_return_item": {
+    "id": "event_return_item",
+    "type": "object",
+    "properties": {
+      "domain": {
+        "type": "string",
+        "format": "uri"
+      },
+      "entity": {
+        "type": "string"
+      },
+      "event_type": {
+        "type": "string"
+      },
+      "source_dt": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "source_id": {
+        "type": "string"
+      },
+      "return_code": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "domain",
+      "entity",
+      "event_type",
+      "source_dt",
+      "source_id",
+      "return_code"
+    ]
+  }
+}

@@ -17,6 +17,10 @@
     {
       "path": "/event-types",
       "description": "Operations on event types of the Event Hub in the University API Tutorial"
+    },
+    {
+      "path": "/events",
+      "description": "Operations on events the Event Hub in the University API Tutorial"
     }
   ],
   "authorizations": {
