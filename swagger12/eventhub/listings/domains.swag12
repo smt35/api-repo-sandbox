@@ -126,7 +126,16 @@
         {
           "method": "OPTIONS",
           "summary": "What can this endpoint do?",
-          "nickname": "domainOptions",
+          "nickname": "domainOptions",,
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
           "responseMessages": [
             {
               "code": "200",
