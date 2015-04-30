@@ -20,7 +20,7 @@
     "plate_state": "UT",
     "plate_number": "C49D3T",
     "vehicle_type": "Truck/SUV",
-    "vehicle_year": "1996",
+    "vehicle_year": "1997",
     "make": "Ford",
     "model": "Ranger",
     "color": "Blue",
