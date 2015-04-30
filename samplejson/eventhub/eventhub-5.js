@@ -1,5 +1,5 @@
 {
-    entity_definition : {
+    "entity_definition" : {
         "entity" : "AIM WaitListing",
         "description" : "Wait List module adds classes as space allows",
         "domain" : "edu.byu",
