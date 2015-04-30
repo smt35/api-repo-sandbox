@@ -126,7 +126,7 @@
         {
           "method": "OPTIONS",
           "summary": "What can this endpoint do?",
-          "nickname": "domainOptions",,
+          "nickname": "domainOptions",
           "parameters": [
             {
               "name": "domain",
