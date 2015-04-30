@@ -86,7 +86,7 @@
     },
     {
       "path": "/domains/{domain}",
-      "description": "Manage the domains visible on the Administrative Portal",
+      "description": "Manage a specific domain visible on the Administrative Portal",
       "operations": [
         {
           "method": "DELETE",
