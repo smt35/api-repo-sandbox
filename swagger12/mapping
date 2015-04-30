@@ -369,6 +369,44 @@
       "return_code": 200,
       "return_header": "Allow: GET,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-options"
+    },
+    {
+      "url_segment": "/eventhub/api-docs/domains",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/eventhub/listings/domains.swag12"
+    },
+    {
+      "url_segment": "/eventhub/domains",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-3.js"
+    },
+    {
+      "url_segment": "/eventhub/domains",
+      "method": "POST",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-2.js"
+    },
+    {
+      "url_segment": "/eventhub/domains",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,POST,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
+    },
+    {
+      "url_segment": "/eventhub/domains/byu.edu",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-2.js"
+    },
+    {
+      "url_segment": "/eventhub/domains/byu.edu",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/delete-options"
     }
   ]
 }

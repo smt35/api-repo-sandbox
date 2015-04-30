@@ -81,7 +81,7 @@
         {
           "method": "OPTIONS",
           "summary": "What can this endpoint do?",
-          "nickname": "eventhubOptions",
+          "nickname": "archivesOptions",
           "responseMessages": [
             {
               "code": "200",

@@ -5,6 +5,10 @@
     {
       "path": "/archives",
       "description": "Operations to retrieve events of the Event Hub archive in the University API Tutorial"
+    },
+    {
+      "path": "/domains",
+      "description": "Operations on domains of the Event Hub in the University API Tutorial"
     }
   ],
   "authorizations": {

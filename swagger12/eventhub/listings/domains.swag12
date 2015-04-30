@@ -1,0 +1,238 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
+  "resourcePath": "/domains",
+  "apis": [
+    {
+      "path": "/domains",
+      "description": "Manage the domains visible on the Administrative Portal",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Lists the set of Domains visible on the Administrative Portal.",
+          "nickname": "getDomains",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Domains Retrieved",
+              "responseModel": "domains"
+            },
+            {
+              "code": "204",
+              "message": "No results found"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Defines a new Domain.  We are using Internet accepted domains.  Event Types are grouped in Domains and then Entities. This makes the new Domain visible on the Administrative Portal.  The Administrative Portal is used by developers to manage their subscriptions.",
+          "nickname": "createDomain",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "domain_definition_create",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Domain Added",
+              "responseModel": "car"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add a domain",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add a domain",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "domainsOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}",
+      "description": "Manage the domains visible on the Administrative Portal",
+      "operations": [
+        {
+          "method": "DELETE",
+          "summary": "Delete a Domain",
+          "nickname": "deleteDomain",
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Domain successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete a domain",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete a domain",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "domainOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "domains": {
+      "id": "domains",
+      "description": "domains",
+      "type": "object",
+      "properties": {
+        "domains": {
+          "$ref": "domain_definition"
+        }
+      },
+      "required": [
+        "domains"
+      ]
+    },
+    "domain_definition": {
+      "id": "domain_definition",
+      "description": "domain_definition",
+      "type": "object",
+      "properties": {
+        "domain_definition": {
+          "$ref": "domain_definition_array"
+        }
+      },
+      "required": [
+        "domain_definition"
+      ]
+    },
+    "domain_definition_array": {
+      "id": "domain_definition_array",
+      "description": "domain_definition_array",
+      "type": "array",
+      "items": [
+        {
+          "$ref": "domain"
+        }
+      ]
+    },
+    "domain_definition_create": {
+      "id": "domain_definition_create",
+      "description": "domain_definition_create",
+      "type": "object",
+      "properties": {
+        "domain_definition": {
+          "$ref": "domain"
+        }
+      },
+      "required": [
+        "domain_definition"
+      ]
+    },
+    "domain": {
+      "id": "domain",
+      "description": "domain",
+      "type": "object",
+      "properties": {
+        "domain": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "domain",
+        "description"
+      ]
+    }
+  }
+}
