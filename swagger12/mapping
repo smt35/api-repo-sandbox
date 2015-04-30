@@ -397,9 +397,9 @@
     },
     {
       "url_segment": "/eventhub/domains/byu.edu",
-      "method": "GET",
+      "method": "DELETE",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-2.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-4.js"
     },
     {
       "url_segment": "/eventhub/domains/byu.edu",
