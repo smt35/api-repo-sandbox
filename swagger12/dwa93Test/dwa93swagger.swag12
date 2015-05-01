@@ -1,0 +1,382 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/test-names",
+  "resourcePath": "/basic",
+  "apis": [
+    {
+      "path": "/",
+      "description": "Students on Doug's Team",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Returns a List of Student Names",
+          "nickname": "getNames",
+          "parameters": [
+            {
+              "name": "net_id",
+              "in": "query",
+              "description": "Student NetId",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "first_name",
+              "in": "query",
+              "description": "Student Frist Name",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "surname",
+              "in": "query",
+              "description": "Student Surname",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "seat_number",
+              "in": "query",
+              "description": "Student Seat Number",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "gender",
+              "in": "query",
+              "description": "Student Gender",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Names Retrieved",
+              "responseModel": "names"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Student Names satisfy the query parameters - the collection is empty",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Query parameters conflict or are malformed",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "New Student's Name",
+          "nickname": "newStudent",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "name",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Student Added",
+              "responseModel": "car"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add a student",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add a student",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "namesOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{net_id}",
+      "description": "Operations for Student Names",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a Student's Name",
+          "nickname": "getName",
+          "parameters": [
+            {
+              "name": "net_id",
+              "description": "Student Net Id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Student Name Retrieved",
+              "responseModel": "name"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Students found - invalid Net ID",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a Student",
+          "nickname": "deleteName",
+          "parameters": [
+            {
+              "name": "net_id",
+              "description": "Student Net Id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Student successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete a student",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete a student",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Modify a Student's Name",
+          "nickname": "modifyName",
+          "parameters": [
+            {
+              "name": "net_id",
+              "description": "Student Net Id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "name",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Student's Name successfully modified",
+              "responseModel": "name"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to modify a name",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to modify a name",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "nameOptions",
+          "parameters": [
+            {
+              "name": "net_id",
+              "description": "Student Net Id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "names": {
+      "id": "names",
+      "description": "List of Student Names",
+      "type": "array",
+      "items": {
+        "$ref": "name"
+      }
+    },
+    "name": {
+      "id": "name",
+      "description": "Student Name",
+      "required": [
+        "net_id",
+        "first_name",
+        "surname",
+        "seat_number",
+        "gender"
+      ],
+      "properties": {
+        "net_id": {
+          "type": "string",
+          "description": "Student Net Id",
+          "maxLength": 10
+        },
+        "first_name": {
+          "type": "string",
+          "description": "Student's First Name"
+        },
+        "surname": {
+          "type": "string",
+          "description": "Student's Surnmane"
+        },
+        "seat_number": {
+          "type": "integer",
+          "description": "Student's Seat Number"
+        },
+        "gender": {
+          "type": "string",
+          "description": "Student's Gender",
+          "enum": [
+            "Male",
+            "Female",
+          ]
+        }
+      }
+    }
+  }
+}
