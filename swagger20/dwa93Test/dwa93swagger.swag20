@@ -5,11 +5,11 @@
         "description": "Students on Doug's Team",
         "version": "v1"
     },
-    "host": "github.com",
+    "host": "edge-wso2.byu.edu:8243",
     "schemes": [
         "https"
     ],
-    "basePath": "/BYU-OIT/api-repo-sandbox/blob/master/samplejson/dwa93Test/dwatest.js",
+    "basePath": "/byuapi/test-names",
     "produces": [
         "application/json"
     ],
@@ -85,7 +85,7 @@
                         }
                     },
                     "404": {
-                        "description": "No Cars satisfy the query parameters - the collection is empty",
+                        "description": "No Student Names satisfy the query parameters - the collection is empty",
                         "schema": {
                             "$ref": "#/definitions/error"
                         }
@@ -105,7 +105,7 @@
                 }
             },
             "post": {
-                "summary": "Names",
+                "summary": "New Student's Name",
                 "description": "Enter a newly hired student's name",
                 "operationId": "newStudent",
                 "parameters": [
@@ -209,7 +209,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Student Name",
+                        "description": "Student Name Retrieved",
                         "schema": {
                             "$ref": "#/definitions/name"
                         }
