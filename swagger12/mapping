@@ -519,7 +519,7 @@
       "url_segment": "/eventhub/events/cea9a774-dfe8-4dfd-8a2a-bb2edc984407",
       "method": "PUT",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-1.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-4.js"
     },
     {
       "url_segment": "/eventhub/events/cea9a774-dfe8-4dfd-8a2a-bb2edc984407",
