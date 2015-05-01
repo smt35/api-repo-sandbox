@@ -565,6 +565,62 @@
       "return_code": 200,
       "return_header": "Allow: DELETE,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/delete-options"
+    },
+    {
+      "url_segment": "/eventhub/api-docs/summaries",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/eventhub/listings/summaries.swag12"
+    },
+    {
+      "url_segment": "/eventhub/summaries",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-11.js"
+    },
+    {
+      "url_segment": "/eventhub/summaries",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-options"
+    },
+    {
+     "url_segment": "/eventhub/api-docs/webhooks",
+     "method": "GET",
+     "return_code": 200,
+     "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/eventhub/listings/webhooks.swag12"
+    },
+    {
+     "url_segment": "/eventhub/webhooks",
+     "method": "GET",
+     "return_code": 200,
+     "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-12.js"
+    },
+    {
+     "url_segment": "/eventhub/webhooks",
+     "method": "POST",
+     "return_code": 200,
+     "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-13.js"
+    },
+    {
+     "url_segment": "/eventhub/webhooks",
+     "method": "PUT",
+     "return_code": 200,
+     "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-13.js"
+    },
+    {
+      "url_segment": "/eventhub/webhooks",
+      "method": "DELETE",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-4.js"
+    },
+    {
+     "url_segment": "/eventhub/webhooks",
+     "method": "OPTIONS",
+     "return_code": 200,
+     "return_header": "Allow: GET,POST,PUT,DELETE,OPTIONS",
+     "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-put-delete-options"
     }
   ]
 }
