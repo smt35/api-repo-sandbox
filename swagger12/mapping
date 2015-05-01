@@ -473,6 +473,12 @@
     },
     {
       "url_segment": "/eventhub/event-types/edu.byu/AIM%20WaitListing/Add%20Class",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-7.js"
+    },
+    {
+      "url_segment": "/eventhub/event-types/edu.byu/AIM%20WaitListing/Add%20Class",
       "method": "DELETE",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/eventhub/eventhub-7.js"
