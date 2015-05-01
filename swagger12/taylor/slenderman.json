@@ -1,0 +1,22 @@
+[{
+    "slender_id" : "the one",
+    "slender_name" : "the one",
+    "discovery_date" : "october",
+    "attacks" : [
+      {
+        "attack_id" : "1",
+        "attack_name" : "sucker punch",
+        "attack_details" : "the slenderman uses his abnormally long arms to punch you in the face"
+      },
+      {
+        "attack_id" : "2",
+        "attack_name" : "embrace",
+        "attack_details" : "take a guess"
+      }
+    ],
+    "location" : {
+      "latitude" : 12,
+      "longitude" : 12,
+      "distance" : 12
+    }
+  }]
