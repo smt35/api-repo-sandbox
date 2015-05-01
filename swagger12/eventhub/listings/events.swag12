@@ -117,7 +117,7 @@
       ]
     },
     {
-      "path": "/events/{event_id}",
+      "path": "/events/{eventID}",
       "description": "Operations on an event item",
       "operations": [
         {
@@ -126,8 +126,8 @@
           "nickname": "acknowledgeEvent",
           "parameters": [
             {
-              "name": "event_id",
-              "description": "event_id",
+              "name": "eventID",
+              "description": "eventID",
               "required": true,
               "type": "string",
               "paramType": "path"
@@ -166,8 +166,8 @@
           "nickname": "eventOptions",
           "parameters": [
             {
-              "name": "event_id",
-              "description": "event_id",
+              "name": "eventID",
+              "description": "eventID",
               "required": true,
               "type": "string",
               "paramType": "path"

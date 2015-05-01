@@ -1,0 +1,173 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
+  "resourcePath": "/summaries",
+  "apis": [
+    {
+      "path": "/summaries",
+      "description": "Manage the summaries visible on the Administrative Portal",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Lists the set of summaries visible on the Administrative Portal.",
+          "nickname": "getSummaries",
+          "parameters": [
+            {
+              "name": "domain",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "entity",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "event_date",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "event_type",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "page_start",
+              "description": "Specifies how far to skip into a large set",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "paramType": "query",
+              "defaultValue": "1"
+            },
+            {
+              "name": "page_size",
+              "description": "Specifies how many items to return from a large set",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "paramType": "query",
+              "defaultValue": "10"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "summaries Retrieved",
+              "responseModel": "summaries"
+            },
+            {
+              "code": "204",
+              "message": "No results found"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "summariesOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "summaries": {
+      "id": "summaries",
+      "type": "object",
+      "properties": {
+        "summaries": {
+          "$ref": "summary_array"
+        }
+      },
+      "required": [
+        "summaries"
+      ]
+    },
+    "summary_array": {
+      "id": "summary_array",
+      "type": "array",
+      "items": {
+        "$ref": "summary"
+      }
+    },
+    "summary": {
+      "id": "summary",
+      "type": "object",
+      "properties": {
+        "event_date": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        },
+        "entity": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "count": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_date",
+        "domain",
+        "entity",
+        "event_type",
+        "count"
+      ]
+    }
+  }
+}

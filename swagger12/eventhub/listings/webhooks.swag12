@@ -1,0 +1,318 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
+  "resourcePath": "/webhooks",
+  "apis": [
+    {
+      "path": "/webhooks",
+      "description": "Allows a business application to retrieve its next group of webhooks from the Event Hub.",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a collection of webhooks",
+          "nickname": "getWebhooks",
+          "parameters": [
+            {
+              "name": "identity_id",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "identity_name",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "endpoint",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "push_option",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Collection Retrieved",
+              "responseModel": "webhooks"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Cars satisfy the query parameters - the collection is empty",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Query parameters conflict or are malformed",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Register webhook",
+          "nickname": "registerWebhook",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "webhook_create",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Event raised",
+              "responseModel": "webhooks_return"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add a webhook",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add a webhook",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Modify a webhook",
+          "nickname": "modifyWebhook",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "webhook_create",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Event Item Retrieved"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "Webhook not found",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a webhook",
+          "nickname": "deleteWebhook",
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Webhook successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete an subscription",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete an subscription",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "Webhook not found",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "webhooksOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "webhooks": {
+      "id": "webhooks",
+      "type": "object",
+      "properties": {
+        "webhooks": {
+          "$ref": "webhook"
+        }
+      },
+      "required": [
+        "webhooks"
+      ]
+    },
+    "webhook": {
+      "id": "webhook",
+      "type": "object",
+      "properties": {
+        "webhook": {
+          "$ref": "webhook_array"
+        }
+      },
+      "required": [
+        "webhook"
+      ]
+    },
+    "webhook_array": {
+      "id": "webhook_array",
+      "type": "array",
+      "items": {
+        "$ref": "webhook_item"
+      }
+    },
+    "webhook_create": {
+      "id": "webhook_create",
+      "type": "object",
+      "properties": {
+        "webhook": {
+          "$ref": "webhook_item"
+        }
+      },
+      "required": [
+        "webhook"
+      ]
+    },
+    "webhook_item": {
+      "id": "webhook_item",
+      "type": "object",
+      "properties": {
+        "identity_id": {
+          "type": "string"
+        },
+        "identity_name": {
+          "type": "string"
+        },
+        "endpoint": {
+          "type": "string"
+        },
+        "push_option": {
+          "type": "string"
+        },
+        "security_option": {
+          "type": "string"
+        },
+        "security_key": {
+          "type": "string"
+        },
+        "content_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "identity_id",
+        "identity_name",
+        "endpoint",
+        "push_option",
+        "security_option",
+        "content_type"
+      ]
+    }
+  }
+}
