@@ -21,6 +21,10 @@
     {
       "path": "/events",
       "description": "Operations on events the Event Hub in the University API Tutorial"
+    },
+    {
+      "path": "/subscriptions",
+      "description": "Operations on subscriptions of the Event Hub in the University API Tutorial"
     }
   ],
   "authorizations": {
