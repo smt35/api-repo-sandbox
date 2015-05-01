@@ -117,7 +117,7 @@
       ]
     },
     {
-      "path": "/{event_id}",
+      "path": "/events/{event_id}",
       "description": "Operations on an event item",
       "operations": [
         {
