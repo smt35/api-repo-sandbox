@@ -527,6 +527,24 @@
       "return_code": 200,
       "return_header": "Allow: PUT,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/put-options"
+    },
+    {
+      "url_segment": "/dwa93test",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwa93swagger.swag12"
+    },
+    {
+      "url_segment": "/names",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwa93Test/dwatest.js"
+    },
+    {
+      "url_segment": "/names/dwa93",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwa93Test/dwatest-1.js"
     }
   ]
 }
