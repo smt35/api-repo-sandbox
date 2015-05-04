@@ -2,19 +2,37 @@
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
   "basepath": "http://edge-wso2.byu.edu:3000/byuapi/eventhub",
-  "resourcePath": "/entities",
+  "resourcePath": "/subscriptions",
   "apis": [
     {
-      "path": "/entities",
-      "description": "Manage the entities visible on the Administrative Portal",
+      "path": "/subscriptions",
+      "description": "Manage the subscriptions visible on the Administrative Portal",
       "operations": [
         {
           "method": "GET",
-          "summary": "Lists the set of entities visible on the Administrative Portal.",
-          "nickname": "getEntities",
+          "summary": "Lists the set of subscriptions visible on the Administrative Portal.",
+          "nickname": "getSubscriptions",
           "parameters": [
             {
+              "name": "eca_identity_id",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "domain",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
               "name": "entity",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "event_type",
               "required": false,
               "type": "string",
               "paramType": "query"
@@ -23,8 +41,8 @@
           "responseMessages": [
             {
               "code": "200",
-              "message": "entities Retrieved",
-              "responseModel": "entities"
+              "message": "subscriptions Retrieved",
+              "responseModel": "subscriptions"
             },
             {
               "code": "204",
@@ -34,22 +52,22 @@
         },
         {
           "method": "POST",
-          "summary": "Defines a new Entity.",
-          "nickname": "createEntity",
+          "summary": "Defines a new subscription.",
+          "nickname": "createSubscription",
           "parameters": [
             {
               "name": "body",
               "description": "Request Body",
               "required": true,
-              "type": "entity_definition_item",
+              "type": "subscription_create",
               "paramType": "body"
             }
           ],
           "responseMessages": [
             {
               "code": "201",
-              "message": "Entity Added",
-              "responseModel": "entity_definition_item"
+              "message": "Subscription Added",
+              "responseModel": "subscription_create"
             },
             {
               "code": "400",
@@ -76,7 +94,7 @@
         {
           "method": "OPTIONS",
           "summary": "What can this endpoint do?",
-          "nickname": "entitiesOptions",
+          "nickname": "subscriptionsOptions",
           "responseMessages": [
             {
               "code": "200",
@@ -93,13 +111,13 @@
       ]
     },
     {
-      "path": "/entities/{domain}/{entity}",
-      "description": "Manage a specific entity visible on the Administrative Portal",
+      "path": "/subscriptions/{domain}/{entity}/{event_type}",
+      "description": "Manage a specific subscription visible on the Administrative Portal",
       "operations": [
         {
           "method": "DELETE",
-          "summary": "Delete a entity",
-          "nickname": "deleteEntity",
+          "summary": "Delete a subscription",
+          "nickname": "deleteSubscription",
           "parameters": [
             {
               "name": "domain",
@@ -111,6 +129,13 @@
             {
               "name": "entity",
               "description": "entity",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "event_type",
+              "description": "event_type",
               "required": true,
               "type": "string",
               "paramType": "path"
@@ -128,12 +153,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to delete an entity",
+              "message": "Authentication required to delete an subscription",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to delete an entity",
+              "message": "Access denied - not authorized to delete an subscription",
               "responseModel": "error"
             },
             {
@@ -146,7 +171,7 @@
         {
           "method": "OPTIONS",
           "summary": "What can this endpoint do?",
-          "nickname": "entityOptions",
+          "nickname": "subscriptionOptions",
           "parameters": [
             {
               "name": "domain",
@@ -158,6 +183,13 @@
             {
               "name": "entity",
               "description": "entity",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "event_type",
+              "description": "event_type",
               "required": true,
               "type": "string",
               "paramType": "path"
@@ -212,73 +244,75 @@
         "type": "string"
       }
     },
-    "entities": {
-      "id": "entities",
+    "subscriptions": {
+      "id": "subscriptions",
       "type": "object",
       "properties": {
-        "entities": {
-          "$ref": "entity_definition"
+        "subscriptions": {
+          "$ref": "subscription"
         }
       },
       "required": [
-        "entities"
+        "subscriptions"
       ]
     },
-    "entity_definition" : {
-      "id": "entity_definition",
+    "subscription": {
+      "id": "subscriptions",
       "type": "object",
       "properties": {
-        "entity_definition": {
-          "$ref": "entity_array"
+        "subscription": {
+          "$ref": "subscription_array"
         }
       },
       "required": [
-        "entity_definition"
+        "subscription"
       ]
     },
-    "entity_array": {
-      "id": "entity_array",
+    "subscription_array": {
+      "id": "subscription_array",
       "type": "array",
-      "items": [
-        {
-          "$ref": "entity"
-        }
-      ]
+      "items": {
+        "$ref": "subscription_item"
+      }
     },
-    "entity_definition_item" : {
-      "id": "entity_definition_item",
+    "subscription_create": {
+      "id": "subscription_create",
       "type": "object",
       "properties": {
-        "entity_definition": {
-          "$ref": "entity"
+        "subscription": {
+          "$ref": "subscription_item"
         }
       },
       "required": [
-        "entity_definition"
+        "subscription"
       ]
     },
-    "entity": {
-      "id": "entity",
+    "subscription_item": {
+      "id": "subscription_item",
       "type": "object",
       "properties": {
-        "entity": {
+        "eca_identity_id": {
           "type": "string"
         },
-        "description": {
+        "eca_identity_name": {
           "type": "string"
         },
         "domain": {
           "type": "string"
         },
-        "entity_ega": {
+        "entity": {
+          "type": "string"
+        },
+        "event_type": {
           "type": "string"
         }
       },
       "required": [
-        "entity",
-        "description",
+        "eca_identity_id",
+        "eca_identity_name",
         "domain",
-        "entity_ega"
+        "entity",
+        "event_type"
       ]
     }
   }
