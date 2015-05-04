@@ -1,4 +1,4 @@
-{
+[
     { "net_id": "dwa93",
       "first_name": "David",
       "surname": "Andrews",
@@ -47,4 +47,4 @@
       "seat_number": "9",
       "gender": "Male"
     }
-}
+]
