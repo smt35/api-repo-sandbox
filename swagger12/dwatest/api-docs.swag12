@@ -3,7 +3,7 @@
   "swaggerVersion": "1.2",
   "apis": [
     {
-      "path": "/resource1",
+      "path": "/names",
       "description": "Testing in WSO2 by dwa"
     }
   ],
@@ -18,31 +18,6 @@
     "description": "An API purely for testing purposes",
     "termsOfServiceURL": "",
     "contact": "david_andrews@byu.edu",
-    "license": "Apache 2.0",
-    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0.html"
-  }
-}
-
-{
-  "apiVersion": "v1",
-  "swaggerVersion": "1.2",
-  "apis": [
-    {
-      "path": "/basic",
-      "description": "Operations of the first example API in the University API Tutorial"
-    }
-  ],
-  "authorizations": {
-    "oauth2": {
-      "type": "oauth2",
-      "scopes": []
-    }
-  },
-  "info": {
-    "title": "apitutor1",
-    "description": "The first example API in the University API Tutorial",
-    "termsOfServiceURL": "",
-    "contact": "djw5@byu.edu",
     "license": "Apache 2.0",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0.html"
   }
