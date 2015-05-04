@@ -373,7 +373,7 @@
           "description": "Student's Gender",
           "enum": [
             "Male",
-            "Female",
+            "Female"
           ]
         }
       }
