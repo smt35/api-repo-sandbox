@@ -529,24 +529,6 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/put-options"
     },
     {
-<<<<<<< HEAD
-      "url_segment": "/dwa93test",
-      "method": "GET",
-      "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwa93swagger.swag12"
-    },
-    {
-      "url_segment": "/names",
-      "method": "GET",
-      "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwa93Test/dwatest.js"
-    },
-    {
-      "url_segment": "/names/dwa93",
-      "method": "GET",
-      "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwa93Test/dwatest-1.js"
-=======
       "url_segment": "/eventhub/api-docs/subscriptions",
       "method": "GET",
       "return_code": 200,
@@ -634,12 +616,35 @@
       "return_json": null
     },
     {
-     "url_segment": "/eventhub/webhooks",
-     "method": "OPTIONS",
-     "return_code": 200,
-     "return_header": "Allow: GET,POST,PUT,DELETE,OPTIONS",
-     "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-put-delete-options"
->>>>>>> 29557a1094d72e8f7bf7c9e0509ce85278186bf7
+      "url_segment": "/eventhub/webhooks",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,POST,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-put-delete-options"
+    },
+    {
+      "url_segment": "/dwa93test/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwatest/api-docs.swag12"
+    },
+    {
+      "url_segment": "/dwa93test/api-docs/names",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwa93/dwa93swagger.swag12"
+    },
+    {
+      "url_segment": "/names",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest.js"
+    },
+    {
+      "url_segment": "/names/dwa93",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-1.js"
     }
   ]
 }
