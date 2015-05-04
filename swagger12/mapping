@@ -641,10 +641,42 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest.js"
     },
     {
+      "url_segment": "/test-names/",
+      "method": "POST",
+      "return_code": 201,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest.js"
+    },
+    {
+      "url_segment": "/test-names",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,POST,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-post-options"
+    },
+    {
       "url_segment": "/test-names/dwa93",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-1.js"
+    },
+    {
+      "url_segment": "/test-names/dwa93",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-1.js"
+    },
+    {
+      "url_segment": "/test-names/dwa93",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-1.js"
+    },
+    {
+      "url_segment": "/test-names/dwa93",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
     }
   ]
 }
