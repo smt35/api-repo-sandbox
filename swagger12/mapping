@@ -632,7 +632,7 @@
       "url_segment": "/dwa93test/api-docs/names",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwa93/dwa93swagger.swag12"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwatest/dwa93swagger.swag12"
     },
     {
       "url_segment": "/test-names",
