@@ -635,13 +635,13 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwa93/dwa93swagger.swag12"
     },
     {
-      "url_segment": "/names",
+      "url_segment": "/test-names",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest.js"
     },
     {
-      "url_segment": "/names/dwa93",
+      "url_segment": "/test-names/dwa93",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-1.js"
