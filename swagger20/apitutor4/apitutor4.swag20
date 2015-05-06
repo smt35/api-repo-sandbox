@@ -9,7 +9,7 @@
     "schemes": [
         "https"
     ],
-    "basePath": "/byuapi/tutorial3-cars",
+    "basePath": "/byuapi/tutorial4-cars",
     "produces": [
         "application/json"
     ],
@@ -428,7 +428,197 @@
                          "schema": {
                              "$ref": "#/definitions/error"
                          }
-                     }
+                    }
+                }
+            }
+        },
+        "/{vin}/odometer_logs": {
+            "get": {
+                "summary": "Odometer Logs",
+                "description": "Returns a collection of odometer_logs for a specific Car",
+                "operationId": "getLogs",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "read_date",
+                        "in": "query",
+                        "description": "Odometer Log Date",
+                        "required": false,
+                        "type": "date"
+                    },
+                    {
+                        "name": "miles",
+                        "in": "query",
+                        "description": "Mileage on Odometer",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "read_by_id",
+                        "in": "query",
+                        "description": "ID of odometer log submitter",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "read_by_name",
+                        "in": "query",
+                        "description": "Name of odometer log submitter"
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Collection Retrieved",
+                        "schema": {
+                            "$ref": "#/definitions/odometer_logs"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "404": {
+                        "description": "No Cars satisfy the query parameters - the collection is empty",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Odometer Logs",
+                "descripton": "Creates a new odometer_log",
+                "operationId": "createLogs",
+                "paramters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "odometer_logs",
+                        "in": "body",
+                        "description": "The Odometer Log to be modified",
+                        "required": true,
+                        "schema": {
+                             "$ref": "#/definitions/odometer_log"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Odometer Log Added",
+                        "schema": {
+                            "$ref": "#/definitions/odeometer_log"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Request Body conflicts or is malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "options": {
+                "summary": "Odometer Logs",
+                "description": "What can this endpoint do?",
+                "operationId": "odometer_logsOptions",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Supported HTTP Methods",
+                        "schema": {
+                            "$ref": "#/definitions/methods"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
                 }
             }
         }
@@ -445,10 +635,10 @@
                     "description": "Hypermedia Links that impact the entire Cars collection",
                     "type": "object",
                     "properties": {
-                        "tutorial3-cars.info": {
-                            "$ref": "/definitions/link"#
+                        "tutorial4-cars.info": {
+                            "$ref": "#/definitions/link"
                         },
-                        "tutorial3-cars.create": {
+                        "tutorial4-cars.create": {
                             "$ref": "#/definitions/link"
                         }
                     }
@@ -475,25 +665,104 @@
                     "description": "Hypermedia Links that impact an item in the Cars collection",
                     "type": "object",
                     "properties": {
-                        "tutorial2-cars.info": {
+                        "tutorial4-cars.info": {
                             "$ref": "#/definitions/link"
                         },
-                        "tutorial2-cars.modify": {
+                        "tutorial4-cars.modify": {
                             "$ref": "#/definitions/link"
                         },
-                        "tutorial2-cars.sell": {
+                        "tutorial4-cars.sell": {
                             "$ref": "#/definitions/link"
                         },
-                        "tutorial2-cars.delete": {
+                        "tutorial4-cars.delete": {
                             "$ref": "#/definitions/link"
                         },
-                        "tutorial2-owners.info": {
+                        "tutorial4-owners.info": {
                             "$ref": "#/definitions/link"
                         }
                     }
                 },
                 "basic": {
                     "$ref": "#/definitions/basic"
+                }
+            }
+        },
+        "odometer_logs": {
+            "description": "A collection of Odometer Logs",
+            "type": "object",
+            "required": [
+                "values"
+            ],
+            "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact the entire Cars collection",
+                    "type": "object",
+                    "properties": {
+                        "tutorial4-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.create": {
+                            "$ref": "#/definitions/link"
+                        }
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/definitions/top_level_metadata"
+                },
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/odometer_log"
+                    }
+                }
+            }
+        },
+        "odometer_Log": {
+            "description": "Odometer Log Item",
+            "type": "object",
+            "required": [
+                "vin",
+                "read_date",
+                "miles",
+                "read_by_id",
+                "read_by_name"
+            ],
+            "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact an item in the Cars collection",
+                    "type": "object",
+                    "properties": {
+                        "tutorial4-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.modify": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.sell": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.delete": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-owners.info": {
+                            "$ref": "#/definitions/link"
+                        }
+                    }
+                },
+                "vin": {
+                    "$ref": "#/definitions/vin"
+                },
+                "read_date": {
+                    "$ref": "#/definition/read_date"
+                },
+                "miles": {
+                    "$ref": "#/definition/miles"
+                },
+                "read_in_id": {
+                    "$ref": "#/definition/read_id_id"
+                },
+                "read_by_name": {
+                    "$ref": "#/definition/read_by_name"
                 }
             }
         },
@@ -528,7 +797,7 @@
                     "$ref": "#/definitions/model"
                 },
                 "color": {
-                    "$ref": "/definitions/color#"
+                    "$ref": "#/definitions/color"
                 },
                 "owner_id": {
                     "$ref": "#/definitions/owner_id"
