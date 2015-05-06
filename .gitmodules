@@ -1,3 +1,0 @@
-[submodule "support/server"]
-	path = support/server
-	url = ssh://git@pentagon7.byu.edu:7999/id/university-api-documentation-sandbox.git
