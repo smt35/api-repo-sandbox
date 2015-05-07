@@ -658,6 +658,9 @@
                 },
                 "basic": {
                     "$ref": "#/definitions/basic"
+                },
+                "odometer_logs": {
+                    "$ref": "#/definitions/odometer_logs"
                 }
             }
         },
@@ -721,18 +724,6 @@
                 "values"
             ],
             "properties": {
-                "links": {
-                    "description": "Hypermedia Links that impact the entire Odometer Logs collection",
-                    "type": "object",
-                    "properties": {
-                        "tutorial4-cars.info": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.create": {
-                            "$ref": "#/definitions/link"
-                        }
-                    }
-                },
                 "values": {
                     "type": "array",
                     "items": {
@@ -752,18 +743,6 @@
                 "read_by_name"
             ],
             "properties": {
-                "links": {
-                    "description": "Hypermedia Links that impact an item in the Odometer Logs collection",
-                    "type": "object",
-                    "properties": {
-                        "tutorial4-cars.info": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutoial4-cars.info": {
-                            "$ref": "#/definitions/link"
-                        }
-                    }
-                },
                 "vin": {
                     "$ref": "#/definitions/vin"
                 },
