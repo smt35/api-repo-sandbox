@@ -595,6 +595,141 @@
                     }
                 }
             }
+        },
+        "/{vin}/odometer_logs/{read_date}": {
+            "get": {
+                "summary": "Cars",
+                "description": "Retrieve a specific odometer log",
+                "operationId": "getOdometerLog",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "read_date",
+                        "in": "path",
+                        "description": "When the odometer log was created",
+                        "required": true,
+                        "type": "date-time"
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Item Retrieved",
+                        "schema": {
+                            "$ref": "#/definitions/odometer_log"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "404": {
+                        "description": "No Odometer Logs satisfy the request - the collection is empty",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Cars",
+                "description": "Modify a specific odometer log",
+                "operationId": "putOdometerLog",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "read_date",
+                        "in": "path",
+                        "description": "When the odometer log was created",
+                        "required": true,
+                        "type": "date-time"
+                    },
+                    {
+                        "name": "log",
+                        "in": "body",
+                        "description": "The Odometer Log to be modified",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/odometer_log"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Odometer Log Modified",
+                        "schema": {
+                            "$ref": "#/definitions/odometer_log"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Request Body conflicts or is malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
