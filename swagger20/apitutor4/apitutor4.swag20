@@ -93,7 +93,7 @@
                         "type": "integer",
                         "format": "int32",
                         "default": 50
-                    }                    
+                    }
                 ],
                 "tags": [
                     "Cars"
@@ -348,7 +348,7 @@
                         "description": "The Car to be modified",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/car"
+                            "$ref": "#/definitions/car"
                         }
                     }
                 ],
@@ -428,15 +428,15 @@
                          "schema": {
                              "$ref": "#/definitions/error"
                          }
-                    }
+                     }
                 }
             }
         },
         "/{vin}/odometer_logs": {
             "get": {
-                "summary": "Odometer Logs",
-                "description": "Returns a collection of odometer_logs for a specific Car",
-                "operationId": "getLogs",
+                "summary": "Cars",
+                "description": "Returns a collection of Odometer Logs",
+                "operationId": "getOdometerLogs",
                 "parameters": [
                     {
                         "name": "vin",
@@ -444,32 +444,6 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "read_date",
-                        "in": "query",
-                        "description": "Odometer Log Date",
-                        "required": false,
-                        "type": "date"
-                    },
-                    {
-                        "name": "miles",
-                        "in": "query",
-                        "description": "Mileage on Odometer",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "read_by_id",
-                        "in": "query",
-                        "description": "ID of odometer log submitter",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "read_by_name",
-                        "in": "query",
-                        "description": "Name of odometer log submitter"
                     }
                 ],
                 "tags": [
@@ -501,7 +475,7 @@
                         }
                     },
                     "404": {
-                        "description": "No Cars satisfy the query parameters - the collection is empty",
+                        "description": "No Odometer Logs satisfy the query parameters - the collection is empty",
                         "schema": {
                             "$ref": "#/definitions/error"
                         }
@@ -521,10 +495,10 @@
                 }
             },
             "put": {
-                "summary": "Odometer Logs",
-                "descripton": "Creates a new odometer_log",
-                "operationId": "createLogs",
-                "paramters": [
+                "summary": "Cars",
+                "description": "Creates a new Odometer Log",
+                "operationId": "createOdometerLog",
+                "parameters": [
                     {
                         "name": "vin",
                         "in": "path",
@@ -533,12 +507,12 @@
                         "type": "string"
                     },
                     {
-                        "name": "odometer_logs",
+                        "name": "odometer_log",
                         "in": "body",
-                        "description": "The Odometer Log to be modified",
+                        "description": "The Odometer Log to be added",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/odometer_log"
+                            "$ref": "#/definitions/odometer_log"
                         }
                     }
                 ],
@@ -549,7 +523,7 @@
                     "201": {
                         "description": "Odometer Log Added",
                         "schema": {
-                            "$ref": "#/definitions/odeometer_log"
+                            "$ref": "#/definitions/odometer_log"
                         }
                     },
                     "400": {
@@ -585,9 +559,9 @@
                 }
             },
             "options": {
-                "summary": "Odometer Logs",
+                "summary": "Cars",
                 "description": "What can this endpoint do?",
-                "operationId": "odometer_logsOptions",
+                "operationId": "OdometerLogsOptions",
                 "parameters": [
                     {
                         "name": "vin",
@@ -687,85 +661,6 @@
                 }
             }
         },
-        "odometer_logs": {
-            "description": "A collection of Odometer Logs",
-            "type": "object",
-            "required": [
-                "values"
-            ],
-            "properties": {
-                "links": {
-                    "description": "Hypermedia Links that impact the entire Cars collection",
-                    "type": "object",
-                    "properties": {
-                        "tutorial4-cars.info": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.create": {
-                            "$ref": "#/definitions/link"
-                        }
-                    }
-                },
-                "metadata": {
-                    "$ref": "#/definitions/top_level_metadata"
-                },
-                "values": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/odometer_log"
-                    }
-                }
-            }
-        },
-        "odometer_Log": {
-            "description": "Odometer Log Item",
-            "type": "object",
-            "required": [
-                "vin",
-                "read_date",
-                "miles",
-                "read_by_id",
-                "read_by_name"
-            ],
-            "properties": {
-                "links": {
-                    "description": "Hypermedia Links that impact an item in the Cars collection",
-                    "type": "object",
-                    "properties": {
-                        "tutorial4-cars.info": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.modify": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.sell": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.delete": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-owners.info": {
-                            "$ref": "#/definitions/link"
-                        }
-                    }
-                },
-                "vin": {
-                    "$ref": "#/definitions/vin"
-                },
-                "read_date": {
-                    "$ref": "#/definition/read_date"
-                },
-                "miles": {
-                    "$ref": "#/definition/miles"
-                },
-                "read_in_id": {
-                    "$ref": "#/definition/read_id_id"
-                },
-                "read_by_name": {
-                    "$ref": "#/definition/read_by_name"
-                }
-            }
-        },
         "basic": {
             "description": "Car Basic Item",
             "type": "object",
@@ -816,6 +711,73 @@
                 },
                 "updated_date_time": {
                     "$ref": "#/definitions/updated_date_time"
+                }
+            }
+        },
+        "odometer_logs": {
+            "description": "A collection of Odometer Logs",
+            "type": "object",
+            "required": [
+                "values"
+            ],
+            "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact the entire Odometer Logs collection",
+                    "type": "object",
+                    "properties": {
+                        "tutorial4-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.create": {
+                            "$ref": "#/definitions/link"
+                        }
+                    }
+                },
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/odometer_log"
+                    }
+                }
+            }
+        },
+        "odometer_log": {
+            "description": "Odometer Log Item",
+            "type": "object",
+            "required": [
+                "vin",
+                "read_date",
+                "miles",
+                "read_by_id",
+                "read_by_name"
+            ],
+            "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact an item in the Odometer Logs collection",
+                    "type": "object",
+                    "properties": {
+                        "tutorial4-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutoial4-cars.info": {
+                            "$ref": "#/definitions/link"
+                        }
+                    }
+                },
+                "vin": {
+                    "$ref": "#/definitions/vin"
+                },
+                "read_date": {
+                    "$ref": "#/definitions/read_date"
+                },
+                "miles": {
+                    "$ref": "#/definitions/miles"
+                },
+                "read_by_id": {
+                    "$ref": "#/definitions/read_by_id"
+                },
+                "read_by_name": {
+                    "$ref": "#/definitions/read_by_name"
                 }
             }
         },
@@ -1243,6 +1205,96 @@
                     "enum": [
                         "system"
                     ]
+                }
+            }
+        },
+        "read_date": {
+            "description": "When the odometer log was created",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "system"
+                    ]
+                }
+            }
+        },
+        "miles": {
+            "description": "Mileage read on odometer",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 4
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+
+        },
+        "read_by_id": {
+            "description": "The ID of the person that created the odometer log",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type",
+                "description"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 9
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "system"
+                    ]
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        },
+        "read_by_name": {
+           "description": "The name of the person that created the odometer log",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                },
+                "related-resource": {
+                    "type": "string"
                 }
             }
         }
