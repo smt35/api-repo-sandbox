@@ -520,7 +520,7 @@
                     "Cars"
                 ],
                 "responses": {
-                    "201": {
+                    "200": {
                         "description": "Odometer Log Added",
                         "schema": {
                             "$ref": "#/definitions/odometer_log"
