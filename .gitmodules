@@ -1,0 +1,3 @@
+[submodule "support/server"]
+	path = support/server
+	url = ssh://git@pentagon7.byu.edu:7999/id/swagger-support-server.git
