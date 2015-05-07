@@ -1,1 +1,429 @@
-*/sample
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/phone_sample",
+  "resourcePath": "/basic",
+  "apis": [
+    {
+      "path": "/",
+      "description": "Operations on a Collection Phone Numbers",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a collection of Phone Numbers",
+          "nickname": "getPhone",
+          "parameters": [
+            {
+              "name": "person_id",
+              "description": "person_id",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "phone_type",
+              "description": "The type of phone",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "phone_number",
+              "description": "the Phone Number",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "country_code",
+              "description": "Phones country code",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Collection Retrieved",
+              "responseModel": "phones"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Phones satisfy the query parameters - the collection is empty",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Query parameters conflict or are malformed",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "POST",
+          "summary": "Create a new Phone",
+          "nickname": "createPhone",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "phone",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Phone Added",
+              "responseModel": "phone"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add a phone",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add a phone",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "phoneOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{person_id}",
+      "description": "Operations on a Phone Item",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieve a Phone",
+          "nickname": "getPhone",
+          "parameters": [
+            {
+              "name": "person_id",
+              "description": "person_id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Item Retrieved",
+              "responseModel": "phone"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Phones found - invalid person_id",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a Phone",
+          "nickname": "deletePhone",
+          "parameters": [
+            {
+              "name": "person_id",
+              "description": "person_id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Phone successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete a phone",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete a phone",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Modify a Phone",
+          "nickname": "modifyPhone",
+          "parameters": [
+            {
+              "name": "person_id",
+              "description": "person_id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "phone",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Phone successfully modified",
+              "responseModel": "phone"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to modify a phone",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to modify a phone",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "phoneOptions",
+          "parameters": [
+            {
+              "name": "person_id",
+              "description": "person_id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+    "error": {
+      "id": "error",
+      "description": "Additional explanation for error conditions",
+      "required": [
+        "return_code",
+        "explanation",
+        "error_data"
+      ],
+      "properties": {
+        "return_code": {
+          "description": "The HTTP Status code",
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "description": "Detailed explanation of the error",
+          "type": "string"
+        },
+        "error_data": {
+          "description": "When appropriate, the data value that caused the error",
+          "type": "string"
+        }
+      }
+    },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "phones": {
+      "id": "phones",
+      "description": "Collection of Phones",
+      "type": "array",
+      "items": {
+        "$ref": "phone"
+      }
+    },
+    "phone": {
+      "id": "phone",
+      "description": "Phone Item",
+      "required": [
+        "person_id",
+        "phone_type",
+        "phone_number",
+        "country_code"
+      ],
+      "properties": {
+        "vin": {
+          "type": "string",
+          "description": "Vehicle Identification Number",
+          "maxLength": 16
+        },
+        "plate_state": {
+          "type": "string",
+          "description": "License plate State",
+          "maxLength": 2
+        },
+        "plate_number": {
+          "type": "string",
+          "description": "License Plate Number"
+        },
+        "vehicle_type": {
+          "type": "string",
+          "description": "Type of Vehicle",
+          "enum": [
+            "Car/Sedan/Coupe",
+            "Delivery/Service Truck",
+            "Moped/Scooter",
+            "Motorcycle",
+            "Other",
+            "Truck/SUV"
+          ]
+        },
+        "vehicle_year": {
+          "type": "string",
+          "description": "Model Year of the Vehicle",
+          "maxLength": 4
+        },
+        "make": {
+          "type": "string",
+          "description": "Make of the Vehicle"
+        },
+        "model": {
+          "type": "string",
+          "description": "Model of the Vehicle"
+        },
+        "color": {
+          "type": "string",
+          "description": "Color of the Vehicle"
+        },
+        "owner_id": {
+          "type": "string",
+          "description": "The ID of the owner of the vehicle",
+          "maxLength": 9
+        },
+        "owner_name": {
+          "type": "string",
+          "description": "The name of the owner of the vehicle"
+        },
+        "created_by_id": {
+          "type": "string",
+          "description": "The ID of the person that created the vehicle entry",
+          "maxLength": 9
+        },
+        "created_by_name": {
+          "type": "string",
+          "description": "The name of the person that created the vehicle entry"
+        },
+        "created_date_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the vehicle entry was created"
+        },
+        "updated_by_id": {
+          "type": "string",
+          "description": "The ID of the person that last updated the vehicle entry",
+          "maxLength": 9
+        },
+        "updated_by_name": {
+          "type": "string",
+          "description": "The name of the person that last updated the vehicle entry"
+        },
+        "updated_date_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the vehicle entry was last updated"
+        }
+      }
+    }
+  }
+}
