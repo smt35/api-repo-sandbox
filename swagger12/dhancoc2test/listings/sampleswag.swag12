@@ -343,86 +343,26 @@
         "country_code"
       ],
       "properties": {
-        "vin": {
+        "person_id": {
           "type": "string",
-          "description": "Vehicle Identification Number",
-          "maxLength": 16
-        },
-        "plate_state": {
-          "type": "string",
-          "description": "License plate State",
-          "maxLength": 2
-        },
-        "plate_number": {
-          "type": "string",
-          "description": "License Plate Number"
-        },
-        "vehicle_type": {
-          "type": "string",
-          "description": "Type of Vehicle",
-          "enum": [
-            "Car/Sedan/Coupe",
-            "Delivery/Service Truck",
-            "Moped/Scooter",
-            "Motorcycle",
-            "Other",
-            "Truck/SUV"
-          ]
-        },
-        "vehicle_year": {
-          "type": "string",
-          "description": "Model Year of the Vehicle",
-          "maxLength": 4
-        },
-        "make": {
-          "type": "string",
-          "description": "Make of the Vehicle"
-        },
-        "model": {
-          "type": "string",
-          "description": "Model of the Vehicle"
-        },
-        "color": {
-          "type": "string",
-          "description": "Color of the Vehicle"
-        },
-        "owner_id": {
-          "type": "string",
-          "description": "The ID of the owner of the vehicle",
+          "description": "person_id",
           "maxLength": 9
         },
-        "owner_name": {
+        "phone_type": {
           "type": "string",
-          "description": "The name of the owner of the vehicle"
+          "description": "Phone Type",
+          "maxLength": 3
         },
-        "created_by_id": {
+        "phone_number": {
           "type": "string",
-          "description": "The ID of the person that created the vehicle entry",
-          "maxLength": 9
+          "description": "Phone Number"
+          "maxLength": 30
         },
-        "created_by_name": {
+        "country_code": {
           "type": "string",
-          "description": "The name of the person that created the vehicle entry"
+          "description": "Country Code",
+          "maxLength": 3
         },
-        "created_date_time": {
-          "type": "string",
-          "format": "date-time",
-          "description": "When the vehicle entry was created"
-        },
-        "updated_by_id": {
-          "type": "string",
-          "description": "The ID of the person that last updated the vehicle entry",
-          "maxLength": 9
-        },
-        "updated_by_name": {
-          "type": "string",
-          "description": "The name of the person that last updated the vehicle entry"
-        },
-        "updated_date_time": {
-          "type": "string",
-          "format": "date-time",
-          "description": "When the vehicle entry was last updated"
-        }
       }
     }
   }
