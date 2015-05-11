@@ -1,0 +1,2097 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Class",
+        "description": "Class Resource of the University API",
+        "version": "1.0.0"
+    },
+    "host": "api.byu.edu",
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/v1/classes",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns a collection of AIM Classes",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "query",
+                        "required": false,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "query",
+                        "required": false,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "query",
+                        "required": false,
+                        "description": "Differentiates the different curriculum offerings",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "query",
+                        "required": false,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "teaching_area",
+                        "in": "query",
+                        "required": false,
+                        "description": "The subject area of the class offering",
+                        "type": "string"
+                    },
+                    {
+                        "name": "catalog_number",
+                        "in": "query",
+                        "required": false,
+                        "description": "The catalog number of the class offering",
+                        "type": "string"
+                    },
+                    {
+                        "name": "catalog_suffix",
+                        "in": "query",
+                        "required": false,
+                        "description": "The catalog suffix of the class offering",
+                        "type": "string"
+                    },
+                    {
+                        "name": "enrollment_status",
+                        "in": "query",
+                        "required": false,
+                        "description": "Indicates what enrollment actions may be performed on the class",
+                        "type": "string"
+                    },
+                    {
+                        "name": "credit_hours",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many credit hours is the class worth?",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_type",
+                        "in": "query",
+                        "required": false,
+                        "description": "What type of section (DAY, EVENING, SLC)?",
+                        "type": "string"
+                    },
+                    {
+                        "name": "honors",
+                        "in": "query",
+                        "required": false,
+                        "description": "Is the section an honors section?",
+                        "type": "string"
+                    },
+                    {
+                        "name": "instructor_id",
+                        "in": "query",
+                        "required": false,
+                        "description": "Classes with this instructor - use person_id of the instructor",
+                        "type": "string"
+                    },
+                    {
+                        "name": "instructor_net_id",
+                        "in": "query",
+                        "required": false,
+                        "description": "Classes with this instructor - use net_id of the instructor",
+                        "type": "string"
+                    },
+                    {
+                        "name": "days_taught",
+                        "in": "query",
+                        "required": false,
+                        "description": "Limit the classes collection to the following days",
+                        "type": "string"
+                    },
+                    {
+                        "name": "time_taught",
+                        "in": "query",
+                        "required": false,
+                        "description": "Limit the classes collection to the following times",
+                        "type": "string"
+                    },
+                    {   "name": "context",
+                        "in": "query",
+                        "required": false,
+                        "description": "Defines a group of field sets to be returned in collection",
+                        "type": "string"
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "required": false,
+                        "description": "List of field sets to be returned in collection",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_start",
+                        "in": "query",
+                        "required": false,
+                        "description": "Skip into the classes collection before starting to return items",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the classes collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "page_start is too large for the collection returned",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "404": {
+                        "description": "No Classes satisfy the query parameters - the collection is empty",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Classes",
+                "description": "Create a new AIM Class",
+                "parameters": [
+                    {
+                        "name": "class",
+                        "in": "body",
+                        "description": "The class to be added",
+                        "required": true,
+                        "schema": {
+                             "$ref": "#/definitions/classes"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Returns the class that was added",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to schedule a new class",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied - not authorized to schedule the new class",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Body of the request contains conflicting, malformed, or invalid data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Classes",
+                "description": "Modify a specific AIM Class (defined by query parameters)",
+                "parameters": [
+                    {
+                        "name": "class",
+                        "in": "body",
+                        "description": "The class to be modified",
+                        "required": true,
+                        "schema": {
+                             "$ref": "#/definitions/classes"
+                        }
+                    },
+                    {
+                        "name": "year_term",
+                        "in": "query",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "teaching_area",
+                        "in": "query",
+                        "required": true,
+                        "description": "The subject area of the class offering",
+                        "type": "string"
+                    },
+                    {
+                        "name": "catalog_number",
+                        "in": "query",
+                        "required": true,
+                        "description": "The catalog number of the class offering",
+                        "type": "string"
+                    },
+                    {
+                        "name": "catalog_suffix",
+                        "in": "query",
+                        "required": true,
+                        "description": "The catalog suffix of the class offering",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "query",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {   "name": "context",
+                        "in": "query",
+                        "required": false,
+                        "description": "Defines a group of field sets to be returned in collection",
+                        "type": "string"
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "required": false,
+                        "description": "List of field sets to be returned in collection",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the class that was modified",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to modify a class",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied - not authorized to modify the class",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Body of the request contains conflicting, malformed, or invalid data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns a specific AIM Class",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different curriculum offerings",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "required": false,
+                        "description": "List of field sets to be returned in collection",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to schedule a new class",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Classes",
+                "description": "Delete/Cancel a specific AIM Class",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different curriculum offerings",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The specific AIM class that was deleted",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to delete/cancel a class",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Unable to perform delete/cancel request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Classes",
+                "description": "Modify a specific AIM Class",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different curriculum offerings",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "required": false,
+                        "description": "List of field sets to be modified in collection",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The specific AIM class that was modified",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to modify a class",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Unable to perform update request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/add-permission-codes": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the add permission codes for a specific AIM Class",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_start",
+                        "in": "query",
+                        "required": false,
+                        "description": "Skip into the add_permission_codes collection before starting to return items",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the add_permission_codes collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to view add_permission_codes",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Classes",
+                "description": "Add an add permission code for a specific AIM Class",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to add add_permission_codes",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Body of the request contains conflicting, malformed, or invalid data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/add-permission-codes/{student_id}": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the add permission codes for a specific AIM Class and student",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "student_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The person_id of the student",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class/student combination found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to view add_permission_codes",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Classes",
+                "description": "Delete an add permission code for a specific AIM Class and student combination",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "student_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The person_id of the student",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class/student combination found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to delete add_permission_codes",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Classes",
+                "description": "Modifies/Redeems an add permission code for a specific AIM Class and student combination",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "student_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The person_id of the student",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class/student combination found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to modify add_permission_codes",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Body of the request contains conflicting, malformed, or invalid data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/assigned-instructors": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the instructors assigned to a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/class-limitations": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the class limitations for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/class-schedules": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the schedules for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/course-limitations": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the course limitations for the course associated with a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-students": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the students enrolled in a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/linked-classes": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the other sections linked to a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/notes": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the class schedule notes a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/permission-to-add-codes": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the set of allocated permission-to-add codes a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/prerequisites": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the prerequisite courses for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/section-headers": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the class schedule section headers for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/supplemental-counts": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the counts for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-students": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the set of students in the wait list queue for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-students-logs": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the log records for enrollment actions for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-students-logs": {
+            "get": {
+                "summary": "Classes",
+                "description": "Returns the log records for wait list actions for a specific AIM Class\n",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the identity collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "classes": {
+            "type": "object",
+            "required": [
+                "values"
+            ],
+            "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact the entire Classes collection",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/links"
+                    }
+                },
+                "metadata": {
+                    "$ref": "#/definitions/top_level_metadata"
+                },
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/item.classes"
+                    }
+                }
+            }
+        },
+        "item.classes": {
+            "type": "string"
+        },
+        "links": {
+            "description": "Hypermedia links format",
+            "type": "object",
+            "required": [
+                "rel",
+                "href",
+                "method"
+            ],
+            "properties": {
+                "rel": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "method": {
+                    "type": "string",
+                    "enum": [
+                        "DELETE",
+                        "GET",
+                        "OPTIONS",
+                        "POST",
+                        "PUT"
+                    ]
+                }
+            }
+        },
+        "top_level_metadata": {
+            "type": "object",
+            "required": [
+                "collection_size",
+                "page_start",
+                "page_end",
+                "page_size",
+                "default_page_size",
+                "maximum_page_size",
+                "field_sets_returned",
+                "field_sets_available",
+                "field_sets_default"
+            ],
+            "properties": {
+                "collection_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_start": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_end": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "default_page_size": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "maximum_page_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "field_sets_returned": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                          "basic",
+                          "add_permission_codes",
+                          "assigned_instructors",
+                          "class_limitations",
+                          "class_schedules",
+                          "course_limitations",
+                          "enrolled_students",
+                          "linked_classes",
+                          "notes",
+                          "permission_to_add_codes",
+                          "prerequisites",
+                          "section_headers",
+                          "supplemental_counts",
+                          "waitlisted_students",
+                          "enrolled_students_log",
+                          "waitlisted_students_log"
+                        ]
+                    }
+                },
+                "field_sets_available": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                          "basic",
+                          "add_permission_codes",
+                          "assigned_instructors",
+                          "class_limitations",
+                          "class_schedules",
+                          "course_limitations",
+                          "enrolled_students",
+                          "linked_classes",
+                          "notes",
+                          "permission_to_add_codes",
+                          "prerequisites",
+                          "section_headers",
+                          "supplemental_counts",
+                          "waitlisted_students",
+                          "enrolled_students_log",
+                          "waitlisted_students_log"
+                        ]
+                    }
+                },
+                "field_sets_default": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                          "basic",
+                          "add_permission_codes",
+                          "assigned_instructors",
+                          "class_limitations",
+                          "class_schedules",
+                          "course_limitations",
+                          "enrolled_students",
+                          "linked_classes",
+                          "notes",
+                          "permission_to_add_codes",
+                          "prerequisites",
+                          "section_headers",
+                          "supplemental_counts",
+                          "waitlisted_students",
+                          "enrolled_students_log",
+                          "waitlisted_students_log"
+                        ]
+                    }
+                }
+            }
+        },
+        "error": {
+            "properties": {
+                "return_code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "explanation": {
+                    "type": "string"
+                },
+                "error_data": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

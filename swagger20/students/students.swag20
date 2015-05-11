@@ -1,15 +1,15 @@
 {
   "swagger": "2.0",
     "info": {
-      "title": "Identity",
-      "description": "Identity Resource of the University API",
+      "title": "Students",
+      "description": "Students Resource of the University API",
       "version": "1.0.0"
     },
     "host": "api.byu.edu",
     "schemes": [
         "https"
     ],
-    "basePath": "/byuapi/identities",
+    "basePath": "/byuapi/students",
     "produces": [
       "application/json"
     ],
