@@ -681,7 +681,7 @@
                         "format": "date-time"
                     },
                     {
-                        "name": "log",
+                        "name": "odometer_log",
                         "in": "body",
                         "description": "The Odometer Log to be modified",
                         "required": true,
@@ -995,6 +995,238 @@
                     }
                 }
             }
+        },
+        "/{vin}/trips/{trip_id}": {
+            "get": {
+                "summary": "Cars",
+                "description": "Retrieve a specific Trip",
+                "operationId": "getTrip",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "trip_id",
+                        "in": "path",
+                        "description": "Trip Identification Number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Item Retrieved",
+                        "schema": {
+                            "$ref": "#/definitions/trip"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "404": {
+                        "description": "No Trips satisfy the request - the collection is empty",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Cars",
+                "description": "Modify a specific Trip",
+                "operationId": "modifyTrip",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "trip_id",
+                        "in": "path",
+                        "description": "Trip Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "trip",
+                        "in": "body",
+                        "description": "The Trip to be modified",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/trip"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Trip Modified",
+                        "schema": {
+                            "$ref": "#/definitions/trip"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Request Body conflicts or is malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Cars",
+                "description": "Delete a specific Trip",
+                "operationId": "deleteTrip",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "trip_id",
+                        "in": "path",
+                        "description": "Trip Identification Number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Trip successfully removed"
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "options": {
+                "summary": "Cars",
+                "description": "What can this endpoint do?",
+                "operationId": "TripsOptions",
+                "parameters": [
+                    {
+                        "name": "vin",
+                        "in": "path",
+                        "description": "Vehicle Identification Number",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "trip_id",
+                        "in": "path",
+                        "description": "Trip Identification Number",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Cars"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Supported HTTP Methods",
+                        "schema": {
+                            "$ref": "#/definitions/methods"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -1061,6 +1293,9 @@
                 },
                 "odometer_logs": {
                     "$ref": "#/definitions/odometer_logs"
+                },
+                "trips": {
+                    "$ref": "#/definitions/trips"
                 }
             }
         },
@@ -1157,6 +1392,57 @@
                 },
                 "read_by_name": {
                     "$ref": "#/definitions/read_by_name"
+                }
+            }
+        },
+        "trips": {
+            "description": "A collection of Trips",
+            "type": "object",
+            "required": [
+                "values"
+            ],
+            "properties": {
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/trip"
+                    }
+                }
+            }
+        },
+        "trip": {
+            "description": "Trip Item",
+            "type": "object",
+            "required": [
+                "vin",
+                "trip_id",
+                "destination",
+                "start_date",
+                "end_date",
+                "start_miles",
+                "end_miles"
+            ],
+            "properties": {
+                "vin": {
+                    "$ref": "#/definitions/vin"
+                },
+                "trip_id": {
+                    "$ref": "#/definitions/trip_id"
+                },
+                "destination": {
+                    "$ref": "#/definitions/destination"
+                },
+                "start_date": {
+                    "$ref": "#/definitions/start_date"
+                },
+                "end_date": {
+                    "$ref": "#/definitions/end_date"
+                },
+                "start_miles": {
+                    "$ref": "#/definitions/start_miles"
+                },
+                "end_miles": {
+                    "$ref": "#/definitions/end_miles"
                 }
             }
         },
@@ -1616,8 +1902,7 @@
             ],
             "properties": {
                 "value": {
-                    "type": "string",
-                    "maxLength": 4
+                    "type": "string"
                 },
                 "api_type": {
                     "type": "string",
@@ -1627,7 +1912,6 @@
                     ]
                 }
             }
-
         },
         "read_by_id": {
             "description": "The ID of the person that created the odometer log",
@@ -1674,6 +1958,120 @@
                 },
                 "related-resource": {
                     "type": "string"
+                }
+            }
+        },
+        "trip_id": {
+            "description": "Trip Identification Number",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "destination": {
+            "description": "Trip Destination",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "start_date": {
+            "description": "When the trip began",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "api_type": {
+                    "type": "string"
+                }
+            }
+        },
+        "end_date": {
+            "description": "When the trip ended",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "api_type": {
+                    "type": "string"
+                }
+            }
+        },
+        "start_miles": {
+            "description": "Mileage read on odometer at beginning of trip",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "end_miles": {
+            "description": "Mileage read on odometer at end of trip",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string"
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
                 }
             }
         }
