@@ -435,7 +435,7 @@
         "/{vin}/odometer_logs": {
             "get": {
                 "summary": "Cars",
-                "description": "Retrieve a collection of Odometer Logs for a specific Car",
+                "description": "Retrieves a collection of Odometer Logs for a specific Car",
                 "operationId": "getOdometerLogs",
                 "parameters": [
                     {
@@ -599,7 +599,7 @@
         "/{vin}/odometer_logs/{read_date}": {
             "get": {
                 "summary": "Cars",
-                "description": "Retrieve a specific Odometer Log",
+                "description": "Retrieves a specific Odometer Log",
                 "operationId": "getOdometerLog",
                 "parameters": [
                     {
@@ -835,7 +835,7 @@
         "/{vin}/trips": {
             "get": {
                 "summary": "Cars",
-                "description": "Retrieve a collection of trips for a specific Car",
+                "description": "Retrieves a collection of trips for a specific Car",
                 "operationId": "getTrips",
                 "parameters": [
                     {
@@ -999,7 +999,7 @@
         "/{vin}/trips/{trip_id}": {
             "get": {
                 "summary": "Cars",
-                "description": "Retrieve a specific Trip",
+                "description": "Retrieves a specific Trip",
                 "operationId": "getTrip",
                 "parameters": [
                     {
@@ -1231,7 +1231,7 @@
         "/{vin}/insurance_policies": {
             "get": {
                 "summary": "Cars",
-                "description": "Retrieve the insurance policy for a specific car",
+                "description": "Retrieves the insurance policy for a specific car",
                 "operationId": "getPolicy",
                 "parameters": [
                     {
@@ -1435,7 +1435,7 @@
         "/{vin}/maintenance_logs": {
             "get": {
                 "summary": "Cars",
-                "description": "Retrieve a collection of Maintenance Logs for a specific Car",
+                "description": "Retrieves a collection of Maintenance Logs for a specific Car",
                 "operationId": "getMaintenanceLogs",
                 "parameters": [
                     {
@@ -1598,7 +1598,7 @@
         "/{vin}/maintenance_logs/{maintenance_id}": {
             "get": {
                 "summary": "Cars",
-                "description": "Retrieve a specific Maintenance Log",
+                "description": "Retrieves a specific Maintenance Log",
                 "operationId": "getMaintenanceLog",
                 "parameters": [
                     {
