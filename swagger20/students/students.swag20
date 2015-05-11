@@ -1,0 +1,241 @@
+{
+  "swagger": "2.0",
+    "info": {
+      "title": "Identity",
+      "description": "Identity Resource of the University API",
+      "version": "1.0.0"
+    },
+    "host": "api.byu.edu",
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/byuapi/identities",
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/": {
+        "get": {
+          "summary": "Identities",
+          "description": "Returns a collection of BYU-IAM Identities",
+          "parameters": [
+            {
+              "name": "person_id",
+              "in": "query",
+              "description": "External PRO identifier",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "tags": [
+            "Identities"
+          ],
+          "responses": {
+            "200": {
+              "description": "A collection of Identities",
+              "schema": {
+                "$ref": "#/definitions/identities"
+              }
+            },
+            "default": {
+              "description": "Unexpected error",
+              "schema": {
+                "$ref": "#/definitions/error"
+              }
+            }
+          }
+        }
+      },
+      "/{identity_id}": {
+        "get": {
+          "summary": "Identities",
+          "description": "Returns a collection of BYU-IAM Identities\n",
+          "parameters": [
+            {
+              "name": "identity_id",
+              "in": "path",
+              "description": "External BYU-IAM identifier",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "page_size",
+              "in": "query",
+              "description": "Portion of identity collection returned",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "tags": [
+            "Identities"
+          ],
+          "responses": {
+            "200": {
+              "description": "A collection of Identities",
+              "schema": {
+                "$ref": "#/definitions/identity"
+              }
+            },
+            "default": {
+              "description": "Unexpected error",
+              "schema": {
+                "$ref": "#/definitions/error"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "identities": {
+        "type": "object",
+        "required": [
+          "values"
+        ],
+        "properties": {
+          "metadata": {
+            "$ref": "#/definitions/top_level_metadata"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/identity"
+            }
+          }
+        }
+      },
+      "identity": {
+        "type": "object",
+        "properties": {
+          "dummy_placeholder": {
+            "type": "string"
+          }
+        }
+      },
+      "links": {
+        "description": "Hypermedia links format",
+        "type": "object",
+        "required": [
+          "rel",
+          "href",
+          "method"
+        ],
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "DELETE",
+              "GET",
+              "OPTIONS",
+              "POST",
+              "PUT"
+            ]
+          }
+        }
+      },
+      "top_level_metadata": {
+        "type": "object",
+        "properties": {
+          "collection_size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page_start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page_end": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page_size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "default_page_size": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "maximum_page_size": {
+            "type": "integer"
+          },
+          "field_sets_returned": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "field_sets_available": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          },
+          "field_sets_default": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "basic"
+              ]
+            }
+          }
+        }
+      },
+      "sub_level_metadata": {
+        "type": "object",
+        "properties": {
+          "collection_size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page_start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page_end": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "page_size": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "default_page_size": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "maximum_page_size": {
+            "type": "integer"
+          }
+        }
+      },
+      "error": {
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "string"
+          }
+        }
+      }
+    }
+}
