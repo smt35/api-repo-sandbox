@@ -1311,7 +1311,13 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Policy Added/Modified",
+                        "description": "Insurance Policy Modified",
+                        "schema": {
+                            "$ref": "#/definitions/insurance_policies"
+                        }
+                    },
+                    "201": {
+                        "description": "Insurance Policy Added",
                         "schema": {
                             "$ref": "#/definitions/insurance_policies"
                         }

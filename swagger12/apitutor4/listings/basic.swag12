@@ -511,7 +511,7 @@
             },
             {
               "code": "404",
-              "message": "No Odometer Logs found - invalid VIN or Log Date",
+              "message": "No Odometer Log found - invalid VIN or Log Date",
               "responseModel": "error"
             }
           ]
@@ -633,6 +633,486 @@
               "required": true,
               "type": "string",
               "format": "date-time",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{vin}/trips",
+      "description": "Operations on a Collection of Cars",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieves a collection of trips for a specific Car",
+          "nickname": "getTrips",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Collection Retrieved",
+              "responseModel": "trips"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Trips satisfy the query parameters - the collection is empty",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Query parameters conflict or are malformed",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Create a new trip",
+          "nickname": "createTrip",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "string"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "trip",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Trip Added",
+              "responseModel": "trip"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "TripsOptions",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{vin}/trips/{trip_id}",
+      "description": "Operations on a Car Item",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieves a specific Trip",
+          "nickname": "getTrip",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "trip_id",
+              "description": "Trip Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Item Retrieved",
+              "responseModel": "trip"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Trip found - invalid VIN or Trip",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Modify a specific Trip",
+          "nickname": "modifyTrip",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "trip_id",
+              "description": "Trip Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "trip",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Trip successfully modified",
+              "responseModel": "odometer_log"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to modify an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to modify an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a specific Trip",
+          "nickname": "deleteTrip",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "trip_id",
+              "description": "Trip Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Trip successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete an trip",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "tripOptions",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "trip_id",
+              "description": "Trip Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{vin}/insurance_policies",
+      "description": "Operations on a Car Item",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieves the insurance policy for a specific car",
+          "nickname": "getPolicy",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Item Retrieved",
+              "responseModel": "insurance_policies"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Insurance Policies found - invalid VIN",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Create or Modify a specific car's insurance policies",
+          "nickname": "createModifyPolicy",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "insurance_policy",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Insurance Policy successfully addedmodified",
+              "responseModel": "odometer_log"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to modify an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to modify an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a specific Trip",
+          "nickname": "deleteTrip",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "trip_id",
+              "description": "Trip Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Trip successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete an trip",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete an trip",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "tripOptions",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "trip_id",
+              "description": "Trip Identification Number",
+              "required": true,
+              "type": "string",
               "paramType": "path"
             }
           ],
