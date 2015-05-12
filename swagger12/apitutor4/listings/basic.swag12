@@ -1400,7 +1400,7 @@
         {
           "method": "OPTIONS",
           "summary": "What can this endpoint do?",
-          "nickname": "tripOptions",
+          "nickname": "MaintenanceLogOptions",
           "parameters": [
             {
               "name": "vin",
@@ -1410,8 +1410,8 @@
               "paramType": "path"
             },
             {
-              "name": "trip_id",
-              "description": "Trip Identification Number",
+              "name": "maintenance_id",
+              "description": "Maintenance Log Identification Number",
               "required": true,
               "type": "string",
               "paramType": "path"
