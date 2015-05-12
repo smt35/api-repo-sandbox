@@ -1708,6 +1708,121 @@
         }
         }
       },
+    "trips": {
+      "id": "trips",
+      "description": "A collection of Trips",
+      "type": "object",
+      "required": [
+        "values"
+      ],
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "trip"
+          }
+        }
+      },
+    "trip": {
+      "id": "trip",
+      "description": "Trip Item",
+      "type": "object",
+      "required": [
+        "vin",
+        "trip_id",
+        "destination",
+        "start_date",
+        "end_date",
+        "start_miles",
+        "end_miles"
+      ],
+      "properties": {
+        "vin": {
+          "$ref": "vin"
+        },
+        "trip_id": {
+          "$ref": "trip_id"
+        },
+        "destination": {
+          "$ref": "destination"
+        },
+        "start_date": {
+          "$ref": "start_date"
+        },
+        "end_date": {
+          "$ref": "end_date"
+        },
+        "start_miles": {
+          "$ref": "start_miles"
+        },
+        "end_miles": {
+          "$ref": "end_miles"
+        }
+      }
+    },
+    "insurance_policies": {
+      "id": "insurance_policies",
+      "description": "Insurance Policy Item",
+      "type": "object",
+      "required": [
+        "vin",
+        "policy_id",
+        "insurer"
+      ],
+      "properties": {
+        "vin": {
+          "$ref": "vin"
+        },
+        "policy_id": {
+          "$ref": "policy_id"
+        },
+        "insurer": {
+          "$ref": "insurer"
+        }
+      }
+    },
+    "maintenance_logs": {
+      "id": "maintenance_logs",
+      "description": "A collection of Maintenance Logs",
+      "type": "object",
+      "required": [
+        "values"
+      ],
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "maintenance_log"
+          }
+        }
+      },
+    "maintenance_log": {
+      "id": "maintenance_log",
+      "description": "Maintenance Log Item",
+      "type": "object",
+      "required": [
+        "vin",
+        "maintenance_id",
+        "maintenance_date",
+        "description",
+        "cost"
+      ],
+      "properties": {
+        "vin": {
+          "$ref": "vin"
+        },
+        "maintenance_id": {
+          "$ref": "maintenance_id"
+        },
+        "maintenance_date": {
+          "$ref": "maintenance_date"
+        },
+        "description": {
+          "$ref": "description"
+        },
+        "cost": {
+          "$ref": "cost"
+        }
+      }
+    },
     "vin": {
       "type": "object",
       "description": "Vehicle Identification Number",
