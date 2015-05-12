@@ -1750,7 +1750,7 @@
                     {
                         "name": "maintenance_id",
                         "in": "path",
-                        "description": "When the Maintenance Log was created",
+                        "description": "Maintenance Log Identification Number",
                         "required": true,
                         "type": "string"
                     }

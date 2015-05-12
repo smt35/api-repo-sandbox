@@ -734,12 +734,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to add an trip",
+              "message": "Authentication required to add a trip",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to add an trip",
+              "message": "Access denied - not authorized to add a trip",
               "responseModel": "error"
             },
             {
@@ -869,12 +869,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to modify an trip",
+              "message": "Authentication required to modify a trip",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to modify an trip",
+              "message": "Access denied - not authorized to modify a trip",
               "responseModel": "error"
             },
             {
@@ -916,12 +916,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to delete an trip",
+              "message": "Authentication required to delete a trip",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to delete an trip",
+              "message": "Access denied - not authorized to delete a trip",
               "responseModel": "error"
             }
           ]
@@ -1022,15 +1022,20 @@
               "name": "body",
               "description": "Request Body",
               "required": true,
-              "type": "insurance_policy",
+              "type": "insurance_policies",
               "paramType": "body"
             }
           ],
           "responseMessages": [
             {
               "code": "200",
-              "message": "Insurance Policy successfully addedmodified",
-              "responseModel": "odometer_log"
+              "message": "Insurance Policy successfully modified",
+              "responseModel": "insurance_policies"
+            },
+            {
+              "code": "201",
+              "message": "Insurance Policy successfully added",
+              "responseModel": "insurance_policies"
             },
             {
               "code": "400",
@@ -1039,12 +1044,12 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to modify an trip",
+              "message": "Authentication required to add or modify an insurance policy",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to modify an trip",
+              "message": "Access denied - not authorized to modify an insurance policy",
               "responseModel": "error"
             },
             {
@@ -1056,8 +1061,201 @@
         },
         {
           "method": "DELETE",
-          "summary": "Delete a specific Trip",
-          "nickname": "deleteTrip",
+          "summary": "Remove the insurance policy from this Car",
+          "nickname": "deletePolicy",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Insurance Policy successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete an insurance policy",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete an insurance policy",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "PolicyOptions",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{vin}/maintenance_logs",
+      "description": "Operations on a Collection of Cars",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieves a collection of Maintenance Logs for a specific Car",
+          "nickname": "getMaintenanceLogs",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Collection Retrieved",
+              "responseModel": "maintenance_logs"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to access data",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Trips satisfy the query parameters - the collection is empty",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Query parameters conflict or are malformed",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Create a new maintenance log",
+          "nickname": "createMaintenanceLog",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "string"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "maintenance_log",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "201",
+              "message": "Maintenance Log Added",
+              "responseModel": "maintenance_log"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to add a maintenance log",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to add a maintenance log",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "MaintenanceLogsOptions",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "string"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/{vin}/maintenance_logs/{maintenance_id}",
+      "description": "Operations on a Car Item",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Retrieves a specific Trip",
+          "nickname": "getTrip",
           "parameters": [
             {
               "name": "vin",
@@ -1067,8 +1265,8 @@
               "paramType": "path"
             },
             {
-              "name": "trip_id",
-              "description": "Trip Identification Number",
+              "name": "maintenance_id",
+              "description": "Maintenance Log Identification Number",
               "required": true,
               "type": "string",
               "paramType": "path"
@@ -1076,8 +1274,9 @@
           ],
           "responseMessages": [
             {
-              "code": "204",
-              "message": "Trip successfully removed"
+              "code": "200",
+              "message": "Item Retrieved",
+              "responseModel": "maintenance_log"
             },
             {
               "code": "400",
@@ -1086,12 +1285,114 @@
             },
             {
               "code": "401",
-              "message": "Authentication required to delete an trip",
+              "message": "Authentication required to access data",
               "responseModel": "error"
             },
             {
               "code": "403",
-              "message": "Access denied - not authorized to delete an trip",
+              "message": "Access denied to protected data",
+              "responseModel": "error"
+            },
+            {
+              "code": "404",
+              "message": "No Trip found - invalid VIN or Maintenance Log ID",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Modify a specific Maintenance Log",
+          "nickname": "modifyMaintenanceLog",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "maintenance_id",
+              "description": "Maintenance Log Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "body",
+              "description": "Request Body",
+              "required": true,
+              "type": "maintenance_log",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Maintenance Log successfully modified",
+              "responseModel": "maintenance_log"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to modify a maintenance log",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to modify a maintenance log",
+              "responseModel": "error"
+            },
+            {
+              "code": "409",
+              "message": "Body of the request contains conflicting, malformed, or invalid data",
+              "responseModel": "error"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a specific Maintenance Log",
+          "nickname": "deleteOdometerLog",
+          "parameters": [
+            {
+              "name": "vin",
+              "description": "Vehicle Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "maintenance_id",
+              "description": "Maintenance Log Identification Number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": "204",
+              "message": "Maintenance Log successfully removed"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            },
+            {
+              "code": "401",
+              "message": "Authentication required to delete a maintenance log",
+              "responseModel": "error"
+            },
+            {
+              "code": "403",
+              "message": "Access denied - not authorized to delete a maintenance log",
               "responseModel": "error"
             }
           ]
