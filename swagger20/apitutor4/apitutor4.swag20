@@ -1902,6 +1902,9 @@
                 "trips": {
                     "$ref": "#/definitions/trips"
                 },
+                "insurance_policies": {
+                    "$ref": "#/definitions/insurance_policies"
+                },
                 "maintenance_logs": {
                     "$ref": "#/definitions/maintenance_logs"
                 }

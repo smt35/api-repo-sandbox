@@ -1531,6 +1531,12 @@
         },
         "odometer_logs": {
             "$ref": "odometer_logs"
+        },
+        "trips": {
+            "$ref": "trips"
+        },
+        "maintenance_logs": {
+            "$ref": "maintenance_logs"
         }
       }
     },
