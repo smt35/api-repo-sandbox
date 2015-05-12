@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Cars",
-        "description": "Cars Resource of the University API Tutorial",
+        "title": "Phone",
+        "description": "Phone Resource of the dhancoc2 API Tutorial",
         "version": "v1"
     },
     "host": "edge-wso2.byu.edu:8243",
@@ -16,93 +16,40 @@
     "paths": {
         "/": {
             "get": {
-                "summary": "Cars",
-                "description": "Returns a collection of Cars",
-                "operationId": "getCars",
+                "summary": "Phones",
+                "description": "Returns a collection of Phone Numbers",
+                "operationId": "getPhones",
                 "parameters": [
                     {
-                        "name": "plate_state",
+                        "name": "phone_type",
                         "in": "query",
-                        "description": "License Plate State",
+                        "description": "Type of Phone",
                         "required": false,
                         "type": "string"
                     },
                     {
-                        "name": "plate_number",
+                        "name": "phone_number",
                         "in": "query",
-                        "description": "License Plate Number",
+                        "description": "Phone Number",
                         "required": false,
                         "type": "string"
                     },
                     {
-                        "name": "vehicle_type",
+                        "name": "country_code",
                         "in": "query",
-                        "description": "Type of Vehicle",
+                        "description": "Country Code",
                         "required": false,
                         "type": "string"
-                    },
-                    {
-                        "name": "vehicle_year",
-                        "in": "query",
-                        "description": "Model Year of the Vehicle",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "make",
-                        "in": "query",
-                        "description": "Make of the Vehicle",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "model",
-                        "in": "query",
-                        "description": "Model of the Vehicle",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "color",
-                        "in": "query",
-                        "description": "Color of the Vehicle",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "owner_id",
-                        "in": "query",
-                        "description": "The ID of the owner of the vehicle",
-                        "required": false,
-                        "type": "string"
-                    },
-                    {
-                        "name": "page_start",
-                        "in": "query",
-                        "description": "Specifies how far to skip into a large set",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "default": 1
-                    },
-                    {
-                        "name": "page_size",
-                        "in": "query",
-                        "description": "Specifies how many items to return from a large set",
-                        "required": false,
-                        "type": "integer",
-                        "format": "int32",
-                        "default": 50
                     }
                 ],
                 "tags": [
-                    "Cars"
+                    "Phones"
                 ],
                 "responses": {
                     "200": {
                         "description": "Collection Retrieved",
                         "schema": {
-                            "$ref": "#/definitions/cars"
+                            "$ref": "#/definitions/phones"
                         }
                     },
                     "400": {
@@ -124,7 +71,7 @@
                         }
                     },
                     "404": {
-                        "description": "No Cars satisfy the query parameters - the collection is empty",
+                        "description": "No phones satisfy the query parameters - the collection is empty",
                         "schema": {
                             "$ref": "#/definitions/error"
                         }
@@ -144,28 +91,28 @@
                 }
             },
             "post": {
-                "summary": "Cars",
-                "description": "Create a new Car",
+                "summary": "Phones",
+                "description": "Create a new Phone",
                 "operationId": "createCar",
                 "parameters": [
                     {
-                        "name": "car",
+                        "name": "phone",
                         "in": "body",
-                        "description": "The Car to be added",
+                        "description": "The Phone to be added",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/car"
+                            "$ref": "#/definitions/phone"
                         }
                     }
                 ],
                 "tags": [
-                    "Cars"
+                    "Phones"
                 ],
                 "responses": {
                     "201": {
-                        "description": "Car Added",
+                        "description": "Phone Added",
                         "schema": {
-                            "$ref": "#/definitions/car"
+                            "$ref": "#/definitions/phone"
                         }
                     },
                     "400": {
@@ -201,11 +148,11 @@
                 }
             },
             "options": {
-                "summary": "Cars",
+                "summary": "Phones",
                 "description": "What can this endpoint do?",
-                "operationId": "carsOptions",
+                "operationId": "phoneOptions",
                 "tags": [
-                    "Cars"
+                    "Phones"
                 ],
                 "responses": {
                     "200": {
@@ -229,28 +176,28 @@
                 }
             }
         },
-        "/{vin}": {
+        "/{person_id}": {
             "get": {
-                "summary": "Cars",
-                "description": "Returns a specific Car",
-                "operationId": "getCar",
+                "summary": "Phones",
+                "description": "Returns a specific Phone Number",
+                "operationId": "getPhone",
                 "parameters": [
                     {
-                        "name": "vin",
+                        "name": "person_id",
                         "in": "path",
-                        "description": "Vehicle Identification Number",
+                        "description": "person_id",
                         "required": true,
                         "type": "string"
                     }
                 ],
                 "tags": [
-                    "Cars"
+                    "Phones"
                 ],
                 "responses": {
                     "200": {
                         "description": "Item Retrieved",
                         "schema": {
-                            "$ref": "#/definitions/car"
+                            "$ref": "#/definitions/phone"
                         }
                     },
                     "400": {
@@ -272,7 +219,7 @@
                         }
                     },
                     "404": {
-                        "description": "No Cars satisfy the request - the collection is empty",
+                        "description": "No Phones satisfy the request - the collection is empty",
                         "schema": {
                             "$ref": "#/definitions/error"
                         }
@@ -286,24 +233,24 @@
                 }
             },
             "delete": {
-                "summary": "Cars",
-                "description": "Delete a specific Car",
-                "operationId": "deleteCar",
+                "summary": "Phones",
+                "description": "Delete a specific Phone Number",
+                "operationId": "deletePhone",
                 "parameters": [
                     {
-                        "name": "vin",
+                        "name": "person_id",
                         "in": "path",
-                        "description": "Vehicle Identification Number",
+                        "description": "person_id",
                         "required": true,
                         "type": "string"
                     }
                 ],
                 "tags": [
-                    "Cars"
+                    "Phones"
                 ],
                 "responses": {
                     "204": {
-                        "description": "Car successfully removed"
+                        "description": "Phone successfully removed"
                     },
                     "400": {
                         "description": "Invalid Request - unable to interpret request",
@@ -332,35 +279,35 @@
                 }
             },
             "put": {
-                "summary": "Cars",
-                "description": "Modify a specific Car",
-                "operationId": "modifyCar",
+                "summary": "Phones",
+                "description": "Modify a specific Phone",
+                "operationId": "modifyPhone",
                 "parameters": [
                     {
-                        "name": "vin",
+                        "name": "person_id",
                         "in": "path",
-                        "description": "Vehicle Identification Number",
+                        "description": "person_id",
                         "required": true,
                         "type": "string"
                     },
                     {
-                        "name": "car",
+                        "name": "phone",
                         "in": "body",
-                        "description": "The Car to be modified",
+                        "description": "The Phone to be modified",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/car"
+                            "$ref": "#/definitions/phone"
                         }
                     }
                 ],
                 "tags": [
-                    "Cars"
+                    "Phones"
                 ],
                 "responses": {
                     "200": {
-                        "description": "Car Modified",
+                        "description": "Phone Modified",
                         "schema": {
-                            "$ref": "#/definitions/car"
+                            "$ref": "#/definitions/phone"
                         }
                     },
                     "400": {
@@ -396,20 +343,20 @@
                 }
             },
             "options": {
-                "summary": "Cars",
+                "summary": "Phones",
                 "description": "What can this endpoint do?",
-                "operationId": "carOptions",
+                "operationId": "phoneOptions",
                 "parameters": [
                     {
-                        "name": "vin",
+                        "name": "person_id",
                         "in": "path",
-                        "description": "Vehicle Identification Number",
+                        "description": "person_id",
                         "required": true,
                         "type": "string"
                     }
                 ],
                 "tags": [
-                    "Cars"
+                    "Phones"
                 ],
                 "responses": {
                     "200": {
@@ -435,114 +382,42 @@
         }
     },
     "definitions": {
-        "cars": {
-            "description": "A collection of Cars",
+        "phones": {
+            "description": "A collection of Phones",
             "type": "array",
             "items": {
-                "$ref": "#/definitions/car"
+                "$ref": "#/definitions/phone"
             }
         },
-        "car": {
-            "description": "Car Item",
+        "phone": {
+            "description": "Phone Item",
             "type": "object",
             "required": [
-                "vin",
-                "plate_state",
-                "plate_number",
-                "vehicle_type",
-                "vehicle_year",
-                "make",
-                "model",
-                "color",
-                "owner_id",
-                "owner_name",
-                "created_by_id",
-                "created_by_name",
-                "created_date_time",
-                "updated_by_id",
-                "updated_by_name",
-                "updated_date_time"
+                "person_id",
+                "phone_type",
+                "phone_number",
+                "country_code"
             ],
             "properties": {
-                "vin": {
-                    "description": "Vehicle Identification Number",
+                "person_id": {
+                    "description": "person_id",
                     "type": "string",
                     "maxLength": 16
                 },
-                "plate_state": {
-                    "description": "License Plate State",
+                "phone_type": {
+                    "description": "Type of Phone",
                     "type": "string",
                     "maxLength": 2
                 },
-                "plate_number": {
-                    "description": "License Plate Number",
-                    "type": "string"
+                "phone_number": {
+                    "description": "Phone Number",
+                    "type": "string",
+                    "maxLength": 30
                 },
-                "vehicle_type": {
+                "country_code": {
                     "description": "Type of Vehicle",
                     "type": "string",
-                    "enum": [
-                        "Car/Sedan/Coupe",
-                        "Delivery/Service Truck",
-                        "Moped/Scooter",
-                        "Motorcycle",
-                        "Other",
-                        "Truck/SUV"
-                    ]
-                },
-                "vehicle_year": {
-                    "description": "Model Year of the Vehicle",
-                    "type": "string",
-                    "maxLength": 4
-                },
-                "make": {
-                    "description": "Make of the Vehicle",
-                    "type": "string"
-                },
-                "model": {
-                    "description": "Model of the Vehicle",
-                    "type": "string"
-                },
-                "color": {
-                    "description": "Color of the Vehicle",
-                    "type": "string"
-                },
-                "owner_id": {
-                    "description": "The ID of the owner of the vehicle",
-                    "type": "string",
-                    "maxLength": 9
-                },
-                "owner_name": {
-                    "description": "The name of the owner of the vehicle",
-                    "type": "string"
-                },
-                "created_by_id": {
-                    "description": "The ID of the person that created the vehicle entry",
-                    "type": "string",
-                    "maxLength": 9
-                },
-                "created_by_name": {
-                    "description": "The name of the person that created the vehicle entry",
-                    "type": "string"
-                },
-                "created_date_time": {
-                    "description": "When the vehicle entry was created",
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "updated_by_id": {
-                    "description": "The ID of the person that last updated the vehicle entry",
-                    "type": "string",
-                    "maxLength": 9
-                },
-                "updated_by_name": {
-                    "description": "The name of the person that last updated the vehicle entry",
-                    "type": "string"
-                },
-                "updated_date_time": {
-                    "description": "When the vehicle entry was last updated",
-                    "type": "string",
-                    "format": "date-time"
+                    "maxLength": 3
                 }
             }
         },
