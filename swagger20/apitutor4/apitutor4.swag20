@@ -104,14 +104,14 @@
                     {
                         "name": "contexts",
                         "in": "query",
-                        "description": "Combined Collection Sets",
+                        "description": "Group of Field Sets",
                         "required": false,
                         "type": "string"
                     },
                     {
                         "name": "insurance_policies.insurer",
                         "in": "query",
-                        "description": "Insurance Company of Insurance Policy",
+                        "description": "Insurance Agency of Insurance Policy",
                         "required": false,
                         "type": "string"
                     }
@@ -2201,6 +2201,30 @@
                 "maximum_page_size": {
                     "type": "integer",
                     "minimum": 0
+                },
+                "field_sets_returned": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/field_sets_returned"
+                    }
+                },
+                "field_sets_available": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/field_sets_available"
+                    }
+                },
+                "default_field_sets": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/default_field_sets"
+                    }
+                },
+                "contexts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/contexts"
+                    }
                 }
             }
         },
@@ -2877,6 +2901,79 @@
                     "enum": [
                         "read-only",
                         "modifiable"
+                    ]
+                }
+            }
+        },
+        "field_sets_returned": {
+            "description": "Field Sets Returned",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "enum": [
+                        "basic",
+                        "odometer_logs",
+                        "trips",
+                        "insurance_policies",
+                        "maintenance_logs"
+                    ]
+                }
+            }
+        },
+        "field_sets_available": {
+            "description": "Field Sets Available",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "enum": [
+                        "basic",
+                        "odometer_logs",
+                        "trips",
+                        "insurance_policies",
+                        "maintenance_logs"
+                    ]
+                }
+            }
+        },
+        "default_field_sets": {
+            "description": "Default Field Sets",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "enum": [
+                        "basic"
+                    ]
+                }
+            }
+        },
+        "contexts": {
+            "description": "Contexts",
+            "type": "object",
+            "required": [
+                "values"
+            ],
+            "properties": {
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/mileage"
+                    }
+                }
+            }
+        },
+        "mileage": {
+            "description": "Mileage Context",
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "enum": [
+                        "basic",
+                        "odometer_logs",
+                        "trips"
                     ]
                 }
             }
