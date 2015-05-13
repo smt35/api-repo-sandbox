@@ -93,6 +93,27 @@
                         "type": "integer",
                         "format": "int32",
                         "default": 50
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "description": "Field Sets Available",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "contexts",
+                        "in": "query",
+                        "description": "Combined Collection Sets",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "insurance_policies.insurer",
+                        "in": "query",
+                        "description": "Insurance Company of Insurance Policy",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
@@ -1312,12 +1333,6 @@
                 "responses": {
                     "200": {
                         "description": "Insurance Policy Modified",
-                        "schema": {
-                            "$ref": "#/definitions/insurance_policies"
-                        }
-                    },
-                    "201": {
-                        "description": "Insurance Policy Added",
                         "schema": {
                             "$ref": "#/definitions/insurance_policies"
                         }
