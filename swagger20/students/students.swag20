@@ -1,9 +1,9 @@
 {
-  "swagger": "2.0",
+    "swagger": "2.0",
     "info": {
-      "title": "Students",
-      "description": "Students Resource of the University API",
-      "version": "1.0.0"
+        "title": "Students",
+        "description": "Students Resource of the University API",
+        "version": "1.0.0"
     },
     "host": "api.byu.edu",
     "schemes": [
@@ -11,231 +11,385 @@
     ],
     "basePath": "/byuapi/students",
     "produces": [
-      "application/json"
+        "application/json"
     ],
     "paths": {
-      "/": {
-        "get": {
-          "summary": "Identities",
-          "description": "Returns a collection of BYU-IAM Identities",
-          "parameters": [
-            {
-              "name": "person_id",
-              "in": "query",
-              "description": "External PRO identifier",
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "tags": [
-            "Identities"
-          ],
-          "responses": {
-            "200": {
-              "description": "A collection of Identities",
-              "schema": {
-                "$ref": "#/definitions/identities"
-              }
+        "/": {
+            "get": {
+                "summary": "Students",
+                "description": "Returns a collection of BYU-IAM Students",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "query",
+                        "description": "External PRO identifier",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Students"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Students",
+                        "schema": {
+                            "$ref": "#/definitions/students"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
             },
-            "default": {
-              "description": "Unexpected error",
-              "schema": {
-                "$ref": "#/definitions/error"
-              }
+            "put": {
+                "summary": "Students",
+                "description": "Update a student (groups of students) not by ID",
+                "responses": {
+                    "200": {
+                        "description": "The students that were put",
+                        "schema": {
+                            "$ref": "#/definitions/student"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
             }
-          }
+        },
+        "/{person_id}": {
+            "get": {
+                "summary": "Student",
+                "description": "Returns a BYU-IAM Student\n",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "path",
+                        "description": "External BYU-IAM identifier",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "description": "Portion of identity collection returned",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Identities"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Students",
+                        "schema": {
+                            "$ref": "#/definitions/student"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Student",
+                "description": "Update a Student\n",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "query",
+                        "description": "External BYU identifier",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The student that was updated",
+                        "schema": {
+                            "$ref": "#/definitions/student"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Student",
+                "description": "Delete a Student\n",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "query",
+                        "description": "External BYU identifier",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The student that was deleted",
+                        "schema": {
+                            "$ref": "#/definitions/student"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{person_id}/enrollments": {
+            "get": {
+                "summary": "Enrollments",
+                "description": "Returns all enrollments for the students",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "query",
+                        "description": "External BYU Identifier",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The enrollment for the student",
+                        "schema": {
+                            "$ref": "#/definitions/enrollment"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Enrollments",
+                "description": "put an enrollment in",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "query",
+                        "description": "External BYU identifier",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The enrollment that was updated",
+                        "schema": {
+                            "$ref": "#/definitions/enrollment"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Enrollments",
+                "description": "bulk update of classes",
+                "parameters": [
+                    {
+                        "name": "person_id",
+                        "in": "query",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The enrollment that was updated",
+                        "schema": {
+                            "$ref": "#/definitions/enrollment"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
         }
-      },
-      "/{identity_id}": {
-        "get": {
-          "summary": "Identities",
-          "description": "Returns a collection of BYU-IAM Identities\n",
-          "parameters": [
-            {
-              "name": "identity_id",
-              "in": "path",
-              "description": "External BYU-IAM identifier",
-              "required": true,
-              "type": "string"
-            },
-            {
-              "name": "page_size",
-              "in": "query",
-              "description": "Portion of identity collection returned",
-              "required": false,
-              "type": "string"
-            }
-          ],
-          "tags": [
-            "Identities"
-          ],
-          "responses": {
-            "200": {
-              "description": "A collection of Identities",
-              "schema": {
-                "$ref": "#/definitions/identity"
-              }
-            },
-            "default": {
-              "description": "Unexpected error",
-              "schema": {
-                "$ref": "#/definitions/error"
-              }
-            }
-          }
-        }
-      }
     },
     "definitions": {
-      "identities": {
-        "type": "object",
-        "required": [
-          "values"
-        ],
-        "properties": {
-          "metadata": {
-            "$ref": "#/definitions/top_level_metadata"
-          },
-          "values": {
-            "type": "array",
-            "items": {
-              "$ref": "#/definitions/identity"
+        "identities": {
+            "type": "object",
+            "required": [
+                "values"
+            ],
+            "properties": {
+                "metadata": {
+                    "$ref": "#/definitions/top_level_metadata"
+                },
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/student"
+                    }
+                }
             }
-          }
-        }
-      },
-      "identity": {
-        "type": "object",
-        "properties": {
-          "dummy_placeholder": {
-            "type": "string"
-          }
-        }
-      },
-      "links": {
-        "description": "Hypermedia links format",
-        "type": "object",
-        "required": [
-          "rel",
-          "href",
-          "method"
-        ],
-        "properties": {
-          "rel": {
-            "type": "string"
-          },
-          "href": {
-            "type": "string",
-            "format": "uri"
-          },
-          "method": {
-            "type": "string",
-            "enum": [
-              "DELETE",
-              "GET",
-              "OPTIONS",
-              "POST",
-              "PUT"
-            ]
-          }
-        }
-      },
-      "top_level_metadata": {
-        "type": "object",
-        "properties": {
-          "collection_size": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "page_start": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "page_end": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "page_size": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "default_page_size": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "maximum_page_size": {
-            "type": "integer"
-          },
-          "field_sets_returned": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "basic"
-              ]
+        },
+        "identity": {
+            "type": "object",
+            "properties": {
+                "dummy_placeholder": {
+                    "type": "string"
+                }
             }
-          },
-          "field_sets_available": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "basic"
-              ]
+        },
+        "links": {
+            "description": "Hypermedia links format",
+            "type": "object",
+            "required": [
+                "rel",
+                "href",
+                "method"
+            ],
+            "properties": {
+                "rel": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "method": {
+                    "type": "string",
+                    "enum": [
+                        "DELETE",
+                        "GET",
+                        "OPTIONS",
+                        "POST",
+                        "PUT"
+                    ]
+                }
             }
-          },
-          "field_sets_default": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "basic"
-              ]
+        },
+        "top_level_metadata": {
+            "type": "object",
+            "properties": {
+                "collection_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_start": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_end": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "default_page_size": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "maximum_page_size": {
+                    "type": "integer"
+                },
+                "field_sets_returned": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "basic"
+                        ]
+                    }
+                },
+                "field_sets_available": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "basic"
+                        ]
+                    }
+                },
+                "field_sets_default": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "basic"
+                        ]
+                    }
+                }
             }
-          }
+        },
+        "sub_level_metadata": {
+            "type": "object",
+            "properties": {
+                "collection_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_start": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_end": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "page_size": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "default_page_size": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "maximum_page_size": {
+                    "type": "integer"
+                }
+            }
+        },
+        "error": {
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "fields": {
+                    "type": "string"
+                }
+            }
         }
-      },
-      "sub_level_metadata": {
-        "type": "object",
-        "properties": {
-          "collection_size": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "page_start": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "page_end": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "page_size": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "default_page_size": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "maximum_page_size": {
-            "type": "integer"
-          }
-        }
-      },
-      "error": {
-        "properties": {
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string"
-          },
-          "fields": {
-            "type": "string"
-          }
-        }
-      }
     }
 }
