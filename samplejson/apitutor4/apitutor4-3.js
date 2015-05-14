@@ -1,5 +1,5 @@
 {
-  "links": [
+  "links": {
     "tutorial4-cars.info": {
       "rel": "self",
       "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
@@ -30,7 +30,7 @@
       "method": "GET",
       "title": "tutorial4-owners.getOwner"
     }
-  ],
+  },
   "basic": {
     "vin": {
       "value": "73",
