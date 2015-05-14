@@ -2600,7 +2600,6 @@
                 },
                 "api_type": {
                     "type": "string"
-                    ]
                 }
             }
         },

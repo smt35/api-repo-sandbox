@@ -1537,7 +1537,7 @@
         },
         "insurance_policies": {
             "$ref": "insurance_policies"
-        }
+        },
         "maintenance_logs": {
             "$ref": "maintenance_logs"
         }
@@ -1612,6 +1612,30 @@
         "maximum_page_size": {
           "type": "integer",
           "minimum": 0
+        },
+        "field_sets_returned": {
+          "type": "arrary",
+          "items": {
+            "$ref": "field_sets_returned"
+          }
+        },
+        "field_sets_available": {
+          "type": "arrary",
+          "items": {
+            "$ref": "field_sets_available"
+          }
+        },
+        "default_field_sets": {
+          "type": "arrary",
+          "items": {
+            "$ref": "default_field_sets"
+          }
+        },
+        "contexts": {
+          "type": "arrary",
+          "items": {
+            "$ref": "contexts"
+          }
         }
       }
     },
@@ -2176,7 +2200,6 @@
         },
         "api_type": {
           "type": "string"
-          ]
         }
       }
     },
@@ -2285,5 +2308,269 @@
         }
       }
     },
+    "start_date": {
+      "type": "object",
+      "description": "When the trip began",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "api_type": {
+          "type": "string"
+        }
+      }
+    },
+    "end_date": {
+      "type": "object",
+      "description": "When the trip ended",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "api_type": {
+          "type": "string"
+        }
+      }
+    },
+    "start_miles": {
+      "type": "object",
+      "description": "Mileage read on odometer at beginning of trip",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "end_miles": {
+      "type": "object",
+      "description": "Mileage read on odometer at end of trip",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "policy_id": {
+      "type": "object",
+      "description": "Policy Identification Number",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "insurer": {
+      "type": "object",
+      "description": "Insurance Agency",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "maintenance_id": {
+      "type": "object",
+      "description": "Maintenance Log Identification Number",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "maintenance_date": {
+      "type": "object",
+      "description": "When the maintenance was done on the Car",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "api_type": {
+          "type": "string"
+        }
+      }
+    },
+    "description": {
+      "type": "object",
+      "description": "Maintenance Log Description",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "cost": {
+      "type": "object",
+      "description": "Cost of Maintenance",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "field_sets_returned": {
+      "type": "object",
+      "description": "Field Sets Returned",
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "basic",
+            "odometer_logs",
+            "trips",
+            "insurance_policies",
+            "maintenance_logs"
+          ]
+        }
+      }
+    },
+    "field_sets_available": {
+      "type": "object",
+      "description": "Field Sets Available",
+      "properties": {
+        "values": {
+          "type": "string",
+          "enum": [
+            "basic",
+            "odometer_logs",
+            "trips",
+            "insurance_policies",
+            "maintenance_logs"
+          ]
+        }
+      }
+    },
+    "default_field_sets": {
+      "type": "object",
+      "description": "Default Field Sets",
+      "properties": {
+        "values": {
+          "type": "string",
+          "enum": [
+            "basic"
+          ]
+        }
+      }
+    },
+    "contexts": {
+      "type": "object",
+      "description": "Contexts",
+      "required": [
+        "values"
+      ],
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "mileage"
+          }
+        }
+      }
+    },
+    "mileage": {
+      "type": "object",
+      "description": "Mileage Context",
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "basic",
+            "odometer_logs",
+            "trips"
+          ]
+        }
+      }
+    }
   }
 }
