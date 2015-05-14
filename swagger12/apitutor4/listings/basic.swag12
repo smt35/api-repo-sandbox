@@ -86,6 +86,27 @@
               "format": "int32",
               "paramType": "query",
               "defaultValue": "50"
+            },
+            {
+              "name": "field_sets",
+              "description": "Field Sets Available",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "contexts",
+              "description": "Group of Field Sets",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "insurance_policies.insurer",
+              "description": "Insurance Agency of Insurance Policy",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
