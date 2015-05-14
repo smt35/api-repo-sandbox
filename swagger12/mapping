@@ -402,6 +402,50 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
     },
     {
+      "url_segment": "/tutorial4-cars/73/odometer_logs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-5.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/odometer_logs",
+      "method": "PUT",
+      "return_code": 201,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-6.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/odometer_logs",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUST,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-options"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/odometer_logs/2014-05-11",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-6.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/odometer_logs/2014-05-11",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-6.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/odometer_logs/2014-05-11",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-4.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/odometer_logs/2014-05-11",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
       "url_segment": "/eventhub/api-docs",
       "method": "GET",
       "return_code": 200,
