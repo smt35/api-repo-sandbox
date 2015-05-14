@@ -2175,9 +2175,7 @@
           "format": "date-time"
         },
         "api_type": {
-          "type": "string",
-          "enum": [
-            "system"
+          "type": "string"
           ]
         }
       }
@@ -2213,6 +2211,70 @@
         "values": {
           "type": "string",
           "maxLength": 9
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "read_by_name": {
+      "type": "object",
+      "description": "The name of the person that created the odometer log",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable",
+            "related"
+          ]
+        },
+        "related_resource": {
+          "type": "string"
+        }
+      }
+    },
+    "trip_id": {
+      "type": "object",
+      "description": "Trip Identification Number",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "destination": {
+      "type": "object",
+      "description": "Trip Destination",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
         },
         "api_type": {
           "type": "string",
