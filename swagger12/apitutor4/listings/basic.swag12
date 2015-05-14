@@ -430,7 +430,7 @@
           ],
           "responseMessages": [
             {
-              "code": "201",
+              "code": "200",
               "message": "Odometer Log Added",
               "responseModel": "odometer_log"
             },
@@ -744,7 +744,7 @@
           ],
           "responseMessages": [
             {
-              "code": "201",
+              "code": "200",
               "message": "Trip Added",
               "responseModel": "trip"
             },
@@ -1215,7 +1215,7 @@
           ],
           "responseMessages": [
             {
-              "code": "201",
+              "code": "200",
               "message": "Maintenance Log Added",
               "responseModel": "maintenance_log"
             },
