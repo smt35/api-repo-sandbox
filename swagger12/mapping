@@ -446,6 +446,119 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
     },
     {
+      "url_segment": "/tutorial4-cars/73/trips",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-7.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/trips",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-8.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/trips",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-options"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/trips/A148",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-8.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/trips/A148",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-8.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/trips/A148",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-4.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/trips/A148",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/insurance_policies",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-9.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/insurance_policies",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-9.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/insurance_policies",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-4.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/insurance_policies",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/maintenance_logs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-10.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/maintenance_logs",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-11.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/maintenance_logs",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-options"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/maintenance_logs/000354",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-11.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/maintenance_logs/000354",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-11.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/maintenance_logs/000354",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-4.js"
+    },
+    {
+      "url_segment": "/tutorial4-cars/73/maintenance_logs/000354",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
       "url_segment": "/eventhub/api-docs",
       "method": "GET",
       "return_code": 200,
