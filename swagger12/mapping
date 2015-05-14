@@ -346,6 +346,18 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
     },
     {
+      "url_segment": "/apitutor4/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor4/api-docs.swag12"
+    },
+    {
+      "url_segment": "/apitutor4/api-docs/basic",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor4/listings/basic.swag12"
+    },
+    {
       "url_segment": "/eventhub/api-docs",
       "method": "GET",
       "return_code": 200,
