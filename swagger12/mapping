@@ -410,7 +410,7 @@
     {
       "url_segment": "/tutorial4-cars/73/odometer_logs",
       "method": "PUT",
-      "return_code": 201,
+      "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-6.js"
     },
     {
