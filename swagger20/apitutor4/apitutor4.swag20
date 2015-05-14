@@ -2631,8 +2631,7 @@
             "type": "object",
             "required": [
                 "value",
-                "api_type",
-                "description"
+                "api_type"
             ],
             "properties": {
                 "value": {
@@ -2642,11 +2641,9 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "system"
+                        "read-only",
+                        "modifiable"
                     ]
-                },
-                "description": {
-                    "type": "string"
                 }
             }
         },

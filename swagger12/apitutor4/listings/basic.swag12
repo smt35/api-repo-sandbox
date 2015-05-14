@@ -1535,6 +1535,9 @@
         "trips": {
             "$ref": "trips"
         },
+        "insurance_policies": {
+            "$ref": "insurance_policies"
+        }
         "maintenance_logs": {
             "$ref": "maintenance_logs"
         }
@@ -2158,6 +2161,67 @@
           ]
         }
       }
-    }
+    },
+    "read_date": {
+      "type": "object",
+      "description": "When the odometer was created",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "system"
+          ]
+        }
+      }
+    },
+    "miles": {
+      "type": "object",
+      "description": "Mileage read on odometer",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "read_by_id": {
+      "type": "object",
+      "description": "The ID of the person that created the odometer log",
+      "required": [
+        "values",
+        "api_type"
+      ],
+      "properties": {
+        "values": {
+          "type": "string",
+          "maxLength": 9
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
   }
 }
