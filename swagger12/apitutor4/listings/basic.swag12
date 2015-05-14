@@ -418,7 +418,7 @@
               "description": "Vehicle Identification Number",
               "required": true,
               "type": "string",
-              "paramType": "string"
+              "paramType": "path"
             },
             {
               "name": "body",
@@ -466,7 +466,7 @@
               "description": "Vehicle Identification Number",
               "required": true,
               "type": "string",
-              "paramType": "string"
+              "paramType": "path"
             }
           ],
           "responseMessages": [
@@ -732,7 +732,7 @@
               "description": "Vehicle Identification Number",
               "required": true,
               "type": "string",
-              "paramType": "string"
+              "paramType": "path"
             },
             {
               "name": "body",
@@ -780,7 +780,7 @@
               "description": "Vehicle Identification Number",
               "required": true,
               "type": "string",
-              "paramType": "string"
+              "paramType": "path"
             }
           ],
           "responseMessages": [
@@ -1203,7 +1203,7 @@
               "description": "Vehicle Identification Number",
               "required": true,
               "type": "string",
-              "paramType": "string"
+              "paramType": "path"
             },
             {
               "name": "body",
@@ -1251,7 +1251,7 @@
               "description": "Vehicle Identification Number",
               "required": true,
               "type": "string",
-              "paramType": "string"
+              "paramType": "path"
             }
           ],
           "responseMessages": [
