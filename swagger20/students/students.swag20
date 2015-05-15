@@ -3,7 +3,7 @@
     "info": {
         "title": "Students",
         "description": "Students Resource of the University API",
-        "version": "1.0.0"
+        "version": "0.1.1"
     },
     "host": "api.byu.edu",
     "schemes": [
@@ -108,7 +108,7 @@
                 "parameters": [
                     {
                         "name": "person_id",
-                        "in": "query",
+                        "in": "path",
                         "description": "External BYU identifier",
                         "required": true,
                         "type": "string"
@@ -135,7 +135,7 @@
                 "parameters": [
                     {
                         "name": "person_id",
-                        "in": "query",
+                        "in": "path",
                         "description": "External BYU identifier",
                         "required": true,
                         "type": "string"
@@ -164,7 +164,7 @@
                 "parameters": [
                     {
                         "name": "person_id",
-                        "in": "query",
+                        "in": "path",
                         "description": "External BYU Identifier",
                         "required": true,
                         "type": "string"
@@ -191,7 +191,7 @@
                 "parameters": [
                     {
                         "name": "person_id",
-                        "in": "query",
+                        "in": "path",
                         "description": "External BYU identifier",
                         "required": true,
                         "type": "string"
@@ -218,7 +218,7 @@
                 "parameters": [
                     {
                         "name": "person_id",
-                        "in": "query",
+                        "in": "path",
                         "required": true,
                         "type": "string"
                     }
@@ -241,14 +241,21 @@
         }
     },
     "definitions": {
-        "identities": {
+        "students": {
             "type": "object",
             "required": [
                 "values"
             ],
             "properties": {
+                "links": {
+                    "description": "HATEAOS links",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/links"
+                    }
+                },
                 "metadata": {
-                    "$ref": "#/definitions/top_level_metadata"
+                    "type": "string"
                 },
                 "values": {
                     "type": "array",
@@ -258,11 +265,44 @@
                 }
             }
         },
-        "identity": {
+        "student": {
             "type": "object",
+            "required": [
+                "basic"
+            ],
             "properties": {
-                "dummy_placeholder": {
-                    "type": "string"
+                "metadata": {
+                    "$ref": "#/definitions/top_level_metadata"
+                },
+                "links": {
+                    "$ref": "#/definitions/links"
+                },
+                "basic": {
+                    "$ref": "#/definitions/basic"
+                },
+                "enrollments": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/enrollment"
+                    }
+                },
+                "waitlist": {
+                    "$ref": "#/definitions/waitlist"
+                },
+                "student_programs": {
+                    "$ref": "#/definitions/student_programs"
+                },
+                "academic_plans": {
+                    "$ref": "#/definitions/academic_plans"
+                },
+                "suggested_classes": {
+                    "$ref": "#/definitions/suggested_classes"
+                },
+                "enrollment_logs": {
+                    "$ref": "#/definitions/enrollment_logs"
+                },
+                "waitlist_logs": {
+                    "$ref": "#/definitions/waitlist_logs"
                 }
             }
         },
@@ -293,6 +333,30 @@
                     ]
                 }
             }
+        },
+        "basic": {
+            "type": "string"
+        },
+        "enrollment": {
+            "type": "string"
+        },
+        "waitlist": {
+            "type": "string"
+        },
+        "student_programs": {
+            "type": "string"
+        },
+        "academic_plans": {
+            "type": "string"
+        },
+        "suggested_classes": {
+            "type": "string"
+        },
+        "enrollment_logs": {
+            "type": "string"
+        },
+        "waitlist_logs": {
+            "type": "string"
         },
         "top_level_metadata": {
             "type": "object",
@@ -346,34 +410,6 @@
                             "basic"
                         ]
                     }
-                }
-            }
-        },
-        "sub_level_metadata": {
-            "type": "object",
-            "properties": {
-                "collection_size": {
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "page_start": {
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "page_end": {
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "page_size": {
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "default_page_size": {
-                    "type": "integer",
-                    "minimum": 1
-                },
-                "maximum_page_size": {
-                    "type": "integer"
                 }
             }
         },

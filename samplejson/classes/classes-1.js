@@ -78,7 +78,7 @@
             "href": "https://api.byu.edu/rest/v1/universityapi/classes/20151,11463,000,001",
             "method": "PUT"
           },
-          { "rel": "classes.close,
+          { "rel": "classes.close",
             "href": "https://api.byu.edu/rest/v1/universityapi/classes/20151,11463,000,001",
             "method": "PUT"
           },
