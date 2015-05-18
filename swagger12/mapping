@@ -892,13 +892,13 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
     },
     {
-      "url_segment": "/dwa93test/api-docs2",
+      "url_segment": "/dwa93test2/api-docs",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwatest/api-docs2.swag12"
     },
     {
-      "url_segment": "/dwa93test/api-docs2/names",
+      "url_segment": "/dwa93test2/api-docs/names",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/dwatest/dwa93swagger2.swag12"
