@@ -946,6 +946,181 @@
       "return_code": 200,
       "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/test-names2/svanna96",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-2.js"
+    },
+    {
+      "url_segment": "/test-names2/svanna96",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-2.js"
+    },
+    {
+      "url_segment": "/test-names2/svanna96",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-2.js"
+    },
+    {
+      "url_segment": "/test-names2/svanna96",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/test-names2/jmort91",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-3.js"
+    },
+    {
+      "url_segment": "/test-names2/jmort91",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-3.js"
+    },
+    {
+      "url_segment": "/test-names2/jmort91",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-3.js"
+    },
+    {
+      "url_segment": "/test-names2/jmort91",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/test-names2/tcowley0",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-4.js"
+    },
+    {
+      "url_segment": "/test-names2/tcowley0",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-4.js"
+    },
+    {
+      "url_segment": "/test-names2/tcowley0",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-4.js"
+    },
+    {
+      "url_segment": "/test-names2/tcowley0",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/test-names2/hlysm337",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-5.js"
+    },
+    {
+      "url_segment": "/test-names2/hlysm337",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-5.js"
+    },
+    {
+      "url_segment": "/test-names2/hlysm337",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-5.js"
+    },
+    {
+      "url_segment": "/test-names2/hlysm337",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/test-names2/slevans",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-6.js"
+    },
+    {
+      "url_segment": "/test-names2/slevans",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-6.js"
+    },
+    {
+      "url_segment": "/test-names2/slevans",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-6.js"
+    },
+    {
+      "url_segment": "/test-names2/slevans",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/test-names2/erikb",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-7.js"
+    },
+    {
+      "url_segment": "/test-names2/erikb",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-7.js"
+    },
+    {
+      "url_segment": "/test-names2/erikb",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-7.js"
+    },
+    {
+      "url_segment": "/test-names2/erikb",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/test-names2/dhancoc2",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-8.js"
+    },
+    {
+      "url_segment": "/test-names2/dhancoc2",
+      "method": "PUT",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-8.js"
+    },
+    {
+      "url_segment": "/test-names2/dhancoc2",
+      "method": "DELETE",
+      "return_code": 204,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/dwatest/dwatest-8.js"
+    },
+    {
+      "url_segment": "/test-names2/dhancoc2",
+      "method": "OPTIONS",
+      "return_code": 200,
+      "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
     }
   ]
 }
