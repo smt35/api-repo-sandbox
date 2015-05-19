@@ -1,6 +1,6 @@
 {
-    "models": {
-        "name": {
+  "models": {
+    "name": {
       "id": "name",
       "description": "Student Name",
       "required": [
