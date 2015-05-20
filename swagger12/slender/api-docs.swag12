@@ -1,0 +1,24 @@
+{
+  "apiVersion": "v1",
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "/taylor",
+      "description": "Operations of the first example API in the University API Tutorial"
+    }
+  ],
+  "authorizations": {
+    "oauth2": {
+      "type": "oauth2",
+      "scopes": []
+    }
+  },
+  "info": {
+    "title": "slenderman",
+    "description": "DON'T LOOK OR IT TAKES YOU",
+    "termsOfServiceURL": "",
+    "contact": "taycowley@gmail.com",
+    "license": "Apache 2.0",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0.html"
+  }
+}
