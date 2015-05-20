@@ -24,7 +24,25 @@
               "responseModel": "error"
             }
           ]
-        }]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "namesOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
+        }
+        ]
     },
     {
       "path": "/{slender_id}",
@@ -105,8 +123,24 @@
               "responseModel": "error"
             }
           ]
+        },
+        {
+          "method": "OPTIONS",
+          "summary": "What can this endpoint do?",
+          "nickname": "namesOptions",
+          "responseMessages": [
+            {
+              "code": "200",
+              "message": "Successful",
+              "responseModel": "options"
+            },
+            {
+              "code": "400",
+              "message": "Invalid Request - unable to interpret request",
+              "responseModel": "error"
+            }
+          ]
         }
-
       ]
     }
   ],
@@ -200,6 +234,14 @@
         "fields": {
           "type": "string"
         }
+      }
+    },
+    "options": {
+      "id": "options",
+      "description": "Array of options",
+      "type": "array",
+      "items": {
+        "type": "string"
       }
     }
   }
