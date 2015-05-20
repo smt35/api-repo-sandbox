@@ -1129,7 +1129,7 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/slender/api-docs.swag12"
     },
     {
-      "url_segment": "/slender/taylor",
+      "url_segment": "/slender/api-docs/taylor",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/slender/slenderman.swag12"
