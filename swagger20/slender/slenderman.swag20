@@ -1,0 +1,233 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "the slenderman API",
+        "description": "DON'T LOOK OR IT TAKES YOU",
+        "version": "0.0.1"
+    },
+    "host": "api.theslenderman.com",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/v1",
+    "produces": [
+        "application/json",
+        "text/plaintext"
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "slendermans",
+                "description": "Returns a collection of slendermans",
+                "operationId": "getSlendermans",
+                "responses": {
+                    "200": {
+                        "description": "slendermans Retrieved",
+                        "schema": {
+                            "$ref": "#/definitions/slendermans"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected Error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        },
+        "/{slender_id}": {
+            "get": {
+                "summary": "slendermans",
+                "description": "Returns a specific slenderman",
+                "operationId": "getSlenderman",
+                "parameters": [
+                    {
+                        "name": "slender_id",
+                        "in": "path",
+                        "description": "The slenderman identification",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "slendermans"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Item Retrieved",
+                        "schema": {
+                            "$ref": "#/definitions/slenderman"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "404": {
+                        "description": "No slendermans satisfy the request - the collection is empty",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "slendermans",
+                "description": "Delete a specific slenderman",
+                "operationId": "deleteSlenderman",
+                "parameters": [
+                    {
+                        "name": "slender_id",
+                        "in": "path",
+                        "description": "The slenderman identification",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "slenderman successfully removed"
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to access data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "slendermans": {
+            "description": "A collection of slendermans",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/slenderman"
+            }
+        },
+        "slenderman": {
+            "description": "The most feared creature",
+            "type": "object",
+            "properties": {
+                "slender_id": {
+                    "description": "The slenderman identification",
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "slender_name": {
+                    "description": "Some slendermans have names",
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "discovery_date": {
+                    "description": "When this slenderman first came into the public eye",
+                    "type": "string"
+                },
+                "attacks": {
+                    "description": "A collection of the slenderman's known attacks",
+                    "$ref": "#/definitions/attacks"
+                },
+                "location": {
+                    "description": "The general area we know this slenderman to inhabit",
+                    "$ref": "#/definitions/location"
+                }
+            }
+        },
+        "location": {
+            "type": "object",
+            "properties": {
+                "latitude": {
+                    "type": "number",
+                    "description": "The latitude of the epicenter of the  slenderman's roaming"
+                },
+                "longitude": {
+                    "type": "number",
+                    "description": "The longitude of the epicenter of the slenderman's roaming"
+                },
+                "distance": {
+                    "type": "number",
+                    "description": "The maximum distance, in meters, the slenderman has been observed from his epicenter"
+                }
+            }
+        },
+        "attacks": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/attack"
+            }
+        },
+        "attack": {
+            "type": "object",
+            "description": "A single possible attack for this slenderman",
+            "properties": {
+                "attack_id": {
+                    "type": "string",
+                    "maxLength": 9
+                },
+                "attack_name": {
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "attack_details": {
+                    "description": "A detailed description of how the attack is executed",
+                    "type": "string",
+                    "maxLength": 200
+                }
+            }
+        },
+        "error": {
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "fields": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
