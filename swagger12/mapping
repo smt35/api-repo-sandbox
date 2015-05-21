@@ -181,10 +181,22 @@
       "url_segment": "/apitutor1/api-docs",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor1/api-docs.swag12"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/slender/apitutor1/api-docs.swag12"
     },
     {
       "url_segment": "/apitutor1/api-docs/basic",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/slender/apitutor1/listings/basic.swag12"
+    },
+        {
+      "url_segment": "/slender/apitutor1/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor1/api-docs.swag12"
+    },
+    {
+      "url_segment": "/slender/apitutor1/api-docs/basic",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor1/listings/basic.swag12"
