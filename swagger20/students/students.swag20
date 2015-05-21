@@ -601,46 +601,46 @@
                     "$ref": "#/definitions/lab_quiz_section_descr"
                 },
                 "date_graded": {
-                    "$ref": "#definitions/date_graded"
+                    "$ref": "#/definitions/date_graded"
                 },
                 "graded_by_id": {
-                    "$ref": "#definitions/graded_by_id"
+                    "$ref": "#/definitions/graded_by_id"
                 },
                 "graded_by_name": {
-                    "$ref": "#definitions/graded_by_name"
+                    "$ref": "#/definitions/graded_by_name"
                 },
                 "date_added": {
-                    "$ref": "#definitions/date_added"
+                    "$ref": "#/definitions/date_added"
                 },
                 "added_by_id": {
-                    "$ref": "#definitions/added_by_id"
+                    "$ref": "#/definitions/added_by_id"
                 },
                 "added_by_name": {
-                    "$ref": "#definitions/added_by_name"
+                    "$ref": "#/definitions/added_by_name"
                 },
                 "add_drop_card": {
-                    "$ref": "#definitions/add_drop_card"
+                    "$ref": "#/definitions/add_drop_card"
                 },
                 "envelope_type": {
-                    "$ref": "#definitions/envelope_type"
+                    "$ref": "#/definitions/envelope_type"
                 },
                 "envelope_id": {
-                    "$ref": "#definitions/envelope_id"
+                    "$ref": "#/definitions/envelope_id"
                 },
                 "date_time_updated": {
-                    "$ref": "#definitions/date_time_updated"
+                    "$ref": "#/definitions/date_time_updated"
                 },
                 "updated_by_id": {
-                    "$ref": "#definitions/updated_by_id"
+                    "$ref": "#/definitions/updated_by_id"
                 },
                 "updated_by_name": {
-                    "$ref": "#definitions/updated_by_name"
+                    "$ref": "#/definitions/updated_by_name"
                 },
                 "instructors": {
-                    "$ref": "#definitions/instructors"
+                    "$ref": "#/definitions/instructors"
                 },
                 "schedules": {
-                    "$ref": "#definitions/schedules"
+                    "$ref": "#/definitions/schedules"
                 }
             }
         }
