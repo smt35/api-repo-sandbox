@@ -2599,7 +2599,12 @@
                     "format": "date-time"
                 },
                 "api_type": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "key",
+                        "read-only",
+                        "modifiable"
+                    ]
                 }
             }
         },
@@ -2682,6 +2687,7 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
+                        "key",
                         "read-only",
                         "modifiable"
                     ]
@@ -2721,7 +2727,11 @@
                     "format": "date-time"
                 },
                 "api_type": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
                 }
             }
         },
@@ -2738,7 +2748,11 @@
                     "format": "date-time"
                 },
                 "api_type": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
                 }
             }
         },
@@ -2796,6 +2810,7 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
+                        "key",
                         "read-only",
                         "modifiable"
                     ]
@@ -2836,6 +2851,7 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
+                        "key",
                         "read-only",
                         "modifiable"
                     ]
