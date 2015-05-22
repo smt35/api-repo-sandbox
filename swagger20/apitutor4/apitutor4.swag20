@@ -2601,7 +2601,9 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "system"
+                        "key",
+                        "read-only",
+                        "modifiable"
                     ]
                 }
             }
@@ -2631,8 +2633,7 @@
             "type": "object",
             "required": [
                 "value",
-                "api_type",
-                "description"
+                "api_type"
             ],
             "properties": {
                 "value": {
@@ -2642,11 +2643,9 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "system"
+                        "read-only",
+                        "modifiable"
                     ]
-                },
-                "description": {
-                    "type": "string"
                 }
             }
         },
@@ -2688,6 +2687,7 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
+                        "key",
                         "read-only",
                         "modifiable"
                     ]
@@ -2727,7 +2727,11 @@
                     "format": "date-time"
                 },
                 "api_type": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
                 }
             }
         },
@@ -2744,7 +2748,11 @@
                     "format": "date-time"
                 },
                 "api_type": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
                 }
             }
         },
@@ -2802,6 +2810,7 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
+                        "key",
                         "read-only",
                         "modifiable"
                     ]
@@ -2842,6 +2851,7 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
+                        "key",
                         "read-only",
                         "modifiable"
                     ]

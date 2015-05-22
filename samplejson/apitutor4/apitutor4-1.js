@@ -39,6 +39,7 @@
     ],
     "contexts_available": {
       "mileage": [
+        "basic",
         "odometer_log",
         "trips"
       ]

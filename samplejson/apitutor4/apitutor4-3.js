@@ -1,5 +1,5 @@
 {
-  "links": [
+  "links": {
     "tutorial4-cars.info": {
       "rel": "self",
       "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
@@ -30,7 +30,7 @@
       "method": "GET",
       "title": "tutorial4-owners.getOwner"
     }
-  ],
+  },
   "basic": {
     "vin": {
       "value": "73",
@@ -97,5 +97,70 @@
       "value": "2014-09-15T08:12:44.03Z",
       "api_type": "system"
     }
-  }
+  },
+  "odometer_logs": [
+    { "vin": "1FTBE14A4NP05962",
+      "read_date": "2014-05-11",
+      "miles": 32459,
+      "read_by_id": "586586586",
+      "read_by_name": "Daffy Duck"
+    },
+    { "vin": "1FTBE14A4NP05962",
+      "read_date": "2014-06-08",
+      "miles": 33782,
+      "read_by_id": "586586586",
+      "read_by_name": "Daffy Duck"
+    },
+    { "vin": "1FTBE14A4NP05962",
+      "read_date": "2014-07-12",
+      "miles": 35121,
+      "read_by_id": "783783783",
+      "read_by_name": "Daisy Duck"
+    }
+  ],
+  "trips": [
+    { "vin": "1FTBE14A4NP05962",
+      "trip_id": "A148",
+      "destination": "Seattle, Washington",
+      "start_date": "2012-08-10",
+      "end_date": "2012-08-16",
+      "start_miles": 10745,
+      "end_miles": 14826
+    },
+    { "vin": "1FTBE14A4NP05962",
+      "trip_id": "C233",
+      "destination": "Denver, Colorado",
+      "start_date": "2013-02-04",
+      "end_date": "2013-02-09",
+      "start_miles": 17386,
+      "end_miles": 18144
+    },
+    { "vin": "1FTBE14A4NP05962",
+      "trip_id": "A432",
+      "destination": "San Francisco, California",
+      "start_date": "2013-06-22",
+      "end_date": "2013-06-26",
+      "start_miles": 22354,
+      "end_miles": 24193
+    }
+  ],
+  "insurance": {
+    "vin": "1FTBE14A4NP05962",
+    "policy_id": "A842B53E41",
+    "insurer": "GEICO"
+  },
+  "maintenance_logs": [
+    { "vin": "1FTBE14A4NP05962",
+      "maintenance_id": "000354",
+      "maintenance_date": "2013-06-01",
+      "description": "Tune-up",
+      "cost": "283.45"
+    },
+    { "vin": "1FTBE14A4NP05962",
+      "maintenance_id": "000418",
+      "maintenance_date": "2013-11-01",
+      "description": "Oil & Lube",
+      "cost": "152.83"
+    }
+  ]
 }

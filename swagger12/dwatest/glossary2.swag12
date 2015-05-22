@@ -1,0 +1,42 @@
+{
+  "models": {
+    "name": {
+      "id": "name",
+      "description": "Student Name",
+      "required": [
+        "net_id",
+        "first_name",
+        "surname",
+        "seat_number",
+        "gender"
+      ],
+      "properties": {
+        "net_id": {
+          "type": "string",
+          "description": "Student Net Id",
+          "maxLength": 10
+        },
+        "first_name": {
+          "type": "string",
+          "description": "Student's First Name"
+        },
+        "surname": {
+          "type": "string",
+          "description": "Student's Surnmane"
+        },
+        "seat_number": {
+          "type": "integer",
+          "description": "Student's Seat Number"
+        },
+        "gender": {
+          "type": "string",
+          "description": "Student's Gender",
+          "enum": [
+            "Male",
+            "Female"
+          ]
+        }
+      }
+    }
+  }
+}
