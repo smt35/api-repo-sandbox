@@ -216,7 +216,7 @@
                         "description": "The class to be added",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/classes"
+                             "$ref": "#/definitions/class"
                         }
                     }
                 ],
@@ -227,7 +227,7 @@
                     "201": {
                         "description": "Returns the class that was added",
                         "schema": {
-                            "$ref": "#/definitions/classes"
+                            "$ref": "#/definitions/class"
                         }
                     },
                     "400": {
@@ -272,7 +272,7 @@
                         "description": "The class to be modified",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/classes"
+                             "$ref": "#/definitions/class"
                         }
                     },
                     {
@@ -331,7 +331,7 @@
                     "200": {
                         "description": "Returns the class that was modified",
                         "schema": {
-                            "$ref": "#/definitions/classes"
+                            "$ref": "#/definitions/class"
                         }
                     },
                     "400": {
@@ -671,6 +671,101 @@
                         "in": "query",
                         "required": false,
                         "description": "How many items of the add_permission_codes collection are returned?",
+                        "type": "string"
+                    }
+                ],
+                "tags": [
+                    "Classes"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A collection of Classes",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "204": {
+                        "description": "No class found that matches key values",
+                        "schema": {
+                            "$ref": "#/definitions/classes"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid Request - unable to interpret request",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "401": {
+                        "description": "Authentication required to view add_permission_codes",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "403": {
+                        "description": "Access denied to protected data",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "409": {
+                        "description": "Query parameters conflict or are malformed",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Classes",
+                "description": "Deletes the add permission codes for a specific AIM Class",
+                "parameters": [
+                    {
+                        "name": "year_term",
+                        "in": "path",
+                        "required": true,
+                        "description": "Enrollment period in which the class is offered",
+                        "type": "string"
+                    },
+                    {
+                        "name": "curriculum_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The curriculum designator for the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "title_code",
+                        "in": "path",
+                        "required": true,
+                        "description": "Differentiates the different offerings of the course",
+                        "type": "string"
+                    },
+                    {
+                        "name": "section_number",
+                        "in": "path",
+                        "required": true,
+                        "description": "The section designator",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_start",
+                        "in": "query",
+                        "required": false,
+                        "description": "Skip into the add_permission_codes collection before starting to delete items",
+                        "type": "string"
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "description": "How many items of the add_permission_codes collection are deleted?",
                         "type": "string"
                     }
                 ],
