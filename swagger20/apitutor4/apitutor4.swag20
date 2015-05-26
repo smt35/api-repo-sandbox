@@ -2005,19 +2005,27 @@
             ],
             "properties": {
                 "vin": {
-                    "$ref": "#/definitions/vin"
+                    "description": "Vehicle Identification Number",
+                    "type": "string",
+                    "maxLength": 16
                 },
                 "read_date": {
-                    "$ref": "#/definitions/read_date"
+                    "description": "When the odometer log was created",
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "miles": {
-                    "$ref": "#/definitions/miles"
+                    "description": "Mileage read on odometer",
+                    "type": "string"
                 },
                 "read_by_id": {
-                    "$ref": "#/definitions/read_by_id"
+                    "description": "The ID of the person that created the odometer log",
+                    "type": "string",
+                    "maxLength": 9
                 },
                 "read_by_name": {
-                    "$ref": "#/definitions/read_by_name"
+                    "description": "The name of the person that created the odometer log",
+                    "type": "string"
                 }
             }
         },
@@ -2050,25 +2058,35 @@
             ],
             "properties": {
                 "vin": {
-                    "$ref": "#/definitions/vin"
+                    "description": "Vehicle Identification Number",
+                    "type": "string",
+                    "maxLength": 16
                 },
                 "trip_id": {
-                    "$ref": "#/definitions/trip_id"
+                    "description": "Trip Identification Number",
+                    "type": "string"
                 },
                 "destination": {
-                    "$ref": "#/definitions/destination"
+                    "description": "Trip Destination",
+                    "type": "string"
                 },
                 "start_date": {
-                    "$ref": "#/definitions/start_date"
+                    "description": "Date the trip began",
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "end_date": {
-                    "$ref": "#/definitions/end_date"
+                    "description": "Date the trip ended",
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "start_miles": {
-                    "$ref": "#/definitions/start_miles"
+                    "description": "Mileage read on odometer at beginning of trip",
+                    "type": "string"
                 },
                 "end_miles": {
-                    "$ref": "#/definitions/end_miles"
+                    "description": "Mileage read on odometer at end of trip",
+                    "type": "string"
                 }
             }
         },
@@ -2082,13 +2100,17 @@
             ],
             "properties": {
                 "vin": {
-                    "$ref": "#/definitions/vin"
+                    "description": "Vehicle Identification Number",
+                    "type": "string",
+                    "maxLength": 16
                 },
                 "policy_id": {
-                    "$ref": "#/definitions/policy_id"
+                    "description": "Insurance Policy Identification Number",
+                    "type": "string"
                 },
                 "insurer": {
-                    "$ref": "#/definitions/insurer"
+                    "description": "Insurance Agency",
+                    "type": "string"
                 }
             }
         },
@@ -2119,19 +2141,26 @@
             ],
             "properties": {
                 "vin": {
-                    "$ref": "#/definitions/vin"
+                    "description": "Vehicle Identification Number",
+                    "type": "string",
+                    "maxLength": 16
                 },
                 "maintenance_id": {
-                    "$ref": "#/definitions/maintenance_id"
+                    "description": "Maintenance Log Identification Number",
+                    "type": "string"
                 },
                 "maintenance_date": {
-                    "$ref": "#/definitions/maintenance_date"
+                    "description": "Date the maintenance work was done on the Car",
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "description": {
-                    "$ref": "#/definitions/description"
+                    "description": "Description of maintenance done on the Car",
+                    "type": "string"
                 },
                 "cost": {
-                    "$ref": "#/definitions/cost"
+                    "description": "Cost of Maintenance",
+                    "type": "string"
                 }
             }
         },
@@ -2582,335 +2611,6 @@
                     "type": "string",
                     "enum": [
                         "system"
-                    ]
-                }
-            }
-        },
-        "read_date": {
-            "description": "When the odometer log was created",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "key",
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "miles": {
-            "description": "Mileage read on odometer",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "read_by_id": {
-            "description": "The ID of the person that created the odometer log",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string",
-                    "maxLength": 9
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "read_by_name": {
-           "description": "The name of the person that created the odometer log",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable",
-                        "related"
-                    ]
-                },
-                "related-resource": {
-                    "type": "string"
-                }
-            }
-        },
-        "trip_id": {
-            "description": "Trip Identification Number",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "key",
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "destination": {
-            "description": "Trip Destination",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "start_date": {
-            "description": "When the trip began",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "end_date": {
-            "description": "When the trip ended",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "start_miles": {
-            "description": "Mileage read on odometer at beginning of trip",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "end_miles": {
-            "description": "Mileage read on odometer at end of trip",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "policy_id": {
-            "description": "Policy Identification Number",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "key",
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "insurer": {
-            "description": "Insurance Agency",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "maintenance_id": {
-            "description": "Maintenance Log Identification Number",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "key",
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "maintenance_date": {
-            "description": "When the maintenance was done on the Car",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "api_type": {
-                    "type": "string"
-                }
-            }
-        },
-        "description": {
-            "description": "Maintenance Log Description",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
-                    ]
-                }
-            }
-        },
-        "cost": {
-            "description": "Cost of Maintenance",
-            "type": "object",
-            "required": [
-                "value",
-                "api_type"
-            ],
-            "properties": {
-                "value": {
-                    "type": "string"
-                },
-                "api_type": {
-                    "type": "string",
-                    "enum": [
-                        "read-only",
-                        "modifiable"
                     ]
                 }
             }
