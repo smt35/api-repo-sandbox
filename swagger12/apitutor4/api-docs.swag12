@@ -4,7 +4,7 @@
   "apis": [
     {
       "path": "/basic",
-      "description": "Operations of the third example API in the University API Tutorial"
+      "description": "Operations of the fourth example API in the University API Tutorial"
     }
   ],
   "authorizations": {
