@@ -1759,7 +1759,7 @@
           "maxLength": 9
         },
         "read_by_name": {
-          "type": "string"
+          "type": "string",
           "description": "The name of the person that created the odometer log"
         }
         }
