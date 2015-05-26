@@ -2010,7 +2010,7 @@
                     "maxLength": 16
                 },
                 "read_date": {
-                    "description": "When the odometer log was created",
+                    "description": "Date the odometer log was created",
                     "type": "string",
                     "format": "date-time"
                 },
