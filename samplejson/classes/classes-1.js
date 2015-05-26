@@ -106,32 +106,36 @@
         "basic": {
           "year_term": {
             "value": "20151",
-            "api_type": "key",
+            "api_type": //something is supposed to go here
+            "key": true,
             "descr": "Winter 2015",
             "long_descr": "Winter Semester 2015",
             "domain": "https://api.byu.edu/rest/v1/universityapi/meta/year-terms"
           },
           "curriculum_id": {
             "value": "11463",
-            "api_type": "key"
+            "api_type": //PUT SOMETHING HERE 
+            "key": true
           },
           "title_code": {
             "value": "000",
-            "api_type": "key"
+            "api_type": //this is blank, put somethe here
+            "key": true
           },
           "section_number": {
              "value": "001",
-             "api_type": "key"
+             "api_type": //something something somthing
+             "key": true
           },
           "class_status": {
             "value": "Future",
             "api_type": "derived",
-            ""
+            "key": true //I don't know if this is what is supposed to be here
           },
           "enrollment_status": {
             "value": "Open",
             "api_type": "derived",
-            ""
+            "key": true //same here
           },
           "teaching_area": {
             "value": "NURS",
@@ -147,7 +151,7 @@
             "domain": "https://api.byu.edu/rest/v1/universityapi/meta/catalog-numbers?year_term=20151&teaching_area=NURS"
           },
           "catalog_suffix": {
-            "value": "",
+            "value": "", //this doesn't have a value
             "api_type": "related",
             "related_resource": "courses",
             "descr": "",
@@ -291,7 +295,7 @@
             "collection_size": 3,
             "page_start": 1,
             "page_end": 3,
-            "page_size": 50",
+            "page_size": 50,
             "default_page_size": 50,
             "max_page_size": 1000
           },
