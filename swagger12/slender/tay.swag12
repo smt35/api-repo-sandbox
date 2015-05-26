@@ -1,8 +1,8 @@
 {
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
-  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/taylorSlenderman10",
-  "resourcePath": "/basic",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/tay",
+  "resourcePath": "/poop",
   "apis": [
     {
       "path": "/",
@@ -43,206 +43,17 @@
           ]
         }
         ]
-    },
-    {
-      "path": "/{slender_id}",
-      "description": "operations on a slenderman",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "slenderman",
-          "nickname": "getSlenderman",
-          "parameters": [
-            {
-              "name": "slender_id",
-              "in": "path",
-              "description": "The slenderman identification",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": "200",
-              "message": "Item Retrieved",
-              "responseModel": "slenderman"
-            },
-            {
-              "code": "400",
-              "message": "Invalid Request - unable to interpret request",
-              "responseModel": "error"
-            },
-            {
-              "code": "401",
-              "message": "Authentication required to access data",
-              "responseModel": "error"
-            },
-            {
-              "code": "403",
-              "message": "Access denied to protected data",
-              "responseModel": "error"
-            },
-            {
-              "code": "404",
-              "message": "No slendermans satisfy the request - the collection is empty",
-              "responseModel": "error"
-            }
-          ]
-        },
-        {
-          "method": "DELETE",
-          "summary": "slenderman",
-          "nickname": "deleteSlenderman",
-          "parameters": [
-            {
-              "name": "slender_id",
-              "in": "path",
-              "description": "The slenderman identification",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": "204",
-              "message": "slenderman successfully removed"
-            },
-            {
-              "code": "400",
-              "message": "Invalid Request - unable to interpret request",
-              "responseModel": "error"
-            },
-            {
-              "code": "401",
-              "message": "Authentication required to access data",
-              "responseModel": "error"
-            },
-            {
-              "code": "403",
-              "message": "Access denied to protected data",
-              "responseModel": "error"
-            }
-          ]
-        },
-        {
-          "method": "OPTIONS",
-          "summary": "What can this endpoint do?",
-          "nickname": "namesOptions",
-          "responseMessages": [
-            {
-              "code": "200",
-              "message": "Successful",
-              "responseModel": "options"
-            },
-            {
-              "code": "400",
-              "message": "Invalid Request - unable to interpret request",
-              "responseModel": "error"
-            }
-          ]
-        }
-      ]
     }
   ],
   "models": {
     "slendermans": {
-      "description": "A collection of slendermans",
-      "type": "array",
-      "items": {
-        "$ref": "slenderman"
-      }
-    },
-    "slenderman": {
-      "description": "The most feared creature",
-      "type": "object",
-      "properties": {
-        "slender_id": {
-          "description": "The slenderman identification",
-          "type": "string",
-          "maxLength": 5
-        },
-        "slender_name": {
-          "description": "Some slendermans have names",
-          "type": "string",
-          "maxLength": 20
-        },
-        "discovery_date": {
-          "description": "When this slenderman first came into the public eye",
-          "type": "string"
-        },
-        "attacks": {
-          "description": "A collection of the slenderman's known attacks",
-          "$ref": "attacks"
-        },
-        "location": {
-          "description": "The general area we know this slenderman to inhabit",
-          "$ref": "location"
-        }
-      }
-    },
-    "location": {
-      "type": "object",
-      "properties": {
-        "latitude": {
-          "type": "number",
-          "description": "The latitude of the epicenter of the  slenderman's roaming"
-        },
-        "longitude": {
-          "type": "number",
-          "description": "The longitude of the epicenter of the slenderman's roaming"
-        },
-        "distance": {
-          "type": "number",
-          "description": "The maximum distance, in meters, the slenderman has been observed from his epicenter"
-        }
-      }
-    },
-    "attacks": {
-      "type": "array",
-      "items": {
-        "$ref": "attack"
-      }
-    },
-    "attack": {
-      "type": "object",
-      "description": "A single possible attack for this slenderman",
-      "properties": {
-        "attack_id": {
-          "type": "string",
-          "maxLength": 9
-        },
-        "attack_name": {
-          "type": "string",
-          "maxLength": 20
-        },
-        "attack_details": {
-          "description": "A detailed description of how the attack is executed",
-          "type": "string",
-          "maxLength": 200
-        }
-      }
+      "type": "string"
     },
     "error": {
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "message": {
-          "type": "string"
-        },
-        "fields": {
-          "type": "string"
-        }
-      }
+      "type": "string"
     },
     "options": {
-      "id": "options",
-      "description": "Array of options",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "type": "string"
     }
   }
 }
