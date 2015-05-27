@@ -3,7 +3,7 @@
   "swaggerVersion": "1.2",
   "apis": [
     {
-      "path": "/slenderTAY",
+      "path": "/tay",
       "description": "Operations of the first example API in the University API Tutorial"
     }
   ],

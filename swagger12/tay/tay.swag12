@@ -1,22 +1,22 @@
 {
   "apiVersion": "v1",
   "swaggerVersion": "1.2",
-  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/NEWslender",
-  "resourcePath": "/poop",
+  "basepath": "http://edge-wso2.byu.edu:3000/byuapi/tay",
+  "resourcePath": "/tay",
   "apis": [
     {
       "path": "/",
-      "description": "operations on a collection of slendermans",
+      "description": "operations on a collection of taylors",
       "operations": [
         {
           "method": "GET",
-          "summary": "slendermans",
-          "nickname": "getSlendermans",
+          "summary": "taylors",
+          "nickname": "getTaylors",
           "responsesMessages": [
             {
               "code": "200",
-              "message": "slendermans Retrieved",
-              "responseModel": "slendermans"
+              "message": "taylor Retrieved",
+              "responseModel": "taylors"
             },
             {
               "code": "404",
@@ -46,7 +46,7 @@
     }
   ],
   "models": {
-    "slendermans": {
+    "taylors": {
       "type": "string"
     },
     "error": {
