@@ -1154,13 +1154,13 @@
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-options"
     },
         {
-      "url_segment": "/slenderTAY/api-docs",
+      "url_segment": "/tay/api-docs",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tay/api-docsTAY.swag12"
     },
     {
-      "url_segment": "/slenderTAY/api-docs/slenderTAY",
+      "url_segment": "/tay/api-docs/tay",
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tay/tay.swag12"
