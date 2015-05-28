@@ -108,8 +108,8 @@
             "value": "20151",
             "api_type": "read-only",
             "key": true,
-            "descr": "Winter 2015",
-            "long_descr": "Winter Semester 2015",
+            "description": "Winter 2015",
+            "long_description": "Winter Semester 2015",
             "domain": "https://api.byu.edu/byuapi/meta/year-terms"
           },
           "curriculum_id": {
@@ -130,7 +130,7 @@
           "credit_institution": {
             "value": "BYU PROVO",
             "api_type": "read-only",
-            "descriptions": "BYU Provo Campus",
+            "descriptioniptions": "BYU Provo Campus",
             "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
           },
           "enrollment_status": {
@@ -142,7 +142,7 @@
             "value": "NURS",
             "api_type": "related",
             "related_resource": "courses",
-            "descr": "Nursing",
+            "description": "Nursing",
             "domain": "https://api.byu.edu/byuapi/meta/subject_areas"
           },
           "course_number": {
@@ -155,7 +155,7 @@
             "value": "", //this doesn't have a value
             "api_type": "related",
             "related_resource": "courses",
-            "descr": "",
+            "description": "",
             "domain": "https://api.byu.edu/byuapi/meta/course_suffixes"
           },
           "course_title": {
@@ -166,31 +166,31 @@
           "section_type": {
             "value": "DAY",
             "api_type": "modifiable",
-            "descr": "Day Classes",
+            "description": "Day Classes",
             "domain": "https://api.byu.edu/byuapi/meta/section-types"
           },
           "block_code": {
             "value": "S",
             "api_type": "modifiable",
-            "descr": "Semester",
+            "description": "Semester",
             "domain": "https://api.byu.edu/byuapi/meta/block_codes"
           },
           "class_status": {
             "value": "A",
             "api_type": "modifiable",
-            "description": "Available",
+            "descriptioniption": "Available",
             "domain": "https://api.byu.edu/byuapi/meta/class_status"
           },
           "reg_method": {
             "value": "S",
             "api_type": "modifiable",
-            "descr": "Permission Required",
+            "description": "Permission Required",
             "domain": "https://api.byu.edu/byuapi/meta/reg-methods"
           },
           "lab_quiz_flag": {
             "value": "",
             "api_type": "modifiable",
-            "descr": "Lecture",
+            "description": "Lecture",
             "domain": "https://api.byu.edu/byuapi/meta/lab_quiz_flag"
           },
           "fee": {
@@ -201,17 +201,17 @@
           "honors": {
             "value": "",
             "api_type": "modifiable",
-            "descr": "Not an Honors Section"
+            "description": "Not an Honors Section"
           },
           "service_learning": {
             "value": "",
             "api_type": "modifiable",
-            "descr": "Not a Service Learning Section"
+            "description": "Not a Service Learning Section"
           },
           "fixed_or_variable": {
             "value": "F",
             "api_type": "modifiable",
-            "descr": "Fixed",
+            "description": "Fixed",
             "domain": "https://api.byu.edu/byuapi/meta/fixed-or-variable"
           },
           "credit_hours": {
@@ -230,26 +230,26 @@
           "class_start_date": {
             "value": "2015-01-05",
             "api_type": "modifiable",
-            "descr": "05 Jan 2015",
-            "long_descr": "05 January 2015"
+            "description": "05 Jan 2015",
+            "long_description": "05 January 2015"
           },
           "class_end_date": {
             "value": "2015-04-14",
             "api_type": "modifiable",
-            "descr": "14 Apr 2015",
-            "long_descr": "14 April 2015"
+            "description": "14 Apr 2015",
+            "long_description": "14 April 2015"
           },
           "reg_start_date": {
             "value": "2015-04-14",
             "api_type": "derived",
-            "descr": "14 Apr 2015",
-            "long_descr": "14 April 2015"
+            "description": "14 Apr 2015",
+            "long_description": "14 April 2015"
           },
           "reg_end_date": {
             "value": "2015-04-14",
             "api_type": "derived",
-            "descr": "14 Apr 2015",
-            "long_descr": "14 April 2015"
+            "description": "14 Apr 2015",
+            "long_description": "14 April 2015"
           },
           "control_mix_date": {
             "value": "",
@@ -258,7 +258,7 @@
           "waitlist_status": {
             "value": "E",
             "api_type": "modifiable",
-            "descr": "Bill does not know what these codes mean",
+            "description": "Bill does not know what these codes mean",
             "domain": "https://api.byu.edu/byuapi/meta/waitlist-status"
           },
           "combine_rolls": {
@@ -331,14 +331,14 @@
             "credit_institution": {
               "value": "BYU PROVO",
               "api_type": "key",
-              "descr": "BYU Provo Campus",
+              "description": "BYU Provo Campus",
               "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
             },
             "year_term": {
               "value": "20151",
               "api_type": "key",
-              "descr": "Winter 2015",
-              "long_descr": "Winter Semester 2015",
+              "description": "Winter 2015",
+              "long_description": "Winter Semester 2015",
               "domain": "https://api.byu.edu/byuapi/meta/year-terms"
             },
             "curriculum_id": {
@@ -412,14 +412,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -450,7 +450,7 @@
               "created_by_id": {
                 "value": "584584584",
                 "api_type": "operational",
-                "descr": "Joe Faculty"
+                "description": "Joe Faculty"
               },
               "created_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -508,14 +508,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -557,7 +557,7 @@
               "updated_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "updated_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -603,14 +603,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -640,7 +640,7 @@
               "updated_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "updated_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -698,14 +698,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -808,7 +808,7 @@
                 "value": "?",
                 "api_type": "?"
               },
-              "set_up_description": {
+              "set_up_descriptioniption": {
                 "value": "?",
                 "api_type": "?"
               },
@@ -819,7 +819,7 @@
               "updated_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "updated_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -946,14 +946,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "description": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "descriptioniption": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1049,14 +1049,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1075,7 +1075,7 @@
                 "value": "NURS",
                 "api_type": "related",
                 "related_resource": "courses"
-                "descr": "Nursing",
+                "description": "Nursing",
                 "domain": "https://api.byu.edu/byuapi/meta/teaching-areas"
               },
               "catalog_number": {
@@ -1088,10 +1088,10 @@
                 "value": "",
                 "api_type": "related",
                 "related_resource": "courses",
-                "descr": "",
+                "description": "",
                 "domain": "https://api.byu.edu/byuapi/meta/catalog-suffixes"
               },
-              "course_description": {
+              "course_descriptioniption": {
                 "value": "Fund Nurs Concepts & Care",
                 "api_type": "related",
                 "related_resource": "courses"
@@ -1099,7 +1099,7 @@
               "section_type": {
                 "value": "DAY",
                 "api_type": "modifiable",
-                "descr": "Day Classes",
+                "description": "Day Classes",
                 "domain": "https://api.byu.edu/byuapi/meta/section-types"
               },
               "linked_curriculum_id": {
@@ -1118,7 +1118,7 @@
                 "value": "NURS",
                 "api_type": "related",
                 "related_resource": "courses"
-                "descr": "Nursing",
+                "description": "Nursing",
                 "domain": "https://api.byu.edu/byuapi/meta/teaching-areas"
               },
               "linked_catalog_number": {
@@ -1131,10 +1131,10 @@
                 "value": "",
                 "api_type": "related",
                 "related_resource": "courses",
-                "descr": "",
+                "description": "",
                 "domain": "https://api.byu.edu/byuapi/meta/catalog-suffixes"
               },
-              "linked_course_description": {
+              "linked_course_descriptioniption": {
                 "value": "Fund Nurs Liabilities",
                 "api_type": "related",
                 "related_resource": "courses"
@@ -1142,7 +1142,7 @@
               "linked_section_type": {
                 "value": "DAY",
                 "api_type": "modifiable",
-                "descr": "Day Classes",
+                "description": "Day Classes",
                 "domain": "https://api.byu.edu/byuapi/meta/section-types"
               }
             }
@@ -1189,14 +1189,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1222,7 +1222,7 @@
               "updated_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "updated_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -1268,14 +1268,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1301,7 +1301,7 @@
               "created_by_id": {
                 "value": "584584584",
                 "api_type": "operational",
-                "descr": "Joe Faculty"
+                "description": "Joe Faculty"
               },
               "created_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -1310,7 +1310,7 @@
               "redeemed_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "redeemed_dttm": {
                 "value": "2014-05-14T13:45:53.20Z",
@@ -1388,7 +1388,7 @@
               "updated_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "updated_dttm": {
                 "value": "2013-11-15",
@@ -1478,14 +1478,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1523,7 +1523,7 @@
               "updated_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "updated_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -1569,14 +1569,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1622,7 +1622,7 @@
               "updated_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "updated_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -1672,14 +1672,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1714,7 +1714,7 @@
                 "value": "NURS",
                 "api_type": "related",
                 "related_resource": "courses"
-                "descr": "Nursing",
+                "description": "Nursing",
                 "domain": "https://api.byu.edu/byuapi/meta/teaching-areas"
               },
               "catalog_number": {
@@ -1727,7 +1727,7 @@
                 "value": "",
                 "api_type": "related",
                 "related_resource": "courses",
-                "descr": "",
+                "description": "",
                 "domain": "https://api.byu.edu/byuapi/meta/catalog-suffixes"
               },
               "credit_hours": {
@@ -1741,7 +1741,7 @@
               "added_by_id": {
                 "value": "585241162",
                 "api_type": "operational",
-                "descr": "Bugs Bunny Ithaca"
+                "description": "Bugs Bunny Ithaca"
               },
               "added_dttm": {
                 "value": "2014-05-11T13:45:53.20Z",
@@ -1799,14 +1799,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1893,14 +1893,14 @@
               "credit_institution": {
                 "value": "BYU PROVO",
                 "api_type": "key",
-                "descr": "BYU Provo Campus",
+                "description": "BYU Provo Campus",
                 "domain": "https://api.byu.edu/byuapi/meta/credit-institutions"
               },
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descr": "Winter 2015",
-                "long_descr": "Winter Semester 2015",
+                "description": "Winter 2015",
+                "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
               "curriculum_id": {
@@ -1927,7 +1927,7 @@
                 "value": "NURS",
                 "api_type": "related",
                 "related_resource": "courses"
-                "descr": "Nursing",
+                "description": "Nursing",
                 "domain": "https://api.byu.edu/byuapi/meta/teaching-areas"
               },
               "catalog_number": {
@@ -1940,7 +1940,7 @@
                 "value": "",
                 "api_type": "related",
                 "related_resource": "courses",
-                "descr": "",
+                "description": "",
                 "domain": "https://api.byu.edu/byuapi/meta/catalog-suffixes"
               },
               "credit_hours": {
