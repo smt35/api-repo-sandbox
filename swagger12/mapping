@@ -1171,5 +1171,17 @@
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/slender/slenderman.json"
     },
+            {
+      "url_segment": "/tay2/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tay2/api-docsTAYtest.swag12"
+    },
+    {
+      "url_segment": "/tay2/api-docs/tay1",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tay2/tayTEST.swag12"
+    }
   ]
 }
