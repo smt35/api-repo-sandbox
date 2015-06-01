@@ -130,7 +130,7 @@
           "credit_institution": {
             "value": "BYU PROVO",
             "api_type": "read-only",
-            "descriptioniptions": "BYU Provo Campus",
+            "description": "BYU Provo Campus",
             "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
           },
           "enrollment_status": {
