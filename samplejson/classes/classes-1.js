@@ -178,7 +178,7 @@
           "class_status": {
             "value": "A",
             "api_type": "modifiable",
-            "descriptioniption": "Available",
+            "description": "Available",
             "domain": "https://api.byu.edu/byuapi/meta/class_status"
           },
           "reg_method": {
@@ -808,7 +808,7 @@
                 "value": "?",
                 "api_type": "?"
               },
-              "set_up_descriptioniption": {
+              "set_up_description": {
                 "value": "?",
                 "api_type": "?"
               },
@@ -952,7 +952,7 @@
               "year_term": {
                 "value": "20151",
                 "api_type": "key",
-                "descriptioniption": "Winter 2015",
+                "description": "Winter 2015",
                 "long_description": "Winter Semester 2015",
                 "domain": "https://api.byu.edu/byuapi/meta/year-terms"
               },
@@ -1091,7 +1091,7 @@
                 "description": "",
                 "domain": "https://api.byu.edu/byuapi/meta/catalog-suffixes"
               },
-              "course_descriptioniption": {
+              "course_description": {
                 "value": "Fund Nurs Concepts & Care",
                 "api_type": "related",
                 "related_resource": "courses"
@@ -1134,7 +1134,7 @@
                 "description": "",
                 "domain": "https://api.byu.edu/byuapi/meta/catalog-suffixes"
               },
-              "linked_course_descriptioniption": {
+              "linked_course_description": {
                 "value": "Fund Nurs Liabilities",
                 "api_type": "related",
                 "related_resource": "courses"
