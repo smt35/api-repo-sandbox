@@ -1187,13 +1187,13 @@
       "url_segment": "/tayCOPY/api-docs",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tayCOPY/api-docsTAYtest.swag12"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tayCopy/api-docsTAYtest.swag12"
     },
     {
       "url_segment": "/tayCOPY/api-docs/tayCOPY",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tayCOPY/tayTEST.swag12"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tayCopy/tayTEST.swag12"
     }
   ]
 }
