@@ -1194,6 +1194,12 @@
       "method": "GET",
       "return_code": 200,
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/tayCopy/tayTEST.swag12"
+    },
+    {
+      "url_segment": "byuapi/taylorSlenderman10/v1",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/slender/slenderman.json"
     }
   ]
 }
