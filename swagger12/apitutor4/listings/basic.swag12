@@ -1526,27 +1526,6 @@
         "basic"
       ],
       "properties": {
-        "links": {
-          "description": "Hypermedia Links that impact an item in the Cars collection",
-          "type": "object",
-          "properties": {
-            "tutorial3-cars.info": {
-              "$ref": "link"
-            },
-            "tutorial4-cars.modify": {
-              "$ref": "link"
-            },
-            "tutorial4-cars.sell": {
-              "$ref": "link"
-            },
-            "tutorial4-cars.delete": {
-              "$ref": "link"
-            },
-            "tutorial4-owners.info": {
-              "$ref": "link"
-            }
-          }
-        },
         "basic": {
           "$ref": "basic"
         },
@@ -1669,6 +1648,27 @@
         "plate_number"
       ],
       "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact an item in the Cars collection",
+          "type": "object",
+          "properties": {
+            "tutorial4-cars.info": {
+              "$ref": "link"
+            },
+            "tutorial4-cars.modify": {
+              "$ref": "link"
+            },
+            "tutorial4-cars.sell": {
+              "$ref": "link"
+            },
+            "tutorial4-cars.delete": {
+              "$ref": "link"
+            },
+            "tutorial4-owners.info": {
+              "$ref": "link"
+            }
+          }
+        },
         "vin": {
           "$ref": "vin"
         },
@@ -1915,10 +1915,12 @@
         "api_type": {
           "type": "string",
           "enum": [
-            "key",
             "read-only",
             "modifiable"
           ]
+        },
+        "key": {
+            "type": "boolean"
         }
       }
     },
