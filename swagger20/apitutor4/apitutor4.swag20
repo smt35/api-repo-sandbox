@@ -1887,27 +1887,6 @@
               "basic"
             ],
             "properties": {
-                "links": {
-                    "description": "Hypermedia Links that impact an item in the Cars collection",
-                    "type": "object",
-                    "properties": {
-                        "tutorial4-cars.info": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.modify": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.sell": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.delete": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-owners.info": {
-                            "$ref": "#/definitions/link"
-                        }
-                    }
-                },
                 "basic": {
                     "$ref": "#/definitions/basic"
                 },
@@ -1934,6 +1913,27 @@
                 "plate_number"
             ],
             "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact an item in the Cars collection",
+                    "type": "object",
+                    "properties": {
+                        "tutorial4-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.modify": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.sell": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.delete": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-owners.info": {
+                            "$ref": "#/definitions/link"
+                        }
+                    }
+                },
                 "vin": {
                     "$ref": "#/definitions/vin"
                 },
@@ -2295,10 +2295,12 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "key",
                         "read-only",
                         "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
             }
         },
