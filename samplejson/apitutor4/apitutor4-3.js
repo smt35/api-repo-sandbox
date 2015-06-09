@@ -1,37 +1,37 @@
 {
-  "links": {
-    "tutorial4-cars.info": {
-      "rel": "self",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
-      "method": "GET",
-      "title": "tutorial4-cars.getCar"
-    },
-    "tutorial4-cars.modify": {
-      "rel": "tutorial4-cars.modify",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
-      "method": "PUT",
-      "title": "tutorial4-cars.modifyCar"
-    },
-    "tutorial4-cars.sell": {
-      "rel": "tutorial4-cars.sell",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
-      "method": "PUT",
-      "title": "tutorial4-cars.modifyCar"
-    },
-    "tutorial4-cars.delete": {
-      "rel": "tutorial4-cars.delete",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
-      "method": "DELETE",
-      "title": "tutorial4-cars.deleteCar"
-    },
-    "tutorial2-owners.info": {
-      "rel": "tutorial2-owners.info",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial3-owners/783783783",
-      "method": "GET",
-      "title": "tutorial4-owners.getOwner"
-    }
-  },
   "basic": {
+    "links": {
+      "tutorial4-cars.info": {
+        "rel": "self",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
+        "method": "GET",
+        "title": "tutorial4-cars.getCar"
+      },
+      "tutorial4-cars.modify": {
+        "rel": "tutorial4-cars.modify",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
+        "method": "PUT",
+        "title": "tutorial4-cars.modifyCar"
+      },
+      "tutorial4-cars.sell": {
+        "rel": "tutorial4-cars.sell",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
+        "method": "PUT",
+        "title": "tutorial4-cars.modifyCar"
+      },
+      "tutorial4-cars.delete": {
+        "rel": "tutorial4-cars.delete",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/73",
+        "method": "DELETE",
+        "title": "tutorial4-cars.deleteCar"
+      },
+      "tutorial2-owners.info": {
+        "rel": "tutorial2-owners.info",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial3-owners/783783783",
+        "method": "GET",
+        "title": "tutorial4-owners.getOwner"
+      }
+    },
     "vin": {
       "value": "73",
       "api_type": "key"

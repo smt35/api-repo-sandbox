@@ -1,37 +1,37 @@
 {
-  "links": {
-    "tutorial4-cars.info": {
-      "rel": "self",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
-      "method": "GET",
-      "title": "tutorial4-cars.getCar"
-    },
-    "tutorial4-cars.modify": {
-      "rel": "tutorial4-cars.modify",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
-      "method": "PUT",
-      "title": "tutorial4-cars.modifyCar"
-    },
-    "tutorial4-cars.sell": {
-      "rel": "tutorial4-cars.sell",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
-      "method": "PUT",
-      "title": "tutorial4-cars.modifyCar"
-    },
-    "tutorial4-cars.delete": {
-      "rel": "tutorial4-cars.delete",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
-      "method": "DELETE",
-      "title": "tutorial4-cars.deleteCar"
-    },
-    "tutorial4-owners.info": {
-      "rel": "tutorial4-owners.info",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-owners/783783783",
-      "method": "GET",
-      "title": "tutorial4-owners.getOwner"
-    }
-  },
   "basic": {
+    "links": {
+      "tutorial4-cars.info": {
+        "rel": "self",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+        "method": "GET",
+        "title": "tutorial4-cars.getCar"
+      },
+      "tutorial4-cars.modify": {
+        "rel": "tutorial4-cars.modify",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+        "method": "PUT",
+        "title": "tutorial4-cars.modifyCar"
+      },
+      "tutorial4-cars.sell": {
+        "rel": "tutorial4-cars.sell",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+        "method": "PUT",
+        "title": "tutorial4-cars.modifyCar"
+      },
+      "tutorial4-cars.delete": {
+        "rel": "tutorial4-cars.delete",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+        "method": "DELETE",
+        "title": "tutorial4-cars.deleteCar"
+      },
+      "tutorial4-owners.info": {
+        "rel": "tutorial4-owners.info",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-owners/783783783",
+        "method": "GET",
+        "title": "tutorial4-owners.getOwner"
+      }
+    },
     "vin": {
       "value": "1FTBE14A4NP05962",
       "api_type": "key"
