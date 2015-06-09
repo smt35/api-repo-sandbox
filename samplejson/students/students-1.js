@@ -1,39 +1,139 @@
-{
-  "students": {
-    "links": {},
+//To be focused on: the student basic subresource and the enrolled_classes subresource
+
+
+{//This is the "students" object. It doesn't need a wrapper
+    "links": {
+        "students.info" : {
+            "rel" : "self",
+            "href": "",
+            "http_method" : "GET",
+            "title" : "",
+        },
+        "students.next" : {
+            "rel" : "students.next",
+            "href" : "GET",
+            "http_method" : "GET",
+            "title" : ""
+        },
+        "students.prev" : {
+            "rel" : "students.prev",
+            "href" : "GET",
+            "http_method" : "GET",
+            "title" : ""
+        }
+        //we probably don't need an "add student" resource
+        //unless we have something like independent study weirdom
+    },
+    ////links related to the collection
+    //next/previous collection, get myself again, etc
+    //add a item to the collection
+    
+    //self - how do I get me?
+    //name students.info
+    //rel - self
+    //next - the next PAGE of students
+    //previous - the previous PAGE
     "metadata": {},
     "values": [
-      {
-        "links": {},
-        "basic": {},
-        "enrollments": {
-          "links": {},
+      { 
+        "basic": {
+            //things only related to this particular student
+            "links": {
+                //Only apply to this item of the collection
+                //edit/delete this item
+                //etc
+            },
+            "student_id" : {
+                "value" : "314",
+                "api_type" : "system",
+                "key" : true,
+            },
+            "student_name" : {
+                "value" : "taylor",
+                "api_type" : "related",//This is actually defined under something else
+                "related_resource" : "person",//this is where we go to update the name    
+            },
+            "byu_id" : {
+                "value" : "093559394",
+                "api_type" : "related",
+                "related_resource" : "identity"
+            },
+            "net_id" : {
+                "value" : "tcowley0",
+                "api_type" : "related",
+                "related_resource" : "identity"
+            },
+            "email_address" : {
+                "value" : "taycowley@gmail.com",
+                "api_type" : "related",
+                "related_resource" : "identity"
+            },
+            "student_status" : {//This one is kindof complex...
+                //talk to... steve and lots of people
+                "value" : "EXPELLED",
+                "api_type" : "",
+            },
+            "current_hours" : {
+                "value" : 4,
+                "api_type" : "derived"
+            },
+            "primary_major" : {
+                "value" : "314159",
+                "api_type" : "derived"
+                "description" : "Computer Engineering"
+            },
+            "as_of_date" : {
+            //we might want to make this an object with all the time-sensitive information in it    
+            },
+            "restricted" : {
+                "value" : "false"
+            }
+        },
+        "confidential_information" : {
+            //things like GPA, etc
+        },
+        "enrolled_classes": {   //all classes that I have ever been enrolled in
+          "links": {
+                "enrolled_classes.info": {
+                    "rel" : "self",
+                    "href" : "",
+                    "http_method" : "GET",
+                    "title": ""
+                },
+                "enrolled_classed.add" : {
+                    "rel" : "enrolled_classes.add",
+                    "href" : "",
+                    "http_method" : "GET",
+                    "title" : ""
+                }
+              
+          },
           "metadata": {},
           "values": [
             "links": {
-              "enrollments.info": {
+              "enrolled_classes.info": {
                 "rel": "self",
-                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrollments/{year_term},{curriculum_id},{title_code},{section_number}",
+                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrolled_classes/{year_term},{curriculum_id},{title_code},{section_number}",
                 "http_method": "GET",
-                "title": "enrollments.getEnrollment"
+                "title": "enrolled_classes.getEnrollment"
               },
-              "enrollments.drop": {
-                "rel": "enrollments.drop",
-                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrollments/{year_term},{curriculum_id},{title_code},{section_number}",
+              "enrolled_classes.drop": {
+                "rel": "enrolled_classes.drop",
+                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrolled_classes/{year_term},{curriculum_id},{title_code},{section_number}",
                 "http_method": "DELETE",
-                "title": "enrollments.dropEnrollment"
+                "title": "enrolled_classes.dropEnrollment"
               },
-              "enrollments.dropImpactInfo": {
-                "rel": "enrollments.dropImpactInfo",
-                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrollments/{year_term},{curriculum_id},{title_code},{section_number}?drop=ImpactInfo",
+              "enrolled_classes.dropImpactInfo": {
+                "rel": "enrolled_classes.dropImpactInfo",
+                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrolled_classes/{year_term},{curriculum_id},{title_code},{section_number}?drop=ImpactInfo",
                 "http_method": "GET",
-                "title": "enrollments.getDropImpactInfo"
+                "title": "enrolled_classes.getDropImpactInfo"
               },
-              "enrollments.dropWithImpact": {
-                "rel": "enrollments.dropWithImpact",
-                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrollments/{year_term},{curriculum_id},{title_code},{section_number}?drop=WithImpact",
+              "enrolled_classes.dropWithImpact": {
+                "rel": "enrolled_classes.dropWithImpact",
+                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrolled_classes/{year_term},{curriculum_id},{title_code},{section_number}?drop=WithImpact",
                 "http_method": "DELETE",
-                "title": "enrollments.dropWithImpact"
+                "title": "enrolled_classes.dropWithImpact"
               },
               "persons.info": {
                 "rel": "persons.info",
@@ -60,15 +160,15 @@
                 "title": "courses.getCurriculum"
               }
             },
-            "person_id": {
+            "student_id": {
               "value": "string(9)",
               "api_type": "key",
               "description": "string(30)"
             },
-            "credit_institution": {
-              "value": "string(15)",
+            "credit_institution": { //Probably to be thrown out
+              "value": "P",
               "api_type": "key",
-              "description": "string(30)",
+              "description": "BYU-PROVO",
               "domain": "?"
             },
             "year_term": {
@@ -91,9 +191,10 @@
                "api_type": "key"
             },
             "dept_name": {
-               "value": "string(5)",
-               "api_type": "read-only",
-               "description": "string(30)"
+               "value": "ECEN",
+               "api_type": "related",
+               "related_resource" : "classes",
+               "description": "Electrical and Computer Engineering"
             },
             "catalog_number": {
                "value": "string(3)",
@@ -116,6 +217,10 @@
                "api_type": "modifiable",
                "domain": "?"
             },
+            "audit_status" : {
+                "value" : false,
+                "api_type" : "derived"
+            }
             "class_repeated": "string(1)",
             "honors_flag": "string(1)",
             "service_learning": "string(1)",
@@ -123,8 +228,12 @@
             "end_date": "date",
             "credit_type": "string(10)",
             "credit_type_descr": "string(15)",
-            "section_type": "string(10)",
-            "section_type_descr": "string(30)",
+            "section_type" : {  //An example of a fixed-up field.
+                "value" : "SLC",
+                "api_type" : "related",
+                "related_resource" : "classes",
+                "description" : "Salt Lake Center"
+            }
             "lab_quiz_section": "string(1)",
             "lab_quiz_section_descr": "string(15)",
             "date_graded": "date",
@@ -144,11 +253,11 @@
                 "person_id": "string(9)",
                 "byu_id": "string(9)",
                 "net_id": "string(15)",
-                "surname": "string(40)",
-                "rest_of_name": "string(80)",
-                "suffix": "string(10)",
-                "surname_position": "string(1)",
-                "preferred_first_name": "string(25)",
+                //"surname": "string(40)",
+                //"rest_of_name": "string(80)",
+                //"suffix": "string(10)",
+                //"surname_position": "string(1)",
+                //"preferred_first_name": "string(25)",
                 "sort_name": "string(50)",
                 "office_address": {
                   "address_line_1": "string(40)",
@@ -187,10 +296,6 @@
                   { "ref": "instructor.info",
                     "href": "https://api.byu.edu/rest/v1/instructors/:person_id",
                     "http_method": "GET"
-                  },
-                  { "ref": "instructor.assign",
-                    "href": "https://api.byu.edu/rest/v1/scheduled-classes/:class_id/instructors",
-                    "http_method": "PUT"
                   }
                 ]
               }
@@ -201,6 +306,16 @@
                   "building": "string(4)",
                   "room": "string(5)"
                 }
+                //we should do this
+                "days_taught" : {
+                    "value" : "MW",
+                    "api_type" : "derived"
+                },
+                "time_taught" : {
+                    "value" : some_time,
+                    "api_type" : "derived"
+                }
+                //instead of all of these
                 "mon": "string(1)",
                 "tue": "string(1)",
                 "wed": "string(1)",
@@ -349,7 +464,7 @@
               "rel": "self",
               "href": "https://api.byu.edu/byuapi/students/{identity_id}/suggested_classes",
               "http_method": "GET",
-              "title": "enrollments.getSuggestedClasses"
+              "title": "enrolled_classes.getSuggestedClasses"
             }
           },
           "metadata": {},
@@ -367,11 +482,11 @@
                 "http_method": "PUT",
                 "title": "lottery.addRequest"
               },
-              "enrollments.add": {
-                "rel": "enrollments.add",
-                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrollments",
+              "enrolled_classes.add": {
+                "rel": "enrolled_classes.add",
+                "href": "https://api.byu.edu/byuapi/students/{identity_id}/enrolled_classes",
                 "http_method": "PUT",
-                "title": "enrollments.addEnrollment"
+                "title": "enrolled_classes.addEnrollment"
               },
               "waitlists.enqueue": {
                 "rel": "waitlists.enqueue",
