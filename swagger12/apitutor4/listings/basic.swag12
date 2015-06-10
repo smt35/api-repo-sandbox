@@ -217,6 +217,20 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            },
+            {
+              "name": "field_sets",
+              "description": "Field Sets Available",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "contexts",
+              "description": "Group of Field Sets",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
@@ -300,6 +314,20 @@
               "required": true,
               "type": "car",
               "paramType": "body"
+            },
+            {
+              "name": "field_sets",
+              "description": "Field Sets Available",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "contexts",
+              "description": "Group of Field Sets",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
             }
           ],
           "responseMessages": [

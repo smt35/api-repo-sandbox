@@ -261,6 +261,20 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "description": "Field Sets Available",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "contexts",
+                        "in": "query",
+                        "description": "Group of Field Sets",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
@@ -325,6 +339,20 @@
                         "schema": {
                             "$ref": "#/definitions/car"
                         }
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "description": "Field Sets Available",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "contexts",
+                        "in": "query",
+                        "description": "Group of Field Sets",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
