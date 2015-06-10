@@ -34,7 +34,8 @@
     },
     "vin": {
       "value": "73",
-      "api_type": "key"
+      "api_type": "modifiable",
+      "key": true
     },
     "plate_state": {
       "value": "UT",
