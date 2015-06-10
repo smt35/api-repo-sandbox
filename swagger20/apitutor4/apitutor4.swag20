@@ -493,6 +493,21 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "read_date",
+                        "in": "query",
+                        "description": "When the odometer log was created",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "name": "miles",
+                        "in": "query",
+                        "description": "Mileage read on odometer",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
@@ -893,6 +908,21 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Trip Destination",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "start_date",
+                        "in": "query",
+                        "description": "When the trip began",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
                     }
                 ],
                 "tags": [
@@ -1493,6 +1523,9 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        
                     }
                 ],
                 "tags": [
