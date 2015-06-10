@@ -414,7 +414,8 @@
         },
         "vin": {
           "value": "1CRTW25A3NX78232",
-          "api_type": "key"
+          "api_type": "modifiable",
+          "key": true
         },
         "plate_state": {
           "value": "UT",
