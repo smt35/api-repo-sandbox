@@ -401,6 +401,21 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            },
+            {
+              "name": "read_date",
+              "description": "When the odometer log was created",
+              "required": false,
+              "type": "string",
+              "format": "date-time",
+              "paramType": "query"
+            },
+            {
+              "name": "miles",
+              "description": "Mileage read on odometer",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
@@ -715,6 +730,21 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            },
+            {
+              "name": "destination",
+              "description": "Trip Destination",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
+            },
+            {
+              "name": "start_date",
+              "description": "When the trip began",
+              "required": false,
+              "type": "string",
+              "format": "date-time",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
@@ -1186,6 +1216,21 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            },
+            {
+              "name": "maintenance_date",
+              "description": "When the maintenance was done on the Car",
+              "required": false,
+              "type": "string",
+              "format": "date-time",
+              "paramType": "query"
+            },
+            {
+              "name": "cost",
+              "description": "Cost of Maintenance",
+              "required": false,
+              "type": "string",
+              "paramType": "query"
             }
           ],
           "responseMessages": [
