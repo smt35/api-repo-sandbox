@@ -1525,7 +1525,19 @@
                         "type": "string"
                     },
                     {
-                        
+                        "name": "maintenance_date",
+                        "in": "query",
+                        "description": "When the maintenance was done on the Car",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "name": "cost",
+                        "in": "query",
+                        "description": "Cost of Maintenance",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
