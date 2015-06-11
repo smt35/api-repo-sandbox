@@ -88,34 +88,41 @@
           "value": "UT",
           "api_type": "modifiable",
           "description": "Utah",
+          "display_label": "Licence Plate State",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate_state"
         },
         "plate_number": {
           "value": "Q580RT",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
+          "display_label": "Licence Plate Number"
         },
         "vehicle_type": {
           "value": "Truck/SUV",
           "api_type": "derived",
+          "display_label": "Vehicle Type",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/vehicle-type"
         },
         "vehicle_year": {
           "value": "2013",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
+          "display_label": "Vehicle Year"
         },
         "make": {
           "value": "Toyota",
           "api_type": "modifiable",
+          "display_label": "Make",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/make"
         },
         "model": {
           "value": "RAV4",
           "api_type": "modifiable",
+          "display_label": "Model",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/model/Toyota"
         },
         "color": {
           "value": "Dark Green",
           "api_type": "modifiable",
+          "display_label": "Color",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/color"
         },
         "owner_id": {
@@ -254,34 +261,41 @@
           "value": "UT",
           "api_type": "modifiable",
           "description": "Utah",
+          "display_label": "Licence Plate State",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate-state"
         },
         "plate_number": {
           "value": "C49D3T",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
+          "display_label": "Licence Plate Number"
         },
         "vehicle_type": {
           "value": "Truck/SUV",
           "api_type": "derived",
+          "display_label": "Vehicle Type",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/vehicle-type"
         },
         "vehicle_year": {
           "value": "1997",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
+          "display_label": "Vehicle Year"
         },
         "make": {
           "value": "Ford",
           "api_type": "modifiable",
+          "display_label": "Make",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/make"
         },
         "model": {
           "value": "Ranger",
           "api_type": "modifiable",
+          "display_label": "Model",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/model/Toyota"
         },
         "color": {
           "value": "Blue",
           "api_type": "modifiable",
+          "display_label": "Color",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/color"
         },
         "owner_id": {
@@ -421,34 +435,41 @@
           "value": "UT",
           "api_type": "modifiable",
           "description": "Utah",
+          "display_label": "Licence Plate State",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate-state"
         },
         "plate_number": {
           "value": "L43S3T",
-           "api_type": "modifiable"
+           "api_type": "modifiable",
+           "display_label": "Licence Plate Number"
         },
         "vehicle_type": {
           "value": "Truck/SUV",
           "api_type": "derived",
+          "display_label": "Vehicle Type",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/vehicle-type"
         },
         "vehicle_year": {
           "value": "2003",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
+          "display_label": "Vehicle Year"
         },
         "make": {
           "value": "Chevrolet",
           "api_type": "modifiable",
+          "display_label": "Make",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/make"
         },
         "model": {
           "value": "Sierra",
           "api_type": "modifiable",
+          "display_label": "Model",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/model/Toyota"
         },
         "color": {
           "value": "Tan",
           "api_type": "modifiable",
+          "display_label": "Color",
           "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/color"
         },
         "owner_id": {
