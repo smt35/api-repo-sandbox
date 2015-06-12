@@ -410,32 +410,32 @@
         "basic"
       ],
       "properties": {
-        "links": {
-          "description": "Hypermedia Links that impact an item in the Cars collection",
-          "type": "object",
-          "properties": {
-            "tutorial2-cars.info": {
-              "$ref": "link"
-            },
-            "tutorial2-cars.modify": {
-              "$ref": "link"
-            },
-            "tutorial2-cars.sell": {
-              "$ref": "link"
-            },
-            "tutorial2-cars.delete": {
-              "$ref": "link"
-            },
-            "tutorial2-owners.info": {
-              "$ref": "link"
-            }
-          }
-        },
         "basic": {
           "$ref": "basic"
-        }
-      }
-    },
+           "links": {
+              "description": "Hypermedia Links that impact an item in the Cars collection",
+              "type": "object",
+              "properties": {
+                "tutorial2-cars.info": {
+                  "$ref": "link"
+                },
+                "tutorial2-cars.modify": {
+                  "$ref": "link"
+                },
+                "tutorial2-cars.sell": {
+                  "$ref": "link"
+                },
+                "tutorial2-cars.delete": {
+                  "$ref": "link"
+                },
+                "tutorial2-owners.info": {
+                  "$ref": "link"
+                }
+              }
+            },
+  }
+}
+},
     "link": {
       "id": "link",
       "description": "Hypermedia links format",
