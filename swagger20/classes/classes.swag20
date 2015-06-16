@@ -1310,7 +1310,7 @@
                 }
             }
         },
-        "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-students": {
+        "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled_students": {
             "get": {
                 "summary": "Classes",
                 "description": "Returns the students enrolled in a specific AIM Class\n",
@@ -1913,6 +1913,7 @@
     },
     "definitions": {
         "classes": {
+            "description": "A collection of Classes",
             "type": "object",
             "required": [
                 "values"
@@ -1938,6 +1939,122 @@
         },
         "item.classes": {
             "type": "string"
+        },
+        "basic": {
+            "description": "Class Basic Item",
+            "type": "object",
+            "required": [
+                "rel",
+                "href",
+                "method"
+            ],
+            "properties": {
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number": {
+                    "$ref": "#/definitions/section_number"
+                },
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "enrollment_status": {
+                    "$ref": "#/definitions/enrollment_status"
+                },
+                "subject_area":{
+                    "$ref": "#/definitions/subject_area"
+                },
+                "course_number": {
+                    "$ref": "#/definitions/course_number"
+                },
+                "course_suffix": {
+                    "$ref": "#/definitions/course_suffix"
+                },
+                "course_title": {
+                    "$ref": "#/definitions/course_title"
+                },
+                "section_type": {
+                    "$ref": "#/definitions/section_type"
+                },
+                "block_code": {
+                    "$ref": "#/definitions/block_code"
+                },
+                "class_status": {
+                    "$ref": "#/definitions/class_status"
+                },
+                "reg_method": {
+                    "$ref": "#/definitions/reg_method"
+                },
+                "lab_quiz_flag": {
+                    "$ref": "#/definitions/lab_quiz_flag"
+                },
+                "fee": {
+                    "$ref": "#/definitions/fee"
+                },
+                "honors": {
+                    "$ref": "#/definitions/honors:
+                },
+                "service_learning": {
+                    "$ref": "#/definitions/service_learning"
+                },
+                "fixed_or_variable": {
+                    "$ref": "#/definitions/fixed_or_variable"
+                },
+                "credit_hours": {
+                    "$ref": "#/definitions/credit_hours"
+                },
+                "minimum_credit_hours": {
+                    "$ref": "#/definitions/minimum_credit_hours"
+                },
+                "class_size": {
+                    "$ref": "#/definitions/class_size"
+                },
+                "class_start_date": {
+                    "$ref": "#/definitions/class_start_date"
+                },
+                "class_end_date": {
+                    "$ref": "#/definitions/class_end_date"
+                },
+                "reg_start_date": {
+                    "$ref": "#/definitions/reg_start_date"
+                },
+                "reg_end_date": {
+                    "$ref": "#/definitions/reg_end_date"
+                },
+                "control_mix_date": {
+                    "$ref": "#/definitions/control_mix_date"
+                },
+                "waitlist_status": {
+                    "$ref": "#/definitions/waitlist_status"
+                },
+                "combine_rolls": {
+                    "$ref": "#/definitions/combine_rolls"
+                },
+                "combine_counts": {
+                    "$ref": "#/definitions/combine_counts"
+                },
+                "link_relation": {
+                    "$ref": "#/definitions/link_relations"
+                },
+                "link_to_year_term": {
+                    "$ref": "#/definitions/link_relations"
+                },
+                "link_to_curriculum_id": {
+                    "$ref": "#/definitions/link_to_curriculum_id"
+                },
+                "link_to_title_code": {
+                    "$ref": "#/definitions/link_to_title_code"
+                },
+                "link_to_section_number": {
+                    "$ref": "#/definitions/link_to_section_number"
+                }
+            }
         },
         "links": {
             "description": "Hypermedia links format",
@@ -1967,6 +2084,717 @@
                 }
             }
         },
+        "add_permission_codes": {
+            "description": "A collection of add permission codes",
+            "type": "object"
+            "required": [
+                "values""
+            ],
+            "properties": {
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/add_permission_code"
+                    }
+                }
+            },
+        },
+        "add_permission_code": {
+            "description": "Add permission code for a single class",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "person_id",
+                "student_name",
+                "audit_flag",
+                "created_by_id",
+                "created_dttm",
+                "redeemed_dttm"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number": {
+                    "$ref": "#/definitions/section_number"
+                }
+               "person_id": { //student or instructor etc?
+                    "$ref": "#/definitions/person_id"
+                },
+                "student_name": {
+                    "$ref": "#/definitions/student_name"
+                },
+                "audit_flag": {
+                    "$ref": "#/definitions/audit_flag"
+                },
+                "created_by_id": {
+                    "$ref": "#/definitions/created_by_id"
+                },
+                "created_dttm": {
+                    "$ref": "#/definitions/created_dttm"
+                },
+                "redeemed_dttm": {
+                    "$ref": "#/definitions/redeemed_dttm"
+                }
+            }
+        },
+        "assigned_instructors": {
+            "description": "Assigned instructors for a class",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "instructor_type",
+                "instructor_name",
+                "person_id",
+                "byu_id",
+                "net_id",
+                "email_address",
+                "updated_by_id",
+                "updated_dttm",
+                "expired_date"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number": {
+                    "$ref": "#/definitions/section_number"
+                }
+                "instructor_type": {
+                    "$ref": "#/definitions/instructor_type"
+                },
+                "instructor_name": {
+                    "$ref": "#/definitions/instructor_name"
+                },
+                "person_id": {
+                    "$ref": "#/definitions/person_id"
+                },
+                "byu_id": {
+                    "$ref": "#/definitions/byu_id"
+                },
+                "net_id": {
+                    "$ref": "#/definitions/net_id"
+                },
+                "email_address": {
+                    "$ref": "#/definitions/email_address"
+                },
+                "updated_by_id": {
+                    "$ref": "#/definitions/updated_by_id"
+                },
+                "updated_dttm": {
+                    "$ref": "#/definitions/updated_dttm"
+                },
+                "expired_date": {
+                    "$ref": "#/definitions/expired_date"
+                }
+            }
+        },
+        "class_limitations": {
+            "description": "limitations to a class",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "limitation_type",
+                "limitation_name",
+                "limitation_value",
+                "updated_by_id",
+                "updated_dttm",
+                "expired_date"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                     "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number": {
+                    "$ref": "#/definitions/section_number"
+                }
+                "limitation_type": {
+                    "$ref": "#/definitions/limitation_type"
+                },
+                "limitation_name": {
+                    "$ref": "#/definitions/limitation_name"
+                },
+                "limitation_value": {
+                    "$ref": "#/definitions/limitation_value"
+                },
+                "updated_by_id": {
+                    "$ref": "#/definitions/updated_by_id"
+                },
+                "updated_dttm": {
+                    "$ref": "#/definitions/updated_dttm"
+                },
+                "expired_date": {
+                    "$ref": "#/definitions/expired_date"
+                }
+            }
+        },
+        "class_schedules": {
+            "description": "",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "schedule_type",
+                "schedule_id",
+                "sequence_number",
+                "institution",
+                "building",
+                "room",
+                "days_taught",
+                "mon",
+                "tue",
+                "wed",
+                "thu",
+                "fri",
+                "sat",
+                "sun",
+                "use_start_date",
+                "use_end_date",
+                "time_taught",
+                "begin_time",
+                "end_time",
+                "status",
+                "set_up_id",
+                "set_up_name",
+                "set_up_description",
+                "schedule_reason",
+                "updated_by_id",
+                "updated_dttm",
+                "allow_conflict"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number": {
+                    "$ref": "#/definitions/section_number"
+                }
+                "schedule_type": {
+                    "description": "Type of schedule",
+                    "type": "string",
+                    "maxLength": 15
+                },
+                "schedule_id": {
+                    "description": "",
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "sequence_number": {
+                    "description": "",
+                    "type": "numbers",
+                    "maxLength": 9
+                },
+                "institution": {
+                    "description": "BYU Provo",
+                    "type": "string",
+                    "maxLength": 15
+                },
+                "building": {
+                    "description": "",
+                    "type": "string",
+                    "maxLength": 15
+                },
+                "room": {
+                    "description": "",
+                    "type": "string",
+                    "maxLength": 10
+                },
+                "days_taught": {
+                    "description": "",
+                    "type": "string"
+                },
+                "mon": {
+                    "description": "",
+                    "type": "string"
+                },
+                "tue": {
+                    "description": "",
+                    "type": "string"
+                },
+                "wed": {
+                    "description": "",
+                    "type": "string"
+                },
+                "thu": {
+                    "description": "",
+                    "type": "string"
+                },
+                "fri": {
+                    "description": "",
+                    "type": "string"
+                },
+                "sat": {
+                    "description": "",
+                    "type": "string"
+                },
+                "sun": {
+                    "description": "",
+                    "type": "string"
+                },
+                "use_start_date": {
+                    "description": "",
+                    "type": "string"
+                },
+                "use_end_date": {
+                    "description": "",
+                    "type": "string"
+                },
+                "time_taught": {
+                    "description": "",
+                    "type": "string"
+                },
+                "begin_time": {
+                    "description": "",
+                    "type": "string"
+                },
+                "end_time": {
+                    "description": "",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "",
+                    "type": "string"
+                },
+                "set_up_id": {
+                    "description": "",
+                    "type": "string"
+                },
+                "set_up_name": {
+                    "description": "",
+                    "type": "string"
+                },
+                "set_up_description": {
+                    "description": ""
+                    "type": "string"
+                },
+                "schedule_reason": {
+                    "description": "",
+                    "type": "string"
+                },
+                "updated_by_id": {
+                    "$ref": "#/definitions/updated_by_id"
+                },
+                "updated_dttm": {
+                    "$ref": "#/definitions/updated_dttm"
+                },
+                "allow_conflict": {
+                    "$ref": "#/definitions/allow_conflict"
+                }
+            }
+        },
+        "course_limitations": {
+            "description": "",
+            "type": "object",
+            "required": [
+                "curriculum_id",
+                "title_code",
+                "effective_date",
+                "expired_date",
+                "limitation_name",
+                "limitation_type",
+                "limitation_value"
+            ],
+            "properties" {
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "effective_date": {
+                    "description": " date for class",
+                    "type": "string",
+                    "maxLength": 23
+                },
+                "expired_date": {
+                    "$ref": "#/definitions/expired_date"
+                },
+                "limitation_name": {
+                    "$ref": "#/definitions/limitation_name"
+                },
+                "limitation_type": {
+                    "$ref": "#/definitions/limitation_type"
+                },
+                "limitation_value": {
+                    "$ref": "#/definitions/limitation_value"
+                },
+            }
+        },
+        "enrolled_students": {
+            "description": "limitations to a class",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "person_id",
+                "credit_hours",
+                "grade",
+                "byu_id",
+                "net_id",
+                "student_name",
+                "email",
+                "added_date_time",
+                "class_standing"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number": {
+                    "$ref": "#/definitions/section_number"
+                },
+                "student_id": {
+                    "description": "id of a student",
+                    "type": "string",
+                    "maxLength": 9
+                },
+                "credit_hours": {
+                    "$ref": "#/definitions/credit_hours"
+                },
+                "grade": {
+                    "description": "grade",
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "byu_id": {
+                    "$ref": "#/definitions/byu_id"
+                },
+                "net_id": {
+                    "$ref": "#/definitions/net_id"
+                },
+                "student_name": {
+                    "$ref": "#/definitions/student_name"
+                },
+                "email": {
+                    "description": "email",
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "added_date_time": {
+                    "description": "added date time",
+                    "type": "string",
+                    "maxLength": 23
+                },
+                "class_standing": {
+                    "description": "",
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "gender": {
+                    "description": "",
+                    "type": "string",
+                    "maxLength": 7
+                },
+                "program_id": {
+                },
+                "home_state": {
+                },
+                "country_code": {
+                },
+                "student_disability": {
+                },
+                "ESL": {
+                }
+            }
+        },
+        "linked_classes": {
+            "description": "",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "teaching_area",
+                "catalog_number",
+                "catalog_suffix",
+                "course_description",
+                "section_type",
+                "linked_curriculum_id",
+                "linked_title_code",
+                "linked_section_number",
+                "linked_teaching_area",
+                "linked_catalog_number",
+                "linked_catalog_suffix",
+                "linked_course_description",
+                "linked_section_type"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number":{
+                    "$ref": "#/definitions/section_number"
+                },
+                "teaching_area": {
+                },
+                "catalog_number": {
+                },
+                "catalog_suffix": {
+                },
+                "course_description": {
+                },
+                "section_type": {
+                    "$ref": "#/definitions/section_type"
+                },
+                "linked_curriculum_id": {
+                },
+                "linked_title_code": {
+                },
+                "linked_section_number": {
+                },
+                "linked_teaching_area": {
+                },
+                "linked_catalog_number": {
+                },
+                "linked_catalog_suffix": {
+                },
+                "linked_course_description": {
+                },
+                "linked_section_type": {
+                }
+            }
+        },
+        "notes": {
+            "description": "",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "note_type",
+                "note_value",
+                "update_by_id",
+                "updated_dttm"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number":{
+                    "$ref": "#/definitions/section_number"
+                },
+                "note_type": {
+                },
+                "note_value": {
+                },
+                "updated_by_id": {
+                    "$ref": "#/definitions/updated_by_id"
+                },
+                "updated_dttm": {
+                    "$ref": "#/definition/updated_dttm"
+                }
+            }
+        },
+        "permission_to_add_codes": {
+            "description": "",
+            "type": "object",
+            "required": [
+                "credit_institution",
+                "year_term",
+                "curriculum_id",
+                "title_code",
+                "section_number",
+                "group_number",
+                "token_value",
+                "created_by_id",
+                "created_dttm",
+                "redeemed_by_id",
+                "redeemed_dttm"
+            ],
+            "properties" {
+                "credit_institution": {
+                    "$ref": "#/definitions/credit_institution"
+                },
+                "year_term": {
+                    "$ref": "#/definitions/year_term"
+                },
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "section_number":{
+                    "$ref": "#/definitions/section_number"
+                },
+                "group_number": {
+                },
+                "token_value": {
+                },
+                "created_by_id": {
+                    "$ref": "#/definitions/created_by_id"
+                },
+                "created_dttm": {
+                    "$ref": "#/definitions/created_dttm"
+                },
+                "redeemed_by_id": {
+                },
+                "redeemed_dttm": {
+                    "$ref": "#/definitions/redeemed_dttm"
+                }
+            }
+        },
+        "prerequisites": {
+            "description": "",
+            "type": "object",
+            "required": [
+                "curriculum_id",
+                "title_code",
+                "seq_num",
+                "enforced",
+                "instructor_approval",
+                "effective_date",
+                "expired_date",
+                "updated_by_id",
+                "updated_dttm",
+                "prerequisite_list"
+            ],
+            "properties" {
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "seq_num":{
+                },
+                "effective_date": {
+                },
+                "expired_date": {
+                },
+                "updated_by_id": {
+                    "$ref": "#/definitions/created_by_id"
+                },
+                "updated_dttm": {
+                    "$ref": "#/definitions/created_dttm"
+                },
+                "prerequisite_list": {
+                }
+            }
+        },
+        "section_headers": {
+            "description": "",
+            "type": "object",
+            "required": [
+                "header_type",
+                "title_code",
+                "seq_num",
+                "enforced",
+                "instructor_approval",
+                "effective_date",
+                "expired_date",
+                "updated_by_id",
+                "updated_dttm",
+                "prerequisite_list"
+            ],
+            "properties" {
+                "curriculum_id": {
+                    "$ref": "#/definitions/curriculum_id"
+                },
+                "title_code": {
+                    "$ref": "#/definitions/title_code"
+                },
+                "seq_num":{
+                },
+                "effective_date": {
+                },
+                "expired_date": {
+                },
+                "updated_by_id": {
+                    "$ref": "#/definitions/created_by_id"
+                },
+                "updated_dttm": {
+                    "$ref": "#/definitions/created_dttm"
+                },
+                "prerequisite_list": {
+                }
+            }
+        },
         "top_level_metadata": {
             "type": "object",
             "required": [
@@ -1978,7 +2806,7 @@
                 "maximum_page_size",
                 "field_sets_returned",
                 "field_sets_available",
-                "field_sets_default"
+                "default_field_sets"
             ],
             "properties": {
                 "collection_size": {
@@ -2011,6 +2839,7 @@
                         "type": "string",
                         "enum": [
                           "basic",
+                          "registration_counts",
                           "add_permission_codes",
                           "assigned_instructors",
                           "class_limitations",
@@ -2035,6 +2864,7 @@
                         "type": "string",
                         "enum": [
                           "basic",
+                          "registration_counts",
                           "add_permission_codes",
                           "assigned_instructors",
                           "class_limitations",
@@ -2053,12 +2883,13 @@
                         ]
                     }
                 },
-                "field_sets_default": {
+                "default_field_sets": {
                     "type": "array",
                     "items": {
                         "type": "string",
                         "enum": [
                           "basic",
+                          "registration_counts",
                           "add_permission_codes",
                           "assigned_instructors",
                           "class_limitations",
@@ -2080,6 +2911,8 @@
             }
         },
         "error": {
+            "description": "Error Information",
+            "type": "object",
             "properties": {
                 "return_code": {
                     "type": "integer",
@@ -2092,6 +2925,1114 @@
                     "type": "string"
                 }
             }
+        },
+        "year_term": {
+            "description": "Year and term for class",
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "description": "Winter 2015",
+                    "type": "string",
+                    "maxLength": 15
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                },
+                "key": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "curriculum_id": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 5
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                },
+                "key": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "title_code": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                },
+                "key": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "section_number": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                },
+                "key": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "credit_institution": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "description": "BYU Provo Campus",
+                    "type": "string",
+                    "maxlength": 15
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "enrollment_status": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 10
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "derived"
+                    ]
+                }
+            }
+            "key": {
+                "type": "boolean"
+            }
+        },
+        "subject_area": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 5
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                }
+            }
+        },
+        "course_number": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                }
+            }
+        },
+        "course_suffix": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                   "type": "string"
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                }
+            }
+        },
+        "course_title": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 30
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                }
+            }
+        },
+        "section_type": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 5
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "block_code": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "class_status": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "reg_method": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "lab_quiz_flag": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "fee": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                }
+            }
+        },
+        "honors": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "service_learning": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "fixed_or_variable": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "credit_hours": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "minimum_credit_hours": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                }
+            }
+        },
+        "class_size": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "class_start_date": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 10
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "class_end_date": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 10
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "reg_start_date": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 10
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "derived"
+                    ]
+                }
+            }
+        },
+        "reg_end_date": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 10
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "derived"
+                    ]
+                }
+            }
+        },
+        "control_mix_date": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "waitlist_status": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "combine_rolls": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "combine_counts": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "link_relation": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 15
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "derived"
+                    ]
+                }
+            }
+        },
+        "link_to_year_term": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "link_to_curriculum_id": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "link_to_title_code": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "link_to_section_number": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 3
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "person_id": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "numbers",
+                    "maxlength": 9
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "key",
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            },
+            "key": {
+                "type": "boolean"
+            }
+        },
+        "student_name": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "related"
+                    ]
+                }
+            },
+            "key": {
+                "type": "boolean"
+            }
+        },
+        "audit_flag": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": ""
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "created_by_id": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 9
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "operational"
+                    ]
+                }
+            }
+        },
+        "created_dttm": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 23
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "operational"
+                    ]
+                }
+            }
+        },
+        "redeemed_dttm": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 23
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "operational"
+                    ]
+                }
+            }
+        },
+        "instructor_type": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                    ]
+                }
+            }
+        },
+        "instructor_name": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                    ]
+                }
+            }
+        },
+        "byu_id": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "numbers",
+                    "maxlength": 9
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "net_id": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 15
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "email_address": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxlength": 30
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
+                }
+            }
+        },
+        "updated_by_id": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "numbers",
+                    "maxlength": 9
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "operational"
+                    ]
+                }
+            }
+        },
+        "updated_dttm": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 23
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "operational"
+                    ]
+                }
+            }
+        },
+        "expired_date": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 23
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                        "operational"
+                    ]
+                }
+            }
+        },
+        "limitation_type": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                    ]
+                }
+            },
+            "key": {
+                "type": "boolean"
+            }
+        },
+        "limitation_name": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 50
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                    ]
+                }
+            },
+            "key": {
+                "type": "boolean"
+            }
+        },
+        "limitation_value": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                    ]
+                }
+            },
+            "key": {
+                "type": "boolean"
+            }
+        },
+        "allow_conflict": {
+            "type": "object",
+            "required": [
+                "value",
+                "api_type"
+            ],
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "maxLength": 20
+                },
+                "api_type": {
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable",
+                    ]
+                }
+            },
         }
     }
 }
