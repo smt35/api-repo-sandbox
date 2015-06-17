@@ -493,11 +493,11 @@
                 "api_type": "operational",
                 "description": "Joe Faculty"
               },
-              "created_dttm": {
+              "date_time_created": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               },
-              "redeemed_dttm": {
+              "date_time_redeemed": {
                 "value": "2014-05-14T13:45:53.20Z",
                 "api_type": "operational"
               }
@@ -697,7 +697,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "updated_dttm": {
+              "date_time_updated": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               },
@@ -881,7 +881,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "updated_dttm": {
+              "date_time_updated": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               },
@@ -1341,7 +1341,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "updated_dttm": {
+              "date_time_updated": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               }
@@ -1425,7 +1425,7 @@
                 "api_type": "operational",
                 "description": "Joe Faculty"
               },
-              "created_dttm": {
+              "date_time_created": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               },
@@ -1434,7 +1434,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "redeemed_dttm": {
+              "date_time_redeemed": {
                 "value": "2014-05-14T13:45:53.20Z",
                 "api_type": "operational"
               }
@@ -1515,7 +1515,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "updated_dttm": {
+              "date_time_updated": {
                 "value": "2013-11-15",
                 "api_type": "operational"
               },
@@ -1655,7 +1655,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "updated_dttm": {
+              "date_time_updated": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               }
@@ -1759,7 +1759,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "updated_dttm": {
+              "date_time_updated": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               }
@@ -1883,7 +1883,7 @@
                 "api_type": "operational",
                 "description": "Bugs Bunny Ithaca"
               },
-              "added_dttm": {
+              "date_time_added": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               },
@@ -1891,7 +1891,7 @@
                 "value": "?",
                 "api_type": "?"
               },
-              "error_dttm": {
+              "date_time_error": {
                 "value": "2014-05-11T13:45:53.20Z",
                 "api_type": "operational"
               }
@@ -1990,7 +1990,7 @@
                 "value": "?",
                 "api_type": "?"
               },
-              "log_dttm": {
+              "date_time_log": {
                 "value": "?",
                 "api_type": "?"
               }
@@ -2105,7 +2105,7 @@
                 "value": "?",
                 "api_type": "?"
               },
-              "log_dttm": {
+              "date_time_log": {
                 "value": "?",
                 "api_type": "?"
               }

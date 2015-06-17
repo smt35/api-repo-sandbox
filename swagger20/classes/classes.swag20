@@ -2112,8 +2112,8 @@
                 "student_name",
                 "audit_flag",
                 "created_by_id",
-                "created_date_time",
-                "redeemed_date_time"
+                "date_time_created",
+                "date_time_redeemed"
             ],
             "properties" {
                 "credit_institution": {
@@ -2143,11 +2143,11 @@
                 "created_by_id": {
                     "$ref": "#/definitions/created_by_id"
                 },
-                "created_date_time": {
-                    "$ref": "#/definitions/created_date_time"
+                "date_time_created": {
+                    "$ref": "#/definitions/date_time_created"
                 },
-                "redeemed_date_time": {
-                    "$ref": "#/definitions/redeemed_date_time"
+                "date_time_redeemed": {
+                    "$ref": "#/definitions/date_time_redeemed"
                 }
             }
         },
@@ -2167,8 +2167,7 @@
                 "net_id",
                 "email_address",
                 "updated_by_id",
-                "updated_date_time",
-                "expired_date"
+                "date_time_updated"
             ],
             "properties" {
                 "credit_institution": {
@@ -2207,11 +2206,8 @@
                 "updated_by_id": {
                     "$ref": "#/definitions/updated_by_id"
                 },
-                "updated_date_time": {
-                    "$ref": "#/definitions/updated_date_time"
-                },
-                "expired_date": {
-                    "$ref": "#/definitions/expired_date"
+                "date_time_updated": {
+                    "$ref": "#/definitions/date_time_updated"
                 }
             }
         },
@@ -2228,7 +2224,7 @@
                 "limitation_name",
                 "limitation_value",
                 "updated_by_id",
-                "updated_date_time",
+                "date_time_updated",
                 "expired_date"
             ],
             "properties" {
@@ -2259,8 +2255,8 @@
                 "updated_by_id": {
                     "$ref": "#/definitions/updated_by_id"
                 },
-                "updated_date_time": {
-                    "$ref": "#/definitions/updated_date_time"
+                "date_time_updated": {
+                    "$ref": "#/definitions/date_time_updated"
                 },
                 "expired_date": {
                     "$ref": "#/definitions/expired_date"
@@ -2301,7 +2297,7 @@
                 "set_up_description",
                 "schedule_reason",
                 "updated_by_id",
-                "updated_date_time",
+                "date_time_updated",
                 "allow_conflict"
             ],
             "properties" {
@@ -2425,8 +2421,8 @@
                 "updated_by_id": {
                     "$ref": "#/definitions/updated_by_id"
                 },
-                "updated_date_time": {
-                    "$ref": "#/definitions/updated_date_time"
+                "date_time_updated": {
+                    "$ref": "#/definitions/date_time_updated"
                 },
                 "allow_conflict": {
                     "$ref": "#/definitions/allow_conflict"
@@ -2487,7 +2483,7 @@
                 "net_id",
                 "student_name",
                 "email_address",
-                "added_date_time",
+                "date_time_added",
                 "class_standing"
             ],
             "properties" {
@@ -2531,7 +2527,7 @@
                 "email_address": {
                     "$ref": "#/definitions/email_address"
                 },
-                "added_date_time": {
+                "date_time_added": {
                     "description": "added date time",
                     "type": "string",
                     "maxLength": 23
@@ -2547,14 +2543,24 @@
                     "maxLength": 7
                 },
                 "program_id": {
+                    "description": "",
+                    "type": "string"
                 },
                 "home_state": {
+                    "description": "",
+                    "type": "string"
                 },
                 "country_code": {
+                    "description": "",
+                    "type": "string"
                 },
                 "student_disability": {
+                    "description": "",
+                    "type": "string"
                 },
                 "ESL": {
+                    "description": "",
+                    "type": "string"
                 }
             }
         },
@@ -2598,31 +2604,55 @@
                     "$ref": "#/definitions/section_number"
                 },
                 "teaching_area": {
+                    "description": "",
+                    "type": "string"
                 },
                 "catalog_number": {
+                    "description": "",
+                    "type": "string"
                 },
                 "catalog_suffix": {
+                    "description": "",
+                    "type": "string"
                 },
                 "course_description": {
+                    "description": "",
+                    "type": "string"
                 },
                 "section_type": {
                     "$ref": "#/definitions/section_type"
                 },
                 "linked_curriculum_id": {
+                    "description": "",
+                    "type": "string"
                 },
                 "linked_title_code": {
+                    "description": "",
+                    "type": "string"
                 },
                 "linked_section_number": {
+                    "description": "",
+                    "type": "string"
                 },
                 "linked_teaching_area": {
+                    "description": "",
+                    "type": "string"
                 },
                 "linked_catalog_number": {
+                    "description": "",
+                    "type": "string"
                 },
                 "linked_catalog_suffix": {
+                    "description": "",
+                    "type": "string"
                 },
                 "linked_course_description": {
+                    "description": "",
+                    "type": "string"
                 },
                 "linked_section_type": {
+                    "description": "",
+                    "type": "string"
                 }
             }
         },
@@ -2638,7 +2668,7 @@
                 "note_type",
                 "note_value",
                 "update_by_id",
-                "updated_date_time"
+                "date_time_updated"
             ],
             "properties" {
                 "credit_institution": {
@@ -2657,14 +2687,18 @@
                     "$ref": "#/definitions/section_number"
                 },
                 "note_type": {
+                    "description": "",
+                    "type": "string"
                 },
                 "note_value": {
+                    "description": "",
+                    "type": "string"
                 },
                 "updated_by_id": {
                     "$ref": "#/definitions/updated_by_id"
                 },
-                "updated_date_time": {
-                    "$ref": "#/definition/updated_date_time"
+                "date_time_updated": {
+                    "$ref": "#/definition/date_time_updated"
                 }
             }
         },
@@ -2680,9 +2714,9 @@
                 "group_number",
                 "token_value",
                 "created_by_id",
-                "created_date_time",
+                "date_time_created",
                 "redeemed_by_id",
-                "redeemed_date_time"
+                "date_time_redeemed"
             ],
             "properties" {
                 "credit_institution": {
@@ -2701,19 +2735,25 @@
                     "$ref": "#/definitions/section_number"
                 },
                 "group_number": {
+                    "description": "",
+                    "type": "string"
                 },
                 "token_value": {
+                    "description": "",
+                    "type": "string"
                 },
                 "created_by_id": {
                     "$ref": "#/definitions/created_by_id"
                 },
-                "created_date_time": {
-                    "$ref": "#/definitions/created_date_time"
+                "date_time_created": {
+                    "$ref": "#/definitions/date_time_created"
                 },
                 "redeemed_by_id": {
+                    "description": "",
+                    "type": "string"
                 },
-                "redeemed_date_time": {
-                    "$ref": "#/definitions/redeemed_date_time"
+                "date_time_redeemed": {
+                    "$ref": "#/definitions/date_time_redeemed"
                 }
             }
         },
@@ -2729,7 +2769,7 @@
                 "effective_date",
                 "expired_date",
                 "updated_by_id",
-                "updated_date_time",
+                "date_time_updated",
                 "prerequisite_list"
             ],
             "properties" {
@@ -2740,8 +2780,12 @@
                     "$ref": "#/definitions/title_code"
                 },
                 "seq_num":{
+                    "description": "",
+                    "type": "string"
                 },
                 "effective_date": {
+                    "description": "",
+                    "type": "string"
                 },
                 "expired_date": {
                     "$ref": "#/definitions/expired_date"
@@ -2749,10 +2793,12 @@
                 "updated_by_id": {
                     "$ref": "#/definitions/updated_by_id"
                 },
-                "updated_date_time": {
-                    "$ref": "#/definitions/updated_date_time"
+                "date_time_updated": {
+                    "$ref": "#/definitions/date_time_updated"
                 },
                 "prerequisite_list": {
+                    "description": "",
+                    "type": "string"
                 }
             }
         },
@@ -2772,10 +2818,12 @@
                 "display_flag",
                 "header_text",
                 "updated_by_id",
-                "updated_date_time"
+                "date_time_updated"
             ],
             "properties" {
                 "header_type": {
+                    "description": "",
+                    "type": "string"
                 },
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
@@ -2793,20 +2841,30 @@
                     "$ref": "#/definitions/section_number"
                 },
                 "dept_name": {
+                    "description": "",
+                    "type": "string"
                 },
                 "sequence_number": {
+                    "description": "",
+                    "type": "string"
                 },
                 "message_type": {
+                    "description": "",
+                    "type": "string"
                 },
                 "display_flag": {
+                    "description": "",
+                    "type": "string"
                 },
                 "header_text": {
+                    "description": "",
+                    "type": "string"
                 },
                 "updated_by_id": {
                     "$ref": "#/definitions/updated_by_id"
                 },
-                "updated_date_time": {
-                    "$ref": "#/definitions/updated_date_time"
+                "date_time_updated": {
+                    "$ref": "#/definitions/date_time_updated"
                 }
             }
         },
@@ -2827,7 +2885,7 @@
                 "drop_count_cum",
                 "total_requests",
                 "updated_by_id",
-                "updated_date_time"
+                "date_time_updated"
             ],
             "properties" {
                 "credit_institution": {
@@ -2846,24 +2904,38 @@
                     "$ref": "#/definitions/section_number"
                 },
                 "count_category": {
+                    "description": "",
+                    "type": "string"
                 },
                 "count_type": {
+                    "description": "",
+                    "type": "string"
                 },
                 "count_catsize": {
+                    "description": "",
+                    "type": "string"
                 },
                 "total_enrolled": {
+                    "description": "",
+                    "type": "string"
                 },
                 "add_count_cum": {
+                    "description": "",
+                    "type": "string"
                 },
                 "drop_count_cum": {
+                    "description": "",
+                    "type": "string"
                 },
                 "total_requests": {
+                    "description": "",
+                    "type": "string"
                 },
                 "updated_by_id": {
                     "$ref": "#/definitions/updated_by_id"
                 },
-                "updated_date_time": {
-                    "$ref": "#/definitions/updated_date_time"
+                "date_time_updated": {
+                    "$ref": "#/definitions/date_time_updated"
                 }
             }
         },
@@ -2886,9 +2958,9 @@
                 "credit_hours",
                 "size_mix_category",
                 "added_by_id",
-                "added_date_time",
+                "date_time_added",
                 "add_error_message",
-                "error_date_time"
+                "date_time_error"
             ],
             "properties" {
                 "credit_institution": {
@@ -2913,14 +2985,24 @@
                     "$ref": "#/definitions/student_name"
                 },
                 "date_requested": {
+                    "description": "",
+                    "type": "string"
                 },
                 "sequencer": {
+                    "description": "",
+                    "type": "string"
                 },
                 "teaching_area": {
+                    "description": "",
+                    "type": "string"
                 },
                 "catalog_number": {
+                    "description": "",
+                    "type": "string"
                 },
                 "catalog_suffix": {
+                    "description": "",
+                    "type": "string"
                 },
                 "credit_hours": {
                     "$ref": "#/definitions/credit_hours"
@@ -2929,12 +3011,20 @@
                     "$ref": "#/definitions/size_mix_category"
                 }
                 "added_by_id": {
+                    "description": "",
+                    "type": "string"
                 },
-                "added_date_time": {
+                "date_time_added": {
+                    "description": "",
+                    "type": "string"
                 },
                 "add_error_message": {
+                    "description": "",
+                    "type": "string"
                 },
-                "error_date_time": {
+                "date_time_error": {
+                    "description": "",
+                    "type": "string"
                 }
             }
         },
@@ -2953,7 +3043,7 @@
                 "student_name",
                 "log_action",
                 "log_by_id",
-                "log_date_time"
+                "date_time_log"
             ],
             "properties" {
                 "credit_institution": {
@@ -2978,15 +3068,23 @@
                     "$ref": "#/definitions/credit_hours"
                 },
                 "grade": {
+                    "description": "",
+                    "type": "string"
                 },
                 "student_name": {
                     "$ref": "#/definitions/student_name"
                 },
                 "log_action": {
+                    "description": "",
+                    "type": "string"
                 },
                 "log_by_id": {
+                    "description": "",
+                    "type": "string"
                 },
-                "log_date_time": {
+                "date_time_log": {
+                    "description": "",
+                    "type": "string"
                 }
             }
         },
@@ -3007,7 +3105,7 @@
                 "credit_hours",
                 "log_action",
                 "log_by_id",
-                "log_date_time"
+                "date_time_log"
             ],
             "properties" {
                 "credit_institution": {
@@ -3032,19 +3130,31 @@
                     "$ref": "#/definitions/student_name"
                 },
                 "teaching_area": {
+                    "description": "",
+                    "type": "string"
                 },
                 "catalog_number": {
+                    "description": "",
+                    "type": "string"
                 },
                 "catalog_suffix": {
+                    "description": "",
+                    "type": "string"
                 },
                 "credit_hours": {
                     "$ref": "#/definitions/credit_hours"
                 },
                 "log_action": {
+                    "description": "",
+                    "type": "string"
                 },
                 "log_by_id": {
+                    "description": "",
+                    "type": "string"
                 },
-                "log_date_time": {
+                "date_time_log": {
+                    "description": "",
+                    "type": "string"
                 }
             }
         },
@@ -3092,7 +3202,7 @@
                         "type": "string",
                         "enum": [
                           "basic",
-                          "registration_counts",
+                          "enrollment_counts",
                           "add_permission_codes",
                           "assigned_instructors",
                           "class_limitations",
@@ -3117,7 +3227,7 @@
                         "type": "string",
                         "enum": [
                           "basic",
-                          "registration_counts",
+                          "enrollment_counts",
                           "add_permission_codes",
                           "assigned_instructors",
                           "class_limitations",
@@ -3142,7 +3252,7 @@
                         "type": "string",
                         "enum": [
                           "basic",
-                          "registration_counts",
+                          "enrollment_counts",
                           "add_permission_codes",
                           "assigned_instructors",
                           "class_limitations",
@@ -3993,7 +4103,7 @@
                 }
             }
         },
-        "created_date_time": {
+        "date_time_created": {
             "type": "object",
             "required": [
                 "value",
@@ -4014,7 +4124,7 @@
                 }
             }
         },
-        "redeemed_date_time": {
+        "date_time_redeemed": {
             "type": "object",
             "required": [
                 "value",
@@ -4156,7 +4266,7 @@
                 }
             }
         },
-        "updated_date_time": {
+        "date_time_updated": {
             "type": "object",
             "required": [
                 "value",
