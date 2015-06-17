@@ -2086,9 +2086,9 @@
         },
         "add_permission_codes": {
             "description": "A collection of add permission codes",
-            "type": "object"
+            "type": "object",
             "required": [
-                "values""
+                "values"
             ],
             "properties": {
                 "values": {
@@ -2115,7 +2115,7 @@
                 "date_time_created",
                 "date_time_redeemed"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2130,8 +2130,8 @@
                 },
                 "section_number": {
                     "$ref": "#/definitions/section_number"
-                }
-               "person_id": { //student or instructor etc?
+                },
+               "person_id": { #student or instructor etc?
                     "$ref": "#/definitions/person_id"
                 },
                 "student_name": {
@@ -2169,7 +2169,7 @@
                 "updated_by_id",
                 "date_time_updated"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2184,7 +2184,7 @@
                 },
                 "section_number": {
                     "$ref": "#/definitions/section_number"
-                }
+                },
                 "instructor_type": {
                     "$ref": "#/definitions/instructor_type"
                 },
@@ -2227,7 +2227,7 @@
                 "date_time_updated",
                 "expired_date"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2242,7 +2242,7 @@
                 },
                 "section_number": {
                     "$ref": "#/definitions/section_number"
-                }
+                },
                 "limitation_type": {
                     "$ref": "#/definitions/limitation_type"
                 },
@@ -2300,7 +2300,7 @@
                 "date_time_updated",
                 "allow_conflict"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2315,7 +2315,7 @@
                 },
                 "section_number": {
                     "$ref": "#/definitions/section_number"
-                }
+                },
                 "schedule_type": {
                     "description": "Type of schedule",
                     "type": "string",
@@ -2411,7 +2411,7 @@
                     "type": "string"
                 },
                 "set_up_description": {
-                    "description": ""
+                    "description": "",
                     "type": "string"
                 },
                 "schedule_reason": {
@@ -2441,7 +2441,7 @@
                 "limitation_type",
                 "limitation_value"
             ],
-            "properties" {
+            "properties": {
                 "curriculum_id": {
                     "$ref": "#/definitions/curriculum_id"
                 },
@@ -2486,7 +2486,7 @@
                 "date_time_added",
                 "class_standing"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2587,7 +2587,7 @@
                 "linked_course_description",
                 "linked_section_type"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2670,7 +2670,7 @@
                 "update_by_id",
                 "date_time_updated"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2718,7 +2718,7 @@
                 "redeemed_by_id",
                 "date_time_redeemed"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2772,7 +2772,7 @@
                 "date_time_updated",
                 "prerequisite_list"
             ],
-            "properties" {
+            "properties": {
                 "curriculum_id": {
                     "$ref": "#/definitions/curriculum_id"
                 },
@@ -2820,7 +2820,7 @@
                 "updated_by_id",
                 "date_time_updated"
             ],
-            "properties" {
+            "properties": {
                 "header_type": {
                     "description": "",
                     "type": "string"
@@ -2887,7 +2887,7 @@
                 "updated_by_id",
                 "date_time_updated"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -2962,7 +2962,7 @@
                 "add_error_message",
                 "date_time_error"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -3009,7 +3009,7 @@
                 },
                 "size_mix_category": {
                     "$ref": "#/definitions/size_mix_category"
-                }
+                },
                 "added_by_id": {
                     "description": "",
                     "type": "string"
@@ -3045,7 +3045,7 @@
                 "log_by_id",
                 "date_time_log"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -3107,7 +3107,7 @@
                 "log_by_id",
                 "date_time_log"
             ],
-            "properties" {
+            "properties": {
                 "credit_institution": {
                     "$ref": "#/definitions/credit_institution"
                 },
@@ -3422,7 +3422,7 @@
                         "derived"
                     ]
                 }
-            }
+            },
             "key": {
                 "type": "boolean"
             }
