@@ -259,7 +259,7 @@
         },
         "vin": {
           "value": "1CRTW25A3NX78232",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
           "key": true
         },
         "plate_state": {
@@ -305,7 +305,7 @@
         },
         "owner_id": {
           "value": "586586586",
-          "api_type": "modifiable",
+          "api_type": "modifiable"
         },
         "owner_name": {
           "value": "Daffy Duck",
