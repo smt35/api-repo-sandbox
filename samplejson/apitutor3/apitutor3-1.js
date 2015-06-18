@@ -155,7 +155,7 @@
         },
         "vin": {
           "value": "1DTGR14A6NP38861",
-          "api_type": "modifable"
+          "api_type": "modifable",
           "key": true
         },
         "plate_state": {
