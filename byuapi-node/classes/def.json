@@ -1,0 +1,78 @@
+{
+  "links": [
+     {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/instructors/:instructor_id",
+        "method": "GET"
+     }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 20,
+    "default_page_size": 20,
+    "max_page_size": 20,
+    "field_sets_returned": [],
+    "field_sets_available": [
+      "basic",
+      "add_approved_students",
+      "assigned_instructors",
+      "assigned_schedules",
+      "class_limitations",
+      "course_limitations",
+      "room_preferences",
+      "enrolled_students",
+      "enrolled_student_logs",
+      "enrollment_counts",
+      "linked_classes",
+      "notes",
+      "permission_to_add_codes",
+      "prerequisites",
+      "priority_schedules",
+      "section_headers",
+      "size_mix",
+      "waitlisted_students",
+      "waitlisted_student_logs"
+    ],
+    "default_field_sets": [
+      "basic"
+    ],
+    "contexts_available": {
+      "class_roll": [
+        "basic",
+        "assigned_instructors",
+        "assigned_schedules",
+        "enrolled_students"
+      ],
+      "class_schedule_record": [
+        "basic",
+        "add_approved_students",
+        "assigned_instructors",
+        "assigned_schedules",
+        "class_limitations",
+        "course_limitations",
+        "linked_classes",
+        "notes",
+        "permission_to_add_codes",
+        "prerequisites",
+        "section_headers",
+        "size_mix"
+      ],
+      "proof": [
+        "course_proof"
+      ],
+      "summary": [
+        "course_summary"
+      ],
+      "dummy": [
+        "basic"
+      ]
+    },
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": []
+}
+

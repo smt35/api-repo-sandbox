@@ -471,6 +471,21 @@
               "basic"
             ],
             "properties": {
+
+                "basic": {
+                    "$ref": "#/definitions/basic"
+                }
+            }
+        },
+        "basic": {
+            "description": "Car Basic Item",
+            "type": "object",
+            "required": [
+                "vin",
+                "plate_state",
+                "plate_number"
+            ],
+            "properties": {
                 "links": {
                     "description": "Hypermedia Links that impact an item in the Cars collection",
                     "type": "object",
@@ -492,20 +507,6 @@
                         }
                     }
                 },
-                "basic": {
-                    "$ref": "#/definitions/basic"
-                }
-            }
-        },
-        "basic": {
-            "description": "Car Basic Item",
-            "type": "object",
-            "required": [
-                "vin",
-                "plate_state",
-                "plate_number"
-            ],
-            "properties": {
                 "vin": {
                     "description": "Vehicle Identification Number",
                     "type": "string",

@@ -1,0 +1,106 @@
+{
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/waitlisted_students",
+      "method": "GET"
+    }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 100,
+    "default_page_size": 100,
+    "max_page_size": 100,
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/waitlisted_students/:person_id",
+        "method": "GET"
+      },
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/waitlisted_students/:person_id",
+        "method": "DELETE"
+      }
+    ],
+    "person_id": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "year_term": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true,
+      "desc": "",
+      "ext_desc": ""
+    },
+    "curriculum_id": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "title_code": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "section_number": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "byu_id": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "student_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "date_time_requested": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "sequencer": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "course_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "credit_hours": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "size_mix_category": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "added_by_id": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "added_by_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "add_error_message": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "date_time_of_error": {
+      "value": "",
+      "api_type": "read-only"
+    }
+  }
+}
+

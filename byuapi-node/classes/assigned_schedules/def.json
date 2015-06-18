@@ -1,0 +1,177 @@
+{
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/assigned_schedules",
+      "method": "GET"
+    }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 20,
+    "default_page_size": 20,
+    "max_page_size": 20,
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/assigned_schedules",
+        "method": "GET"
+      }
+    ],
+    "schedule_type": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "schedule_id": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "sequence_number": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "year_term": {
+      "value": "",
+      "api_type": "operational",
+      "desc": "",
+      "ext_desc": ""
+    },
+    "curriculum_id": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "title_code": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "section_number": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "institution": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "building": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "room": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "days_taught": {
+      "value": "",
+      "api_type": "operational"
+    },
+    "mon": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "tue": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "wed": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "thu": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "fri": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "sat": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "sun": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "use_start_date": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "use_end_date": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "time_taught": {
+      "value": "",
+      "api_type": "operational"
+    },
+    "begin_time": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "end_time": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "status": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "set_up_id": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "set_up_description": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "schedule_reason": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "updated_by_id": {
+      "value": "",
+      "api_type": "operationsl"
+    },
+    "updated_by_name": {
+      "value": "",
+      "api_type": "operational"
+    },
+    "allow_conflict": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    }
+  }
+}
+

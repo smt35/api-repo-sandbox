@@ -228,7 +228,7 @@
                     }
                 },
                 "metadata": {
-                    "type": "string"
+                    "$ref": "#/definitions/top_level_metadata"
                 },
                 "values": {
                     "type": "array",
@@ -254,10 +254,7 @@
                     "$ref": "#/definitions/basic"
                 },
                 "enrolled_classes": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/enrolled_class"
-                    }
+                    "$ref": "#/definitions/enrolled_classes"
                 },
                 "waitlist": {
                     "$ref": "#/definitions/waitlist"
@@ -308,10 +305,178 @@
             }
         },
         "basic": {
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "links": {
+                    "$ref": "#/definitions/links"
+                },
+                "student_id": {
+                    "$ref": "#/definitions/student_id"
+                },
+                "student_name": {
+                    "type": "string"
+                },
+                "byu_id": {
+                    "type": "string"
+                },
+                "net_id": {
+                    "type": "string"
+                },
+                "email_address": {
+                    "type": "string"
+                },
+                "student_status": {
+                    "type": "string"
+                },
+                "current_hours": {
+                    "type": "string"
+                },
+                "primary_major": {
+                    "type": "string"
+                },
+                "as_of_date": {
+                    "type": "string"
+                },
+                "restricted": {
+                    "type": "string"
+                }
+            }
+        },
+        "confidential_information": {
+            "type": "object",
+            "properties": {
+                "links": {
+                    "$ref": "#/definitions/links"
+                },
+                "secret_marital_status": {
+                    "type": "string"
+                }
+            }
+        },
+        "enrolled_classes": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/enrolled_class"
+            }
         },
         "enrolled_class": {
-            "type": "string"
+            "type": "object",
+            "properties": {
+                "links": {
+                    "$ref": "#/definitions/links"
+                },
+                "student_id": {
+                    "$ref": "#/definitions/student_id"
+                },
+                "credit_institution": {
+                    "type": "string"
+                },
+                "year_term": {
+                    "type": "string"
+                },
+                "curriculum_id": {
+                    "type": "string"
+                },
+                "title_code": {
+                    "type": "string"
+                },
+                "section_number": {
+                    "type": "string"
+                },
+                "dept_name": {
+                    "type": "string"
+                },
+                "catalog_number": {
+                    "type": "string"
+                },
+                "catalog_suffix": {
+                    "type": "string"
+                },
+                "transcript_title": {
+                    "type": "string"
+                },
+                "credit_hours": {
+                    "type": "string"
+                },
+                "grade": {
+                    "type": "string"
+                },
+                "audit_status": {
+                    "type": "string"
+                },
+                "class_repeated": {
+                    "type": "string"
+                },
+                "honors_flag": {
+                    "type": "string"
+                },
+                "service_learning": {
+                    "type": "string"
+                },
+                "start_date": {
+                    "type": "string"
+                },
+                "end_date": {
+                    "type": "string"
+                },
+                "credit_type": {
+                    "type": "string"
+                },
+                "credit_type_descr": {
+                    "type": "string"
+                },
+                "section_type": {
+                    "type": "string"
+                },
+                "lab_quiz_section": {
+                    "type": "string"
+                },
+                "lab_quiz_section_desc": {
+                    "type": "string"
+                },
+                "date_graded": {
+                    "type": "string"
+                },
+                "graded_by_id": {
+                    "type": "string"
+                },
+                "graded_by_name": {
+                    "type": "string"
+                },
+                "date_added": {
+                    "type": "string"
+                },
+                "added_by_id": {
+                    "type": "string"
+                },
+                "added_by_name": {
+                    "type": "string"
+                },
+                "add_drop_card": {
+                    "type": "string"
+                },
+                "envelope_type": {
+                    "type": "string"
+                },
+                "envelope_id": {
+                    "type": "string"
+                },
+                "date_time_updated": {
+                    "type": "string"
+                },
+                "updateed_by_id": {
+                    "type": "string"
+                },
+                "updated_by_name": {
+                    "type": "string"
+                },
+                "instructors": {
+                    "$ref": "#/definitions/instructors"
+                },
+                "schedules": {
+                    "$ref": "#/definitions/schedules"
+                }
+            }
         },
         "waitlist": {
             "type": "string"
@@ -334,113 +499,17 @@
         "student_id": {
             "type": "string"
         },
-        "credit_institution": {
-            "type": "string"
-        },
-        "curriculum_id": {
-            "type": "string"
-        },
-        "year_term": {
-            "type": "string"
-        },
-        "title_code": {
-            "type": "string"
-        },
-        "section_number": {
-            "type": "string"
-        },
-        "dept_name": {
-            "type": "string"
-        },
-        "catalog_number": {
-            "type": "string"
-        },
-        "catalog_suffix": {
-            "type": "string"
-        },
-        "transcript_title": {
-            "type": "string"
-        },
-        "credit_hours": {
-            "type": "string"
-        },
-        "grade": {
-            "type": "string"
-        },
-        "class_repeated": {
-            "type": "string"
-        },
-        "honors_flag": {
-            "type": "string"
-        },
-        "service_learning": {
-            "type": "string"
-        },
-        "start_date": {
-            "type": "string"
-        },
-        "end_date": {
-            "type": "string"
-        },
-        "credit_type": {
-            "type": "string"
-        },
-        "credit_type_descr": {
-            "type": "string"
-        },
-        "section_type": {
-            "type": "string"
-        },
-        "section_type_descr": {
-            "type": "string"
-        },
-        "lab_quiz_section": {
-            "type": "string"
-        },
-        "lab_quiz_section_descr": {
-            "type": "string"
-        },
-        "date_graded": {
-            "type": "string"
-        },
-        "graded_by_id": {
-            "type": "string"
-        },
-        "graded_by_name": {
-            "type": "string"
-        },
-        "date_added": {
-            "type": "string"
-        },
-        "added_by_id": {
-            "type": "string"
-        },
-        "added_by_name": {
-            "type": "string"
-        },
-        "add_drop_card": {
-            "type": "string"
-        },
-        "envelope_type": {
-            "type": "string"
-        },
-        "envelope_id": {
-            "type": "string"
-        },
-        "date_time_updated": {
-            "type": "string"
-        },
-        "updated_by_id": {
-            "type": "string"
-        },
-        "updated_by_name": {
-            "type": "string"
-        },
         "instructors": {
-            "type": "string"
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         },
         "schedules": {
-            "type": "string"
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         },
         "top_level_metadata": {
             "type": "object",
@@ -508,139 +577,6 @@
                 },
                 "fields": {
                     "type": "string"
-                }
-            }
-        },
-        "enrollments": {
-            "type": "array",
-            "properties": {
-                "links": {
-                    "$ref": "#/definitions/links"
-                },
-                "metadata": {
-                    "type": "string"
-                }
-            },
-            "items": {
-                "$ref": "#/definitions/enrollment"
-            }
-        },
-        "enrollment": {
-            "type": "object",
-            "properties": {
-                "links": {
-                    "$ref": "#/definitions/enrollment"
-                },
-                "person_id": {
-                    "$ref": "#/definitions/student_id"
-                },
-                "credit_institution": {
-                    "$ref": "#/definitions/credit_institution"
-                },
-                "year_term": {
-                    "$ref": "#/definitions/year_term"
-                },
-                "curriculum_id": {
-                    "$ref": "#/definitions/curriculum_id"
-                },
-                "title_code": {
-                    "$ref": "#/definitions/title_code"
-                },
-                "section_number": {
-                    "$ref": "#/definitions/section_number"
-                },
-                "dept_name": {
-                    "$ref": "#/definitions/dept_name"
-                },
-                "catalog_number": {
-                    "$ref": "#/definitions/catalog_number"
-                },
-                "catalog_suffix": {
-                    "$ref": "#/definitions/catalog_suffix"
-                },
-                "transcript_title": {
-                    "$ref": "#/definitions/transcript_title"
-                },
-                "credit_hours": {
-                    "$ref": "#/definitions/credit_hours"
-                },
-                "grade": {
-                    "$ref": "#/definitions/grade"
-                },
-                "class_repeated": {
-                    "$ref": "#/definitions/class_repeated"
-                },
-                "honors_flag": {
-                    "$ref": "#/definitions/honors_flag"
-                },
-                "service_learning": {
-                    "$ref": "#/definitions/service_learning"
-                },
-                "start_date": {
-                    "$ref": "#/definitions/start_date"
-                },
-                "end_date": {
-                    "$ref": "#/definitions/end_date"
-                },
-                "credit_type": {
-                    "$ref": "#/definitions/credit_type"
-                },
-                "credit_type_descr": {
-                    "$ref": "#/definitions/credit_type_descr"
-                },
-                "section_type": {
-                    "$ref": "#/definitions/section_type"
-                },
-                "section_type_desc": {
-                    "$ref": "#/definitions/section_type_descr"
-                },
-                "lab_quiz_section": {
-                    "$ref": "#/definitions/lab_quiz_section"
-                },
-                "lab_quiz_section_descr": {
-                    "$ref": "#/definitions/lab_quiz_section_descr"
-                },
-                "date_graded": {
-                    "$ref": "#/definitions/date_graded"
-                },
-                "graded_by_id": {
-                    "$ref": "#/definitions/graded_by_id"
-                },
-                "graded_by_name": {
-                    "$ref": "#/definitions/graded_by_name"
-                },
-                "date_added": {
-                    "$ref": "#/definitions/date_added"
-                },
-                "added_by_id": {
-                    "$ref": "#/definitions/added_by_id"
-                },
-                "added_by_name": {
-                    "$ref": "#/definitions/added_by_name"
-                },
-                "add_drop_card": {
-                    "$ref": "#/definitions/add_drop_card"
-                },
-                "envelope_type": {
-                    "$ref": "#/definitions/envelope_type"
-                },
-                "envelope_id": {
-                    "$ref": "#/definitions/envelope_id"
-                },
-                "date_time_updated": {
-                    "$ref": "#/definitions/date_time_updated"
-                },
-                "updated_by_id": {
-                    "$ref": "#/definitions/updated_by_id"
-                },
-                "updated_by_name": {
-                    "$ref": "#/definitions/updated_by_name"
-                },
-                "instructors": {
-                    "$ref": "#/definitions/instructors"
-                },
-                "schedules": {
-                    "$ref": "#/definitions/schedules"
                 }
             }
         }
