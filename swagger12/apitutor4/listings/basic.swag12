@@ -1993,7 +1993,7 @@
           ]
         },
         "key": {
-            "type": "boolean"
+          "type": "boolean"
         }
       }
     },
@@ -2041,7 +2041,6 @@
         "api_type": {
           "type": "string",
           "enum": [
-            "key",
             "read-only",
             "modifiable"
           ]
