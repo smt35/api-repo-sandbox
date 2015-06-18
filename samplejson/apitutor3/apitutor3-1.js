@@ -282,7 +282,7 @@
         },
         "vehicle_year": {
           "value": "2003",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
           "display_label": "Vehicle Year"
         },
         "make": {
@@ -305,7 +305,7 @@
         },
         "owner_id": {
           "value": "586586586",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
         },
         "owner_name": {
           "value": "Daffy Duck",
