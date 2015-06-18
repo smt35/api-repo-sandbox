@@ -1,0 +1,115 @@
+{
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/course_summary",
+      "method": "GET"
+    }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 3,
+    "page_size": 100,
+    "default_page_size": 100,
+    "max_page_size": 100,
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": {
+    "subject_area_summary": {
+      "year_term": {
+        "value": "",
+        "api_type": "operational",
+        "desc": "",
+        "ext_desc": ""
+      },
+      "total_sections": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "total_full_sections": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "total_seats_available": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "total_seats_offered": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "total_enrolled": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "total_waitlisted": {
+        "value": 0,
+        "api_type": "operational"
+      }
+    },
+    "course_number_summary": {
+      "links": [],
+      "subject_area": {
+        "value": "",
+        "api_type": "operational"
+      },
+      "catalog_number": {
+        "value": "",
+        "api_type": "operational"
+      },
+      "catalog_suffix": {
+        "value": "",
+        "api_type": "operational"
+      },
+      "curriculum_id": {
+        "value": "",
+        "api_type": "operational"
+      },
+      "title_code": {
+        "value": "",
+        "api_type": "operational"
+      },
+      "course_title": {
+        "value": "",
+        "api_type": "operational"
+      },
+      "multiple_title_codes": {
+        "value": "",
+        "api_type": "operational"
+      },
+      "number_of_sections": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "number_of_full_sections": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "seats_available": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "seats_offered": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "total_enrolled": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "number_waitlisted": {
+        "value": 0,
+        "api_type": "operational"
+      },
+      "allow_add_codes": {
+        "value": "",
+        "api_type": "related",
+        "related_resource": "courses"
+      }
+    }
+  }
+}
+

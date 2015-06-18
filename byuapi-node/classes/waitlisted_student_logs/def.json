@@ -1,0 +1,89 @@
+{
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/waitlisted_student_logs",
+      "method": "GET"
+    }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 100,
+    "default_page_size": 100,
+    "max_page_size": 100,
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/waitlisted_student_logss/:person_id",
+        "method": "GET"
+      }
+    ],
+    "person_id": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "year_term": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true,
+      "desc": "",
+      "ext_desc": ""
+    },
+    "curriculum_id": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "title_code": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "section_number": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "byu_id": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "student_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "action": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "action_date_time": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "action_by_id": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "action_by_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "course_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "credit_hours": {
+      "value": "",
+      "api_type": "read-only"
+    }
+  }
+}
+

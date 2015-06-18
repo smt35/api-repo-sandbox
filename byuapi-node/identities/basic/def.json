@@ -1,0 +1,49 @@
+{
+  "basic": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/identities/:identity_id"
+        "method": "GET"
+      },
+    ]
+    "created_by_id": {
+      "value" : "",
+      "api-type": "system",
+      "desc": ""
+    },
+    "date_time_created": {
+      "value": "",
+      "api_type": "system"
+    },
+    "updated_by_id": {
+      "value": "",
+      "api_type": "system",
+      "desc": ""
+    },
+    "date_time_updated": {
+      "value": "",
+      "api_type": "system"
+    },
+    "identity_id": {
+      "value": "",
+      "api_type": "modifiable",
+      "key": "boolean"
+    },
+    "identity_name": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "identity_type": {
+      "value": "",
+      "api_type": "derived",
+      "desc": ""
+    },
+    "uuid": {
+      "value": "",
+      "api_type": "system",
+      "key": "boolean"
+    }
+  }
+}
+{

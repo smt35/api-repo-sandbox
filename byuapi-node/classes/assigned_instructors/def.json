@@ -1,0 +1,106 @@
+{
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/assigned_instructors",
+      "method": "GET"
+    }
+  ],
+  "metadata": {
+    "collection_size": 3,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 20,
+    "default_page_size": 20,
+    "max_page_size": 20,
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/assigned_instructors",
+        "method": "GET"
+      }
+    ],
+    "credit_institution": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "year_term": {
+      "value": "",
+      "api_type": "key",
+      "desc": "",
+      "ext_desc": ""
+    },
+    "curriculum_id": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "title_code": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "section_number": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "instructor_type": {
+      "value": "",
+      "api_type": "key",
+      "desc": "",
+      "domain": ""
+    },
+    "instructor_name": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "identity",
+      "desc": ""
+    },
+    "person_id": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "byu_id": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "identity",
+      "desc": ""
+    },
+    "net_id": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "identity",
+      "desc": ""
+    },
+    "email_address": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "identity",
+      "desc": ""
+    },
+    "updated_by_id": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "updated_by_name": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "date_time_updated": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    }
+  }
+}
+

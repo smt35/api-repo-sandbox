@@ -1,0 +1,35 @@
+{
+  "links": [
+     {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/academic_units/:unit_id",
+        "method": "GET"
+     }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 200,
+    "default_page_size": 200,
+    "max_page_size": 200,
+    "field_sets_returned": [],
+    "field_sets_available": [
+      "basic",
+      "assigned_programs",
+      "assigned_teaching_areas",
+      "contacts",
+      "sub_units"
+    ],
+    "default_field_sets": [
+      "basic"
+    ],
+    "contexts_available": {
+    },
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": []
+}
+

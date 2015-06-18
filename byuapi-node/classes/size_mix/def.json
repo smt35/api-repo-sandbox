@@ -1,0 +1,107 @@
+{
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/size_mix",
+      "method": "GET"
+    }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 3,
+    "page_size": 20,
+    "default_page_size": 20,
+    "max_page_size": 20,
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/size_mix",
+        "method": "GET"
+      }
+    ],
+    "credit_institution": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "year_term": {
+      "value": "",
+      "api_type": "key",
+      "desc": "",
+      "ext_desc": ""
+    },
+    "curriculum_id": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "title_code": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "section_number": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "category": {
+      "value": "",
+      "api_type": "key",
+      "desc": "",
+      "domain": ""
+    },
+    "type": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "size": {
+      "value": "",
+      "api_type": "modifiable",
+      "desc": ""
+    },
+    "total_enrolled": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "number_of_adds": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "number_of_drops": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "total_requests": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "updated_by_id": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "updated_by_name": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    },
+    "date_time_updated": {
+      "value": "",
+      "api_type": "operational",
+      "desc": ""
+    }
+  }
+}
+
