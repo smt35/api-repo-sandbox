@@ -1,16 +1,16 @@
 {
   "links": {
-    "tutorial4-cars.info": {
+    "tutorial5-cars.info": {
       "rel": "self",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars",
+      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars",
       "method": "GET",
-      "title": "tutorial4-cars.getCars"
+      "title": "tutorial5-cars.getCars"
     },
-    "tutorial4-cars.create": {
-      "rel": "tutorial4-cars.create",
-      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars",
+    "tutorial5-cars.create": {
+      "rel": "tutorial5-cars.create",
+      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars",
       "method": "POST",
-      "title": "tutorial4-cars.createCar"
+      "title": "tutorial5-cars.createCar"
     }
   },
   "metadata": {
@@ -49,40 +49,41 @@
     {
       "basic": {
         "links": {
-          "tutorial4-cars.info": {
+          "tutorial5-cars.info": {
             "rel": "self",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
             "method": "GET",
-            "title": "tutorial4-cars.getCar"
+            "title": "tutorial5-cars.getCar"
           },
-          "tutorial4-cars.modify": {
-            "rel": "tutorial4-cars.modify",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+          "tutorial5-cars.modify": {
+            "rel": "tutorial5-cars.modify",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
             "method": "PUT",
-            "title": "tutorial4-cars.modifyCar"
+            "title": "tutorial5-cars.modifyCar"
           },
-          "tutorial4-cars.sell": {
-            "rel": "tutorial4-cars.sell",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+          "tutorial5-cars.sell": {
+            "rel": "tutorial5-cars.sell",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
             "method": "PUT",
-            "title": "tutorial4-cars.modifyCar"
+            "title": "tutorial5-cars.modifyCar"
           },
-          "tutorial4-cars.delete": {
-            "rel": "tutorial4-cars.delete",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+          "tutorial5-cars.delete": {
+            "rel": "tutorial5-cars.delete",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
             "method": "DELETE",
-            "title": "tutorial4-cars.deleteCar"
+            "title": "tutorial5-cars.deleteCar"
           },
-          "tutorial4-owners.info": {
-             "rel": "tutorial4-owners.info",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-owners/783783783",
+          "tutorial5-owners.info": {
+             "rel": "tutorial5-owners.info",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/783783783",
             "method": "GET",
-            "title": "tutorial4-owners.getOwner"
+            "title": "tutorial5-owners.getOwner"
           }
         },
         "vin": {
           "value": "1FTBE14A4NP05962",
-          "api_type": "key"
+          "api_type": "modifiable",
+          "key": true
         },
         "plate_state": {
           "value": "UT",
@@ -132,7 +133,7 @@
         "owner_name": {
           "value": "Daisy Duck",
           "api_type": "related",
-          "related_resource": "tutorial4-owners"
+          "related_resource": "tutorial5-owners"
         },
         "created_by_id": {
           "value": "586586586",
@@ -222,40 +223,41 @@
     {
       "basic": {
         "links": {
-          "tutorial4-cars.info": {
+          "tutorial5-cars.info": {
             "rel": "self",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1DTGR14A6NP38861",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
             "method": "GET",
-            "title": "tutorial4-cars.getCar"
+            "title": "tutorial5-cars.getCar"
           },
-          "tutorial4-cars.modify": {
-            "rel": "tutorial4-cars.modify",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1DTGR14A6NP38861",
+          "tutorial5-cars.modify": {
+            "rel": "tutorial5-cars.modify",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
             "method": "PUT",
-            "title": "tutorial4-cars.modifyCar"
+            "title": "tutorial5-cars.modifyCar"
           },
-          "tutorial4-cars.sell": {
-            "rel": "tutorial4-cars.sell",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1DTGR14A6NP38861",
+          "tutorial5-cars.sell": {
+            "rel": "tutorial5-cars.sell",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
             "method": "PUT",
-            "title": "tutorial4-cars.modifyCar"
+            "title": "tutorial5-cars.modifyCar"
           },
-          "tutorial4-cars.delete": {
-            "rel": "tutorial4-cars.delete",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1DTGR14A6NP38861",
+          "tutorial5-cars.delete": {
+            "rel": "tutorial5-cars.delete",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
             "method": "DELETE",
-            "title": "tutorial4-cars.deleteCar"
+            "title": "tutorial5-cars.deleteCar"
           },
-          "tutorial4-owners.info": {
-            "rel": "tutorial4-owners.info",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-owners/586586586",
+          "tutorial5-owners.info": {
+            "rel": "tutorial5-owners.info",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/586586586",
             "method": "GET",
-            "title": "tutorial4-cars.getOwner"
+            "title": "tutorial5-cars.getOwner"
           }
         },
         "vin": {
           "value": "1DTGR14A6NP38861",
-          "api_type": "key"
+          "api_type": "modifiable",
+          "key": true
         },
         "plate_state": {
           "value": "UT",
@@ -305,7 +307,7 @@
         "owner_name": {
           "value": "Daffy Duck",
           "api_type": "related",
-          "related_resource": "tutorial4-owners"
+          "related_resource": "tutorial5-owners"
         },
         "created_by_id": {
           "value": "586586586",
@@ -395,35 +397,35 @@
     {
       "basic": {
         "links": {
-          "tutorial4-cars.info": {
+          "tutorial5-cars.info": {
             "rel": "self",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1CRTW25A3NX78232",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
             "method": "GET",
-            "title": "tutorial4-cars.getCar"
+            "title": "tutorial5-cars.getCar"
           },
-          "tutorial4-cars.modify": {
-            "rel": "tutorial4-cars.modify",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1CRTW25A3NX78232",
+          "tutorial5-cars.modify": {
+            "rel": "tutorial5-cars.modify",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
             "method": "PUT",
-            "title": "tutorial4-cars.modifyCar"
+            "title": "tutorial5-cars.modifyCar"
           },
-          "tutorial4-cars.sell": {
-            "rel": "tutorial4-cars.sell",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1CRTW25A3NX78232",
+          "tutorial5-cars.sell": {
+            "rel": "tutorial5-cars.sell",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
             "method": "PUT",
-            "title": "tutorial4-cars.modifyCar"
+            "title": "tutorial5-cars.modifyCar"
           },
-          "tutorial4-cars.delete": {
-            "rel": "tutorial4-cars.delete",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1CRTW25A3NX78232",
+          "tutorial5-cars.delete": {
+            "rel": "tutorial5-cars.delete",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
             "method": "DELETE",
-            "title": "tutorial4-cars.deleteCar"
+            "title": "tutorial5-cars.deleteCar"
           },
-          "tutorial4-owners.info": {
-            "rel": "tutorial4-owners.info",
-            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-owners/586586586",
+          "tutorial5-owners.info": {
+            "rel": "tutorial5-owners.info",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/586586586",
             "method": "GET",
-            "title": "tutorial4-owners.getOwner"
+            "title": "tutorial5-owners.getOwner"
           }
         },
         "vin": {
@@ -479,7 +481,7 @@
         "owner_name": {
           "value": "Daffy Duck",
           "api_type": "related",
-          "related_resource": "tutorial4-owners"
+          "related_resource": "tutorial5-owners"
         },
         "created_by_id": {
           "value": "586586586",
