@@ -163,7 +163,7 @@
             "domain": "https://api.byu.edu/byuapi/meta/course_numbers?year_term=20151&subject_area=NURS"
           },
           "course_suffix": {
-            "value": "", //this doesn't have a value
+            "value": "",
             "api_type": "related",
             "related_resource": "courses",
             "description": "",
