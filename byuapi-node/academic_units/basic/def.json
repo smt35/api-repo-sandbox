@@ -53,15 +53,16 @@
     },
     "date_time_updated": {
       "value": "",
-      "api_type": "modifiable"
+      "api_type": "operational"
     },
     "updated_by_id": {
       "value": "",
-      "api_type": "modifiable"
+      "api_type": "operational"
     },
     "updated_by_name": {
       "value": "",
-      "api_type": "modifiable"
+      "api_type": "related",
+      "related_resource": "identity"
     }
   }
 }

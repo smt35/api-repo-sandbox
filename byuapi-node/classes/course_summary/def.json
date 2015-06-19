@@ -18,7 +18,7 @@
     ]
   },
   "values": {
-    "subject_area_summary": {
+    "teaching_area_summary": {
       "year_term": {
         "value": "",
         "api_type": "operational",
@@ -52,7 +52,7 @@
     },
     "course_number_summary": {
       "links": [],
-      "subject_area": {
+      "teaching_area": {
         "value": "",
         "api_type": "operational"
       },

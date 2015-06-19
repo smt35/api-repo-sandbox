@@ -2,6 +2,7 @@
 
 var sql = require('./sql.js');
 var core = require("../../core.js");
+var common = require("../../commonAcademicUtils.js");
 var q = require('q');
 
 exports.get = function(connection, resources, request, response) {
@@ -51,7 +52,7 @@ function processData(connection, data, results) {
   var def, def2;
   var x;
 
-  buildYearTermDesc(data.values.subject_area_aummary.year_term);
+  common.buildYearTermDesc(data.values.subject_area_aummary.year_term);
   def = data.values.course_number_summary;
   data.values.course_number_summary = [];
 

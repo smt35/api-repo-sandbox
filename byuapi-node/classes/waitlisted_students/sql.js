@@ -8,7 +8,7 @@ exports.waitlistedStudentsData =
       + " a.section_number as \"section_number\","
       + " b.byu_id as \"byu_id\","
       + " b.sort_name as \"student_name\","
-      + " to_char(a.date_requested, 'dd Mon yyyy hh24:mi:ss') as \"date_time_requetsed\","
+      + " to_char(a.date_requested, 'dd Mon yyyy hh24:mi:ss') as \"date_time_requested\","
       + " a.sequencer as \"sequencer\","
       + " rpad(a.dept_name, 6)||a.catalog_number||a.catalog_suffix as \"course_name\","
       + " a.credit_hours as \"credit_hours\","

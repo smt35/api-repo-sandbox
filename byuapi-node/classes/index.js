@@ -12,7 +12,6 @@ exports.get = function(connection, resources, request, response) {
     return resources.sub_resources[request.params.sub_resource_name].get(connection, resources, request, response)
       .then(function (results) {
         store[request.params.sub_resource_name] = results;
-//        console.log("data: ", results)
         return store;
       });
   } else {
@@ -31,9 +30,6 @@ exports.get = function(connection, resources, request, response) {
     }
     return q.allSettled(promises)
       .then(function() {
-//        return store;
-//        data.classes = store;
-//        return data;
         data[resource_name].values[0] = store;
         return data;
       }

@@ -21,6 +21,7 @@
       "assigned_schedules",
       "class_limitations",
       "course_limitations",
+      "course_summary",
       "room_preferences",
       "enrolled_students",
       "enrolled_student_logs",
@@ -31,7 +32,7 @@
       "prerequisites",
       "priority_schedules",
       "section_headers",
-      "size_mix",
+      "size_mixes",
       "waitlisted_students",
       "waitlisted_student_logs"
     ],
@@ -57,7 +58,7 @@
         "permission_to_add_codes",
         "prerequisites",
         "section_headers",
-        "size_mix"
+        "size_mixes"
       ],
       "proof": [
         "course_proof"

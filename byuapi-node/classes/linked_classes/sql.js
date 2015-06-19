@@ -16,7 +16,7 @@ exports.linkedClassesData =
       + " a.curriculum_id as \"curriculum_id\","
       + " a.title_code as \"title_code\","
       + " a.section_number as \"section_number\","
-      + " nvl(a.dept_name, 'xxxxx') as \"subject_area\","
+      + " nvl(a.dept_name, 'xxxxx') as \"teaching_area\","
       + " nvl(a.catalog_number, '000') as \"course_number\","
       + " nvl(a.catalog_suffix, '') as \"course_suffix\","
       + " nvl(a.section_type, 'unknown') as \"section_type\","

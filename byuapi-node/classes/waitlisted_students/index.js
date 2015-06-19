@@ -39,7 +39,7 @@ function buildDataRow(data, results) {
   }
 }
 
-function processData(connection, data, results) {
+function processData(data, results) {
   var def, def2;
   var x;
 

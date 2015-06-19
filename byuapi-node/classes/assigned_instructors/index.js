@@ -2,6 +2,7 @@
 
 var sql = require('./sql.js');
 var core = require("../../core.js");
+var common = require("../../commonAcademicUtils.js");
 var q = require('q');
 
 exports.get = function(connection, resources, request, response) {
@@ -53,6 +54,7 @@ function processData(connection, data, results) {
     def2 = core.object.copy(def);
     data.values.push(def2);
     buildDataRow(def2, results.rows[x]);
+    common.buildYearTermDesc(def2.year_term);
 
     // get the email address
     (function(row) {

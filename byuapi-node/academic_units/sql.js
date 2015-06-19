@@ -17,7 +17,5 @@ exports.academicUnitData =
  + " from academic_unit a,"
       + " person b"
 + " where a.academic_unit_id = :1"
-  + " and to_date(:2, 'yyyymmdd' between a.effective_date and a.expired_date
+  + " and to_date(:2, 'yyyymmdd') between a.effective_date and a.expired_date"
   + " and b.person_id (+) = a.updated_by_id";
-}
-

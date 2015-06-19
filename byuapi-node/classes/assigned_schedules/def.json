@@ -27,39 +27,36 @@
     ],
     "schedule_type": {
       "value": "",
-      "api_type": "key",
-      "desc": ""
+      "api_type": "read-only",
+      "key": true
     },
     "schedule_id": {
       "value": "",
-      "api_type": "key",
-      "desc": ""
+      "api_type": "read-only",
+      "key": true
     },
     "sequence_number": {
       "value": "",
-      "api_type": "key",
-      "desc": ""
+      "api_type": "read-only",
+      "key": true
     },
     "year_term": {
       "value": "",
-      "api_type": "operational",
+      "api_type": "read-only",
       "desc": "",
       "ext_desc": ""
     },
     "curriculum_id": {
       "value": "",
-      "api_type": "operational",
-      "desc": ""
+      "api_type": "read-only"
     },
     "title_code": {
       "value": "",
-      "api_type": "operational",
-      "desc": ""
+      "api_type": "read-only"
     },
     "section_number": {
       "value": "",
-      "api_type": "operational",
-      "desc": ""
+      "api_type": "read-only"
     },
     "institution": {
       "value": "",

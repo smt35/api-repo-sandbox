@@ -2,6 +2,7 @@
 
 var sql = require('./sql.js');
 var core = require("../../core.js");
+var common = require("../../commonAcademicUtils.js");
 var q = require('q');
 
 exports.get = function(connection, resources, request, response) {
@@ -49,32 +50,7 @@ function processData(data, results) {
     def2 = core.object.copy(def);
     data.values.push(def2);
     buildDataRow(def2, results.rows[x]);
-    buildYearTermDesc(def2.year_term);
-  }
-}
-
-function buildYearTermDesc(year_term) {
-
-  switch(year_term.value.substr(4, 1)) {
-    case '1':
-      year_term.desc = "Winter " + year_term.value.substr(0, 4);
-      year_term.ext_desc = "Winter Semester " + year_term.value.substr(0, 4);
-      break;
-    case '3':
-      year_term.desc = "Spring " + year_term.value.substr(0, 4);
-      year_term.ext_desc = "Spring Term " + year_term.value.substr(0, 4);
-      break;
-    case '4':
-      year_term.desc = "Summer " + year_term.value.substr(0, 4);
-      year_term.ext_desc = "Summer Term " + year_term.value.substr(0, 4);
-      break;
-    case '5':
-      year_term.desc = "Fall " + year_term.value.substr(0, 4);
-      year_term.ext_desc = "Fall Semester " + year_term.value.substr(0, 4);
-      break;
-    default:
-      year_term.desc = "Unknown " + year_term.value.substr(0, 4);
-      year_term.ext_desc = "Unknown " + year_term.value.substr(0, 4);
+    common.buildYearTermDesc(def2.year_term);
   }
 }
 
