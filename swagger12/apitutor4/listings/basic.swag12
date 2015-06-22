@@ -414,7 +414,7 @@
               "name": "miles",
               "description": "Mileage read on odometer",
               "required": false,
-              "type": "string",
+              "type": "integer",
               "paramType": "query"
             }
           ],

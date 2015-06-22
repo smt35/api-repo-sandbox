@@ -507,7 +507,7 @@
                         "in": "query",
                         "description": "Mileage read on odometer",
                         "required": false,
-                        "type": "string"
+                        "type": "integer"
                     }
                 ],
                 "tags": [
