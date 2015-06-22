@@ -2089,7 +2089,7 @@
                 },
                 "miles": {
                     "description": "Mileage read on odometer",
-                    "type": "string"
+                    "type": "integer"
                 },
                 "read_by_id": {
                     "description": "The ID of the person that created the odometer log",
@@ -2155,11 +2155,11 @@
                 },
                 "start_miles": {
                     "description": "Mileage read on odometer at beginning of trip",
-                    "type": "string"
+                    "type": "integer"
                 },
                 "end_miles": {
                     "description": "Mileage read on odometer at end of trip",
-                    "type": "string"
+                    "type": "integer"
                 }
             }
         },
