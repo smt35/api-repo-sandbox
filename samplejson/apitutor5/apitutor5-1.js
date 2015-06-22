@@ -503,23 +503,88 @@
         }
       },
       "odometer_logs": [
-        { "vin": "1CRTW25A3NX78232",
-          "read_date": "2014-05-03",
-          "miles": 85919,
-          "read_by_id": "586586586",
-          "read_by_name": "Daffy Duck"
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-05-03",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 85919,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         },
-        { "vin": "1CRTW25A3NX78232",
-          "read_date": "2014-06-22",
-          "miles": 90652,
-          "read_by_id": "586586586",
-          "read_by_name": "Daffy Duck"
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-06-22",
+            "api_type": "modifiable",
+            "key": true,
+            "display_label": ""
+          },
+          "miles": {
+            "value": 90652,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "values": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         },
-        { "vin": "1CRTW25A3NX78232",
-          "read_date": "2014-07-21",
-          "miles": 94126,
-          "read_by_id": "783783783",
-          "read_by_name": "Daisy Duck"
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-07-21",
+            "api_type": "modifiable",
+            "key": true,
+            "display_label": ""
+          },
+          "miles": {
+            "value": 94126,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "783783783",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daisy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         }
       ],
       "trips": [
