@@ -6,7 +6,7 @@ var q = require('q');
 
 exports.get = function(connection, resources, request, response) {
   var params = [];
-  var sql_query = sql.basicData;
+  var sql_query = sql.academicUnitData;
   var data = {};
 
   if(request.params.resource_id) {

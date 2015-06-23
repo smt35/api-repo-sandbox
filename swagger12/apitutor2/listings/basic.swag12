@@ -411,7 +411,6 @@
       ],
       "properties": {
         "basic": {
-          "$ref": "basic"
            "links": {
               "description": "Hypermedia Links that impact an item in the Cars collection",
               "type": "object",
@@ -433,6 +432,7 @@
                 }
               }
             },
+          "$ref": "basic"
   }
 }
 },

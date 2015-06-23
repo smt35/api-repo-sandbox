@@ -81,8 +81,7 @@
         "uuid": {
           "value": "",
           "api_type": "system",
-          "key": "boolean"
-        }
+          "key": "boolean"        }
       }
     }
   ]

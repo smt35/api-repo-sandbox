@@ -1,0 +1,171 @@
+{
+  "basic": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/section_info",
+        "method": "GET"
+      }
+    ],
+    "year_term": {
+      "value": "",
+      "api_type": "key",
+      "desc": "",
+      "ext_desc": ""
+    },
+    "curriculum_id": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "title_code": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "section_number": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "credit_institution": {
+      "value": "",
+      "api_type": "key",
+      "desc": ""
+    },
+    "enrollment_status": {
+      "value": "",
+      "api_type": "derived"
+    },
+    "subject_area": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "courses"
+    },
+    "course_number": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "courses"
+    },
+    "course_suffix": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "courses"
+    },
+    "course_title": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "courses"
+    },
+    "section_type": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "block_code": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "class_status": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "reg_method": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "lab_quiz_flag": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "fee": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "honors": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "service_learning": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "fixed_or_variable": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "credit_hours": {
+      "value": 0.0,
+      "api_type": "modifiable"
+    },
+    "minimum_credit_hours": {
+      "value": 0.0,
+      "api_type": "related",
+      "related_resource": "courses"
+    },
+    "class_size": {
+      "value": 0,
+      "api_type": "modifiable"
+    },
+    "total_enrolled": {
+      "value": 0,
+      "api_type": "modifiable"
+    },
+    "class_start_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "class_end_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "reg_start_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "reg_end_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "withdraw_deadline_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "control_mix_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "waitlist_status": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "combine_linked_rolls": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "combine_linked_counts": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "link_relation": {
+      "value": "",
+      "api_type": "operational"
+    },
+    "link_to_year_term": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "link_to_curriculum_id": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "link_to_title_code": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "link_to_section_number": {
+      "value": "",
+      "api_type": "modifiable"
+    }
+  }
+}
+

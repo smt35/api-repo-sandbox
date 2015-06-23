@@ -19,6 +19,7 @@
       "assigned_programs",
       "assigned_teaching_areas",
       "contacts",
+      "faculty",
       "sub_units"
     ],
     "default_field_sets": [

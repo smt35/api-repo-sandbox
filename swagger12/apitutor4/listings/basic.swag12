@@ -414,7 +414,7 @@
               "name": "miles",
               "description": "Mileage read on odometer",
               "required": false,
-              "type": "string",
+              "type": "integer",
               "paramType": "query"
             }
           ],
@@ -1823,7 +1823,7 @@
           "description": "Date the odometer log was created"
         },
         "miles": {
-          "type": "string",
+          "type": "integer",
           "description": "Mileage read on odometer"
         },
         "read_by_id": {
@@ -1889,11 +1889,11 @@
           "description": "Date the trip ended"
         },
         "start_miles": {
-          "type": "string",
+          "type": "integer",
           "description": "Mileage read on odometer at beginning of trip"
         },
         "end_miles": {
-          "type": "string",
+          "type": "integer",
           "description": "Mileage read on odometer at end of trip"
         }
       }
@@ -1993,7 +1993,7 @@
           ]
         },
         "key": {
-            "type": "boolean"
+          "type": "boolean"
         }
       }
     },
@@ -2041,7 +2041,6 @@
         "api_type": {
           "type": "string",
           "enum": [
-            "key",
             "read-only",
             "modifiable"
           ]

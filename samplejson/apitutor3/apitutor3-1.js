@@ -155,7 +155,7 @@
         },
         "vin": {
           "value": "1DTGR14A6NP38861",
-          "api_type": "modifable"
+          "api_type": "modifable",
           "key": true
         },
         "plate_state": {
@@ -259,7 +259,7 @@
         },
         "vin": {
           "value": "1CRTW25A3NX78232",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
           "key": true
         },
         "plate_state": {
@@ -282,7 +282,7 @@
         },
         "vehicle_year": {
           "value": "2003",
-          "api_type": "modifiable"
+          "api_type": "modifiable",
           "display_label": "Vehicle Year"
         },
         "make": {

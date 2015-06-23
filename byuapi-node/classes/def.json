@@ -30,8 +30,10 @@
       "permission_to_add_codes",
       "prerequisites",
       "priority_schedules",
+      "proof",
       "section_headers",
-      "size_mix",
+      "size_mixes",
+      "summary",
       "waitlisted_students",
       "waitlisted_student_logs"
     ],
@@ -57,16 +59,13 @@
         "permission_to_add_codes",
         "prerequisites",
         "section_headers",
-        "size_mix"
+        "size_mixes"
       ],
       "proof": [
-        "course_proof"
+        "proof"
       ],
       "summary": [
-        "course_summary"
-      ],
-      "dummy": [
-        "basic"
+        "summary"
       ]
     },
     "default_db": [

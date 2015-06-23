@@ -9,7 +9,7 @@
     "schemes": [
         "https"
     ],
-    "basePath": "/byuapi/tutorial4-cars",
+    "basePath": "/byuapi/tutorial5-cars",
     "produces": [
         "application/json"
     ],
@@ -261,6 +261,20 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "field_sets",
+                        "in": "query",
+                        "description": "Field Sets Available",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "contexts",
+                        "in": "query",
+                        "description": "Group of Field Sets",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
@@ -464,6 +478,21 @@
                         "in": "path",
                         "description": "Vehicle Identification Number",
                         "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "read_date",
+                        "in": "query",
+                        "description": "When the odometer log was created",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "name": "miles",
+                        "in": "query",
+                        "description": "Mileage read on odometer",
+                        "required": false,
                         "type": "string"
                     }
                 ],
@@ -865,6 +894,21 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "description": "Trip Destination",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "start_date",
+                        "in": "query",
+                        "description": "When the trip began",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
                     }
                 ],
                 "tags": [
@@ -1465,6 +1509,21 @@
                         "description": "Vehicle Identification Number",
                         "required": true,
                         "type": "string"
+                    },
+                    {
+                        "name": "maintenance_date",
+                        "in": "query",
+                        "description": "When the maintenance was done on the Car",
+                        "required": false,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    {
+                        "name": "cost",
+                        "in": "query",
+                        "description": "Cost of Maintenance",
+                        "required": false,
+                        "type": "string"
                     }
                 ],
                 "tags": [
@@ -1887,27 +1946,6 @@
               "basic"
             ],
             "properties": {
-                "links": {
-                    "description": "Hypermedia Links that impact an item in the Cars collection",
-                    "type": "object",
-                    "properties": {
-                        "tutorial4-cars.info": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.modify": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.sell": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-cars.delete": {
-                            "$ref": "#/definitions/link"
-                        },
-                        "tutorial4-owners.info": {
-                            "$ref": "#/definitions/link"
-                        }
-                    }
-                },
                 "basic": {
                     "$ref": "#/definitions/basic"
                 },
@@ -1934,6 +1972,27 @@
                 "plate_number"
             ],
             "properties": {
+                "links": {
+                    "description": "Hypermedia Links that impact an item in the Cars collection",
+                    "type": "object",
+                    "properties": {
+                        "tutorial4-cars.info": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.modify": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.sell": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-cars.delete": {
+                            "$ref": "#/definitions/link"
+                        },
+                        "tutorial4-owners.info": {
+                            "$ref": "#/definitions/link"
+                        }
+                    }
+                },
                 "vin": {
                     "$ref": "#/definitions/vin"
                 },
@@ -2266,10 +2325,12 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "key",
                         "read-only",
                         "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
             }
         },
@@ -2601,10 +2662,12 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "key",
                         "read-only",
                         "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
             }
         },
@@ -2687,10 +2750,12 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "key",
                         "read-only",
                         "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
             }
         },
@@ -2810,10 +2875,12 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "key",
                         "read-only",
                         "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
             }
         },
@@ -2851,10 +2918,12 @@
                 "api_type": {
                     "type": "string",
                     "enum": [
-                        "key",
                         "read-only",
                         "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
             }
         },
@@ -2871,7 +2940,11 @@
                     "format": "date-time"
                 },
                 "api_type": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": [
+                        "read-only",
+                        "modifiable"
+                    ]
                 }
             }
         },

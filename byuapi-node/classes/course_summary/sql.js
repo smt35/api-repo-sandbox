@@ -1,7 +1,7 @@
 'use strict';
 
 exports.courseSummaryData =
-  "select a.dept_name as \"subject_area\","
+  "select a.dept_name as \"teaching_area\","
       + " a.catalog_number as \"catalog_number\","
       + " nvl(a.catalog_suffix, '') as \"catalog_suffix\","
       + " a.curriculum_id as \"curriculum_id\","

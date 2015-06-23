@@ -82,7 +82,8 @@
         },
         "vin": {
           "value": "1FTBE14A4NP05962",
-          "api_type": "key"
+          "api_type": "modifiable",
+          "key": true
         },
         "plate_state": {
           "value": "UT",
@@ -255,7 +256,8 @@
         },
         "vin": {
           "value": "1DTGR14A6NP38861",
-          "api_type": "key"
+          "api_type": "modifiable",
+          "key": true
         },
         "plate_state": {
           "value": "UT",
