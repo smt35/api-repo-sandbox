@@ -155,68 +155,271 @@
         }
       },
       "odometer_logs": [
-        { "vin": "1FTBE14A4NP05962",
-          "read_date": "2014-05-11",
-          "miles": 32459,
-          "read_by_id": "586586586",
-          "read_by_name": "Daffy Duck"
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-05-11",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 32459,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         },
-        { "vin": "1FTBE14A4NP05962",
-          "read_date": "2014-06-08",
-          "miles": 33782,
-          "read_by_id": "586586586",
-          "read_by_name": "Daffy Duck"
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-06-08",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 33782,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         },
-        { "vin": "1FTBE14A4NP05962",
-          "read_date": "2014-07-12",
-          "miles": 35121,
-          "read_by_id": "783783783",
-          "read_by_name": "Daisy Duck"
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-07-12",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 35121,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "783783783",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daisy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         }
       ],
       "trips": [
-        { "vin": "1FTBE14A4NP05962",
-          "trip_id": "A148",
-          "destination": "Seattle, Washington",
-          "start_date": "2012-08-10",
-          "end_date": "2012-08-16",
-          "start_miles": 10745,
-          "end_miles": 14826
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "A148",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Seattle, Washington",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2012-08-10",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2012-08-16",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 10745,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 14826,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         },
-        { "vin": "1FTBE14A4NP05962",
-          "trip_id": "C233",
-          "destination": "Denver, Colorado",
-          "start_date": "2013-02-04",
-          "end_date": "2013-02-09",
-          "start_miles": 17386,
-          "end_miles": 18144
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "C233",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Denver, Colorado",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-02-04",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-02-09",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 17386,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 18144,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         },
-        { "vin": "1FTBE14A4NP05962",
-          "trip_id": "A432",
-          "destination": "San Francisco, California",
-          "start_date": "2013-06-22",
-          "end_date": "2013-06-26",
-          "start_miles": 22354,
-          "end_miles": 24193
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "A432",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "San Francisco, California",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-06-22",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-06-26",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 22354,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 24193,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         }
       ],
       "insurance": {
-        "vin": "1FTBE14A4NP05962",
-        "policy_id": "A842B53E41",
-        "insurer": "GEICO"
+        "vin": {
+          "value": "1FTBE14A4NP05962",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "policy_id": {
+          "value": "A842B53E41",
+          "api_type": "modifiable"
+        },
+        "insurer": {
+          "value": "GEICO",
+          "api_type": "modifiable",
+          "display_label": "Insurance Agency"
+        }
       },
       "maintenance_logs": [
-        { "vin": "1FTBE14A4NP05962",
-          "maintenance_id": "000354",
-          "maintenance_date": "2013-06-01",
-          "description": "Tune-up",
-          "cost": "283.45"
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000354",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-06-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "Tune-up",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "283.45",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
         },
-        { "vin": "1FTBE14A4NP05962",
-          "maintenance_id": "000418",
-          "maintenance_date": "2013-11-01",
-          "description": "Oil & Lube",
-          "cost": "152.83"
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000418",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-11-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "Oil & Lube",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "152.83",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
         }
       ]
     },
@@ -329,68 +532,271 @@
         }
       },
       "odometer_logs": [
-        { "vin": "1DTGR14A6NP38861",
-          "read_date": "2014-05-09",
-          "miles": 26438,
-          "read_by_id": "586586586",
-          "read_by_name": "Daffy Duck"
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-05-09",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 26438,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         },
-        { "vin": "1DTGR14A6NP38861",
-          "read_date": "2014-06-11",
-          "miles": 29521,
-          "read_by_id": "586586586",
-          "read_by_name": "Daffy Duck"
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-06-11",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 29521,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         },
-        { "vin": "1DTGR14A6NP38861",
-          "read_date": "2014-07-15",
-          "miles": 30114,
-          "read_by_id": "783783783",
-          "read_by_name": "Daisy Duck"
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-07-15",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 30114,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "783783783",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daisy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
         }
       ],
       "trips": [
-        { "vin": "1DTGR14A6NP38861",
-          "trip_id": "A326",
-          "destination": "Butte, Montana",
-          "start_date": "2012-09-06",
-          "end_date": "2012-09-10",
-          "start_miles": 8265,
-          "end_miles": 9854
+        {
+          "vin": {
+          "value": "1DTGR14A6NP38861",
+          "api_type": "modifiable",
+          "key": true
+          },
+          "trip_id": {
+            "value": "A326",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Butte, Montana",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2012-09-06",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2012-09-10",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 8265,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 9854,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         },
-        { "vin": "1DTGR14A6NP38861",
-          "trip_id": "D551",
-          "destination": "St. Louis, Missouri",
-          "start_date": "2013-01-02",
-          "end_date": "2013-01-12",
-          "start_miles": 11843,
-          "end_miles": 15365
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "D551",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "St. Louis, Missouri",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-01-02",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-01-12",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 11843,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 15365,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         },
-        { "vin": "1DTGR14A6NP38861",
-          "trip_id": "A776",
-          "destination": "Los Angeles, California",
-          "start_date": "2013-04-01",
-          "end_date": "2013-04-06",
-          "start_miles": 17221,
-          "end_miles": 19632
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "A776",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "os Angeles, California",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-04-01",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-04-06",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 17221,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 19632,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         }
       ],
       "insurance": {
-        "vin": "1DTGR14A6NP38861",
-        "policy_id": "421T84GX333",
-        "insurer": "State Farm"
+        "vin": {
+          "value": "1DTGR14A6NP38861",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "policy_id": {
+          "value": "421T84GX333",
+          "api_type": "modifiable"
+        },
+        "insurer": {
+          "value": "State Farm",
+          "api_type": "modifiable",
+          "display_label": "Insurance Agency"
+        }
       },
       "maintenance_logs": [
-        { "vin": "1DTGR14A6NP38861",
-          "maintenance_id": "000401",
-          "maintenance_date": "2013-08-01",
-          "description": "New Tires",
-          "cost": "533.12"
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000401",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-08-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "New Tires",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "533.12",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
         },
-        { "vin": "1DTGR14A6NP38861",
-          "maintenance_id": "000663",
-          "maintenance_date": "2014-02-01",
-          "description": "Replace Alternator",
-          "cost": "486.23"
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000663",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2014-02-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "Replace Alternator",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "486.23",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
         }
       ]
     },
@@ -588,34 +994,124 @@
         }
       ],
       "trips": [
-        { "vin": "1CRTW25A3NX78232",
-          "trip_id": "B111",
-          "destination": "Pocatello, Idaho",
-          "start_date": "2011-04-01",
-          "end_date": "2011-04-10",
-          "start_miles": 18542,
-          "end_miles": 19296
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "B111",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Pocatello, Idaho",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2011-04-01",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2011-04-10",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 18542,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 19296,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         },
-        { "vin": "1CRTW25A3NX78232",
-          "trip_id": "E028",
-          "destination": "Ely, Nevada",
-          "start_date": "2013-04-01",
-          "end_date": "2013-04-10",
-          "start_miles": 60181,
-          "end_miles": 60946
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "E028",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Ely, Nevada",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-04-01",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-04-10",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 60181,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 60946,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
         }
       ],
       "insurance": {
-        "vin": "1CRTW25A3NX78232",
-        "policy_id": "Y583958CV43",
-        "insurer": "All State"
+        "vin": {
+          "value": "1CRTW25A3NX78232",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "policy_id": {
+          "value": "Y583958CV43",
+          "api_type": "modifiable"
+        },
+        "insurer": {
+          "value": "All State",
+          "api_type": "modifiable",
+          "display_label": "Insurance Agency"
+        }
       },
       "maintenance_logs": [
-        { "vin": "1CRTW25A3NX78232",
-          "maintenance_id": "000710",
-          "maintenance_date": "2013-10-31",
-          "description": "New Transmission",
-          "cost": "2436.11"
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000710",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-10-31",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "New Transmission",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "2436.11",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
         }
       ]
     }
