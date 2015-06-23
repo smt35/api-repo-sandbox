@@ -124,7 +124,8 @@
                         "description": "Limit the classes collection to the following times",
                         "type": "string"
                     },
-                    {   "name": "context",
+                    {
+                        "name": "context",
                         "in": "query",
                         "required": false,
                         "description": "Defines a group of field sets to be returned in collection",
@@ -216,7 +217,7 @@
                         "description": "The class to be added",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/classes"
+                            "$ref": "#/definitions/classes"
                         }
                     }
                 ],
@@ -272,7 +273,7 @@
                         "description": "The class to be modified",
                         "required": true,
                         "schema": {
-                             "$ref": "#/definitions/classes"
+                            "$ref": "#/definitions/classes"
                         }
                     },
                     {
@@ -310,7 +311,8 @@
                         "description": "The section designator",
                         "type": "string"
                     },
-                    {   "name": "context",
+                    {
+                        "name": "context",
                         "in": "query",
                         "required": false,
                         "description": "Defines a group of field sets to be returned in collection",
@@ -1967,7 +1969,7 @@
                 "enrollment_status": {
                     "$ref": "#/definitions/enrollment_status"
                 },
-                "subject_area":{
+                "subject_area": {
                     "$ref": "#/definitions/subject_area"
                 },
                 "course_number": {
@@ -1998,7 +2000,7 @@
                     "$ref": "#/definitions/fee"
                 },
                 "honors": {
-                    "$ref": "#/definitions/honors:
+                    "$ref": "#/definitions/honors"
                 },
                 "service_learning": {
                     "$ref": "#/definitions/service_learning"
@@ -2097,7 +2099,7 @@
                         "$ref": "#/definitions/add_permission_code"
                     }
                 }
-            },
+            }
         },
         "add_permission_code": {
             "description": "Add permission code for a single class",
@@ -2131,7 +2133,7 @@
                 "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
-               "person_id": { #student or instructor etc?
+                "person_id": {
                     "$ref": "#/definitions/person_id"
                 },
                 "student_name": {
@@ -2235,7 +2237,7 @@
                     "$ref": "#/definitions/year_term"
                 },
                 "curriculum_id": {
-                     "$ref": "#/definitions/curriculum_id"
+                    "$ref": "#/definitions/curriculum_id"
                 },
                 "title_code": {
                     "$ref": "#/definitions/title_code"
@@ -2328,7 +2330,7 @@
                 },
                 "sequence_number": {
                     "description": "",
-                    "type": "numbers",
+                    "type": "integer",
                     "maxLength": 9
                 },
                 "institution": {
@@ -2464,7 +2466,7 @@
                 },
                 "limitation_value": {
                     "$ref": "#/definitions/limitation_value"
-                },
+                }
             }
         },
         "enrolled_students": {
@@ -2600,7 +2602,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "teaching_area": {
@@ -2683,7 +2685,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "note_type": {
@@ -2731,7 +2733,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "group_number": {
@@ -2779,7 +2781,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "seq_num":{
+                "seq_num": {
                     "description": "",
                     "type": "string"
                 },
@@ -2837,7 +2839,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "dept_name": {
@@ -2900,7 +2902,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "count_category": {
@@ -2975,7 +2977,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "person_id": {
@@ -3058,7 +3060,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "person_id": {
@@ -3120,7 +3122,7 @@
                 "title_code": {
                     "$ref": "#/definitions/title_code"
                 },
-                "section_number":{
+                "section_number": {
                     "$ref": "#/definitions/section_number"
                 },
                 "person_id": {
@@ -3201,23 +3203,23 @@
                     "items": {
                         "type": "string",
                         "enum": [
-                          "basic",
-                          "enrollment_counts",
-                          "add_permission_codes",
-                          "assigned_instructors",
-                          "class_limitations",
-                          "class_schedules",
-                          "course_limitations",
-                          "enrolled_students",
-                          "linked_classes",
-                          "notes",
-                          "permission_to_add_codes",
-                          "prerequisites",
-                          "section_headers",
-                          "supplemental_counts",
-                          "waitlisted_students",
-                          "enrolled_students_log",
-                          "waitlisted_students_log"
+                            "basic",
+                            "enrollment_counts",
+                            "add_permission_codes",
+                            "assigned_instructors",
+                            "class_limitations",
+                            "class_schedules",
+                            "course_limitations",
+                            "enrolled_students",
+                            "linked_classes",
+                            "notes",
+                            "permission_to_add_codes",
+                            "prerequisites",
+                            "section_headers",
+                            "supplemental_counts",
+                            "waitlisted_students",
+                            "enrolled_students_log",
+                            "waitlisted_students_log"
                         ]
                     }
                 },
@@ -3226,23 +3228,23 @@
                     "items": {
                         "type": "string",
                         "enum": [
-                          "basic",
-                          "enrollment_counts",
-                          "add_permission_codes",
-                          "assigned_instructors",
-                          "class_limitations",
-                          "class_schedules",
-                          "course_limitations",
-                          "enrolled_students",
-                          "linked_classes",
-                          "notes",
-                          "permission_to_add_codes",
-                          "prerequisites",
-                          "section_headers",
-                          "supplemental_counts",
-                          "waitlisted_students",
-                          "enrolled_students_log",
-                          "waitlisted_students_log"
+                            "basic",
+                            "enrollment_counts",
+                            "add_permission_codes",
+                            "assigned_instructors",
+                            "class_limitations",
+                            "class_schedules",
+                            "course_limitations",
+                            "enrolled_students",
+                            "linked_classes",
+                            "notes",
+                            "permission_to_add_codes",
+                            "prerequisites",
+                            "section_headers",
+                            "supplemental_counts",
+                            "waitlisted_students",
+                            "enrolled_students_log",
+                            "waitlisted_students_log"
                         ]
                     }
                 },
@@ -3251,23 +3253,23 @@
                     "items": {
                         "type": "string",
                         "enum": [
-                          "basic",
-                          "enrollment_counts",
-                          "add_permission_codes",
-                          "assigned_instructors",
-                          "class_limitations",
-                          "class_schedules",
-                          "course_limitations",
-                          "enrolled_students",
-                          "linked_classes",
-                          "notes",
-                          "permission_to_add_codes",
-                          "prerequisites",
-                          "section_headers",
-                          "supplemental_counts",
-                          "waitlisted_students",
-                          "enrolled_students_log",
-                          "waitlisted_students_log"
+                            "basic",
+                            "enrollment_counts",
+                            "add_permission_codes",
+                            "assigned_instructors",
+                            "class_limitations",
+                            "class_schedules",
+                            "course_limitations",
+                            "enrolled_students",
+                            "linked_classes",
+                            "notes",
+                            "permission_to_add_codes",
+                            "prerequisites",
+                            "section_headers",
+                            "supplemental_counts",
+                            "waitlisted_students",
+                            "enrolled_students_log",
+                            "waitlisted_students_log"
                         ]
                     }
                 }
@@ -3346,7 +3348,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3369,7 +3371,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3393,7 +3395,7 @@
                 "value": {
                     "description": "BYU Provo Campus",
                     "type": "string",
-                    "maxlength": 15
+                    "maxLength": 15
                 },
                 "api_type": {
                     "type": "string",
@@ -3413,7 +3415,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 10
+                    "maxLength": 10
                 },
                 "api_type": {
                     "type": "string",
@@ -3421,10 +3423,10 @@
                         "read-only",
                         "derived"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
-            },
-            "key": {
-                "type": "boolean"
             }
         },
         "subject_area": {
@@ -3436,7 +3438,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 5
+                    "maxLength": 5
                 },
                 "api_type": {
                     "type": "string",
@@ -3457,7 +3459,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3477,7 +3479,7 @@
             ],
             "properties": {
                 "value": {
-                   "type": "string"
+                    "type": "string"
                 },
                 "api_type": {
                     "type": "string",
@@ -3498,7 +3500,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 30
+                    "maxLength": 30
                 },
                 "api_type": {
                     "type": "string",
@@ -3519,7 +3521,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 5
+                    "maxLength": 5
                 },
                 "api_type": {
                     "type": "string",
@@ -3539,7 +3541,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3559,7 +3561,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3579,7 +3581,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3598,7 +3600,7 @@
             ],
             "properties": {
                 "value": {
-                    "type": "string",
+                    "type": "string"
                 },
                 "api_type": {
                     "type": "string",
@@ -3618,7 +3620,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3639,7 +3641,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3659,7 +3661,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3679,7 +3681,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3699,7 +3701,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3719,7 +3721,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3740,7 +3742,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3760,7 +3762,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 10
+                    "maxLength": 10
                 },
                 "api_type": {
                     "type": "string",
@@ -3780,7 +3782,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 10
+                    "maxLength": 10
                 },
                 "api_type": {
                     "type": "string",
@@ -3800,7 +3802,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 10
+                    "maxLength": 10
                 },
                 "api_type": {
                     "type": "string",
@@ -3821,7 +3823,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 10
+                    "maxLength": 10
                 },
                 "api_type": {
                     "type": "string",
@@ -3842,7 +3844,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3862,7 +3864,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3882,7 +3884,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3902,7 +3904,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3922,7 +3924,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 15
+                    "maxLength": 15
                 },
                 "api_type": {
                     "type": "string",
@@ -3943,7 +3945,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3963,7 +3965,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -3983,7 +3985,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -4003,7 +4005,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 3
+                    "maxLength": 3
                 },
                 "api_type": {
                     "type": "string",
@@ -4022,8 +4024,8 @@
             ],
             "properties": {
                 "value": {
-                    "type": "numbers",
-                    "maxlength": 9
+                    "type": "string",
+                    "maxLength": 9
                 },
                 "api_type": {
                     "type": "string",
@@ -4032,10 +4034,10 @@
                         "read-only",
                         "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
-            },
-            "key": {
-                "type": "boolean"
             }
         },
         "student_name": {
@@ -4056,10 +4058,10 @@
                         "modifiable",
                         "related"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
-            },
-            "key": {
-                "type": "boolean"
             }
         },
         "audit_flag": {
@@ -4071,7 +4073,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxLength": ""
+                    "maxLength": 7
                 },
                 "api_type": {
                     "type": "string",
@@ -4160,7 +4162,7 @@
                     "type": "string",
                     "enum": [
                         "read-only",
-                        "modifiable",
+                        "modifiable"
                     ]
                 }
             }
@@ -4180,7 +4182,7 @@
                     "type": "string",
                     "enum": [
                         "read-only",
-                        "modifiable",
+                        "modifiable"
                     ]
                 }
             }
@@ -4193,8 +4195,8 @@
             ],
             "properties": {
                 "value": {
-                    "type": "numbers",
-                    "maxlength": 9
+                    "type": "string",
+                    "maxLength": 9
                 },
                 "api_type": {
                     "type": "string",
@@ -4214,7 +4216,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 15
+                    "maxLength": 15
                 },
                 "api_type": {
                     "type": "string",
@@ -4234,7 +4236,7 @@
             "properties": {
                 "value": {
                     "type": "string",
-                    "maxlength": 30
+                    "maxLength": 30
                 },
                 "api_type": {
                     "type": "string",
@@ -4253,8 +4255,8 @@
             ],
             "properties": {
                 "value": {
-                    "type": "numbers",
-                    "maxlength": 9
+                    "type": "string",
+                    "maxLength": 9
                 },
                 "api_type": {
                     "type": "string",
@@ -4323,12 +4325,12 @@
                     "type": "string",
                     "enum": [
                         "read-only",
-                        "modifiable",
+                        "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
-            },
-            "key": {
-                "type": "boolean"
             }
         },
         "limitation_name": {
@@ -4346,12 +4348,12 @@
                     "type": "string",
                     "enum": [
                         "read-only",
-                        "modifiable",
+                        "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
-            },
-            "key": {
-                "type": "boolean"
             }
         },
         "limitation_value": {
@@ -4369,12 +4371,12 @@
                     "type": "string",
                     "enum": [
                         "read-only",
-                        "modifiable",
+                        "modifiable"
                     ]
+                },
+                "key": {
+                    "type": "boolean"
                 }
-            },
-            "key": {
-                "type": "boolean"
             }
         },
         "allow_conflict": {
@@ -4392,10 +4394,10 @@
                     "type": "string",
                     "enum": [
                         "read-only",
-                        "modifiable",
+                        "modifiable"
                     ]
                 }
-            },
+            }
         }
     }
 }
