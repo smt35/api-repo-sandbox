@@ -1,8 +1,37 @@
-{ "vin": "1FTBE14A4NP05962",
-  "trip_id": "A148",
-  "destination": "Seattle, Washington",
-  "start_date": "2012-08-10",
-  "end_date": "2012-08-16",
-  "start_miles": 10745,
-  "end_miles": 14826
+{
+  "vin": {
+    "value": "73",
+    "api_type": "modifiable",
+    "key": true
+  },
+  "trip_id": {
+    "value": "A148",
+    "api_type": "modifiable",
+    "key": true
+  },
+  "destination": {
+    "value": "Seattle, Washington",
+    "api_type": "modifiable",
+    "display_label": "Trip Destination"
+  },
+  "start_date": {
+    "value": "2012-08-10",
+    "api_type": "modifiable",
+    "display_label": "Trip Start Date"
+  },
+  "end_date": {
+    "value": "2012-08-16",
+    "api_type": "modifiable",
+    "display_label": "Trip End Date"
+  },
+  "start_miles": {
+    "value": 10745,
+    "api_type": "modifiable",
+    "display_label": "Trip Beginning Mileage"
+  },
+  "end_miles": {
+    "value": 14826,
+    "api_type": "modifiable",
+    "display_label": "Trip Ending Mileage"
+  }
 }

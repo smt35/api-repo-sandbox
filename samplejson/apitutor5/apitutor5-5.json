@@ -1,20 +1,83 @@
 [
-    { "vin": "73",
-      "read_date": "2014-05-11",
-      "miles": 32459,
-      "read_by_id": "586586586",
-      "read_by_name": "Daffy Duck"
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
     },
-    { "vin": "73",
-      "read_date": "2014-06-08",
-      "miles": 33782,
-      "read_by_id": "586586586",
-      "read_by_name": "Daffy Duck"
+    "read_date": {
+      "value": "2014-05-11",
+      "api_type": "modifiable",
+      "key": true
     },
-    { "vin": "73",
-      "read_date": "2014-07-12",
-      "miles": 35121,
-      "read_by_id": "783783783",
-      "read_by_name": "Daisy Duck"
+    "miles": {
+      "value": 32459,
+      "api_type": "modifiable",
+      "display_label": ""
+    },
+    "read_by_id": {
+      "value": "586586586",
+      "api_type": "modifiable",
+      "display_label": ""
+    },
+    "read_by_name": {
+      "value": "Daffy Duck",
+      "api_type": "related",
+      "display_label": ""
     }
- ]
+  },
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "read_date": {
+      "value": "2014-06-08",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "miles": {
+      "value": 33782,
+      "api_type": "modifiable",
+      "display_label": ""
+    },
+    "read_by_id": {
+      "value": "586586586",
+      "api_type": "modifiable",
+      "display_label": ""
+    },
+    "read_by_name": {
+      "value": "Daffy Duck",
+      "api_type": "related",
+      "display_label": ""
+    }
+  },
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "read_date": {
+      "value": "2014-07-12",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "miles": {
+      "value": 35121,
+      "api_type": "modifiable",
+      "display_label": ""
+    },
+    "read_by_id": {
+      "value": "783783783",
+      "api_type": "modifiable",
+      "display_label": ""
+    },
+    "read_by_name": {
+      "value": "Daisy Duck",
+      "api_type": "related",
+      "display_label": ""
+    }
+  }
+]
