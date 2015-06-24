@@ -373,7 +373,7 @@
       "url_segment": "/tutorial4-cars",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-1.json"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-1.js"
     },
     {
       "url_segment": "/tutorial4-cars",
