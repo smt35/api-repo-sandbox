@@ -3751,7 +3751,7 @@
       "properties": {
         "value": {
           "type": "string",
-          "maxLength": 3
+          "maxLength": 30
         },
         "api_type": {
           "type": "string",
@@ -4103,7 +4103,7 @@
       "properties": {
         "value": {
           "type": "string",
-          "maxLength": 7
+          "maxLength": 1
         },
         "api_type": {
           "type": "string",
