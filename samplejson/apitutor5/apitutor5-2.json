@@ -1,35 +1,35 @@
 {
   "basic": {
     "links": {
-      "tutorial4-cars.info": {
+      "tutorial5-cars.info": {
         "rel": "self",
-        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
         "method": "GET",
-        "title": "tutorial4-cars.getCar"
+        "title": "tutorial5-cars.getCar"
       },
-      "tutorial4-cars.modify": {
-        "rel": "tutorial4-cars.modify",
-        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+      "tutorial5-cars.modify": {
+        "rel": "tutorial5-cars.modify",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
         "method": "PUT",
-        "title": "tutorial4-cars.modifyCar"
+        "title": "tutorial5-cars.modifyCar"
       },
-      "tutorial4-cars.sell": {
-        "rel": "tutorial4-cars.sell",
-        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+      "tutorial5-cars.sell": {
+        "rel": "tutorial5-cars.sell",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
         "method": "PUT",
-        "title": "tutorial4-cars.modifyCar"
+        "title": "tutorial5-cars.modifyCar"
       },
-      "tutorial4-cars.delete": {
-        "rel": "tutorial4-cars.delete",
-        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-cars/1FTBE14A4NP05962",
+      "tutorial5-cars.delete": {
+        "rel": "tutorial5-cars.delete",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
         "method": "DELETE",
-        "title": "tutorial4-cars.deleteCar"
+        "title": "tutorial5-cars.deleteCar"
       },
-      "tutorial4-owners.info": {
-        "rel": "tutorial4-owners.info",
-        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial4-owners/783783783",
+      "tutorial5-owners.info": {
+        "rel": "tutorial5-owners.info",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/783783783",
         "method": "GET",
-        "title": "tutorial4-owners.getOwner"
+        "title": "tutorial5-owners.getOwner"
       }
     },
     "vin": {
@@ -42,7 +42,7 @@
       "api_type": "modifiable",
       "description": "Utah",
       "display_label": "Licence Plate State",
-      "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate-state"
+      "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate_state"
     },
     "plate_number": {
       "value": "Q580RT",
@@ -85,7 +85,7 @@
     "owner_name": {
       "value": "Daisy Duck",
       "api_type": "related",
-      "related_resource": "tutorial3-owners"
+      "related_resource": "tutorial5-owners"
     },
     "created_by_id": {
       "value": "586586586",
@@ -107,68 +107,271 @@
     }
   },
   "odometer_logs": [
-    { "vin": "1FTBE14A4NP05962",
-      "read_date": "2014-05-11",
-      "miles": 32459,
-      "read_by_id": "586586586",
-      "read_by_name": "Daffy Duck"
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "read_date": {
+        "value": "2014-05-11",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "miles": {
+        "value": 32459,
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_id": {
+        "value": "586586586",
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_name": {
+        "value": "Daffy Duck",
+        "api_type": "related",
+        "display_label": ""
+      }
     },
-    { "vin": "1FTBE14A4NP05962",
-      "read_date": "2014-06-08",
-      "miles": 33782,
-      "read_by_id": "586586586",
-      "read_by_name": "Daffy Duck"
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "read_date": {
+        "value": "2014-06-08",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "miles": {
+        "value": 33782,
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_id": {
+        "value": "586586586",
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_name": {
+        "value": "Daffy Duck",
+        "api_type": "related",
+        "display_label": ""
+      }
     },
-    { "vin": "1FTBE14A4NP05962",
-      "read_date": "2014-07-12",
-      "miles": 35121,
-      "read_by_id": "783783783",
-      "read_by_name": "Daisy Duck"
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "read_date": {
+        "value": "2014-07-12",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "miles": {
+        "value": 35121,
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_id": {
+        "value": "783783783",
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_name": {
+        "value": "Daisy Duck",
+        "api_type": "related",
+        "display_label": ""
+      }
     }
   ],
   "trips": [
-    { "vin": "1FTBE14A4NP05962",
-      "trip_id": "A148",
-      "destination": "Seattle, Washington",
-      "start_date": "2012-08-10",
-      "end_date": "2012-08-16",
-      "start_miles": 10745,
-      "end_miles": 14826
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "trip_id": {
+        "value": "A148",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "destination": {
+        "value": "Seattle, Washington",
+        "api_type": "modifiable",
+        "display_label": "Trip Destination"
+      },
+      "start_date": {
+        "value": "2012-08-10",
+        "api_type": "modifiable",
+        "display_label": "Trip Start Date"
+      },
+      "end_date": {
+        "value": "2012-08-16",
+        "api_type": "modifiable",
+        "display_label": "Trip End Date"
+      },
+      "start_miles": {
+        "value": 10745,
+        "api_type": "modifiable",
+        "display_label": "Trip Beginning Mileage"
+      },
+      "end_miles": {
+        "value": 14826,
+        "api_type": "modifiable",
+        "display_label": "Trip Ending Mileage"
+      }
     },
-    { "vin": "1FTBE14A4NP05962",
-      "trip_id": "C233",
-      "destination": "Denver, Colorado",
-      "start_date": "2013-02-04",
-      "end_date": "2013-02-09",
-      "start_miles": 17386,
-      "end_miles": 18144
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "trip_id": {
+        "value": "C233",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "destination": {
+        "value": "Denver, Colorado",
+        "api_type": "modifiable",
+        "display_label": "Trip Destination"
+      },
+      "start_date": {
+        "value": "2013-02-04",
+        "api_type": "modifiable",
+        "display_label": "Trip Start Date"
+      },
+      "end_date": {
+        "value": "2013-02-09",
+        "api_type": "modifiable",
+        "display_label": "Trip End Date"
+      },
+      "start_miles": {
+        "value": 17386,
+        "api_type": "modifiable",
+        "display_label": "Trip Beginning Mileage"
+      },
+      "end_miles": {
+        "value": 18144,
+        "api_type": "modifiable",
+        "display_label": "Trip Ending Mileage"
+      }
     },
-    { "vin": "1FTBE14A4NP05962",
-      "trip_id": "A432",
-      "destination": "San Francisco, California",
-      "start_date": "2013-06-22",
-      "end_date": "2013-06-26",
-      "start_miles": 22354,
-      "end_miles": 24193
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "trip_id": {
+        "value": "A432",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "destination": {
+        "value": "San Francisco, California",
+        "api_type": "modifiable",
+        "display_label": "Trip Destination"
+      },
+      "start_date": {
+        "value": "2013-06-22",
+        "api_type": "modifiable",
+        "display_label": "Trip Start Date"
+      },
+      "end_date": {
+        "value": "2013-06-26",
+        "api_type": "modifiable",
+        "display_label": "Trip End Date"
+      },
+      "start_miles": {
+        "value": 22354,
+        "api_type": "modifiable",
+        "display_label": "Trip Beginning Mileage"
+      },
+      "end_miles": {
+        "value": 24193,
+        "api_type": "modifiable",
+        "display_label": "Trip Ending Mileage"
+      }
     }
   ],
   "insurance": {
-    "vin": "1FTBE14A4NP05962",
-    "policy_id": "A842B53E41",
-    "insurer": "GEICO"
+    "vin": {
+      "value": "1FTBE14A4NP05962",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "policy_id": {
+      "value": "A842B53E41",
+      "api_type": "modifiable"
+    },
+    "insurer": {
+      "value": "GEICO",
+      "api_type": "modifiable",
+      "display_label": "Insurance Agency"
+    }
   },
   "maintenance_logs": [
-    { "vin": "1FTBE14A4NP05962",
-      "maintenance_id": "000354",
-      "maintenance_date": "2013-06-01",
-      "description": "Tune-up",
-      "cost": "283.45"
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_id": {
+        "value": "000354",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_date": {
+        "value": "2013-06-01",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Date"
+      },
+      "description": {
+        "value": "Tune-up",
+        "api_type": "modifable",
+        "display_label": "Maintenance Description"
+      },
+      "cost": {
+        "value": "283.45",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Cost"
+      }
     },
-    { "vin": "1FTBE14A4NP05962",
-      "maintenance_id": "000418",
-      "maintenance_date": "2013-11-01",
-      "description": "Oil & Lube",
-      "cost": "152.83"
+    {
+      "vin": {
+        "value": "1FTBE14A4NP05962",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_id": {
+        "value": "000418",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_date": {
+        "value": "2013-11-01",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Date"
+      },
+      "description": {
+        "value": "Oil & Lube",
+        "api_type": "modifable",
+        "display_label": "Maintenance Description"
+      },
+      "cost": {
+        "value": "152.83",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Cost"
+      }
     }
   ]
 }
