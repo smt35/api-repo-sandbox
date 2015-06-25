@@ -205,13 +205,13 @@
       "url_segment": "/tutorial1-cars",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-1.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-1.json"
     },
     {
       "url_segment": "/tutorial1-cars/",
       "method": "POST",
       "return_code": 201,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-2.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-2.json"
     },
     {
       "url_segment": "/tutorial1-cars",
@@ -224,19 +224,19 @@
       "url_segment": "/tutorial1-cars/73",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-2.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-2.json"
     },
     {
       "url_segment": "/tutorial1-cars/73",
       "method": "PUT",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-2.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-2.json"
     },
     {
       "url_segment": "/tutorial1-cars/73",
       "method": "DELETE",
       "return_code": 204,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-3.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor1/apitutor1-3.json"
     },
     {
       "url_segment": "/tutorial1-cars/73",
@@ -261,13 +261,13 @@
       "url_segment": "/tutorial2-cars",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-1.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-1.json"
     },
     {
       "url_segment": "/tutorial2-cars",
       "method": "POST",
       "return_code": 201,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-2.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-2.json"
     },
     {
       "url_segment": "/tutorial2-cars",
@@ -280,19 +280,19 @@
       "url_segment": "/tutorial2-cars/73",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-3.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-3.json"
     },
     {
       "url_segment": "/tutorial2-cars/73",
       "method": "PUT",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-3.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-3.json"
     },
     {
       "url_segment": "/tutorial2-cars/73",
       "method": "DELETE",
       "return_code": 204,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-4.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor2/apitutor2-4.json"
     },
     {
       "url_segment": "/tutorial2-cars/73",
@@ -317,13 +317,13 @@
       "url_segment": "/tutorial3-cars",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-1.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-1.json"
     },
     {
       "url_segment": "/tutorial3-cars",
       "method": "POST",
       "return_code": 201,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-2.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-2.json"
     },
     {
       "url_segment": "/tutorial3-cars",
@@ -336,19 +336,19 @@
       "url_segment": "/tutorial3-cars/73",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-3.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-3.json"
     },
     {
       "url_segment": "/tutorial3-cars/73",
       "method": "PUT",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-3.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-3.json"
     },
     {
       "url_segment": "/tutorial3-cars/73",
       "method": "DELETE",
       "return_code": 204,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-4.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor3/apitutor3-4.json"
     },
     {
       "url_segment": "/tutorial3-cars/73",
@@ -373,7 +373,7 @@
       "url_segment": "/tutorial4-cars",
       "method": "GET",
       "return_code": 200,
-      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-1.js"
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/apitutor4/apitutor4-1.json"
     },
     {
       "url_segment": "/tutorial4-cars",
@@ -569,6 +569,18 @@
       "return_code": 200,
       "return_header": "Allow: GET,PUT,DELETE,OPTIONS",
       "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/samplejson/options/get-put-delete-options"
+    },
+    {
+      "url_segment": "/apitutor5/api-docs",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor5/api-docs.swag12"
+    },
+    {
+      "url_segment": "/apitutor5/api-docs/basic",
+      "method": "GET",
+      "return_code": 200,
+      "return_json": "https://raw.githubusercontent.com/BYU-OIT/api-repo-sandbox/master/swagger12/apitutor5/listings/basic.swag12"
     },
     {
       "url_segment": "/eventhub/api-docs",
