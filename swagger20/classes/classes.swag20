@@ -1432,6 +1432,126 @@
         }
       }
     },
+    "/{year_term},{curriculum_id},{title_code},{section_number}/size-mixes": {
+      "get": {
+        "summary": "Classes",
+        "description": "",
+        "parameters": [
+          {
+            "name": "year_term",
+            "in": "path",
+            "required": true,
+            "description": "Enrollment period in which the class is offered",
+            "type": "string"
+          },
+          {
+            "name": "curriculum_id",
+            "in": "path",
+            "required": true,
+            "description": "The curriculum designator for the course",
+            "type": "string"
+          },
+          {
+            "name": "title_code",
+            "in": "path",
+            "required": true,
+            "description": "Differentiates the different offerings of the course",
+            "type": "string"
+          },
+          {
+            "name": "section_number",
+            "in": "path",
+            "required": true,
+            "description": "The section designator",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the identity collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Classes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Collection Retrieved",
+            "schema": {
+              "$ref": "#/definitions/size_mixes"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{year_term},{curriculum_id},{title_code},{section_number}/summary": {
+      "get": {
+        "summary": "Classes",
+        "description": "",
+        "parameters": [
+          {
+            "name": "year_term",
+            "in": "path",
+            "required": true,
+            "description": "Enrollment period in which the class is offered",
+            "type": "string"
+          },
+          {
+            "name": "curriculum_id",
+            "in": "path",
+            "required": true,
+            "description": "The curriculum designator for the course",
+            "type": "string"
+          },
+          {
+            "name": "title_code",
+            "in": "path",
+            "required": true,
+            "description": "Differentiates the different offerings of the course",
+            "type": "string"
+          },
+          {
+            "name": "section_number",
+            "in": "path",
+            "required": true,
+            "description": "The section designator",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the identity collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Classes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Collection Retrieved",
+            "schema": {
+              "$ref": "#/definitions/summary"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
     "/{year_term},{curriculum_id},{title_code},{section_number}/notes": {
       "get": {
         "summary": "Classes",
@@ -2711,6 +2831,26 @@
           "description": "",
           "type": "string"
         }
+      }
+    },
+    "size_mixes": {
+      "description": "",
+      "type": "object",
+      "required": [
+
+      ],
+      "properties": {
+
+      }
+    },
+    "summary": {
+      "description": "",
+      "type": "object",
+      "required": [
+
+      ],
+      "properties": {
+
       }
     },
     "notes": {
