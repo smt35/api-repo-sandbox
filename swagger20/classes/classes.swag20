@@ -665,14 +665,14 @@
             "name": "page_start",
             "in": "query",
             "required": false,
-            "description": "Skip into the add_permission_codes collection before starting to return items",
+            "description": "Skip into the add_approved_students collection before starting to return items",
             "type": "string"
           },
           {
             "name": "page_size",
             "in": "query",
             "required": false,
-            "description": "How many items of the add_permission_codes collection are returned?",
+            "description": "How many items of the add_approved_students collection are returned?",
             "type": "string"
           }
         ],
@@ -683,13 +683,13 @@
           "200": {
             "description": "Collection Retrieved",
             "schema": {
-              "$ref": "#/definitions/add_permission_codes"
+              "$ref": "#/definitions/add_approved_students"
             }
           },
           "204": {
             "description": "page_start is too large for the collection returned",
             "schema": {
-              "$ref": "#/definitions/add_permission_codes"
+              "$ref": "#/definitions/add_approved_students"
             }
           },
           "400": {
@@ -699,7 +699,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to view add_permission_codes",
+            "description": "Authentication required to view add_approved_students",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -780,7 +780,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to add add_permission_codes",
+            "description": "Authentication required to add add_approved_students",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -854,7 +854,7 @@
           "200": {
             "description": "Item Retrieved",
             "schema": {
-              "$ref": "#/definitions/add_permission_code"
+              "$ref": "#/definitions/add_approved_student"
             }
           },
           "204": {
@@ -1958,8 +1958,8 @@
         "class_limitations": {
           "$ref": "#/definitions/class_limitations"
         },
-        "class_schedules": {
-          "$ref": "#/definitions/class_schedules"
+        "assigned_schedules": {
+          "$ref": "#/definitions/assigned_schedules"
         },
         "course_limitations": {
           "$ref": "#/definitions/course_limitations"
@@ -2151,12 +2151,12 @@
         "values": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/add_permission_code"
+            "$ref": "#/definitions/add_approved_student"
           }
         }
       }
     },
-    "add_permission_code": {
+    "add_approved_student": {
       "description": "Add permission code for a single class",
       "type": "object",
       "required": [
@@ -3271,7 +3271,7 @@
               "add_approved_students",
               "assigned_instructors",
               "class_limitations",
-              "class_schedules",
+              "assigned_schedules",
               "course_limitations",
               "enrolled_students",
               "linked_classes",
@@ -3296,7 +3296,7 @@
               "add_approved_students",
               "assigned_instructors",
               "class_limitations",
-              "class_schedules",
+              "assigned_schedules",
               "course_limitations",
               "enrolled_students",
               "linked_classes",
@@ -3321,7 +3321,7 @@
               "add_approved_students",
               "assigned_instructors",
               "class_limitations",
-              "class_schedules",
+              "assigned_schedules",
               "course_limitations",
               "enrolled_students",
               "linked_classes",
