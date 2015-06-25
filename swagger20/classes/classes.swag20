@@ -1615,7 +1615,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/section-headers": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the class schedule section headers for a specific AIM Class\n",
+        "description": "Returns the class schedule section headers for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -2269,7 +2269,7 @@
       }
     },
     "class_limitations": {
-      "description": "limitations to a class",
+      "description": "Limitations to a class",
       "type": "object",
       "required": [
         "credit_institution",
@@ -2321,7 +2321,7 @@
       }
     },
     "class_schedules": {
-      "description": "",
+      "description": "Schedule for a class",
       "type": "object",
       "required": [
         "credit_institution",
@@ -2487,7 +2487,7 @@
       }
     },
     "course_limitations": {
-      "description": "",
+      "description": "Limitations to a class",
       "type": "object",
       "required": [
         "curriculum_id",
@@ -2525,7 +2525,7 @@
       }
     },
     "enrolled_students": {
-      "description": "limitations to a class",
+      "description": "Students enrolled in a class",
       "type": "object",
       "required": [
         "credit_institution",
@@ -2622,7 +2622,7 @@
       }
     },
     "linked_classes": {
-      "description": "",
+      "description": "Sections linked to a class",
       "type": "object",
       "required": [
         "credit_institution",
@@ -2714,7 +2714,7 @@
       }
     },
     "notes": {
-      "description": "",
+      "description": "Class schedule notes",
       "type": "object",
       "required": [
         "credit_institution",
@@ -2760,7 +2760,7 @@
       }
     },
     "permission_to_add_codes": {
-      "description": "",
+      "description": "Add permission codes",
       "type": "object",
       "required": [
         "credit_institution",
@@ -2815,7 +2815,7 @@
       }
     },
     "prerequisites": {
-      "description": "",
+      "description": "Prerequisite courses for a class",
       "type": "object",
       "required": [
         "curriculum_id",
@@ -2868,7 +2868,7 @@
       }
     },
     "section_headers": {
-      "description": "",
+      "description": "Class section headers",
       "type": "object",
       "required": [
         "header_type",
@@ -2934,7 +2934,7 @@
       }
     },
     "supplemental_counts": {
-      "description": "",
+      "description": "Supplemental counts",
       "type": "object",
       "required": [
         "credit_institution",
@@ -3005,7 +3005,7 @@
       }
     },
     "waitlisted_students": {
-      "description": "",
+      "description": "Students on the waitlist queue for a class",
       "type": "object",
       "required": [
         "credit_institution",
@@ -3094,7 +3094,7 @@
       }
     },
     "enrolled_student_logs": {
-      "description": "",
+      "description": "Log record for enrolled students",
       "type": "object",
       "required": [
         "credit_institution",
@@ -3154,7 +3154,7 @@
       }
     },
     "waitlisted_student_logs": {
-      "description": "",
+      "description": "Log record of waitlisted students",
       "type": "object",
       "required": [
         "credit_institution",
