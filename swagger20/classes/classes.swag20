@@ -158,7 +158,7 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/classes"
             }
@@ -415,9 +415,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "Item Retrieved",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/class"
             }
           },
           "204": {
@@ -681,7 +681,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/add_permission_codes"
             }
@@ -852,7 +852,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Item Retrieved",
             "schema": {
               "$ref": "#/definitions/add_permission_code"
             }
@@ -1075,7 +1075,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/assigned-instructors": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the instructors assigned to a specific AIM Class\n",
+        "description": "Returns the instructors assigned to a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1118,7 +1118,7 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/assigned_instructors"
             }
@@ -1135,7 +1135,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/class-limitations": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the class limitations for a specific AIM Class\n",
+        "description": "Returns the class limitations for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1178,7 +1178,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/class_limitations"
             }
@@ -1195,7 +1195,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/class-schedules": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the schedules for a specific AIM Class\n",
+        "description": "Returns the schedules for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1238,7 +1238,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/class_schedules"
             }
@@ -1255,7 +1255,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/course-limitations": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the course limitations for the course associated with a specific AIM Class\n",
+        "description": "Returns the course limitations for the course associated with a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1298,7 +1298,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/course_limitations"
             }
@@ -1315,7 +1315,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled_students": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the students enrolled in a specific AIM Class\n",
+        "description": "Returns the students enrolled in a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1358,7 +1358,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/enrolled_students"
             }
@@ -1375,7 +1375,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/linked-classes": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the other sections linked to a specific AIM Class\n",
+        "description": "Returns the other sections linked to a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1418,7 +1418,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/linked_classes"
             }
@@ -1435,7 +1435,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/notes": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the class schedule notes a specific AIM Class\n",
+        "description": "Returns the class schedule notes a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1478,7 +1478,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/notes"
             }
@@ -1495,7 +1495,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/permission-to-add-codes": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the set of allocated permission-to-add codes a specific AIM Class\n",
+        "description": "Returns the set of allocated permission-to-add codes a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1538,7 +1538,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/permission_to_add_codes"
             }
@@ -1555,7 +1555,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/prerequisites": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the prerequisite courses for a specific AIM Class\n",
+        "description": "Returns the prerequisite courses for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1598,7 +1598,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/prerequisites"
             }
@@ -1658,7 +1658,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/section_headers"
             }
@@ -1675,7 +1675,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/supplemental-counts": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the counts for a specific AIM Class\n",
+        "description": "Returns the counts for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1718,7 +1718,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/supplemental_counts"
             }
@@ -1735,7 +1735,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-students": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the set of students in the wait list queue for a specific AIM Class\n",
+        "description": "Returns the set of students in the wait list queue for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1778,7 +1778,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/waitlisted_students"
             }
@@ -1795,7 +1795,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-student-logs": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the log records for enrollment actions for a specific AIM Class\n",
+        "description": "Returns the log records for enrollment actions for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1838,7 +1838,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/enrolled_student_logs"
             }
@@ -1855,7 +1855,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-student-logs": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the log records for wait list actions for a specific AIM Class\n",
+        "description": "Returns the log records for wait list actions for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -1898,7 +1898,7 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/waitlisted_student_logs"
             }
