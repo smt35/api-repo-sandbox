@@ -1,0 +1,16 @@
+{
+  "vin": {
+    "value": "73",
+    "api_type": "modifiable",
+    "key": true
+  },
+  "policy_id": {
+    "value": "A842B53E41",
+    "api_type": "modifiable"
+  },
+  "insurer": {
+    "value": "GEICO",
+    "api_type": "modifiable",
+    "display_label": "Insurance Agency"
+  }
+}

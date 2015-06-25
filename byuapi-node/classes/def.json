@@ -21,7 +21,6 @@
       "assigned_schedules",
       "class_limitations",
       "course_limitations",
-      "course_summary",
       "room_preferences",
       "enrolled_students",
       "enrolled_student_logs",
@@ -31,8 +30,10 @@
       "permission_to_add_codes",
       "prerequisites",
       "priority_schedules",
+      "proof",
       "section_headers",
       "size_mixes",
+      "summary",
       "waitlisted_students",
       "waitlisted_student_logs"
     ],
@@ -61,13 +62,10 @@
         "size_mixes"
       ],
       "proof": [
-        "course_proof"
+        "proof"
       ],
       "summary": [
-        "course_summary"
-      ],
-      "dummy": [
-        "basic"
+        "summary"
       ]
     },
     "default_db": [

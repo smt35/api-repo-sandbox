@@ -1,0 +1,56 @@
+[
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "maintenance_id": {
+      "value": "000354",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "maintenance_date": {
+      "value": "2013-06-01",
+      "api_type": "modifiable",
+      "display_label": "Maintenance Date"
+    },
+    "description": {
+      "value": "Tune-up",
+      "api_type": "modifable",
+      "display_label": "Maintenance Description"
+    },
+    "cost": {
+      "value": "283.45",
+      "api_type": "modifiable",
+      "display_label": "Maintenance Cost"
+    }
+  },
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "maintenance_id": {
+      "value": "000418",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "maintenance_date": {
+      "value": "2013-11-01",
+      "api_type": "modifiable",
+      "display_label": "Maintenance Date"
+    },
+    "description": {
+      "value": "Oil & Lube",
+      "api_type": "modifable",
+      "display_label": "Maintenance Description"
+    },
+    "cost": {
+      "value": "152.83",
+      "api_type": "modifiable",
+      "display_label": "Maintenance Cost"
+    }
+  }
+]

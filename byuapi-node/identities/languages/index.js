@@ -2,7 +2,6 @@
 
 var sql = require('./sql.js');
 var core = require("../../core.js");
-//var common = require("../../commonAcademicUtils.js");
 var q = require('q');
 
 exports.get = function(connection, resources, request, response) {

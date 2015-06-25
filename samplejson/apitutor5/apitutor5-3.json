@@ -1,0 +1,377 @@
+{
+  "basic": {
+    "links": {
+      "tutorial5-cars.info": {
+        "rel": "self",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/73",
+        "method": "GET",
+        "title": "tutorial5-cars.getCar"
+      },
+      "tutorial5-cars.modify": {
+        "rel": "tutorial5-cars.modify",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/73",
+        "method": "PUT",
+        "title": "tutorial5-cars.modifyCar"
+      },
+      "tutorial5-cars.sell": {
+        "rel": "tutorial5-cars.sell",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/73",
+        "method": "PUT",
+        "title": "tutorial5-cars.modifyCar"
+      },
+      "tutorial5-cars.delete": {
+        "rel": "tutorial5-cars.delete",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/73",
+        "method": "DELETE",
+        "title": "tutorial5-cars.deleteCar"
+      },
+      "tutorial5-owners.info": {
+        "rel": "tutorial5-owners.info",
+        "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/783783783",
+        "method": "GET",
+        "title": "tutorial5-owners.getOwner"
+      }
+    },
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "plate_state": {
+      "value": "UT",
+      "api_type": "modifiable",
+      "description": "Utah",
+      "display_label": "Licence Plate State",
+      "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate_state"
+    },
+    "plate_number": {
+      "value": "Q580RT",
+      "api_type": "modifiable",
+      "display_label": "Licence Plate Number"
+    },
+    "vehicle_type": {
+      "value": "Truck/SUV",
+      "api_type": "derived",
+      "display_label": "Vehicle Type",
+      "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/vehicle-type"
+    },
+    "vehicle_year": {
+      "value": "2013",
+      "api_type": "modifiable",
+      "display_label": "Vehicle Year"
+    },
+    "make": {
+      "value": "Toyota",
+      "api_type": "modifiable",
+      "display_label": "Make",
+      "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/make"
+    },
+    "model": {
+      "value": "RAV4",
+      "api_type": "modifiable",
+      "display_label": "Model",
+      "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/model/Toyota"
+    },
+    "color": {
+      "value": "Dark Green",
+      "api_type": "modifiable",
+      "display_label": "Color",
+      "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/color"
+    },
+    "owner_id": {
+      "value": "783783783",
+      "api_type": "modifiable"
+    },
+    "owner_name": {
+      "value": "Daisy Duck",
+      "api_type": "related",
+      "related_resource": "tutorial5-owners"
+    },
+    "created_by_id": {
+      "value": "586586586",
+      "api_type": "system",
+      "description": "Daffy Duck"
+    },
+    "created_date_time": {
+      "value": "2014-05-11T13:45:53.09Z",
+      "api_type": "system"
+    },
+    "updated_by_id": {
+      "value": "783783783",
+      "api_type": "system",
+      "description": "Daisy Duck"
+    },
+    "updated_date_time": {
+      "value": "2014-09-15T08:12:44.03Z",
+      "api_type": "system"
+    }
+  },
+  "odometer_logs": [
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "read_date": {
+        "value": "2014-05-11",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "miles": {
+        "value": 32459,
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_id": {
+        "value": "586586586",
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_name": {
+        "value": "Daffy Duck",
+        "api_type": "related",
+        "display_label": ""
+      }
+    },
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "read_date": {
+        "value": "2014-06-08",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "miles": {
+        "value": 33782,
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_id": {
+        "value": "586586586",
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_name": {
+        "value": "Daffy Duck",
+        "api_type": "related",
+        "display_label": ""
+      }
+    },
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "read_date": {
+        "value": "2014-07-12",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "miles": {
+        "value": 35121,
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_id": {
+        "value": "783783783",
+        "api_type": "modifiable",
+        "display_label": ""
+      },
+      "read_by_name": {
+        "value": "Daisy Duck",
+        "api_type": "related",
+        "display_label": ""
+      }
+    }
+  ],
+  "trips": [
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "trip_id": {
+        "value": "A148",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "destination": {
+        "value": "Seattle, Washington",
+        "api_type": "modifiable",
+        "display_label": "Trip Destination"
+      },
+      "start_date": {
+        "value": "2012-08-10",
+        "api_type": "modifiable",
+        "display_label": "Trip Start Date"
+      },
+      "end_date": {
+        "value": "2012-08-16",
+        "api_type": "modifiable",
+        "display_label": "Trip End Date"
+      },
+      "start_miles": {
+        "value": 10745,
+        "api_type": "modifiable",
+        "display_label": "Trip Beginning Mileage"
+      },
+      "end_miles": {
+        "value": 14826,
+        "api_type": "modifiable",
+        "display_label": "Trip Ending Mileage"
+      }
+    },
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "trip_id": {
+        "value": "C233",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "destination": {
+        "value": "Denver, Colorado",
+        "api_type": "modifiable",
+        "display_label": "Trip Destination"
+      },
+      "start_date": {
+        "value": "2013-02-04",
+        "api_type": "modifiable",
+        "display_label": "Trip Start Date"
+      },
+      "end_date": {
+        "value": "2013-02-09",
+        "api_type": "modifiable",
+        "display_label": "Trip End Date"
+      },
+      "start_miles": {
+        "value": 17386,
+        "api_type": "modifiable",
+        "display_label": "Trip Beginning Mileage"
+      },
+      "end_miles": {
+        "value": 18144,
+        "api_type": "modifiable",
+        "display_label": "Trip Ending Mileage"
+      }
+    },
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "trip_id": {
+        "value": "A432",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "destination": {
+        "value": "San Francisco, California",
+        "api_type": "modifiable",
+        "display_label": "Trip Destination"
+      },
+      "start_date": {
+        "value": "2013-06-22",
+        "api_type": "modifiable",
+        "display_label": "Trip Start Date"
+      },
+      "end_date": {
+        "value": "2013-06-26",
+        "api_type": "modifiable",
+        "display_label": "Trip End Date"
+      },
+      "start_miles": {
+        "value": 22354,
+        "api_type": "modifiable",
+        "display_label": "Trip Beginning Mileage"
+      },
+      "end_miles": {
+        "value": 24193,
+        "api_type": "modifiable",
+        "display_label": "Trip Ending Mileage"
+      }
+    }
+  ],
+  "insurance": {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "policy_id": {
+      "value": "A842B53E41",
+      "api_type": "modifiable"
+    },
+    "insurer": {
+      "value": "GEICO",
+      "api_type": "modifiable",
+      "display_label": "Insurance Agency"
+    }
+  },
+  "maintenance_logs": [
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_id": {
+        "value": "000354",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_date": {
+        "value": "2013-06-01",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Date"
+      },
+      "description": {
+        "value": "Tune-up",
+        "api_type": "modifable",
+        "display_label": "Maintenance Description"
+      },
+      "cost": {
+        "value": "283.45",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Cost"
+      }
+    },
+    {
+      "vin": {
+        "value": "73",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_id": {
+        "value": "000418",
+        "api_type": "modifiable",
+        "key": true
+      },
+      "maintenance_date": {
+        "value": "2013-11-01",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Date"
+      },
+      "description": {
+        "value": "Oil & Lube",
+        "api_type": "modifable",
+        "display_label": "Maintenance Description"
+      },
+      "cost": {
+        "value": "152.83",
+        "api_type": "modifiable",
+        "display_label": "Maintenance Cost"
+      }
+    }
+  ]
+}

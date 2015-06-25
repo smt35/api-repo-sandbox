@@ -1,0 +1,1119 @@
+{
+  "links": {
+    "tutorial5-cars.info": {
+      "rel": "self",
+      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars",
+      "method": "GET",
+      "title": "tutorial5-cars.getCars"
+    },
+    "tutorial5-cars.create": {
+      "rel": "tutorial5-cars.create",
+      "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars",
+      "method": "POST",
+      "title": "tutorial5-cars.createCar"
+    }
+  },
+  "metadata": {
+    "collection_size": 3,
+    "page_start": 1,
+    "page_end": 3,
+    "page_size": 50,
+    "default_page_size": 50,
+    "max_page_size": 1000,
+    "field_sets_returned": [
+      "basic",
+      "odometer_log",
+      "trips",
+      "insurance",
+      "maintenance_log"
+    ],
+    "field_sets_available": [
+      "basic",
+      "odometer_log",
+      "trips",
+      "insurance",
+      "maintenance_log"
+    ],
+    "default_field_sets": [
+      "basic"
+    ],
+    "contexts_available": {
+      "mileage": [
+        "basic",
+        "odometer_log",
+        "trips"
+      ]
+    }
+  },
+  "values": [
+    {
+      "basic": {
+        "links": {
+          "tutorial5-cars.info": {
+            "rel": "self",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
+            "method": "GET",
+            "title": "tutorial5-cars.getCar"
+          },
+          "tutorial5-cars.modify": {
+            "rel": "tutorial5-cars.modify",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
+            "method": "PUT",
+            "title": "tutorial5-cars.modifyCar"
+          },
+          "tutorial5-cars.sell": {
+            "rel": "tutorial5-cars.sell",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
+            "method": "PUT",
+            "title": "tutorial5-cars.modifyCar"
+          },
+          "tutorial5-cars.delete": {
+            "rel": "tutorial5-cars.delete",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1FTBE14A4NP05962",
+            "method": "DELETE",
+            "title": "tutorial5-cars.deleteCar"
+          },
+          "tutorial5-owners.info": {
+             "rel": "tutorial5-owners.info",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/783783783",
+            "method": "GET",
+            "title": "tutorial5-owners.getOwner"
+          }
+        },
+        "vin": {
+          "value": "1FTBE14A4NP05962",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "plate_state": {
+          "value": "UT",
+          "api_type": "modifiable",
+          "description": "Utah",
+          "display_label": "Licence Plate State",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate_state"
+        },
+        "plate_number": {
+          "value": "Q580RT",
+          "api_type": "modifiable",
+          "display_label": "Licence Plate Number"
+        },
+        "vehicle_type": {
+          "value": "Truck/SUV",
+          "api_type": "derived",
+          "display_label": "Vehicle Type",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/vehicle-type"
+        },
+        "vehicle_year": {
+          "value": "2013",
+          "api_type": "modifiable",
+          "display_label": "Vehicle Year"
+        },
+        "make": {
+          "value": "Toyota",
+          "api_type": "modifiable",
+          "display_label": "Make",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/make"
+        },
+        "model": {
+          "value": "RAV4",
+          "api_type": "modifiable",
+          "display_label": "Model",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/model/Toyota"
+        },
+        "color": {
+          "value": "Dark Green",
+          "api_type": "modifiable",
+          "display_label": "Color",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/color"
+        },
+        "owner_id": {
+          "value": "783783783",
+          "api_type": "modifiable"
+        },
+        "owner_name": {
+          "value": "Daisy Duck",
+          "api_type": "related",
+          "related_resource": "tutorial5-owners"
+        },
+        "created_by_id": {
+          "value": "586586586",
+          "api_type": "system",
+          "description": "Daffy Duck"
+        },
+        "created_date_time": {
+          "value": "2014-05-11T13:45:53.09Z",
+          "api_type": "system"
+        },
+        "updated_by_id": {
+          "value": "783783783",
+          "api_type": "system",
+          "description": "Daisy Duck"
+        },
+        "updated_date_time": {
+          "value": "2014-09-15T08:12:44.03Z",
+          "api_type": "system"
+        }
+      },
+      "odometer_logs": [
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-05-11",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 32459,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        },
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-06-08",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 33782,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        },
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-07-12",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 35121,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "783783783",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daisy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        }
+      ],
+      "trips": [
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "A148",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Seattle, Washington",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2012-08-10",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2012-08-16",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 10745,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 14826,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        },
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "C233",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Denver, Colorado",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-02-04",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-02-09",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 17386,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 18144,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        },
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "A432",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "San Francisco, California",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-06-22",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-06-26",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 22354,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 24193,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        }
+      ],
+      "insurance": {
+        "vin": {
+          "value": "1FTBE14A4NP05962",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "policy_id": {
+          "value": "A842B53E41",
+          "api_type": "modifiable"
+        },
+        "insurer": {
+          "value": "GEICO",
+          "api_type": "modifiable",
+          "display_label": "Insurance Agency"
+        }
+      },
+      "maintenance_logs": [
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000354",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-06-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "Tune-up",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "283.45",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
+        },
+        {
+          "vin": {
+            "value": "1FTBE14A4NP05962",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000418",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-11-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "Oil & Lube",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "152.83",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
+        }
+      ]
+    },
+    {
+      "basic": {
+        "links": {
+          "tutorial5-cars.info": {
+            "rel": "self",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
+            "method": "GET",
+            "title": "tutorial5-cars.getCar"
+          },
+          "tutorial5-cars.modify": {
+            "rel": "tutorial5-cars.modify",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
+            "method": "PUT",
+            "title": "tutorial5-cars.modifyCar"
+          },
+          "tutorial5-cars.sell": {
+            "rel": "tutorial5-cars.sell",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
+            "method": "PUT",
+            "title": "tutorial5-cars.modifyCar"
+          },
+          "tutorial5-cars.delete": {
+            "rel": "tutorial5-cars.delete",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1DTGR14A6NP38861",
+            "method": "DELETE",
+            "title": "tutorial5-cars.deleteCar"
+          },
+          "tutorial5-owners.info": {
+            "rel": "tutorial5-owners.info",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/586586586",
+            "method": "GET",
+            "title": "tutorial5-cars.getOwner"
+          }
+        },
+        "vin": {
+          "value": "1DTGR14A6NP38861",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "plate_state": {
+          "value": "UT",
+          "api_type": "modifiable",
+          "description": "Utah",
+          "display_label": "Licence Plate State",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate-state"
+        },
+        "plate_number": {
+          "value": "C49D3T",
+          "api_type": "modifiable",
+          "display_label": "Licence Plate Number"
+        },
+        "vehicle_type": {
+          "value": "Truck/SUV",
+          "api_type": "derived",
+          "display_label": "Vehicle Type",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/vehicle-type"
+        },
+        "vehicle_year": {
+          "value": "1997",
+          "api_type": "modifiable",
+          "display_label": "Vehicle Year"
+        },
+        "make": {
+          "value": "Ford",
+          "api_type": "modifiable",
+          "display_label": "Make",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/make"
+        },
+        "model": {
+          "value": "Ranger",
+          "api_type": "modifiable",
+          "display_label": "Model",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/model/Toyota"
+        },
+        "color": {
+          "value": "Blue",
+          "api_type": "modifiable",
+          "display_label": "Color",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/color"
+        },
+        "owner_id": {
+          "value": "586586586",
+          "api_type": "modifiable"
+        },
+        "owner_name": {
+          "value": "Daffy Duck",
+          "api_type": "related",
+          "related_resource": "tutorial5-owners"
+        },
+        "created_by_id": {
+          "value": "586586586",
+          "api_type": "system",
+          "description": "Daffy Duck"
+        },
+        "created_date_time": {
+          "value": "2014-05-11T13:45:53.09Z",
+          "api_type": "system"
+        },
+        "updated_by_id": {
+          "value": "783783783",
+          "api_type": "system",
+          "description": "Daisy Duck"
+        },
+        "updated_date_time": {
+          "value": "2014-09-15T08:12:44.03Z",
+          "api_type": "system"
+        }
+      },
+      "odometer_logs": [
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-05-09",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 26438,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        },
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-06-11",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 29521,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        },
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-07-15",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 30114,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "783783783",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daisy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        }
+      ],
+      "trips": [
+        {
+          "vin": {
+          "value": "1DTGR14A6NP38861",
+          "api_type": "modifiable",
+          "key": true
+          },
+          "trip_id": {
+            "value": "A326",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Butte, Montana",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2012-09-06",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2012-09-10",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 8265,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 9854,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        },
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "D551",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "St. Louis, Missouri",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-01-02",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-01-12",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 11843,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 15365,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        },
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "A776",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "os Angeles, California",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-04-01",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-04-06",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 17221,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 19632,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        }
+      ],
+      "insurance": {
+        "vin": {
+          "value": "1DTGR14A6NP38861",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "policy_id": {
+          "value": "421T84GX333",
+          "api_type": "modifiable"
+        },
+        "insurer": {
+          "value": "State Farm",
+          "api_type": "modifiable",
+          "display_label": "Insurance Agency"
+        }
+      },
+      "maintenance_logs": [
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000401",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-08-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "New Tires",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "533.12",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
+        },
+        {
+          "vin": {
+            "value": "1DTGR14A6NP38861",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000663",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2014-02-01",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "Replace Alternator",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "486.23",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
+        }
+      ]
+    },
+    {
+      "basic": {
+        "links": {
+          "tutorial5-cars.info": {
+            "rel": "self",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
+            "method": "GET",
+            "title": "tutorial5-cars.getCar"
+          },
+          "tutorial5-cars.modify": {
+            "rel": "tutorial5-cars.modify",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
+            "method": "PUT",
+            "title": "tutorial5-cars.modifyCar"
+          },
+          "tutorial5-cars.sell": {
+            "rel": "tutorial5-cars.sell",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
+            "method": "PUT",
+            "title": "tutorial5-cars.modifyCar"
+          },
+          "tutorial5-cars.delete": {
+            "rel": "tutorial5-cars.delete",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-cars/1CRTW25A3NX78232",
+            "method": "DELETE",
+            "title": "tutorial5-cars.deleteCar"
+          },
+          "tutorial5-owners.info": {
+            "rel": "tutorial5-owners.info",
+            "href": "https://edge-wso2.byu.edu:8243/byuapi/tutorial5-owners/586586586",
+            "method": "GET",
+            "title": "tutorial5-owners.getOwner"
+          }
+        },
+        "vin": {
+          "value": "1CRTW25A3NX78232",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "plate_state": {
+          "value": "UT",
+          "api_type": "modifiable",
+          "description": "Utah",
+          "display_label": "Licence Plate State",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/plate-state"
+        },
+        "plate_number": {
+          "value": "L43S3T",
+           "api_type": "modifiable",
+           "display_label": "Licence Plate Number"
+        },
+        "vehicle_type": {
+          "value": "Truck/SUV",
+          "api_type": "derived",
+          "display_label": "Vehicle Type",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/vehicle-type"
+        },
+        "vehicle_year": {
+          "value": "2003",
+          "api_type": "modifiable",
+          "display_label": "Vehicle Year"
+        },
+        "make": {
+          "value": "Chevrolet",
+          "api_type": "modifiable",
+          "display_label": "Make",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/make"
+        },
+        "model": {
+          "value": "Sierra",
+          "api_type": "modifiable",
+          "display_label": "Model",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/model/Toyota"
+        },
+        "color": {
+          "value": "Tan",
+          "api_type": "modifiable",
+          "display_label": "Color",
+          "domain": "https://edge-wso2.byu.edu:8243/byuapi/meta/cars/color"
+        },
+        "owner_id": {
+          "value": "586586586",
+          "api_type": "modifiable"
+        },
+        "owner_name": {
+          "value": "Daffy Duck",
+          "api_type": "related",
+          "related_resource": "tutorial5-owners"
+        },
+        "created_by_id": {
+          "value": "586586586",
+          "api_type": "system",
+          "description": "Daffy Duck"
+        },
+        "created_date_time": {
+          "value": "2014-05-11T13:45:53.09Z",
+          "api_type": "system"
+        },
+        "updated_by_id": {
+          "value": "783783783",
+          "api_type": "system",
+          "description": "Daisy Duck"
+        },
+        "updated_date_time": {
+          "value": "2014-09-15T08:12:44.03Z",
+          "api_type": "system"
+        }
+      },
+      "odometer_logs": [
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-05-03",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "miles": {
+            "value": 85919,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        },
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-06-22",
+            "api_type": "modifiable",
+            "key": true,
+            "display_label": ""
+          },
+          "miles": {
+            "value": 90652,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "values": "586586586",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daffy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        },
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "read_date": {
+            "value": "2014-07-21",
+            "api_type": "modifiable",
+            "key": true,
+            "display_label": ""
+          },
+          "miles": {
+            "value": 94126,
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_id": {
+            "value": "783783783",
+            "api_type": "modifiable",
+            "display_label": ""
+          },
+          "read_by_name": {
+            "value": "Daisy Duck",
+            "api_type": "related",
+            "display_label": ""
+          }
+        }
+      ],
+      "trips": [
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "B111",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Pocatello, Idaho",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2011-04-01",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2011-04-10",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 18542,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 19296,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        },
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "trip_id": {
+            "value": "E028",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "destination": {
+            "value": "Ely, Nevada",
+            "api_type": "modifiable",
+            "display_label": "Trip Destination"
+          },
+          "start_date": {
+            "value": "2013-04-01",
+            "api_type": "modifiable",
+            "display_label": "Trip Start Date"
+          },
+          "end_date": {
+            "value": "2013-04-10",
+            "api_type": "modifiable",
+            "display_label": "Trip End Date"
+          },
+          "start_miles": {
+            "value": 60181,
+            "api_type": "modifiable",
+            "display_label": "Trip Beginning Mileage"
+          },
+          "end_miles": {
+            "value": 60946,
+            "api_type": "modifiable",
+            "display_label": "Trip Ending Mileage"
+          }
+        }
+      ],
+      "insurance": {
+        "vin": {
+          "value": "1CRTW25A3NX78232",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "policy_id": {
+          "value": "Y583958CV43",
+          "api_type": "modifiable"
+        },
+        "insurer": {
+          "value": "All State",
+          "api_type": "modifiable",
+          "display_label": "Insurance Agency"
+        }
+      },
+      "maintenance_logs": [
+        {
+          "vin": {
+            "value": "1CRTW25A3NX78232",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_id": {
+            "value": "000710",
+            "api_type": "modifiable",
+            "key": true
+          },
+          "maintenance_date": {
+            "value": "2013-10-31",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Date"
+          },
+          "description": {
+            "value": "New Transmission",
+            "api_type": "modifable",
+            "display_label": "Maintenance Description"
+          },
+          "cost": {
+            "value": "2436.11",
+            "api_type": "modifiable",
+            "display_label": "Maintenance Cost"
+          }
+        }
+      ]
+    }
+  ]
+}
