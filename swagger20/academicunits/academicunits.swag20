@@ -9,7 +9,7 @@
   "schemes": [
     "https"
   ],
-  "basePath": "/v1/academicunits",
+  "basePath": "/v1/academic_units",
   "produces": [
     "application/json"
   ],
@@ -20,108 +20,374 @@
         "description": "Returns a collection of Academic Units",
         "parameters": [
           {
-            "name": "year_term",
+            "name": "academic_unit_id",
             "in": "query",
             "required": false,
-            "description": "Enrollment period in which the class is offered",
+            "description": "Academic Unit ID",
             "type": "string"
           },
           {
-            "name": "curriculum_id",
+            "name": "academic_unit_effective_date",
             "in": "query",
             "required": false,
-            "description": "The curriculum designator for the course",
+            "description": "Effective date of the Academic Unit",
             "type": "string"
           },
           {
-            "name": "title_code",
+            "name": "academic_unit_expired_date",
             "in": "query",
             "required": false,
-            "description": "Differentiates the different curriculum offerings",
+            "description": "Expired date of the Academic Unit",
             "type": "string"
           },
           {
-            "name": "section_number",
+            "name": "academic_unit_name",
             "in": "query",
             "required": false,
-            "description": "The section designator",
+            "description": "Name of the Academic Unit",
             "type": "string"
           },
           {
-            "name": "teaching_area",
+            "name": "academic_unit_official_name",
             "in": "query",
             "required": false,
-            "description": "The subject area of the class offering",
+            "description": "Official name of the Academic Unit",
             "type": "string"
           },
           {
-            "name": "catalog_number",
+            "name": "academic_unit_type",
             "in": "query",
             "required": false,
-            "description": "The catalog number of the class offering",
+            "description": "Unit type of the Academic Unit",
             "type": "string"
           },
           {
-            "name": "catalog_suffix",
+            "name": "parent_academic_unit_id",
             "in": "query",
             "required": false,
-            "description": "The catalog suffix of the class offering",
+            "description": "academic_unit_id of the parent Academic Unit of an Academic Unit",
             "type": "string"
           },
           {
-            "name": "enrollment_status",
+            "name": "old_academic_unit_id",
             "in": "query",
             "required": false,
-            "description": "Indicates what enrollment actions may be performed on the class",
+            "description": "Old academic_unit_id of an Academic Unit",
             "type": "string"
           },
           {
-            "name": "credit_hours",
+            "name": "academic_program_id",
             "in": "query",
             "required": false,
-            "description": "How many credit hours is the class worth?",
+            "description": "Academic Program ID",
             "type": "string"
           },
           {
-            "name": "section_type",
+            "name": "academic_program_effective_date",
             "in": "query",
             "required": false,
-            "description": "What type of section (DAY, EVENING, SLC)?",
+            "description": "Academic Program Effective Date",
             "type": "string"
           },
           {
-            "name": "honors",
+            "name": "academic_program_expired_date",
             "in": "query",
             "required": false,
-            "description": "Is the section an honors section?",
+            "description": "Academic Program Expired Date",
             "type": "string"
           },
           {
-            "name": "instructor_id",
+            "name": "academic_program_type",
             "in": "query",
             "required": false,
-            "description": "Academic Units with this instructor - use person_id of the instructor",
+            "description": "Academic Program Type",
             "type": "string"
           },
           {
-            "name": "instructor_net_id",
+            "name": "academic_program_description",
             "in": "query",
             "required": false,
-            "description": "Academic Units with this instructor - use net_id of the instructor",
+            "description": "Academic Program Description",
             "type": "string"
           },
           {
-            "name": "days_taught",
+            "name": "academic_program_diploma_description",
             "in": "query",
             "required": false,
-            "description": "Limit the academicunits collection to the following days",
+            "description": "Academic Program Diploma Description",
             "type": "string"
           },
           {
-            "name": "time_taught",
+            "name": "academic_program_long_description",
             "in": "query",
             "required": false,
-            "description": "Limit the academicunits collection to the following times",
+            "description": "Academic Program Long Description",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_degree",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Degree",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_admission_required",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Long Description",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_is_teaching_program",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program is a teaching program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_has_limited_enrollment",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program has limited enrollment",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_committee_members_needed_count",
+            "in": "query",
+            "required": false,
+            "description": "Indicates the number of committee members an Academic Program requires",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_major_program_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic (emphasis) Program's associated Academic Program ID for its major",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_emphasis_required",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program requires an emphasis",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_minor_required",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program requires a minor",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_study_list_required",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program requires a study list",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_has_honors_recognition",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program has honors recognition",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_years_to_complete",
+            "in": "query",
+            "required": false,
+            "description": "Indicates maximum number of years in which Academic Program must be completed",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_program_hours",
+            "in": "query",
+            "required": false,
+            "description": "Indicates the number of hours in an Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_minimum_program_hours",
+            "in": "query",
+            "required": false,
+            "description": "Indicates minimum number of hours in which Academic Program must be completed",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_program_hours",
+            "in": "query",
+            "required": false,
+            "description": "Indicates maximum number of hours in which Academic Program must be completed",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_requirement_hours",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_requirement_classes",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_prior_program_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program's prior Academic Program ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_comments",
+            "in": "query",
+            "required": false,
+            "description": "Comments about Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_date_time_updated",
+            "in": "query",
+            "required": false,
+            "description": "Date/Time Academic Program was last updated",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_updated_by_id",
+            "in": "query",
+            "required": false,
+            "description": "ID of person who last updated Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_updated_by_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of person who last updated Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_name",
+            "in": "query",
+            "required": false,
+            "description": "Teaching Area name",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_long_name",
+            "in": "query",
+            "required": false,
+            "description": "Long name of Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Effective date of Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Expired date of Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_date_time_updated",
+            "in": "query",
+            "required": false,
+            "description": "Date/Time Teaching Area was last updated",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_updated_by_id",
+            "in": "query",
+            "required": false,
+            "description": "ID of person who last updated Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_updated_by_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of person who last updated Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "contact_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Effective date of Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Expired date of Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_person_id",
+            "in": "query",
+            "required": false,
+            "description": "ID of person associated with Contact information",
+            "type": "string"
+          },
+          {
+            "name": "contact_person_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of person associated with Contact information",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic Unit ID of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Effective date of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Expired date of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_official_name",
+            "in": "query",
+            "required": false,
+            "description": "Official name of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_type",
+            "in": "query",
+            "required": false,
+            "description": "Type of subordinate Academic Unit",
             "type": "string"
           },
           {
@@ -142,14 +408,14 @@
             "name": "page_start",
             "in": "query",
             "required": false,
-            "description": "Skip into the academicunits collection before starting to return items",
+            "description": "Skip into the academic_units collection before starting to return items",
             "type": "string"
           },
           {
             "name": "page_size",
             "in": "query",
             "required": false,
-            "description": "How many items of the academicunits collection are returned?",
+            "description": "How many items of the academic_units collection are returned?",
             "type": "string"
           }
         ],
@@ -160,13 +426,13 @@
           "200": {
             "description": "A collection of Academic Units",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "204": {
             "description": "page_start is too large for the collection returned",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "400": {
@@ -190,7 +456,7 @@
           "404": {
             "description": "No Academic Units satisfy the query parameters - the collection is empty",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "409": {
@@ -212,12 +478,12 @@
         "description": "Create a new Academic Unit",
         "parameters": [
           {
-            "name": "class",
+            "name": "academic_unit",
             "in": "body",
-            "description": "The class to be added",
+            "description": "The Academic Unit to be added",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           }
         ],
@@ -228,7 +494,7 @@
           "201": {
             "description": "Returns the academic unit that was added",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "400": {
@@ -238,13 +504,13 @@
             }
           },
           "401": {
-            "description": "Authentication required to schedule a new class",
+            "description": "Authentication required to add a new Academic Unit",
             "schema": {
               "$ref": "#/definitions/error"
             }
           },
           "403": {
-            "description": "Access denied - not authorized to schedule the new class",
+            "description": "Access denied - not authorized to add the new Academic Unit",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -268,61 +534,33 @@
         "description": "Modify a specific Academic Unit (defined by query parameters)",
         "parameters": [
           {
-            "name": "class",
+            "name": "academic_unit",
             "in": "body",
-            "description": "The class to be modified",
+            "description": "The Academic Unit to be modified",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           {
-            "name": "year_term",
+            "name": "academic_unit_id",
             "in": "query",
             "required": true,
-            "description": "Enrollment period in which the class is offered",
-            "type": "string"
-          },
-          {
-            "name": "teaching_area",
-            "in": "query",
-            "required": true,
-            "description": "The subject area of the class offering",
-            "type": "string"
-          },
-          {
-            "name": "catalog_number",
-            "in": "query",
-            "required": true,
-            "description": "The catalog number of the class offering",
-            "type": "string"
-          },
-          {
-            "name": "catalog_suffix",
-            "in": "query",
-            "required": true,
-            "description": "The catalog suffix of the class offering",
-            "type": "string"
-          },
-          {
-            "name": "section_number",
-            "in": "query",
-            "required": true,
-            "description": "The section designator",
+            "description": "Academic Unit ID",
             "type": "string"
           },
           {
             "name": "context",
             "in": "query",
             "required": false,
-            "description": "Defines a group of field sets to be returned in collection",
+            "description": "Defines a group of field sets used in updating the Academic Unit",
             "type": "string"
           },
           {
             "name": "field_sets",
             "in": "query",
             "required": false,
-            "description": "List of field sets to be returned in collection",
+            "description": "List of field sets used in updating the Academic Unit",
             "type": "string"
           }
         ],
@@ -331,9 +569,9 @@
         ],
         "responses": {
           "200": {
-            "description": "Returns the academic unit that was modified",
+            "description": "Returns the Academic Unit that was modified",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "400": {
@@ -343,13 +581,13 @@
             }
           },
           "401": {
-            "description": "Authentication required to modify a class",
+            "description": "Authentication required to modify the Academic Unit",
             "schema": {
               "$ref": "#/definitions/error"
             }
           },
           "403": {
-            "description": "Access denied - not authorized to modify the class",
+            "description": "Access denied - not authorized to modify the Academic Unit",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -369,44 +607,23 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}": {
+    "/{academic_unit_id}": {
       "get": {
         "summary": "Academic Units",
-        "description": "Returns a specific AIM Class",
+        "description": "Returns a specific Academic Unit",
         "parameters": [
           {
-            "name": "year_term",
+            "name": "academic_unit_id",
             "in": "path",
             "required": true,
-            "description": "Enrollment period in which the class is offered",
-            "type": "string"
-          },
-          {
-            "name": "curriculum_id",
-            "in": "path",
-            "required": true,
-            "description": "The curriculum designator for the course",
-            "type": "string"
-          },
-          {
-            "name": "title_code",
-            "in": "path",
-            "required": true,
-            "description": "Differentiates the different curriculum offerings",
-            "type": "string"
-          },
-          {
-            "name": "section_number",
-            "in": "path",
-            "required": true,
-            "description": "The section designator",
+            "description": "The specific Academic Unit ID",
             "type": "string"
           },
           {
             "name": "field_sets",
             "in": "query",
             "required": false,
-            "description": "List of field sets to be returned in collection",
+            "description": "List of field sets to be returned with the specific Academic Unit",
             "type": "string"
           }
         ],
@@ -417,13 +634,13 @@
           "200": {
             "description": "A collection of Academic Units",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "204": {
             "description": "No class found that matches key values",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "400": {
@@ -433,7 +650,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to schedule a new class",
+            "description": "Authentication required to retrieve specific Academic Unit",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -460,34 +677,13 @@
       },
       "delete": {
         "summary": "Academic Units",
-        "description": "Delete/Cancel a specific AIM Class",
+        "description": "Expire a specific Academic Unit",
         "parameters": [
           {
-            "name": "year_term",
+            "name": "academic_unit_id",
             "in": "path",
             "required": true,
-            "description": "Enrollment period in which the class is offered",
-            "type": "string"
-          },
-          {
-            "name": "curriculum_id",
-            "in": "path",
-            "required": true,
-            "description": "The curriculum designator for the course",
-            "type": "string"
-          },
-          {
-            "name": "title_code",
-            "in": "path",
-            "required": true,
-            "description": "Differentiates the different curriculum offerings",
-            "type": "string"
-          },
-          {
-            "name": "section_number",
-            "in": "path",
-            "required": true,
-            "description": "The section designator",
+            "description": "The specific Academic Unit ID",
             "type": "string"
           }
         ],
@@ -496,15 +692,15 @@
         ],
         "responses": {
           "200": {
-            "description": "The specific AIM class that was deleted",
+            "description": "The specific Academic Unit was successfully expired",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "204": {
-            "description": "No class found that matches key values",
+            "description": "No Academic Unit found that matches key value",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "400": {
@@ -514,7 +710,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to delete/cancel a class",
+            "description": "Authentication required to expire an Academic Unit",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -526,7 +722,7 @@
             }
           },
           "409": {
-            "description": "Unable to perform delete/cancel request",
+            "description": "Unable to perform expire request",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -544,38 +740,17 @@
         "description": "Modify a specific AIM Class",
         "parameters": [
           {
-            "name": "year_term",
+            "name": "academic_unit_id",
             "in": "path",
             "required": true,
-            "description": "Enrollment period in which the class is offered",
-            "type": "string"
-          },
-          {
-            "name": "curriculum_id",
-            "in": "path",
-            "required": true,
-            "description": "The curriculum designator for the course",
-            "type": "string"
-          },
-          {
-            "name": "title_code",
-            "in": "path",
-            "required": true,
-            "description": "Differentiates the different curriculum offerings",
-            "type": "string"
-          },
-          {
-            "name": "section_number",
-            "in": "path",
-            "required": true,
-            "description": "The section designator",
+            "description": "The specific Academic Unit ID",
             "type": "string"
           },
           {
             "name": "field_sets",
             "in": "query",
             "required": false,
-            "description": "List of field sets to be modified in collection",
+            "description": "List of field sets also used when modifying specific Academic Unit",
             "type": "string"
           }
         ],
@@ -584,15 +759,15 @@
         ],
         "responses": {
           "200": {
-            "description": "The specific AIM class that was modified",
+            "description": "The specific Academic Unit was successfully modified",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "204": {
-            "description": "No class found that matches key values",
+            "description": "No Academic Unit found that matches key value",
             "schema": {
-              "$ref": "#/definitions/academicunits"
+              "$ref": "#/definitions/academic_units"
             }
           },
           "400": {
@@ -602,7 +777,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to modify a class",
+            "description": "Authentication required to modify Academic Unit",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -630,157 +805,14 @@
     }
   },
   "definitions": {
-    "academicunits": {
-      "description": "A collection of Academic Units",
-      "type": "object",
-      "required": [
-        "values"
-      ],
-      "properties": {
-        "links": {
-          "description": "Hypermedia Links that impact the entire Academic Units collection",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/links"
-          }
-        },
-        "metadata": {
-          "$ref": "#/definitions/top_level_metadata"
-        },
-        "values": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/item.academicunits"
-          }
-        }
-      }
-    },
-    "item.academicunits": {
-      "type": "string"
-    },
-    "basic": {
-      "description": "Class Basic Item",
-      "type": "object",
-      "required": [
-        "rel",
-        "href",
-        "method"
-      ],
-      "properties": {
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number": {
-          "$ref": "#/definitions/section_number"
-        },
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "enrollment_status": {
-          "$ref": "#/definitions/enrollment_status"
-        },
-        "subject_area":{
-          "$ref": "#/definitions/subject_area"
-        },
-        "course_number": {
-          "$ref": "#/definitions/course_number"
-        },
-        "course_suffix": {
-          "$ref": "#/definitions/course_suffix"
-        },
-        "course_title": {
-          "$ref": "#/definitions/course_title"
-        },
-        "section_type": {
-          "$ref": "#/definitions/section_type"
-        },
-        "block_code": {
-          "$ref": "#/definitions/block_code"
-        },
-        "class_status": {
-          "$ref": "#/definitions/class_status"
-        },
-        "reg_method": {
-          "$ref": "#/definitions/reg_method"
-        },
-        "lab_quiz_flag": {
-          "$ref": "#/definitions/lab_quiz_flag"
-        },
-        "fee": {
-          "$ref": "#/definitions/fee"
-        },
-        "honors": {
-          "$ref": "#/definitions/honors"
-        },
-        "service_learning": {
-          "$ref": "#/definitions/service_learning"
-        },
-        "fixed_or_variable": {
-          "$ref": "#/definitions/fixed_or_variable"
-        },
-        "credit_hours": {
-          "$ref": "#/definitions/credit_hours"
-        },
-        "minimum_credit_hours": {
-          "$ref": "#/definitions/minimum_credit_hours"
-        },
-        "class_size": {
-          "$ref": "#/definitions/class_size"
-        },
-        "class_start_date": {
-          "$ref": "#/definitions/class_start_date"
-        },
-        "class_end_date": {
-          "$ref": "#/definitions/class_end_date"
-        },
-        "reg_start_date": {
-          "$ref": "#/definitions/reg_start_date"
-        },
-        "reg_end_date": {
-          "$ref": "#/definitions/reg_end_date"
-        },
-        "control_mix_date": {
-          "$ref": "#/definitions/control_mix_date"
-        },
-        "waitlist_status": {
-          "$ref": "#/definitions/waitlist_status"
-        },
-        "combine_rolls": {
-          "$ref": "#/definitions/combine_rolls"
-        },
-        "combine_counts": {
-          "$ref": "#/definitions/combine_counts"
-        },
-        "link_relation": {
-          "$ref": "#/definitions/link_relation"
-        },
-        "link_to_year_term": {
-          "$ref": "#/definitions/link_to_year_term"
-        },
-        "link_to_curriculum_id": {
-          "$ref": "#/definitions/link_to_curriculum_id"
-        },
-        "link_to_title_code": {
-          "$ref": "#/definitions/link_to_title_code"
-        },
-        "link_to_section_number": {
-          "$ref": "#/definitions/link_to_section_number"
-        }
-      }
-    },
     "links": {
       "description": "Hypermedia links format",
       "type": "object",
       "required": [
         "rel",
         "href",
-        "method"
+        "method",
+        "title"
       ],
       "properties": {
         "rel": {
@@ -799,974 +831,29 @@
             "POST",
             "PUT"
           ]
+        },
+        "title": {
+          "type": "string"
         }
       }
     },
-    "add_permission_codes": {
-      "description": "A collection of add permission codes",
+    "error": {
+      "description": "Error Information",
       "type": "object",
-      "required": [
-        "values"
-      ],
       "properties": {
-        "values": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/add_permission_code"
-          }
+        "return_code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "error_data": {
+          "type": "string"
         }
       }
     },
-    "add_permission_code": {
-      "description": "Add permission code for a single class",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "person_id",
-        "student_name",
-        "audit_flag",
-        "created_by_id",
-        "created_date_time",
-        "redeemed_date_time"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number": {
-          "$ref": "#/definitions/section_number"
-        },
-        "person_id": { //student or instructor etc?
-          "$ref": "#/definitions/person_id"
-        },
-        "student_name": {
-          "$ref": "#/definitions/student_name"
-        },
-        "audit_flag": {
-          "$ref": "#/definitions/audit_flag"
-        },
-        "created_by_id": {
-          "$ref": "#/definitions/created_by_id"
-        },
-        "created_date_time": {
-          "$ref": "#/definitions/created_date_time"
-        },
-        "redeemed_date_time": {
-          "$ref": "#/definitions/redeemed_date_time"
-        }
-      }
-    },
-    "assigned_instructors": {
-      "description": "Assigned instructors for a class",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "instructor_type",
-        "instructor_name",
-        "person_id",
-        "byu_id",
-        "net_id",
-        "email_address",
-        "updated_by_id",
-        "updated_date_time",
-        "expired_date"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number": {
-          "$ref": "#/definitions/section_number"
-        },
-        "instructor_type": {
-          "$ref": "#/definitions/instructor_type"
-        },
-        "instructor_name": {
-          "$ref": "#/definitions/instructor_name"
-        },
-        "person_id": {
-          "$ref": "#/definitions/person_id"
-        },
-        "byu_id": {
-          "$ref": "#/definitions/byu_id"
-        },
-        "net_id": {
-          "$ref": "#/definitions/net_id"
-        },
-        "email_address": {
-          "$ref": "#/definitions/email_address"
-        },
-        "updated_by_id": {
-          "$ref": "#/definitions/updated_by_id"
-        },
-        "updated_date_time": {
-          "$ref": "#/definitions/updated_date_time"
-        },
-        "expired_date": {
-          "$ref": "#/definitions/expired_date"
-        }
-      }
-    },
-    "class_limitations": {
-      "description": "limitations to a class",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "limitation_type",
-        "limitation_name",
-        "limitation_value",
-        "updated_by_id",
-        "updated_date_time",
-        "expired_date"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number": {
-          "$ref": "#/definitions/section_number"
-        },
-        "limitation_type": {
-          "$ref": "#/definitions/limitation_type"
-        },
-        "limitation_name": {
-          "$ref": "#/definitions/limitation_name"
-        },
-        "limitation_value": {
-          "$ref": "#/definitions/limitation_value"
-        },
-        "updated_by_id": {
-          "$ref": "#/definitions/updated_by_id"
-        },
-        "updated_date_time": {
-          "$ref": "#/definitions/updated_date_time"
-        },
-        "expired_date": {
-          "$ref": "#/definitions/expired_date"
-        }
-      }
-    },
-    "class_schedules": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "schedule_type",
-        "schedule_id",
-        "sequence_number",
-        "institution",
-        "building",
-        "room",
-        "days_taught",
-        "mon",
-        "tue",
-        "wed",
-        "thu",
-        "fri",
-        "sat",
-        "sun",
-        "use_start_date",
-        "use_end_date",
-        "time_taught",
-        "begin_time",
-        "end_time",
-        "status",
-        "set_up_id",
-        "set_up_name",
-        "set_up_description",
-        "schedule_reason",
-        "updated_by_id",
-        "updated_date_time",
-        "allow_conflict"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number": {
-          "$ref": "#/definitions/section_number"
-        },
-        "schedule_type": {
-          "description": "Type of schedule",
-          "type": "string",
-          "maxLength": 15
-        },
-        "schedule_id": {
-          "description": "",
-          "type": "string",
-          "maxLength": 50
-        },
-        "sequence_number": {
-          "description": "",
-          "type": "numbers",
-          "maxLength": 9
-        },
-        "institution": {
-          "description": "BYU Provo",
-          "type": "string",
-          "maxLength": 15
-        },
-        "building": {
-          "description": "",
-          "type": "string",
-          "maxLength": 15
-        },
-        "room": {
-          "description": "",
-          "type": "string",
-          "maxLength": 10
-        },
-        "days_taught": {
-          "description": "",
-          "type": "string"
-        },
-        "mon": {
-          "description": "",
-          "type": "string"
-        },
-        "tue": {
-          "description": "",
-          "type": "string"
-        },
-        "wed": {
-          "description": "",
-          "type": "string"
-        },
-        "thu": {
-          "description": "",
-          "type": "string"
-        },
-        "fri": {
-          "description": "",
-          "type": "string"
-        },
-        "sat": {
-          "description": "",
-          "type": "string"
-        },
-        "sun": {
-          "description": "",
-          "type": "string"
-        },
-        "use_start_date": {
-          "description": "",
-          "type": "string"
-        },
-        "use_end_date": {
-          "description": "",
-          "type": "string"
-        },
-        "time_taught": {
-          "description": "",
-          "type": "string"
-        },
-        "begin_time": {
-          "description": "",
-          "type": "string"
-        },
-        "end_time": {
-          "description": "",
-          "type": "string"
-        },
-        "status": {
-          "description": "",
-          "type": "string"
-        },
-        "set_up_id": {
-          "description": "",
-          "type": "string"
-        },
-        "set_up_name": {
-          "description": "",
-          "type": "string"
-        },
-        "set_up_description": {
-          "description": "",
-          "type": "string"
-        },
-        "schedule_reason": {
-          "description": "",
-          "type": "string"
-        },
-        "updated_by_id": {
-          "$ref": "#/definitions/updated_by_id"
-        },
-        "updated_date_time": {
-          "$ref": "#/definitions/updated_date_time"
-        },
-        "allow_conflict": {
-          "$ref": "#/definitions/allow_conflict"
-        }
-      }
-    },
-    "course_limitations": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "curriculum_id",
-        "title_code",
-        "effective_date",
-        "expired_date",
-        "limitation_name",
-        "limitation_type",
-        "limitation_value"
-      ],
-      "properties": {
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "effective_date": {
-          "description": " date for class",
-          "type": "string",
-          "maxLength": 23
-        },
-        "expired_date": {
-          "$ref": "#/definitions/expired_date"
-        },
-        "limitation_name": {
-          "$ref": "#/definitions/limitation_name"
-        },
-        "limitation_type": {
-          "$ref": "#/definitions/limitation_type"
-        },
-        "limitation_value": {
-          "$ref": "#/definitions/limitation_value"
-        }
-      }
-    },
-    "enrolled_students": {
-      "description": "limitations to a class",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "student_id",
-        "credit_hours",
-        "grade",
-        "byu_id",
-        "net_id",
-        "student_name",
-        "email_address",
-        "added_date_time",
-        "class_standing"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number": {
-          "$ref": "#/definitions/section_number"
-        },
-        "student_id": {
-          "description": "id of a student",
-          "type": "string",
-          "maxLength": 9
-        },
-        "credit_hours": {
-          "$ref": "#/definitions/credit_hours"
-        },
-        "grade": {
-          "description": "grade",
-          "type": "string",
-          "maxLength": 5
-        },
-        "byu_id": {
-          "$ref": "#/definitions/byu_id"
-        },
-        "net_id": {
-          "$ref": "#/definitions/net_id"
-        },
-        "student_name": {
-          "$ref": "#/definitions/student_name"
-        },
-        "email_address": {
-          "$ref": "#/definitions/email_address"
-        },
-        "added_date_time": {
-          "description": "added date time",
-          "type": "string",
-          "maxLength": 23
-        },
-        "class_standing": {
-          "description": "",
-          "type": "string",
-          "maxLength": 20
-        },
-        "gender": {
-          "description": "",
-          "type": "string",
-          "maxLength": 7
-        },
-        "program_id": {
-        },
-        "home_state": {
-        },
-        "country_code": {
-        },
-        "student_disability": {
-        },
-        "ESL": {
-        }
-      }
-    },
-    "linked_academicunits": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "teaching_area",
-        "catalog_number",
-        "catalog_suffix",
-        "course_description",
-        "section_type",
-        "linked_curriculum_id",
-        "linked_title_code",
-        "linked_section_number",
-        "linked_teaching_area",
-        "linked_catalog_number",
-        "linked_catalog_suffix",
-        "linked_course_description",
-        "linked_section_type"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "teaching_area": {
-        },
-        "catalog_number": {
-        },
-        "catalog_suffix": {
-        },
-        "course_description": {
-        },
-        "section_type": {
-          "$ref": "#/definitions/section_type"
-        },
-        "linked_curriculum_id": {
-        },
-        "linked_title_code": {
-        },
-        "linked_section_number": {
-        },
-        "linked_teaching_area": {
-        },
-        "linked_catalog_number": {
-        },
-        "linked_catalog_suffix": {
-        },
-        "linked_course_description": {
-        },
-        "linked_section_type": {
-        }
-      }
-    },
-    "notes": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "note_type",
-        "note_value",
-        "update_by_id",
-        "updated_date_time"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "note_type": {
-        },
-        "note_value": {
-        },
-        "updated_by_id": {
-          "$ref": "#/definitions/updated_by_id"
-        },
-        "updated_date_time": {
-          "$ref": "#/definition/updated_date_time"
-        }
-      }
-    },
-    "permission_to_add_codes": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "group_number",
-        "token_value",
-        "created_by_id",
-        "created_date_time",
-        "redeemed_by_id",
-        "redeemed_date_time"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "group_number": {
-        },
-        "token_value": {
-        },
-        "created_by_id": {
-          "$ref": "#/definitions/created_by_id"
-        },
-        "created_date_time": {
-          "$ref": "#/definitions/created_date_time"
-        },
-        "redeemed_by_id": {
-        },
-        "redeemed_date_time": {
-          "$ref": "#/definitions/redeemed_date_time"
-        }
-      }
-    },
-    "prerequisites": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "curriculum_id",
-        "title_code",
-        "seq_num",
-        "enforced",
-        "instructor_approval",
-        "effective_date",
-        "expired_date",
-        "updated_by_id",
-        "updated_date_time",
-        "prerequisite_list"
-      ],
-      "properties": {
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "seq_num":{
-        },
-        "effective_date": {
-        },
-        "expired_date": {
-          "$ref": "#/definitions/expired_date"
-        },
-        "updated_by_id": {
-          "$ref": "#/definitions/updated_by_id"
-        },
-        "updated_date_time": {
-          "$ref": "#/definitions/updated_date_time"
-        },
-        "prerequisite_list": {
-        }
-      }
-    },
-    "section_headers": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "header_type",
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "dept_name",
-        "sequence_number",
-        "message_type",
-        "display_flag",
-        "header_text",
-        "updated_by_id",
-        "updated_date_time"
-      ],
-      "properties": {
-        "header_type": {
-        },
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "dept_name": {
-        },
-        "sequence_number": {
-        },
-        "message_type": {
-        },
-        "display_flag": {
-        },
-        "header_text": {
-        },
-        "updated_by_id": {
-          "$ref": "#/definitions/updated_by_id"
-        },
-        "updated_date_time": {
-          "$ref": "#/definitions/updated_date_time"
-        }
-      }
-    },
-    "supplemental_counts": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "count_category",
-        "count_type",
-        "count_catsize",
-        "total_enrolled",
-        "add_count_cum",
-        "drop_count_cum",
-        "total_requests",
-        "updated_by_id",
-        "updated_date_time"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "count_category": {
-        },
-        "count_type": {
-        },
-        "count_catsize": {
-        },
-        "total_enrolled": {
-        },
-        "add_count_cum": {
-        },
-        "drop_count_cum": {
-        },
-        "total_requests": {
-        },
-        "updated_by_id": {
-          "$ref": "#/definitions/updated_by_id"
-        },
-        "updated_date_time": {
-          "$ref": "#/definitions/updated_date_time"
-        }
-      }
-    },
-    "waitlisted_students": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "person_id",
-        "student_name",
-        "date_requested",
-        "sequencer",
-        "teaching_area",
-        "catalog_number",
-        "catalog_suffix",
-        "credit_hours",
-        "size_mix_category",
-        "added_by_id",
-        "added_date_time",
-        "add_error_message",
-        "error_date_time"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "person_id": {
-          "$ref": "#/definitions/person_id"
-        },
-        "student_name": {
-          "$ref": "#/definitions/student_name"
-        },
-        "date_requested": {
-        },
-        "sequencer": {
-        },
-        "teaching_area": {
-        },
-        "catalog_number": {
-        },
-        "catalog_suffix": {
-        },
-        "credit_hours": {
-          "$ref": "#/definitions/credit_hours"
-        },
-        "size_mix_category": {
-          "$ref": "#/definitions/size_mix_category"
-        },
-        "added_by_id": {
-        },
-        "added_date_time": {
-        },
-        "add_error_message": {
-        },
-        "error_date_time": {
-        }
-      }
-    },
-    "enrolled_student_logs": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "person_id",
-        "credit_hours",
-        "grade",
-        "student_name",
-        "log_action",
-        "log_by_id",
-        "log_date_time"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "person_id": {
-          "$ref": "#/definitions/person_id"
-        },
-        "credit_hours": {
-          "$ref": "#/definitions/credit_hours"
-        },
-        "grade": {
-        },
-        "student_name": {
-          "$ref": "#/definitions/student_name"
-        },
-        "log_action": {
-        },
-        "log_by_id": {
-        },
-        "log_date_time": {
-        }
-      }
-    },
-    "waitlisted_student_logs": {
-      "description": "",
-      "type": "object",
-      "required": [
-        "credit_institution",
-        "year_term",
-        "curriculum_id",
-        "title_code",
-        "section_number",
-        "person_id",
-        "student_name",
-        "teaching_area",
-        "catalog_number",
-        "catalog_suffix",
-        "credit_hours",
-        "log_action",
-        "log_by_id",
-        "log_date_time"
-      ],
-      "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
-        },
-        "year_term": {
-          "$ref": "#/definitions/year_term"
-        },
-        "curriculum_id": {
-          "$ref": "#/definitions/curriculum_id"
-        },
-        "title_code": {
-          "$ref": "#/definitions/title_code"
-        },
-        "section_number":{
-          "$ref": "#/definitions/section_number"
-        },
-        "person_id": {
-          "$ref": "#/definitions/person_id"
-        },
-        "student_name": {
-          "$ref": "#/definitions/student_name"
-        },
-        "teaching_area": {
-        },
-        "catalog_number": {
-        },
-        "catalog_suffix": {
-        },
-        "credit_hours": {
-          "$ref": "#/definitions/credit_hours"
-        },
-        "log_action": {
-        },
-        "log_by_id": {
-        },
-        "log_date_time": {
-        }
-      }
-    },
-    "top_level_metadata": {
+    "metadata": {
       "type": "object",
       "required": [
         "collection_size",
@@ -1774,10 +861,7 @@
         "page_end",
         "page_size",
         "default_page_size",
-        "maximum_page_size",
-        "field_sets_returned",
-        "field_sets_available",
-        "default_field_sets"
+        "maximum_page_size"
       ],
       "properties": {
         "collection_size": {
@@ -1807,235 +891,634 @@
         "field_sets_returned": {
           "type": "array",
           "items": {
-            "type": "string",
-            "enum": [
-              "basic",
-              "registration_counts",
-              "add_permission_codes",
-              "assigned_instructors",
-              "class_limitations",
-              "class_schedules",
-              "course_limitations",
-              "enrolled_students",
-              "linked_academicunits",
-              "notes",
-              "permission_to_add_codes",
-              "prerequisites",
-              "section_headers",
-              "supplemental_counts",
-              "waitlisted_students",
-              "enrolled_students_log",
-              "waitlisted_students_log"
-            ]
+            "$ref": "#/definitions/field_sets_returned"
           }
         },
         "field_sets_available": {
           "type": "array",
           "items": {
-            "type": "string",
-            "enum": [
-              "basic",
-              "registration_counts",
-              "add_permission_codes",
-              "assigned_instructors",
-              "class_limitations",
-              "class_schedules",
-              "course_limitations",
-              "enrolled_students",
-              "linked_academicunits",
-              "notes",
-              "permission_to_add_codes",
-              "prerequisites",
-              "section_headers",
-              "supplemental_counts",
-              "waitlisted_students",
-              "enrolled_students_log",
-              "waitlisted_students_log"
-            ]
+            "$ref": "#/definitions/field_sets_available"
           }
         },
         "default_field_sets": {
           "type": "array",
           "items": {
-            "type": "string",
-            "enum": [
-              "basic",
-              "registration_counts",
-              "add_permission_codes",
-              "assigned_instructors",
-              "class_limitations",
-              "class_schedules",
-              "course_limitations",
-              "enrolled_students",
-              "linked_academicunits",
-              "notes",
-              "permission_to_add_codes",
-              "prerequisites",
-              "section_headers",
-              "supplemental_counts",
-              "waitlisted_students",
-              "enrolled_students_log",
-              "waitlisted_students_log"
-            ]
+            "$ref": "#/definitions/default_field_sets"
+          }
+        },
+        "contexts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/contexts"
           }
         }
       }
     },
-    "error": {
-      "description": "Error Information",
+    "submetadata": {
       "type": "object",
+      "required": [
+        "collection_size",
+        "page_start",
+        "page_end",
+        "page_size",
+        "default_page_size",
+        "maximum_page_size"
+      ],
       "properties": {
-        "return_code": {
+        "collection_size": {
           "type": "integer",
-          "format": "int32"
+          "minimum": 0
         },
-        "explanation": {
-          "type": "string"
+        "page_start": {
+          "type": "integer",
+          "minimum": 0
         },
-        "error_data": {
-          "type": "string"
+        "page_end": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "default_page_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maximum_page_size": {
+          "type": "integer",
+          "minimum": 0
         }
       }
     },
-    "year_term": {
-      "description": "Year and term for class",
+    "field_sets_returned": {
+      "description": "Field Sets Returned",
       "type": "object",
-      "required": [
-        "value",
-        "api_type"
-      ],
-      "properties": {
-        "value": {
-          "description": "Winter 2015",
-          "type": "string",
-          "maxLength": 15
-        },
-        "api_type": {
-          "type": "string",
-          "enum": [
-            "read-only",
-            "modifiable"
-          ]
-        },
-        "key": {
-          "type": "boolean"
-        }
-      }
-    },
-    "curriculum_id": {
-      "type": "object",
-      "required": [
-        "value",
-        "api_type"
-      ],
       "properties": {
         "value": {
           "type": "string",
-          "maxLength": 5
-        },
-        "api_type": {
-          "type": "string",
           "enum": [
-            "read-only",
-            "modifiable"
-          ]
-        },
-        "key": {
-          "type": "boolean"
-        }
-      }
-    },
-    "title_code": {
-      "type": "object",
-      "required": [
-        "value",
-        "api_type"
-      ],
-      "properties": {
-        "value": {
-          "type": "string",
-          "maxlength": 3
-        },
-        "api_type": {
-          "type": "string",
-          "enum": [
-            "read-only",
-            "modifiable"
-          ]
-        },
-        "key": {
-          "type": "boolean"
-        }
-      }
-    },
-    "section_number": {
-      "type": "object",
-      "required": [
-        "value",
-        "api_type"
-      ],
-      "properties": {
-        "value": {
-          "type": "string",
-          "maxlength": 3
-        },
-        "api_type": {
-          "type": "string",
-          "enum": [
-            "read-only",
-            "modifiable"
-          ]
-        },
-        "key": {
-          "type": "boolean"
-        }
-      }
-    },
-    "credit_institution": {
-      "type": "object",
-      "required": [
-        "value",
-        "api_type"
-      ],
-      "properties": {
-        "value": {
-          "description": "BYU Provo Campus",
-          "type": "string",
-          "maxlength": 15
-        },
-        "api_type": {
-          "type": "string",
-          "enum": [
-            "read-only",
-            "modifiable"
+            "basic",
+            "assigned_programs",
+            "assigned_teaching_areas",
+            "contacts",
+            "sub_units"
           ]
         }
       }
     },
-    "enrollment_status": {
+    "field_sets_available": {
+      "description": "Field Sets Available",
       "type": "object",
-      "required": [
-        "value",
-        "api_type"
-      ],
       "properties": {
         "value": {
           "type": "string",
-          "maxlength": 10
-        },
-        "api_type": {
+          "enum": [
+            "basic",
+            "assigned_programs",
+            "assigned_teaching_areas",
+            "contacts",
+            "sub_units"
+          ]
+        }
+      }
+    },
+    "default_field_sets": {
+      "description": "Default Field Sets",
+      "type": "object",
+      "properties": {
+        "value": {
           "type": "string",
           "enum": [
-            "read-only",
-            "derived"
+            "basic",
+            "sub_units"
           ]
+        }
+      }
+    },
+    "contexts": {
+      "description": "Contexts",
+      "type": "object",
+      "required": [
+        "values"
+      ],
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "academic_units": {
+      "description": "A collection of Academic Units",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Academic Units collection",
+          "type": "object",
+          "properties": {
+            "academic_units.info": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.next": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.create": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/metadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/academic_unit"
+          }
+        }
+      }
+    },
+    "academic_unit": {
+      "description": "An item in the Academic Units collection",
+      "type": "object",
+      "properties": {
+        "basic": {
+          "$ref": "#/definitions/basic"
+        },
+        "assigned_programs": {
+          "$ref": "#/definitions/assigned_programs"
+        },
+        "assigned_teaching_areas": {
+          "$ref": "#/definitions/assigned_teaching_areas"
+        },
+        "contacts": {
+          "$ref": "#/definitions/contacts"
+        },
+        "sub_units": {
+          "$ref": "#/definitions/sub_units"
+        }
+      }
+    },
+    "basic": {
+      "description": "Basic data for an Academic Unit item",
+      "type": "object",
+      "required": [
+      ],
+      "properties": {
+        "links": {
+          "academic_units.info": {
+            "$ref": "#/definitions/links"
+          },
+          "academic_units.modify": {
+            "$ref": "#/definitions/links"
+          },
+          "academic_units.delete": {
+            "$ref": "#/definitions/links"
+          },
+          "academic_unitsparent.info": {
+            "$ref": "#/definitions/links"
+          }
+        },
+        "academic_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        },
+        "effective_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "expired_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "unit_name": {
+          "$ref": "#/definitions/academic_unit_name"
+        },
+        "official_name": {
+          "$ref": "#/definitions/academic_unit_official_name"
+        },
+        "unit_type": {
+          "$ref": "#/definitions/academic_unit_type"
+        },
+        "parent_academic_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        },
+        "parent_academic_unit_name": {
+          "$ref": "#/definitions/academic_unit_name"
+        },
+        "parent_academic_unit_official_name": {
+          "$ref": "#/definitions/academic_unit_official_name"
+        },
+        "old_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        }
+      }
+    },
+    "assigned_programs": {
+      "description": "A collection of Academic Programs",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Academic Programs collection",
+          "type": "object",
+          "properties": {
+            "assigned_programs.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.next": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/assigned_program"
+          }
+        }
+      }
+    },
+    "assigned_program": {
+      "links": {
+        "assigned_programs.info": {
+          "$ref": "#/definitions/links"
+        },
+        "assigned_programs.modify": {
+          "$ref": "#/definitions/links"
+        },
+        "assigned_programs.delete": {
+          "$ref": "#/definitions/links"
+        },
+        "identity.info": {
+          "$ref": "#/definitions/links"
         }
       },
-      "key": {
-        "type": "boolean"
+      "academic_program_id": {
+        "$ref": "#/definitions/academic_program_id"
+      },
+      "effective_date": {
+        "$ref": "#/definitions/api_modifiable_date"
+      },
+      "expired_date": {
+        "$ref": "#/definitions/api_modifiable_date"
+      },
+      "program_type": {
+        "$ref": "#/definitions/academic_program_type"
+      },
+      "description": {
+        "$ref": "#/definitions/description"
+      },
+      "diploma_description": {
+        "$ref": "#/definitions/description"
+      },
+      "long_description": {
+        "$ref": "#/definitions/description"
+      },
+      "degree": {
+        "$ref": "#/definitions/academic_program_degree"
+      },
+      "admission_required": {
+        "$ref": "#/definitions/api_boolean"
+      },
+      "is_teaching_program": {
+        "$ref": "#/definitions/api_boolean"
+      },
+      "is_limited_enrollment_program": {
+        "$ref": "#/definitions/api_boolean"
+      },
+      "committee_members_needed_count": {
+        "$ref": "#/definitions/api_count"
+      },
+      "major_program_id": {
+        "$ref": "#/definitions/academic_program_id"
+      },
+      "ge_program_id": {
+        "$ref": "#/definitions/academic_program_id"
+      },
+      "core_program_id": {
+        "$ref": "#/definitions/academic_program_id"
+      },
+      "emphasis_required": {
+        "$ref": "#/definitions/api_boolean"
+      },
+      "minor_required": {
+        "$ref": "#/definitions/api_boolean"
+      },
+      "study_list_required": {
+        "$ref": "#/definitions/api_boolean"
+      },
+      "has_honors_recognition": {
+        "$ref": "#/definitions/api_boolean"
+      },
+      "maximum_years_to_complete": {
+        "$ref": "#/definitions/api_zero_positive_integer"
+      },
+      "program_hours": {
+        "$ref": "#/definitions/api_zero_positive_integer"
+      },
+      "minimum_program_hours": {
+        "$ref": "#/definitions/api_zero_positive_integer"
+      },
+      "maximum_program_hours": {
+        "$ref": "#/definitions/api_zero_positive_integer"
+      },
+      "maximum_requirement_hours": {
+        "$ref": "#/definitions/api_zero_positive_integer"
+      },
+      "maximum_requirement_classes": {
+        "$ref": "#/definitions/api_zero_positive_integer"
+      },
+      "prior_program_id": {
+        "$ref": "#/definitions/academic_program_id"
+      },
+      "comments": {
+        "$ref": "#/definitions/api_description"
+      },
+      "date_time_updated": {
+        "$ref": "#/definitions/api_read_only_date"
+      },
+      "updated_by_id": {
+        "$ref": "#/definitions/api_person_id"
       }
     },
-    "subject_area": {
+    "assigned_teaching_areas": {
+      "description": "A collection of Teaching Areas",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Teaching Areas collection",
+          "type": "object",
+          "properties": {
+            "assigned_teaching_areas.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.next": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/assigned_teaching_area"
+          }
+        }
+      }
+    },
+    "assigned_teaching_area": {
+      "links": {
+        "assigned_teaching_areas.info": {
+          "$ref": "#/definitions/links"
+        },
+        "assigned_teaching_areas.modify": {
+          "$ref": "#/definitions/links"
+        },
+        "assigned_teaching_areas.delete": {
+          "$ref": "#/definitions/links"
+        },
+        "identity.info": {
+          "$ref": "#/definitions/links"
+        }
+      },
+      "name": {
+        "$ref": "#/definitions/assigned_teaching_area_name"
+      },
+      "long_name": {
+        "$ref": "#/definitions/api_description"
+      },
+      "effective_date": {
+        "$ref": "#/definitions/api_modifiable_date"
+      },
+      "expired_date": {
+        "$ref": "#/definitions/api_modifiable_date"
+      },
+      "date_time_updated": {
+        "$ref": "#/definitions/api_read_only_date"
+      },
+      "updated_by_id": {
+        "$ref": "#/definitions/api_person_id"
+      }
+    },
+    "contacts": {
+      "description": "A collection of Academic Unit Contacts",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Academic Unit Contacts collection",
+          "type": "object",
+          "properties": {
+            "contacts.info": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.next": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/contact"
+          }
+        }
+      }
+    },
+    "contact": {
+      "links": {
+        "contacts.info": {
+          "$ref": "#/definitions/links"
+        },
+        "contacts.modify": {
+          "$ref": "#/definitions/links"
+        },
+        "contacts.delete": {
+          "$ref": "#/definitions/links"
+        },
+        "identity.info": {
+          "$ref": "#/definitions/links"
+        }
+      },
+      "contact_type": {
+        "$ref": "#/definitions/academic_unit_contact_type"
+      },
+      "effective_date": {
+        "$ref": "#/definitions/api_key_date"
+      },
+      "expired_date": {
+        "$ref": "#/definitions/api_modifiable_date"
+      },
+      "person_id": {
+        "$ref": "#/definitions/api_person_id"
+      },
+      "person_name": {
+        "$ref": "#/definitions/api_related_string"
+      }
+    },
+    "sub_units": {
+      "description": "A collection of Subordinate Academic Units",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Subordinate Academic Units collection",
+          "type": "object",
+          "properties": {
+            "assigned_teaching_areas.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.next": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/sub_unit"
+          }
+        }
+      }
+    },
+    "sub_unit": {
+      "links": {
+        "academic_units.info": {
+          "$ref": "#/definitions/links"
+        },
+        "academic_units.modify": {
+          "$ref": "#/definitions/links"
+        },
+        "academic_units.delete": {
+          "$ref": "#/definitions/links"
+        },
+        "academic_unitsparent.info": {
+          "$ref": "#/definitions/links"
+        }
+      },
+      "academic_unit_id": {
+        "$ref": "#/definitions/academic_unit_id"
+      },
+      "effective_date": {
+        "$ref": "#/definitions/api_modifiable_date"
+      },
+      "expired_date": {
+        "$ref": "#/definitions/api_modifiable_date"
+      },
+      "unit_name": {
+        "$ref": "#/definitions/academic_unit_name"
+      },
+      "official_name": {
+        "$ref": "#/definitions/academic_unit_official_name"
+      },
+      "unit_type": {
+        "$ref": "#/definitions/academic_unit_type"
+      },
+      "parent_academic_unit_id": {
+        "$ref": "#/definitions/academic_unit_id"
+      },
+      "parent_academic_unit_name": {
+        "$ref": "#/definitions/academic_unit_name"
+      },
+      "parent_academic_unit_official_name": {
+        "$ref": "#/definitions/academic_unit_official_name"
+      },
+      "old_unit_id": {
+        "$ref": "#/definitions/academic_unit_id"
+      }
+    },
+    "academic_unit_id": {
+      "description": "Academic Unit ID",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_modifiable_date": {
+      "description": "BYU API date property that is modifiable",
       "type": "object",
       "required": [
         "value",
@@ -2043,16 +1526,508 @@
       ],
       "properties": {
         "value": {
-          "type": "string",
-          "maxlength": 5
+          "type": "date-time"
         },
         "api_type": {
           "type": "string",
           "enum": [
             "read-only",
-            "modifiable",
-            "related"
+            "modifiable"
           ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_read_only_date": {
+      "description": "BYU API date property that is read only",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "date-time"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_related_person_id": {
+      "description": "A generic definition of a person ID for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{9}$"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        },
+        "related_resource": {
+          "type": "string"
+        }
+      }
+    },
+    "api_related_string": {
+      "description": "A generic definition of a person name for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        },
+        "related_resource": {
+          "type": "string"
+        }
+      }
+    },
+    "api_boolean": {
+      "description": "A generic definition of a boolean for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "boolean"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_count": {
+      "description": "A generic definition of an integer count for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "integer"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_description": {
+      "description": "A generic description field for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_zero_positive_integer": {
+      "description": "An explanation about the puropose of this instance described by this schema.",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": "0"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "academic_unit_name": {
+      "description": "Academic Unit Name",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "academic_unit_official_name": {
+      "description": "Academic Unit Offical Name",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "academic_unit_type": {
+      "description": "Academic Unit Type",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "ACAD VP",
+            "COLLEGE",
+            "INSTITUTE",
+            "CENTER",
+            "DIVISION",
+            "PROGRAM",
+            "SCHOOL",
+            "DEPARTMENT"
+          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "academic_program_id": {
+      "description": "Academic Program ID",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{5}$"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        }
+      }
+    },
+    "academic_program_type": {
+      "description": "Academic Program Type",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "CERT",
+            "SPECIALIZATION",
+            "LICENSURE",
+            "EMPHASIS",
+            "GE",
+            "NONDEGREE",
+            "MAJOR",
+            "MINOR",
+            "UNIV",
+            "HONORS",
+            "PRE-MAJOR",
+            "POST-BACHELORS"
+          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "academic_program_degree": {
+      "description": "Academic Program Degree Abbreviation",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "2YC",
+            "6YC",
+            "AA",
+            "AIS",
+            "AS",
+            "BA",
+            "BES",
+            "BFA",
+            "BGS",
+            "BIS",
+            "BM",
+            "BMU",
+            "BS",
+            "CERT",
+            "CGN",
+            "DMA",
+            "DRE",
+            "EDD",
+            "EDS",
+            "EdS",
+            "JD",
+            "LLM",
+            "MA",
+            "MAC",
+            "MACC",
+            "MBA",
+            "MCD",
+            "MCE",
+            "MCH",
+            "MCL",
+            "ME",
+            "MED",
+            "MEM",
+            "MES",
+            "MFA",
+            "MFR",
+            "MHA",
+            "MHE",
+            "MIE",
+            "MIN",
+            "MISM",
+            "MLIS",
+            "MLS",
+            "MM",
+            "MMU",
+            "MN",
+            "MOB",
+            "MPA",
+            "MPH",
+            "MPP",
+            "MRE",
+            "MRED",
+            "MS",
+            "MSW",
+            "MTM",
+            "NDG",
+            "PBS",
+            "PHD",
+            "PRE",
+            "SPC",
+            "TC",
+            "TESL",
+            "TL"          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "assigned_teaching_area_name": {
+      "description": "Teaching Area Name",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        }
+      }
+    },
+    "academic_unit_contact_type": {
+      "description": "Academic Unit Contact Type",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "ADVISEMENT CENTER",
+            "ASSOCIATE DEAN GRADES",
+            "CADS",
+            "CHAIR",
+            "DEAN",
+            "GRAD COORDINATOR",
+            "GRAD SECRETARY",
+            "GRADE CONTACT",
+            "GRADE ROLL MONITOR",
+            "SCHED OFFICER",
+            "TEACHING AREA"          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "api_key_date": {
+      "description": "BYU API date property that is a key",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key"
+      ],
+      "properties": {
+        "value": {
+          "type": "date-time"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "display_label": {
+          "type": "string"
         }
       }
     }

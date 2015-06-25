@@ -17,6 +17,12 @@
       "href": "https://api.byu.edu/byuapi/academicunits?page_start_101,page_size=50",
       "method": "GET",
       "title": "academicunits.getAcademicUnits"
+    },
+    "academicunits.create": {
+      "rel": "academicunits.create",
+      "href": "https://api.byu.edu/byuapi/academicunits",
+      "method": "POST",
+      "title": "academicunits.createAcademicUnit"
     }
   },
   "metadata": {
@@ -54,2051 +60,560 @@
     {
       "basic": {
         "links": {
-          "academicunits.info":
-          { "rel": "self",
+          "academicunits.info": {
+            "rel": "self",
             "href": "https://api.byu.edu/byuapi/academicunits/1115",
-            "method": "GET"
+            "method": "GET",
+            "title": "academicunits.getAcademicUnit"
           },
-    { "rel": "academicunits.cancel",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "DELETE"
-    },
-    { "rel": "academicunits.modify",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "PUT"
-    },
-    { "rel": "academicunits.open",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "PUT"
-    },
-    { "rel": "academicunits.start",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "PUT"
-    },
-    { "rel": "academicunits.close",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "PUT"
-    },
-    { "rel": "academicunits.end",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "PUT"
-    },
-    { "rel": "academicunits.combine",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "PUT"
-    },
-    { "rel": "academicunits.split",
-      "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001",
-      "method": "PUT"
-    },
-    { "rel": "courses.info",
-      "href": "https://api.byu.edu/byuapi/courses/11463,000",
-      "method": "GET"
-    },
-    { "rel": "curriculum-units.info",
-      "href": "https://api.byu.edu/byuapi/curriculum_units/11463",
-      "method": "GET"
-    }
-    },
-    "year_term": {
-      "value": "20151",
-      "api_type": "read-only",
-      "key": true,
-      "description": "Winter 2015",
-      "long_description": "Winter Semester 2015",
-      "display_label": "Semester/Term",
-      "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-    },
-    "curriculum_id": {
-      "value": "11463",
-      "api_type": "read-only",
-      "key": true
-    },
-    "title_code": {
-      "value": "000",
-      "api_type": "modifiable",
-      "key": true
-    },
-    "section_number": {
-      "value": "001",
-      "api_type": "system",
-      "key": true
-    },
-    "credit_institution": {
-      "value": "BYU PROVO",
-      "api_type": "read-only",
-      "description": "BYU Provo Campus",
-      "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-    },
-    "enrollment_status": {
-      "value": "Open",
-      "api_type": "derived",
-      "key": true
-    },
-    "subject_area": {
-      "value": "NURS",
-      "api_type": "related",
-      "related_resource": "courses",
-      "description": "Nursing",
-      "domain": "https://api.byu.edu/byuapi/meta/subject_areas"
-    },
-    "course_number": {
-      "value": "295",
-      "api_type": "related",
-      "related_resource": "courses",
-      "domain": "https://api.byu.edu/byuapi/meta/course_numbers?year_term=20151&subject_area=NURS"
-    },
-    "course_suffix": {
-      "value": "", //this doesn't have a value
-      "api_type": "related",
-      "related_resource": "courses",
-      "description": "",
-      "domain": "https://api.byu.edu/byuapi/meta/course_suffixes"
-    },
-    "course_title": {
-      "value": "Fund Nurs Concepts & Care",
-      "api_type": "related",
-      "related_resource": "courses"
-    },
-    "section_type": {
-      "value": "DAY",
-      "api_type": "modifiable",
-      "description": "Day Classes",
-      "domain": "https://api.byu.edu/byuapi/meta/section_types"
-    },
-    "block_code": {
-      "value": "S",
-      "api_type": "modifiable",
-      "description": "Semester",
-      "domain": "https://api.byu.edu/byuapi/meta/block_codes"
-    },
-    "class_status": {
-      "value": "A",
-      "api_type": "modifiable",
-      "description": "Available",
-      "domain": "https://api.byu.edu/byuapi/meta/class_status"
-    },
-    "reg_method": {
-      "value": "S",
-      "api_type": "modifiable",
-      "description": "Permission Required",
-      "domain": "https://api.byu.edu/byuapi/meta/reg_methods"
-    },
-    "lab_quiz_flag": {
-      "value": "",
-      "api_type": "modifiable",
-      "description": "Lecture",
-      "domain": "https://api.byu.edu/byuapi/meta/lab_quiz_flag"
-    },
-    "fee": {
-      "value": "0",
-      "api_type": "related",
-      "related_resource": "courses"
-    },
-    "honors": {
-      "value": "",
-      "api_type": "modifiable",
-      "description": "Not an Honors Section"
-    },
-    "service_learning": {
-      "value": "",
-      "api_type": "modifiable",
-      "description": "Not a Service Learning Section"
-    },
-    "fixed_or_variable": {
-      "value": "F",
-      "api_type": "modifiable",
-      "description": "Fixed",
-      "domain": "https://api.byu.edu/byuapi/meta/fixed_or_variable"
-    },
-    "credit_hours": {
-      "value": "3",
-      "api_type": "modifiable"
-    },
-    "minimum_credit_hours": {
-      "value": "3",
-      "api_type": "related",
-      "related_resource": "courses"
-    },
-    "class_size": {
-      "value": 64,
-      "api_type": "modifiable"
-    },
-    "class_start_date": {
-      "value": "2015-01-05",
-      "api_type": "modifiable",
-      "description": "05 Jan 2015",
-      "long_description": "05 January 2015"
-    },
-    "class_end_date": {
-      "value": "2015-04-14",
-      "api_type": "modifiable",
-      "description": "14 Apr 2015",
-      "long_description": "14 April 2015"
-    },
-    "reg_start_date": {
-      "value": "2015-04-14",
-      "api_type": "derived",
-      "description": "14 Apr 2015",
-      "long_description": "14 April 2015"
-    },
-    "reg_end_date": {
-      "value": "2015-04-14",
-      "api_type": "derived",
-      "description": "14 Apr 2015",
-      "long_description": "14 April 2015"
-    },
-    "withdraw_deadline_date": {
-      "value": "2015-04-14",
-      "api_type": "derived",
-      "description": "14 Apr 2015",
-      "long_description": "14 April 2015"
-    },
-    "control_mix_date": {
-      "value": "",
-      "api_type": "modifiable"
-    },
-    "waitlist_status": {
-      "value": "E",
-      "api_type": "modifiable",
-      "description": "Bill does not know what these codes mean",
-      "domain": "https://api.byu.edu/byuapi/meta/waitlist_status"
-    },
-    "combine_linked_rolls": {
-      "value": "N",
-      "api_type": "modifiable"
-    },
-    "combine_linked_counts": {
-      "value": "N",
-      "api_type": "modifiable"
-    },
-    "link_relation": {
-      "value": "parent",
-      "api_type": "derived"
-    },
-    "link_to_year_term": {
-      "value": "",
-      "api_type": "modifiable"
-    },
-    "link_to_curriculum_id": {
-      "value": "",
-      "api_type": "modifiable"
-    },
-    "link_to_title_code": {
-      "value": "",
-      "api_type": "modifiable"
-    },
-    "link_to_section_number": {
-      "value": "",
-      "api_type": "modifiable"
-    }
-    },
-    "enrollment_counts": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes",
-          "method": "GET"
+          "academicunits.modify": {
+            "rel": "self",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115",
+            "method": "PUT",
+            "title": "academicunits.modifyAcademicUnit"
+          },
+          "academicunits.delete": {
+            "rel": "self",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115",
+            "method": "DELETE",
+            "title": "academicunits.deleteAcademicUnit"
+          },
+          "academicunitsparent.info": {
+            "rel": "academicunitsparent.info",
+            "href": "https://api.byu.edu/byuapi/academicunits/1008",
+            "method": "GET",
+            "title": "academicunits.getAcademicUnitParent"
+          }
         },
-        { "rel": "add_permission_codes.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes?{query_parameters}",
-          "method": "GET"
+        "academic_unit_id": {
+          "value": "1115",
+          "api_type": "system",
+          "key": true,
+          "display_label": "Unit ID"
         },
-        { "rel": "add_permission_codes.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes",
-          "method": "PUT"
+        "effective_date": {
+          "value": "2001-01-25",
+          "api_type": "modifiable",
+          "display_label": "Effective"
+        },
+        "expired_date": {
+          "value": "2999-12-31",
+          "api_type": "modifiable"
+        },
+        "unit_name": {
+          "value": "Instructional Psych&Tech",
+          "api_type": "modifiable"
+        },
+        "official_name": {
+          "value": "Instructional Psychology and Technology, Department of",
+          "api_type": "modifiable"
+        },
+        "unit_type": {
+          "value": "DEPARTMENT",
+          "api_type": "modifiable",
+          "domain": "https://api.byu.edu/byuapi/meta/academic_unit_types"
+        },
+        "parent_academic_unit_id": {
+          "value": "1008",
+          "api_type": "related",
+          "related_resource": "academicunitsparent"
+        },
+        "parent_academic_unit_name": {
+          "value": "Education, David O. McKay School of",
+          "api_type": "related",
+          "related_resource": "academicunitsparent"
+        },
+        "old_unit_id": {
+          "value": "3554",
+          "api_type": "modifiable"
         }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
       },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes/585241162",
-            "method": "GET"
+      "assigned_programs": {
+        "links": {
+          "assigned_programs.info": {
+            "rel": "self",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_programs?page_start=51,page_size=50",
+            "method": "GET",
+            "title": "academicunits.getAssignedPrograms"
           },
-          { "rel": "add_permission_codes.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes/585241162",
-            "method": "DELETE"
+          "assigned_programs.prev": {
+            "rel": "assigned_programs.prev",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_programs?page_start=1,page_size=50",
+            "method": "GET",
+            "title": "academicunits.getAssignedPrograms"
           },
-          { "rel": "students.info",
-            "href": "https://api.byu.edu/byuapi/students/585241162",
-            "method": "GET"
+          "assigned_programs.next": {
+            "rel": "assigned_programs.next",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_programs?page_start=101,page_size=50",
+            "method": "GET",
+            "title": "academicunits.getAssignedPrograms"
+          },
+          "assigned_programs.add": {
+            "rel": "assigned_programs.add",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_programs",
+            "method": "POST",
+            "title": "academicunits.addAssignedProgram"
           }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "class_size": {
-            "value": 64,
-            "api_type": "modifiable"
-          },
-          "total_enrolled": {
-            "value": 57,
-            "api_type": "derived"
-          },
-          "total_adds": {
-            "value": 57,
-            "api_type": "derived"
-          },
-          "total_drops": {
-            "value": 57,
-            "api_type": "derived"
-          },
-          "total_requests": {
-            "value": 57,
-            "api_type": "derived"
-          },
-          "waitlist_count": {
-            "value": 0,
-            "api_type": "derived"
-          },
-          "unused_permission_codes": {
-            "value": 0,
-            "api_type": "derived"
-          }
-        }
-      ]
-    },
-    "add_permission_codes": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes",
-          "method": "GET"
         },
-        { "rel": "add_permission_codes.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes?{query_parameters}",
-          "method": "GET"
+        "metadata": {
+          "collection_size": 3,
+          "page_start": 1,
+          "page_end": 3,
+          "page_size": 50,
+          "default_page_size": 50,
+          "max_page_size": 1000
         },
-        { "rel": "add_permission_codes.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes/585241162",
-            "method": "GET"
-          },
-          { "rel": "add_permission_codes.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/add_permission_codes/585241162",
-            "method": "DELETE"
-          },
-          { "rel": "students.info",
-            "href": "https://api.byu.edu/byuapi/students/585241162",
-            "method": "GET"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "person_id": {
-            "value": "585241162",
-            "api_type": "",
-            "key": true
-          },
-          "student_name": {
-            "value": "Bugs Bunny Ithaca",
-            "api_type": "related",
-            "related_resource": "students"
-          },
-          "audit_flag": {
-            "value": "",
-            "api_type": "modifiable"
-          },
-          "created_by_id": {
-            "value": "584584584",
-            "api_type": "operational",
-            "description": "Joe Faculty"
-          },
-          "created_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          },
-          "redeemed_dttm": {
-            "value": "2014-05-14T13:45:53.20Z",
-            "api_type": "operational"
-          }
-        }
-      ]
-    },
-    "assigned_instructors": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/assigned_instructors",
-          "method": "GET"
-        },
-        { "rel": "assigned_instructors.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/assigned_instructors?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "assigned_instructors.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/assigned_instructors",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/assigned_instructors/585241162",
-            "method": "GET"
-          },
-          { "rel": "add_permission_codes.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/assigned_instructors/585241162",
-            "method": "DELETE"
-          },
-          { "rel": "add_permission_codes.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/assigned_instructors/585241162",
-            "method": "PUT"
-          },
-          { "rel": "instructors.info",
-            "href": "https://api.byu.edu/byuapi/instructors/585241162",
-            "method": "GET"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "instructor_type": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "instructor_name": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "person_id": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "byu_id": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "net_id": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "email_address": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "updated_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "updated_by_name": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "date_time_updated": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          }
-        }
-      ]
-    },
-    "class_limitations": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_limitations",
-          "method": "GET"
-        },
-        { "rel": "class_limitations.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_limitation",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_limitations/?",
-            "method": "GET"
-          },
-          { "rel": "class_limitationss.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_limitations/?",
-            "method": "DELETE"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "limitation_type": {
-            "value": "?"
-            "api_type": "",
-            "key": true
-          },
-          "limitation_name": {
-            "value": "?"
-            "api_type": "",
-            "key": true
-          },
-          "limitation_value": {
-            "value": "?"
-            "api_type": "",
-            "key": true
-          },
-          "updated_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "updated_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          },
-          "expired_date": {
-            "value": "?"
-            "api_type": "?"
-          }
-        }
-      ]
-    },
-    "class_schedules": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_schedules",
-          "method": "GET"
-        },
-        { "rel": "class_schedules.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_schedules?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "class_schedules.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_schedules",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_schedules/?",
-            "method": "GET"
-          },
-          { "rel": "class_schedules.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_schedules/?",
-            "method": "DELETE"
-          },
-          { "rel": "class_schedules.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/class_schedules/?",
-            "method": "PUT"
-          },
-          { "rel": "locations.info",
-            "href": "https://api.byu.edu/byuapi/locations/ITB,2019",
-            "method": "GET"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "schedule_type": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "schedule_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "sequence_number": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "institution": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "building": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "room": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "days_taught": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "mon": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "tue": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "wed": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "thu": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "fri": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "sat": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "sun": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "use_start_date": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "use_end_date": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "time_taught": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "begin_time": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "end_time": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "status": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "set_up_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "set_up_name": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "set_up_description": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "schedule_reason": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "updated_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "updated_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          },
-          "allow_conflict": {
-            "value": "?",
-            "api_type": "?"
-          }
-        }
-      ]
-    },
-    "course_limitations": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/course_limitations",
-          "method": "GET"
-        },
-        { "rel": "course_limitations.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/course_limitation",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/course_limitations/?",
-            "method": "GET"
-          },
-          { "rel": "course_limitations.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/course_limitations/?",
-            "method": "DELETE"
-          }
-        ],
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "effective_date": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "expired_date": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "limitation_name": {
-            "value": "?"
-            "api_type": "",
-            "key": true
-          },
-          "limitation_type": {
-            "value": "?"
-            "api_type": "",
-            "key": true
-          },
-          "limitation_value": {
-            "value": "?"
-            "api_type": "",
-            "key": true
-          }
-        }
-      ]
-    },
-    "enrolled_students": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students",
-          "method": "GET"
-        },
-        { "rel": "enrolled_students.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "enrolled_students.prev",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students?page_start=1,page_size=50",
-          "method": "GET"
-        },
-        { "rel": "enrolled_students.next",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students?page_start=101,page_size=50",
-          "method": "GET"
-        },
-        { "rel": "enrolled_students.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 60,
-        "page_start": 1,
-        "page_end": 50,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students/585241162",
-            "method": "GET"
-          },
-          { "rel": "enrolled-students.drop",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students/585241162",
-            "method": "DELETE"
-          },
-          { "rel": "enrolled-students.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_students/585241162",
-            "method": "PUT"
-          },
-          { "rel": "students.info",
-            "href": "https://api.byu.edu/byuapi/students/585241162",
-            "method": "GET"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "student_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "credit_hours": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "grade": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "byu_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "net_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "student_name": {
-            "value": "Doug Walker",
-            "api_type": "related",
-            "related_resource": "students",
-          },
-          "email_address": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "phone": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "address": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "added_date_time": {
-            "value": "?",
-            "api_type": "system"
-          },
-          "class_standing": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "gender": {
-            "value": "",
-            "api_type": "?"
-          },
-          "major": {
-            "value": "",
-            "api_type": ""
-            "description": ""
-            "domain": ""
-          },
-          "home_state": {
-            "value": "",
-            "api_type": "derived",
-          },
-          "country_code": {
-            "value": "",
-            "api_type": "derived"
-          },
-          "student_disability": {
-            "value": "",
-            "api_type":
-          },
-          "ESL": {
-            "value": "",
-            "api_type":
-          }
-        }
-      ]
-    },
-    "linked_academicunits": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/linked_academicunits",
-          "method": "GET"
-        },
-        { "rel": "linked_academicunits.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/linked_academicunits?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "linked_academicunits.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/linked_academicunits",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/linked_academicunits/585241162",
-            "method": "GET"
-          },
-          { "rel": "linked_academicunits.unlink",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/linked_academicunits/11463,001,003",
-            "method": "DELETE"
-          },
-          { "rel": "academicunits.info",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,001,003",
-            "method": "GET"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "teaching_area": {
-            "value": "NURS",
-            "api_type": "related",
-            "related_resource": "courses"
-            "description": "Nursing",
-            "domain": "https://api.byu.edu/byuapi/meta/teaching_areas"
-          },
-          "catalog_number": {
-            "value": "295",
-            "api_type": "related",
-            "related_resource": "courses"
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_numbers?year_term=20151&teaching_area=NURS"
-          },
-          "catalog_suffix": {
-            "value": "",
-            "api_type": "related",
-            "related_resource": "courses",
-            "description": "",
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_suffixes"
-          },
-          "course_description": {
-            "value": "Fund Nurs Concepts & Care",
-            "api_type": "related",
-            "related_resource": "courses"
-          },
-          "section_type": {
-            "value": "DAY",
-            "api_type": "modifiable",
-            "description": "Day Classes",
-            "domain": "https://api.byu.edu/byuapi/meta/section_types"
-          },
-          "linked_curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "linked_title_code": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "linked_section_number": {
-            "value": "003",
-            "api_type": "",
-            "key": true
-          },
-          "linked_teaching_area": {
-            "value": "NURS",
-            "api_type": "related",
-            "related_resource": "courses"
-            "description": "Nursing",
-            "domain": "https://api.byu.edu/byuapi/meta/teaching_areas"
-          },
-          "linked_catalog_number": {
-            "value": "296",
-            "api_type": "related",
-            "related_resource": "courses"
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_numbers?year_term=20151&teaching_area=NURS"
-          },
-          "linked_catalog_suffix": {
-            "value": "",
-            "api_type": "related",
-            "related_resource": "courses",
-            "description": "",
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_suffixes"
-          },
-          "linked_course_description": {
-            "value": "Fund Nurs Liabilities",
-            "api_type": "related",
-            "related_resource": "courses"
-          },
-          "linked_section_type": {
-            "value": "DAY",
-            "api_type": "modifiable",
-            "description": "Day Classes",
-            "domain": "https://api.byu.edu/byuapi/meta/section_types"
-          }
-        }
-      ]
-    },
-    "notes": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/notes",
-          "method": "GET"
-        },
-        { "rel": "notes.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/notes?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "notes.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/notes",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/notes/?",
-            "method": "GET"
-          },
-          { "rel": "notes.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/notes/?",
-            "method": "DELETE"
-          },
-          { "rel": "notes.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/notes/?",
-            "method": "PUT"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "note_type": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "note_value": {
-            "value": "?"
-            "api_type": "?"
-          },
-          "updated_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "updated_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          }
-        }
-      ]
-    },
-    "permission_to_add_codes": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/permission_to_add_codes",
-          "method": "GET"
-        },
-        { "rel": "permission_to_add_codes.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/permission_to_add_codes?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "permission_to_add_codes.allocate",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/permission_to_add_codes?count=",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/permission_to_add_codes/?",
-            "method": "GET"
-          },
-          { "rel": "permission_to_add_codes.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/permission_to_add_codes/?",
-            "method": "DELETE"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "group_number": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "token_value": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "created_by_id": {
-            "value": "584584584",
-            "api_type": "operational",
-            "description": "Joe Faculty"
-          },
-          "created_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          },
-          "redeemed_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "redeemed_dttm": {
-            "value": "2014-05-14T13:45:53.20Z",
-            "api_type": "operational"
-          }
-        }
-      ]
-    },
-    "prerequisites": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/prerequisites",
-          "method": "GET"
-        },
-        { "rel": "prerequisites.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/prerequisites?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "prerequisites.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/prerequisites",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/prerequisites/?",
-            "method": "GET"
-          },
-          { "rel": "prerequisites.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/prerequisites/?",
-            "method": "DELETE"
-          },
-          { "rel": "prerequisites.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/prerequisites/?",
-            "method": "PUT"
-          }
-        ],
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "seq_num": {
-            "value": 1,
-            "api_type": "",
-            "key": true
-          },
-          "enforced": {
-            "value": "Y",
-            "api_type": "modifiable"
-          },
-          "instructor_approval": {
-            "value": "N",
-            "api_type": "modifiable"
-          },
-          "effective_date": {
-            "value": "2014-01-01",
-            "api_type": "modifiable"
-          },
-          "expired_date": {
-            "value": "2016-05-01",
-            "api_type": "modifiable"
-          },
-          "updated_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "updated_dttm": {
-            "value": "2013-11-15",
-            "api_type": "operational"
-          },
-          "prerequisite_list": [
-            { "curriculum_id": {
-              "value": "09975",
-              "api_type": "modifiable"
-            },
-              "title_code": {
-                "value": "001",
-                "api_type": "modifiable"
+        "values": [
+          {
+            "links": {
+              "assigned_programs.info": {
+                "rel": "self",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_programs/30815",
+                "method": "GET",
+                "title": "assigned_programs.getAssignedProgram"
               },
-              "group_num": {
-                "value": 1,
-                "api_type": "modifiable"
+              "assigned_programs.modify": {
+                "rel": "assigned_programs.modify",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_programs/30815",
+                "method": "PUT",
+                "title": "assigned_programs.getAssignedProgram"
               },
-              "order_in_group": {
-                "value": 1,
-                "api_type": "modifiable"
+              "assigned_programs.delete": {
+                "rel": "assigned_programs.delete",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_programs/30815",
+                "method": "DELETE",
+                "title": "assigned_programs.getAssignedProgram"
+              },
+              "identity.info": {
+                "rel": "identity.info",
+                "href": "https://api.byu.edu/byuapi/identity/111111111",
+                "method": "GET",
+                "title": "assigned_programs.getUpdatedBy"
               }
             },
-            { "curriculum_id": {
-              "value": "10146",
+            "academic_program_id": {
+              "value": "30815",
+              "api_type": "system",
+              "key": true
+            },
+            "effective_date": {
+              "value": "2001-01-01",
               "api_type": "modifiable"
             },
-              "title_code": {
-                "value": "002",
-                "api_type": "modifiable"
-              },
-              "group_num": {
-                "value": 1,
-                "api_type": "modifiable"
-              },
-              "order_in_group": {
-                "value": 2,
-                "api_type": "modifiable"
-              }
+            "expired_date": {
+              "value": "2099-12-31",
+              "api_type": "modifiable"
+            },
+            "program_type": {
+              "value": "MAJOR",
+              "api_type": "modifiable",
+              "domain": "https://api.byu.edu/byuapi/meta/academic_program_types"
+            },
+            "description": {
+              "value": "Instructional Psychology & Technology",
+              "api_type": "modifiable"
+            },
+            "diploma_description": {
+              "value": "Instructional Psychology & Technology",
+              "api_type": "modifiable"
+            },
+            "long_description": {
+              "value": "Instructional Psychology & Technology",
+              "api_type": "modifiable"
+            },
+            "degree": {
+              "value": "MS",
+              "api_type": "modifiable",
+              "domain": "https://api.byu.edu/byuapi/meta/academic_program_degree"
+            },
+            "admission_required": {
+              "value": "true",
+              "api_type": "modifiable"
+            },
+            "is_teaching_program": {
+              "value": "false",
+              "api_type": "modifiable"
+            },
+            "is_limited_enrollment_program": {
+              "value": "false",
+              "api_type": "modifiable"
+            },
+            "committee_members_needed_count": {
+              "value": "0",
+              "api_type": "modifiable"
+            },
+            "major_program_id": {
+              "value": "",
+              "api_type": "modifiable"
+            },
+            "ge_program_id": {
+              "value": "",
+              "api_type": "modifiable"
+            },
+            "core_program_id": {
+              "value": "",
+              "api_type": "modifiable"
+            },
+            "emphasis_required" : {
+              "value": "true",
+              "api_type": "modifiable"
+            },
+            "minor_required": {
+              "value": "false",
+              "api_type": "modifiable"
+            },
+            "study_list_required": {
+              "value": "true",
+              "api_type": "modifiable"
+            },
+            "has_honors_recognition": {
+              "value": "false",
+              "api_type": "modifiable"
+            },
+            "maximum_years_to_complete": {
+              "value": "5",
+              "api_type": "modifiable"
+            },
+            "program_hours": {
+              "value": "30",
+              "api_type": "modifiable"
+            },
+            "minimum_program_hours": {
+              "value": "30",
+              "api_type": "modifiable"
+            },
+            "maximum_program_hours": {
+              "value": "30",
+              "api_type": "modifiable"
+            },
+            "maximum_requirement_hours": {
+              "value": "0",
+              "api_type": "modifiable"
+            },
+            "maximum_requirement_classes": {
+              "value": "0",
+              "api_type": "modifiable"
+            },
+            "prior_program_id": {
+              "value": "20005",
+              "api_type": "read-only"
+            },
+            "comments": {
+              "value": "Comments...",
+              "api_type": "modifiable"
+            },
+            "date_time_updated": {
+              "value": "2001-01-01",
+              "api_type": "read-only"
+            },
+            "updated_by_id": {
+              "value": "111111111",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "updated_by_name": {
+              "value": "John Smith",
+              "api_type": "related",
+              "related_resource": "identity"
             }
-          ]
-        }
-      ]
-    },
-    "section_headers": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/section_headers",
-          "method": "GET"
-        },
-        { "rel": "section_headers.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/section_headers?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "section_headers.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/section_headers",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
+          }
+        ]
       },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/section_headers/?",
-            "method": "GET"
+      "assigned_teaching_areas": {
+        "links": {
+          "assigned_teaching_areas.info": {
+            "rel": "self",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_teaching_areas?page_start=51,page_size=50",
+            "method": "GET",
+            "title": "academicunits.getAssignedTeachingAreas"
           },
-          { "rel": "section_headers.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/section_headers/?",
-            "method": "DELETE"
+          "assigned_teaching_areas.prev": {
+            "rel": "assigned_teaching_areas.prev",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_teaching_areas?page_start=1,page_size=50",
+            "method": "GET",
+            "title": "academicunits.getAssignedTeachingAreas"
           },
-          { "rel": "section_headers.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/section_headers/?",
-            "method": "PUT"
+          "assigned_teaching_areas.next": {
+            "rel": "assigned_teaching_areas.next",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_teaching_areas?page_start=101,page_size=50",
+            "method": "GET",
+            "title": "academicunits.getAssignedTeachingAreas"
+          },
+          "assigned_teaching_areas.add": {
+            "rel": "assigned_teaching_areas.add",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_teaching_areas",
+            "method": "POST",
+            "title": "academicunits.addAssignedTeachingArea"
           }
-        ],
-          "header_type": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "type": "",
-            "key": true
-          },
-          "dept_name":{
-            "value": "?",
-            "api_type": "?"
-          }
-          "sequence_number":{
-            "value": "?",
-            "api_type": "?"
-          }
-          "message_type":{
-            "value": "?",
-            "api_type": "?"
-          }
-          "display_flag":{
-            "value": "?",
-            "api_type": "?"
-          }
-          "header_text":{
-            "value": "?",
-            "api_type": "?"
-          }
-          "updated_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "updated_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          }
-        }
-      ]
-    },
-    "supplemental_counts": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/supplemental_counts",
-          "method": "GET"
         },
-        { "rel": "supplemental_counts.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/supplemental_counts",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
+        "metadata": {
+          "collection_size": 3,
+          "page_start": 1,
+          "page_end": 3,
+          "page_size": 50,
+          "default_page_size": 50,
+          "max_page_size": 1000
+        },
+        "values": [
+          {
+            "links": {
+              "assigned_teaching_areas.info": {
+                "rel": "self",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_teaching_areas/IPT&amp;T",
+                "method": "GET",
+                "title": "assigned_teaching_areas.getAssignedTeachingArea"
+              },
+              "assigned_teaching_areas.modify": {
+                "rel": "assigned_teaching_areas.modify",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_teaching_areas/IPT&amp;T",
+                "method": "PUT",
+                "title": "assigned_teaching_areas.modifyAssignedTeachingArea"
+              },
+              "assigned_teaching_areas.delete": {
+                "rel": "assigned_teaching_areas.delete",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/assigned_teaching_areas/IPT&amp;T",
+                "method": "DELETE",
+                "title": "assigned_teaching_areas.deleteAssignedTeachingArea"
+              },
+              "identity.info": {
+                "rel": "identity.info",
+                "href": "https://api.byu.edu/byuapi/identity/111111111",
+                "method": "GET",
+                "title": "assigned_teaching_areas.getUpdatedBy"
+              }
+            },
+            "name": {
+              "value": "IP&T",
+              "api_type": "modifiable",
+              "key": true
+            },
+            "long_name": {
+              "value": "Instructional Psychology and Technology",
+              "api_type": "modifiable"
+            },
+            "effective_date": {
+              "value": "1997-09-02",
+              "api_type": "modifiable"
+            },
+            "expired_date": {
+              "value": "2099-12-31",
+              "api_type": "modifiable"
+            },
+            "date_time_updated": {
+              "value": "2001-01-01",
+              "api_type": "read-only"
+            },
+            "updated_by_id": {
+              "value": "111111111",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "updated_by_name": {
+              "value": "John Smith",
+              "api_type": "related",
+              "related_resource": "identity"
+            }
+          }
+        ]
       },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/supplemental_counts/?",
-            "method": "GET"
+      "contacts": {
+        "links": {
+          "contacts.info": {
+            "rel": "self",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/contacts?page_start=51,page_size=50",
+            "method": "GET",
+            "title": "contacts.getContacts"
           },
-          { "rel": "supplemental_counts.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/supplemental_counts/?",
-            "method": "DELETE"
+          "contacts.prev": {
+            "rel": "contacts.prev",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/contacts?page_start=1,page_size=50",
+            "method": "GET",
+            "title": "contacts.getContacts"
           },
-          { "rel": "supplemental_counts.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/supplemental_counts/?",
-            "method": "PUT"
+          "contacts.next": {
+            "rel": "contacts.next",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/contacts?page_start=101,page_size=50",
+            "method": "GET",
+            "title": "contacts.getContacts"
+          },
+          "contacts.add": {
+            "rel": "contacts.add",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/contacts",
+            "method": "POST",
+            "title": "contacts.addContact"
           }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "count_category": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "count_type": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "count_catsize": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "total_enrolled": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "add_count_cum": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "drop_count_cum": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "total_requests": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "updated_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "updated_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
+        },
+        "metadata": {
+          "collection_size": 3,
+          "page_start": 1,
+          "page_end": 3,
+          "page_size": 50,
+          "default_page_size": 50,
+          "max_page_size": 1000
+        },
+        "values": [
+          {
+            "links": {
+              "contacts.info": {
+                "rel": "self",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/contacts/CHAIR,1997-09-02",
+                "method": "GET",
+                "title": "contacts.getContact"
+              },
+              "contacts.modify": {
+                "rel": "contacts.modify",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/contacts/CHAIR,1997-09-02",
+                "method": "PUT",
+                "title": "contacts.getContact"
+              },
+              "contacts.delete": {
+                "rel": "contacts.delete",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115/contacts/CHAIR,1997-09-02",
+                "method": "DELETE",
+                "title": "contacts.getContact"
+              },
+              "identity.info": {
+                "rel": "identity.info",
+                "href": "https://api.byu.edu/byuapi/identity/111111111",
+                "method": "GET",
+                "title": "contacts.getPerson"
+              }
+            },
+            "contact_type": {
+              "value": "CHAIR",
+              "api_type": "modifiable",
+              "key": true
+            },
+            "effective_date": {
+              "value": "1997-09-02",
+              "api_type": "modifiable",
+              "key": true
+            },
+            "expired_date": {
+              "value": "2099-12-31",
+              "api_type": "modifiable"
+            },
+            "person_id": {
+              "value": "111111111",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "person_name": {
+              "value": "Charles Graham",
+              "api_type": "related",
+              "related_resource": "identity"
+            }
           }
-        }
-      ]
-    },
-    "waitlisted_students": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_students",
-          "method": "GET"
-        },
-        { "rel": "waitlisted_students.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_students?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "waitlisted_students.add",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_students",
-          "method": "PUT"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
+        ]
       },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_students/?",
-            "method": "GET"
+      "sub_units": {
+        "links": {
+          "sub_units.info": {
+            "rel": "self",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/sub_units?page_start=51,page_size=50",
+            "method": "GET",
+            "title": "sub_units.getSubUnits"
           },
-          { "rel": "waitlisted_students.delete",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_students/?",
-            "method": "DELETE"
+          "sub_units.prev": {
+            "rel": "sub_units.prev",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/sub_units?page_start=1,page_size=50",
+            "method": "GET",
+            "title": "sub_units.getSubUnits"
           },
-          { "rel": "waitlisted_students.modify",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_students/?",
-            "method": "PUT"
+          "sub_units.next": {
+            "rel": "sub_units.next",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/sub_units?page_start=101,page_size=50",
+            "method": "GET",
+            "title": "sub_units.getSubUnits"
+          },
+          "sub_units.add": {
+            "rel": "sub_units.add",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115/sub_units",
+            "method": "POST",
+            "title": "sub_units.addSubUnit"
           }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "person_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "student_name": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "date_requested": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "sequencer": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "teaching_area": {
-            "value": "NURS",
-            "api_type": "related",
-            "related_resource": "courses"
-            "description": "Nursing",
-            "domain": "https://api.byu.edu/byuapi/meta/teaching_areas"
-          },
-          "catalog_number": {
-            "value": "295",
-            "api_type": "related",
-            "related_resource": "courses"
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_numbers?year_term=20151&teaching_area=NURS"
-          },
-          "catalog_suffix": {
-            "value": "",
-            "api_type": "related",
-            "related_resource": "courses",
-            "description": "",
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_suffixes"
-          },
-          "credit_hours": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "size_mix_category": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "added_by_id": {
-            "value": "585241162",
-            "api_type": "operational",
-            "description": "Bugs Bunny Ithaca"
-          },
-          "added_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
-          },
-          "add_error_message":{
-            "value": "?",
-            "api_type": "?"
-          },
-          "error_dttm": {
-            "value": "2014-05-11T13:45:53.20Z",
-            "api_type": "operational"
+        },
+        "metadata": {
+          "collection_size": 3,
+          "page_start": 1,
+          "page_end": 3,
+          "page_size": 50,
+          "default_page_size": 50,
+          "max_page_size": 1000
+        },
+        "values": [
+          {
+            "links": {
+              "academicunits.info": {
+                "rel": "self",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115",
+                "method": "GET",
+                "title": "academicunits.getAcademicUnit"
+              },
+              "academicunits.modify": {
+                "rel": "self",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115",
+                "method": "PUT",
+                "title": "academicunits.modifyAcademicUnit"
+              },
+              "academicunits.delete": {
+                "rel": "self",
+                "href": "https://api.byu.edu/byuapi/academicunits/1115",
+                "method": "DELETE",
+                "title": "academicunits.deleteAcademicUnit"
+              },
+              "academicunitsparent.info": {
+                "rel": "academicunitsparent.info",
+                "href": "https://api.byu.edu/byuapi/academicunits/1008",
+                "method": "GET",
+                "title": "academicunits.getAcademicUnitParent"
+              }
+            },
+            "academic_unit_id": {
+              "value": "1115",
+              "api_type": "system",
+              "key": true,
+              "display_label": "Unit ID"
+            },
+            "effective_date": {
+              "value": "2001-01-25",
+              "api_type": "modifiable",
+              "display_label": "Effective"
+            },
+            "expired_date": {
+              "value": "2999-12-31",
+              "api_type": "modifiable"
+            },
+            "unit_name": {
+              "value": "Instructional Psych&Tech",
+              "api_type": "modifiable"
+            },
+            "official_name": {
+              "value": "Instructional Psychology and Technology, Department of",
+              "api_type": "modifiable"
+            },
+            "unit_type": {
+              "value": "DEPARTMENT",
+              "api_type": "modifiable",
+              "domain": "https://api.byu.edu/byuapi/meta/academic_unit_types"
+            },
+            "parent_academic_unit_id": {
+              "value": "1008",
+              "api_type": "related",
+              "related_resource": "academicunitsparent"
+            },
+            "parent_academic_unit_name": {
+              "value": "Education, David O. McKay School of",
+              "api_type": "related",
+              "related_resource": "academicunitsparent"
+            },
+            "old_unit_id": {
+              "value": "3554",
+              "api_type": "modifiable"
+            }
           }
-        }
-      ]
-    },
-    "enrolled_student_logs": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_student_logs",
-          "method": "GET"
-        },
-        { "rel": "enrolled_student_logs.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_student_logs?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "enrolled_student_logs.prev",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_student_logs?page_start=1,page_size=50",
-          "method": "GET"
-        },
-        { "rel": "enrolled_student_logs.next",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_student_logs?page_start=101,page_size=50",
-          "method": "GET"
-        }
-      ],
-      "metadata": {
-        "collection_size": 105,
-        "page_start": "1,
-        "page_end": 50,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/enrolled_student_logs/585241162,?",
-            "method": "GET"
-          },
-          { "rel": "students.info",
-            "href": "https://api.byu.edu/byuapi/students/585241162",
-            "method": "GET"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "person_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "credit_hours": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "grade": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "student_name": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "log_action": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "log_by_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "log_dttm": {
-            "value": "?",
-            "api_type": "?"
-          }
-        }
-      ]
-    },
-    "waitlisted_student_logs": {
-      "links": [
-        { "rel": "self",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_student_logs",
-          "method": "GET"
-        },
-        { "rel": "waitlisted_student_logs.filter",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_student_logs?{query_parameters}",
-          "method": "GET"
-        },
-        { "rel": "waitlisted_student_logs.prev",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_student_logs?page_start=1,page_size=50",
-          "method": "GET"
-        },
-        { "rel": "waitlisted_student_logs.next",
-          "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_student_logs?page_start=101,page_size=50",
-          "method": "GET"
-        }
-      ],
-      "metadata": {
-        "collection_size": 3,
-        "page_start": 1,
-        "page_end": 3,
-        "page_size": 50,
-        "default_page_size": 50,
-        "max_page_size": 1000
-      },
-      "values": [
-        { "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/20151,11463,000,001/waitlisted_student_logs/585241162",
-            "method": "GET"
-          },
-          { "rel": "students.info",
-            "href": "https://api.byu.edu/byuapi/students/585241162",
-            "method": "GET"
-          }
-        ],
-          "credit_institution": {
-            "value": "BYU PROVO",
-            "api_type": "",
-            "key": true,
-            "description": "BYU Provo Campus",
-            "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-          },
-          "year_term": {
-            "value": "20151",
-            "api_type": "",
-            "key": true,
-            "description": "Winter 2015",
-            "long_description": "Winter Semester 2015",
-            "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-          },
-          "curriculum_id": {
-            "value": "11463",
-            "api_type": "",
-            "key": true
-          },
-          "title_code": {
-            "value": "000",
-            "api_type": "",
-            "key": true
-          },
-          "section_number": {
-            "value": "001",
-            "api_type": "",
-            "key": true
-          },
-          "person_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "student_name": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "teaching_area": {
-            "value": "NURS",
-            "api_type": "related",
-            "related_resource": "courses"
-            "description": "Nursing",
-            "domain": "https://api.byu.edu/byuapi/meta/teaching_areas"
-          },
-          "catalog_number": {
-            "value": "295",
-            "api_type": "related",
-            "related_resource": "courses"
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_numbers?year_term=20151&teaching_area=NURS"
-          },
-          "catalog_suffix": {
-            "value": "",
-            "api_type": "related",
-            "related_resource": "courses",
-            "description": "",
-            "domain": "https://api.byu.edu/byuapi/meta/catalog_suffixes"
-          },
-          "credit_hours": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "log_action": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "log_by_id": {
-            "value": "?",
-            "api_type": "?"
-          },
-          "log_dttm": {
-            "value": "?",
-            "api_type": "?"
-          }
-        }
-      ]
+        ]
+      }
     }
-  }
   ]
-}
 }
