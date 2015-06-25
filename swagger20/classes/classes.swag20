@@ -681,15 +681,15 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/add_permission_codes"
             }
           },
           "204": {
-            "description": "No class found that matches key values",
+            "description": "page_start is too large for the collection returned",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/add_permission_codes"
             }
           },
           "400": {
@@ -852,15 +852,15 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/add_permission_code"
             }
           },
           "204": {
             "description": "No class/student combination found that matches key values",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/add_permission_codes"
             }
           },
           "400": {
@@ -1120,7 +1120,7 @@
           "200": {
             "description": "A collection of Classes",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/assigned_instructors"
             }
           },
           "default": {
@@ -1178,9 +1178,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/class_limitations"
             }
           },
           "default": {
@@ -1238,9 +1238,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/class_schedules"
             }
           },
           "default": {
@@ -1298,9 +1298,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/course_limitations"
             }
           },
           "default": {
@@ -1358,9 +1358,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/enrolled_students"
             }
           },
           "default": {
@@ -1418,9 +1418,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/linked_classes"
             }
           },
           "default": {
@@ -1478,9 +1478,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/notes"
             }
           },
           "default": {
@@ -1538,9 +1538,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/permission_to_add_codes"
             }
           },
           "default": {
@@ -1598,9 +1598,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/prerequisites"
             }
           },
           "default": {
@@ -1658,9 +1658,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/section_headers"
             }
           },
           "default": {
@@ -1718,9 +1718,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/supplemental_counts"
             }
           },
           "default": {
@@ -1778,9 +1778,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/waitlisted_students"
             }
           },
           "default": {
@@ -1792,7 +1792,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-students-logs": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-student-logs": {
       "get": {
         "summary": "Classes",
         "description": "Returns the log records for enrollment actions for a specific AIM Class\n",
@@ -1838,9 +1838,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/enrolled_student_logs"
             }
           },
           "default": {
@@ -1852,7 +1852,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-students-logs": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-student-logs": {
       "get": {
         "summary": "Classes",
         "description": "Returns the log records for wait list actions for a specific AIM Class\n",
@@ -1898,9 +1898,9 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "",
             "schema": {
-              "$ref": "#/definitions/classes"
+              "$ref": "#/definitions/waitlisted_student_logs"
             }
           },
           "default": {
@@ -1934,13 +1934,67 @@
         "values": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/item.classes"
+            "$ref": "#/definitions/class"
           }
         }
       }
     },
-    "item.classes": {
-      "type": "string"
+    "class": {
+      "description": "A specific class",
+      "type": "object",
+      "required": [
+        "basic"
+      ],
+      "properties": {
+        "basic": {
+          "$ref": "#/definitions/basic"
+        },
+        "add_permission_codes": {
+          "$ref": "#/definitions/add_permission_codes"
+        },
+        "assigned_instructors": {
+          "$ref": "#/definitions/assigned_instructors"
+        },
+        "class_limitations": {
+          "$ref": "#/definitions/class_limitations"
+        },
+        "class_schedules": {
+          "$ref": "#/definitions/class_schedules"
+        },
+        "course_limitations": {
+          "$ref": "#/definitions/course_limitations"
+        },
+        "enrolled_students": {
+          "$ref": "#/definitions/enrolled_students"
+        },
+        "linked_classes": {
+          "$ref": "#/definitions/linked_classes"
+        },
+        "notes": {
+          "$ref": "#/definitions/notes"
+        },
+        "permission_to_add_codes": {
+          "$ref": "#/definitions/permission_to_add_codes"
+        },
+        "prerequisites": {
+          "$ref": "#/definitions/prerequisites"
+        },
+        "section_headers": {
+          "$ref": "#/definitions/section_headers"
+        },
+        "supplemental_counts": {
+          "$ref": "#/definitions/supplemental_counts"
+        },
+        "waitlisted_students": {
+          "$ref": "#/definitions/waitlisted_students"
+        },
+        "enrolled_student_logs": {
+          "$ref": "#/definitions/enrolled_student_logs"
+        },
+        "waitlisted_student_logs": {
+          "$ref": "#/definitions/waitlisted_student_logs"
+        }
+      }
     },
     "basic": {
       "description": "Class Basic Item",
@@ -3751,7 +3805,7 @@
       "properties": {
         "value": {
           "type": "string",
-          "maxLength": 3
+          "maxLength": 30
         },
         "api_type": {
           "type": "string",
@@ -4103,7 +4157,7 @@
       "properties": {
         "value": {
           "type": "string",
-          "maxLength": 7
+          "maxLength": 1
         },
         "api_type": {
           "type": "string",
