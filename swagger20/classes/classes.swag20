@@ -628,7 +628,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/add-permission-codes": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/add-approved-students": {
       "get": {
         "summary": "Classes",
         "description": "Returns the add permission codes for a specific AIM Class",
@@ -806,7 +806,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/add-permission-codes/{student_id}": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/add-approved-students/{student_id}": {
       "get": {
         "summary": "Classes",
         "description": "Returns the add permission codes for a specific AIM Class and student",
@@ -860,7 +860,7 @@
           "204": {
             "description": "No class/student combination found that matches key values",
             "schema": {
-              "$ref": "#/definitions/add_permission_codes"
+              "$ref": "#/definitions/add_approved_students"
             }
           },
           "400": {
@@ -870,7 +870,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to view add_permission_codes",
+            "description": "Authentication required to view add_approved_students",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -958,7 +958,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to delete add_permission_codes",
+            "description": "Authentication required to delete add_approved_students",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -1046,7 +1046,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to modify add_permission_codes",
+            "description": "Authentication required to modify add_approved_students",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -1192,7 +1192,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/class-schedules": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/assigned-schedules": {
       "get": {
         "summary": "Classes",
         "description": "Returns the schedules for a specific AIM Class",
@@ -1240,7 +1240,7 @@
           "200": {
             "description": "Collection Retrieved",
             "schema": {
-              "$ref": "#/definitions/class_schedules"
+              "$ref": "#/definitions/assigned_schedules"
             }
           },
           "default": {
@@ -1949,8 +1949,8 @@
         "basic": {
           "$ref": "#/definitions/basic"
         },
-        "add_permission_codes": {
-          "$ref": "#/definitions/add_permission_codes"
+        "add_approved_students": {
+          "$ref": "#/definitions/add_approved_students"
         },
         "assigned_instructors": {
           "$ref": "#/definitions/assigned_instructors"
@@ -2141,7 +2141,7 @@
         }
       }
     },
-    "add_permission_codes": {
+    "add_approved_students": {
       "description": "A collection of add permission codes",
       "type": "object",
       "required": [
@@ -2320,7 +2320,7 @@
         }
       }
     },
-    "class_schedules": {
+    "assigned_schedules": {
       "description": "Schedule for a class",
       "type": "object",
       "required": [
@@ -3268,7 +3268,7 @@
             "enum": [
               "basic",
               "enrollment_counts",
-              "add_permission_codes",
+              "add_approved_students",
               "assigned_instructors",
               "class_limitations",
               "class_schedules",
@@ -3293,7 +3293,7 @@
             "enum": [
               "basic",
               "enrollment_counts",
-              "add_permission_codes",
+              "add_approved_students",
               "assigned_instructors",
               "class_limitations",
               "class_schedules",
@@ -3318,7 +3318,7 @@
             "enum": [
               "basic",
               "enrollment_counts",
-              "add_permission_codes",
+              "add_approved_students",
               "assigned_instructors",
               "class_limitations",
               "class_schedules",
