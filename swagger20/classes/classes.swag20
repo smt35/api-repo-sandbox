@@ -1792,7 +1792,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-students-logs": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-student-logs": {
       "get": {
         "summary": "Classes",
         "description": "Returns the log records for enrollment actions for a specific AIM Class\n",
@@ -1852,7 +1852,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-students-logs": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-student-logs": {
       "get": {
         "summary": "Classes",
         "description": "Returns the log records for wait list actions for a specific AIM Class\n",
@@ -1934,13 +1934,67 @@
         "values": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/item.classes"
+            "$ref": "#/definitions/class"
           }
         }
       }
     },
-    "item.classes": {
-      "type": "string"
+    "class": {
+      "description": "A specific class",
+      "type": "object",
+      "required": [
+        "basic"
+      ],
+      "properties": {
+        "basic": {
+          "$ref": "#/definitions/basic"
+        },
+        "add_permission_codes": {
+          "$ref": "#/definitions/add_permission_codes"
+        },
+        "assigned_instructors": {
+          "$ref": "#/definitions/assigned_instructors"
+        },
+        "class_limitations": {
+          "$ref": "#/definitions/class_limitations"
+        },
+        "class_schedules": {
+          "$ref": "#/definitions/class_schedules"
+        },
+        "course_limitations": {
+          "$ref": "#/definitions/course_limitations"
+        },
+        "enrolled_students": {
+          "$ref": "#/definitions/enrolled_students"
+        },
+        "linked_classes": {
+          "$ref": "#/definitions/linked_classes"
+        },
+        "notes": {
+          "$ref": "#/definitions/notes"
+        },
+        "permission_to_add_codes": {
+          "$ref": "#/definitions/permission_to_add_codes"
+        },
+        "prerequisites": {
+          "$ref": "#/definitions/prerequisites"
+        },
+        "section_headers": {
+          "$ref": "#/definitions/section_headers"
+        },
+        "supplemental_counts": {
+          "$ref": "#/definitions/supplemental_counts"
+        },
+        "waitlisted_students": {
+          "$ref": "#/definitions/waitlisted_students"
+        },
+        "enrolled_student_logs": {
+          "$ref": "#/definitions/enrolled_student_logs"
+        },
+        "waitlisted_student_logs": {
+          "$ref": "#/definitions/waitlisted_student_logs"
+        }
+      }
     },
     "basic": {
       "description": "Class Basic Item",
