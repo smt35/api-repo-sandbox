@@ -2837,10 +2837,63 @@
       "description": "",
       "type": "object",
       "required": [
-
+        "credit_institution",
+        "year_term",
+        "curriculum_id",
+        "title_code",
+        "section_number",
+        "category",
+        "type"
       ],
       "properties": {
-
+        "credit_institution": {
+          "$ref": "#/definitions/credit_institution"
+        },
+        "year_term": {
+          "$ref": "#/definitions/year_term"
+        },
+        "curriculum_id": {
+          "$ref": "#/definitions/curriculum_id"
+        },
+        "title_code": {
+          "$ref": "#/definitions/title_code"
+        },
+        "section_number": {
+          "$ref": "#/definitions/section_number"
+        },
+        "category": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "type": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "size": {
+          "type": "integer"
+        },
+        "total_enrolled": {
+          "type": "integer"
+        },
+        "number_of_adds": {
+          "type": "integer"
+        },
+        "number_of_drops": {
+          "type": "integer"
+        },
+        "total_requests": {
+          "type": "integer"
+        },
+        "updated_by_id": {
+          "$ref": "#/definitions/updated_by_id"
+        },
+        "date_time_updated": {
+          "$ref": "#/definitions/date_time_updated"
+        },
+        "updated_by_name": {
+          "type": "string",
+          "maxLength": 50
+        }
       }
     },
     "summary": {
