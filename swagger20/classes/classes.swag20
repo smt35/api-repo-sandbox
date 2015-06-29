@@ -1852,6 +1852,66 @@
         }
       }
     },
+    "/{year_term},{curriculum_id},{title_code},{section_number}/enrollment-counts": {
+      "get": {
+        "summary": "Classes",
+        "description": "",
+        "parameters": [
+          {
+            "name": "year_term",
+            "in": "path",
+            "required": true,
+            "description": "Enrollment period in which the class is offered",
+            "type": "string"
+          },
+          {
+            "name": "curriculum_id",
+            "in": "path",
+            "required": true,
+            "description": "The curriculum designator for the course",
+            "type": "string"
+          },
+          {
+            "name": "title_code",
+            "in": "path",
+            "required": true,
+            "description": "Differentiates the different offerings of the course",
+            "type": "string"
+          },
+          {
+            "name": "section_number",
+            "in": "path",
+            "required": true,
+            "description": "The section designator",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the identity collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Classes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Collection Retrieved",
+            "schema": {
+              "$ref": "#/definitions/enrollment_counts"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
     "/{year_term},{curriculum_id},{title_code},{section_number}/waitlisted-students": {
       "get": {
         "summary": "Classes",
@@ -2900,10 +2960,28 @@
       "description": "",
       "type": "object",
       "required": [
-
+        "credit_institution",
+        "year_term",
+        "curriculum_id",
+        "title_code",
+        "section_number"
       ],
       "properties": {
-
+        "credit_institution": {
+          "$ref": "#/definitions/credit_institution"
+        },
+        "year_term": {
+          "$ref": "#/definitions/year_term"
+        },
+        "curriculum_id": {
+          "$ref": "#/definitions/curriculum_id"
+        },
+        "title_code": {
+          "$ref": "#/definitions/title_code"
+        },
+        "section_number": {
+          "$ref": "#/definitions/section_number"
+        }
       }
     },
     "notes": {
@@ -3194,6 +3272,34 @@
         },
         "date_time_updated": {
           "$ref": "#/definitions/date_time_updated"
+        }
+      }
+    },
+    "enrollment_counts": {
+      "description": "",
+      "type": "object",
+      "required": [
+        "credit_institution",
+        "year_term",
+        "curriculum_id",
+        "title_code",
+        "section_number"
+      ],
+      "properties": {
+        "credit_institution": {
+          "$ref": "#/definitions/credit_institution"
+        },
+        "year_term": {
+          "$ref": "#/definitions/year_term"
+        },
+        "curriculum_id": {
+          "$ref": "#/definitions/curriculum_id"
+        },
+        "title_code": {
+          "$ref": "#/definitions/title_code"
+        },
+        "section_number": {
+          "$ref": "#/definitions/section_number"
         }
       }
     },
