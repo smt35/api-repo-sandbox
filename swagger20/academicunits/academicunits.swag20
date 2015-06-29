@@ -640,7 +640,7 @@
         }
       }
     },
-    "/{academic_unit_id}": {
+    "/{academic_unit_id},{academic_unit_effective_date}": {
       "get": {
         "summary": "An Academic Unit",
         "description": "Returns a specific Academic Unit",
@@ -652,6 +652,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "field_sets",
@@ -720,6 +728,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           }
         ],
         "tags": [
@@ -781,6 +797,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "academic_unit",
@@ -858,6 +882,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           }
         ],
         "tags": [
@@ -885,7 +917,7 @@
         }
       }
     },
-    "/{academic_unit_id}/assigned_programs": {
+    "/{academic_unit_id},{academic_unit_effective_date}/assigned_programs": {
       "get": {
         "summary": "Academic Programs assigned to an Academic Unit",
         "description": "Retrieves a collection of Academic Programs for a specific Academic Unit",
@@ -897,6 +929,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "page_start",
@@ -974,6 +1014,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "academic_program",
             "in": "body",
             "description": "The Academic Program to be added",
@@ -1036,6 +1084,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           }
         ],
         "tags": [
@@ -1063,7 +1119,7 @@
         }
       }
     },
-    "/{academic_unit_id}/assigned_programs/{academic_program_id}": {
+    "/{academic_unit_id},{academic_unit_effective_date}/assigned_programs/{academic_program_id}": {
       "get": {
         "summary": "An Academic Program assigned to an Academic Unit",
         "description": "Retrieves a specific Academic Program",
@@ -1075,6 +1131,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "academic_program_id",
@@ -1137,6 +1201,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "academic_program_id",
@@ -1210,6 +1282,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "academic_program_id",
             "in": "path",
             "required": true,
@@ -1263,6 +1343,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "academic_program_id",
             "in": "path",
             "required": true,
@@ -1295,7 +1383,7 @@
         }
       }
     },
-    "/{academic_unit_id}/teaching_areas": {
+    "/{academic_unit_id},{academic_unit_effective_date}/teaching_areas": {
       "get": {
         "summary": "Teaching Areas assigned to an Academic Unit",
         "description": "Retrieves a collection of Teaching Areas for a specific Academic Unit",
@@ -1307,6 +1395,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "page_start",
@@ -1384,6 +1480,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "teaching_area",
             "in": "body",
             "description": "The Teaching Area to be added",
@@ -1446,6 +1550,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           }
         ],
         "tags": [
@@ -1473,7 +1585,7 @@
         }
       }
     },
-    "/{academic_unit_id}/assigned_teaching_areas/{teaching_area_name}": {
+    "/{academic_unit_id},{academic_unit_effective_date}/assigned_teaching_areas/{teaching_area_name}": {
       "get": {
         "summary": "A Teaching Area assigned to an Academic Unit",
         "description": "Retrieves a specific Teaching Area",
@@ -1485,6 +1597,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "teaching_area_name",
@@ -1547,6 +1667,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "teaching_area_name",
@@ -1620,6 +1748,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "teaching_area_name",
             "in": "path",
             "required": true,
@@ -1673,6 +1809,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "teaching_area_name",
             "in": "path",
             "required": true,
@@ -1705,7 +1849,7 @@
         }
       }
     },
-    "/{academic_unit_id}/contacts": {
+    "/{academic_unit_id},{academic_unit_effective_date}/contacts": {
       "get": {
         "summary": "Contacts assigned to an Academic Unit",
         "description": "Retrieves a collection of Contacts for a specific Academic Unit",
@@ -1717,6 +1861,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "page_start",
@@ -1794,6 +1946,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "contact",
             "in": "body",
             "description": "The Contact to be added",
@@ -1856,6 +2016,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           }
         ],
         "tags": [
@@ -1883,7 +2051,7 @@
         }
       }
     },
-    "/{academic_unit_id}/contacts/{contact_type},{effective_date}": {
+    "/{academic_unit_id},{academic_unit_effective_date}/contacts/{contact_type},{contact_effective_date}": {
       "get": {
         "summary": "A contact assigned to an Academic Unit",
         "description": "Retrieves a specific Contact",
@@ -1897,6 +2065,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "contact_type",
             "in": "path",
             "required": true,
@@ -1904,7 +2080,7 @@
             "type": "string"
           },
           {
-            "name": "effective_date",
+            "name": "contact_effective_date",
             "in": "path",
             "required": true,
             "description": "The effective date of the contact type",
@@ -1966,6 +2142,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "contact_type",
             "in": "path",
             "required": true,
@@ -1973,7 +2157,7 @@
             "type": "string"
           },
           {
-            "name": "effective_date",
+            "name": "contact_effective_date",
             "in": "path",
             "required": true,
             "description": "The effective date of the contact type",
@@ -2044,6 +2228,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "contact_type",
             "in": "path",
             "required": true,
@@ -2051,7 +2243,7 @@
             "type": "string"
           },
           {
-            "name": "effective_date",
+            "name": "contact_effective_date",
             "in": "path",
             "required": true,
             "description": "The effective date of the contact type",
@@ -2104,6 +2296,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "contact_type",
             "in": "path",
             "required": true,
@@ -2111,7 +2311,7 @@
             "type": "string"
           },
           {
-            "name": "effective_date",
+            "name": "contact_effective_date",
             "in": "path",
             "required": true,
             "description": "The effective date of the contact type",
@@ -2143,7 +2343,7 @@
         }
       }
     },
-    "/{academic_unit_id}/sub_units": {
+    "/{academic_unit_id},{academic_unit_effective_date}/sub_units": {
       "get": {
         "summary": "Subordinate Academic Units assigned to an Academic Unit",
         "description": "Retrieves a collection of subordinate Academic Units for a specific Academic Unit",
@@ -2155,6 +2355,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "page_start",
@@ -2232,6 +2440,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "sub_unit",
             "in": "body",
             "description": "The subordinate Academic Unit to be added",
@@ -2294,6 +2510,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           }
         ],
         "tags": [
@@ -2321,7 +2545,7 @@
         }
       }
     },
-    "/{academic_unit_id}/sub_units/{sub_unit_id}": {
+    "/{academic_unit_id},{academic_unit_effective_date}/sub_units/{sub_unit_id}": {
       "get": {
         "summary": "A subordinate Academic Unit assigned to an Academic Unit",
         "description": "Retrieves a specific subordinate Academic Unit",
@@ -2333,6 +2557,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "sub_unit_id",
@@ -2395,6 +2627,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "sub_unit_id",
@@ -2468,6 +2708,14 @@
             "type": "string"
           },
           {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
             "name": "sub_unit_id",
             "in": "path",
             "required": true,
@@ -2519,6 +2767,14 @@
             "required": true,
             "description": "The specific Academic Unit ID",
             "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
           },
           {
             "name": "sub_unit_id",

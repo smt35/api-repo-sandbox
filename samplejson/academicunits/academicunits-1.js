@@ -62,38 +62,39 @@
         "links": {
           "academicunits.info": {
             "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/1115",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115,2001-01-25",
             "method": "GET",
             "title": "academicunits.getAcademicUnit"
           },
           "academicunits.modify": {
             "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/1115",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115,2001-01-25",
             "method": "PUT",
             "title": "academicunits.modifyAcademicUnit"
           },
           "academicunits.delete": {
             "rel": "self",
-            "href": "https://api.byu.edu/byuapi/academicunits/1115",
+            "href": "https://api.byu.edu/byuapi/academicunits/1115,2001-01-25",
             "method": "DELETE",
             "title": "academicunits.deleteAcademicUnit"
           },
           "academicunitsparent.info": {
             "rel": "academicunitsparent.info",
-            "href": "https://api.byu.edu/byuapi/academicunits/1008",
+            "href": "https://api.byu.edu/byuapi/academicunits/1008,1997-09-02",
             "method": "GET",
             "title": "academicunits.getAcademicUnitParent"
           }
         },
         "academic_unit_id": {
           "value": "1115",
-          "api_type": "system",
+          "api_type": "read-only",
           "key": true,
           "display_label": "Unit ID"
         },
         "effective_date": {
           "value": "2001-01-25",
           "api_type": "modifiable",
+          "key": true,
           "display_label": "Effective"
         },
         "expired_date": {
