@@ -2171,8 +2171,8 @@
         "supplemental_counts": {
           "$ref": "#/definitions/supplemental_counts"
         },
-        "enrolled_counts": {
-          "$ref": "#/definitions/enrolled_counts"
+        "enrollment_counts": {
+          "$ref": "#/definitions/enrollment_counts"
         },
         "waitlisted_students": {
           "$ref": "#/definitions/waitlisted_students"
