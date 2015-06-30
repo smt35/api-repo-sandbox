@@ -4580,6 +4580,9 @@
             "read-only",
             "modifiable"
           ]
+        },
+        "key": {
+          "type": "boolean"
         }
       }
     },
