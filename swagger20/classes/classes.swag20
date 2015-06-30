@@ -1312,7 +1312,7 @@
         }
       }
     },
-    "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled_students": {
+    "/{year_term},{curriculum_id},{title_code},{section_number}/enrolled-students": {
       "get": {
         "summary": "Classes",
         "description": "Returns the students enrolled in a specific AIM Class",
@@ -2150,6 +2150,12 @@
         "linked_classes": {
           "$ref": "#/definitions/linked_classes"
         },
+        "size_mixes": {
+          "$ref": "#/definitions/size_mixes"
+        },
+        "summary": {
+          "$ref": "#/definitions/summary"
+        },
         "notes": {
           "$ref": "#/definitions/notes"
         },
@@ -2164,6 +2170,9 @@
         },
         "supplemental_counts": {
           "$ref": "#/definitions/supplemental_counts"
+        },
+        "enrolled_counts": {
+          "$ref": "#/definitions/enrolled_counts"
         },
         "waitlisted_students": {
           "$ref": "#/definitions/waitlisted_students"
