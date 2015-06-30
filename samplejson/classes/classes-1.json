@@ -693,103 +693,106 @@
               "key": true
             },
             "schedule_type": {
-              "value": "?",
-              "api_type": "?"
+              "value": "CLS",
+              "api_type": "read-only",
+              "key": true
             },
             "schedule_id": {
-              "value": "?",
-              "api_type": "?"
+              "value": "BYU PROVO      2015109017001007",
+              "api_type": "read-only",
+              "key": true
             },
             "sequence_number": {
-              "value": "?",
-              "api_type": "?"
+              "value": "1",
+              "api_type": "read-only",
+              "key": true
             },
             "institution": {
-              "value": "?",
-              "api_type": "?"
+              "value": "BYU PROVO",
+              "api_type": "modifiable"
             },
             "building": {
-              "value": "?",
-              "api_type": "?"
+              "value": "HFAC",
+              "api_type": "modifiable"
             },
             "room": {
-              "value": "?",
-              "api_type": "?"
+              "value": "E379",
+              "api_type": "modifiable"
             },
             "days_taught": {
-              "value": "?",
-              "api_type": "?"
+              "value": "TTh",
+              "api_type": "operational"
             },
             "mon": {
-              "value": "?",
-              "api_type": "?"
+              "value": null,
+              "api_type": "modifiable"
             },
             "tue": {
-              "value": "?",
-              "api_type": "?"
+              "value": "T",
+              "api_type": "modifiable"
             },
             "wed": {
-              "value": "?",
-              "api_type": "?"
+              "value": null,
+              "api_type": "modifiable"
             },
             "thu": {
-              "value": "?",
-              "api_type": "?"
+              "value": "R",
+              "api_type": "modifiable"
             },
             "fri": {
-              "value": "?",
-              "api_type": "?"
+              "value": null,
+              "api_type": "modifiable"
             },
             "sat": {
-              "value": "?",
-              "api_type": "?"
+              "value": null,
+              "api_type": "modifiable"
             },
             "sun": {
-              "value": "?",
-              "api_type": "?"
+              "value": null,
+              "api_type": "modifiable"
             },
             "use_start_date": {
-              "value": "?",
-              "api_type": "?"
+              "value": "05 Jan 2015",
+              "api_type": "modifiable"
             },
             "use_end_date": {
-              "value": "?",
-              "api_type": "?"
+              "value": "14 Apr 2015",
+              "api_type": "modifiable"
             },
             "time_taught": {
-              "value": "?",
-              "api_type": "?"
+              "value": "07:00 pm-07:50 pm",
+              "api_type": "operational"
             },
             "begin_time": {
-              "value": "?",
-              "api_type": "?"
+              "value": "1900",
+              "api_type": "modifiable"
             },
             "end_time": {
-              "value": "?",
-              "api_type": "?"
+              "value": "1950",
+              "api_type": "modifiable"
             },
             "status": {
-              "value": "?",
-              "api_type": "?"
+              "value": "C",
+              "api_type": "modifiable"
             },
             "set_up_id": {
-              "value": "?",
-              "api_type": "?"
+              "value": null,
+              "api_type": "modifiable"
             },
             "set_up_name": {
-              "value": "?",
+              "value": null,
               "api_type": "?"
             },
             "set_up_description": {
-              "value": "?",
+              "value": null,
               "api_type": "?"
             },
             "schedule_reason": {
-              "value": "?",
+              "value": null,
               "api_type": "?"
             },
             "updated_by_id": {
-              "value": "585241162",
+              "value": "Rollover",
               "api_type": "operational",
               "description": "Bugs Bunny Ithaca"
             },
@@ -798,8 +801,8 @@
               "api_type": "operational"
             },
             "allow_conflict": {
-              "value": "?",
-              "api_type": "?"
+              "value": "N",
+              "api_type": "modifiable"
             }
           }
         ]
