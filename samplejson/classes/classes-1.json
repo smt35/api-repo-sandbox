@@ -317,106 +317,7 @@
           "api_type": "modifiable"
         }
       },
-      "enrollment_counts": {
-        "links": [
-          { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes",
-            "method": "GET"
-          },
-          { "rel": "add_permission_codes.filter",
-            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes?{query_parameters}",
-            "method": "GET"
-          },
-          { "rel": "add_permission_codes.add",
-            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes",
-            "method": "PUT"
-          }
-        ],
-        "metadata": {
-          "collection_size": 3,
-          "page_start": 1,
-          "page_end": 3,
-          "page_size": 50,
-          "default_page_size": 50,
-          "max_page_size": 1000
-        },
-        "values": [
-          { "links": [
-            { "rel": "self",
-              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes/585241162",
-              "method": "GET"
-            },
-            { "rel": "add_permission_codes.delete",
-              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes/585241162",
-              "method": "DELETE"
-            },
-            { "rel": "students.info",
-              "href": "https://api.byu.edu/byuapi/students/585241162",
-              "method": "GET"
-            }
-          ],
-            "credit_institution": {
-              "value": "BYU PROVO",
-              "api_type": "",
-              "key": true,
-              "description": "BYU Provo Campus",
-              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-            },
-            "year_term": {
-              "value": "20151",
-              "api_type": "",
-              "key": true,
-              "description": "Winter 2015",
-              "long_description": "Winter Semester 2015",
-              "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-            },
-            "curriculum_id": {
-              "value": "11463",
-              "api_type": "",
-              "key": true
-            },
-            "title_code": {
-              "value": "000",
-              "api_type": "",
-              "key": true
-            },
-            "section_number": {
-              "value": "001",
-              "api_type": "",
-              "key": true
-            },
-            "class_size": {
-              "value": 64,
-              "api_type": "modifiable"
-            },
-            "total_enrolled": {
-              "value": 57,
-              "api_type": "derived"
-            },
-            "total_adds": {
-              "value": 57,
-              "api_type": "derived"
-            },
-            "total_drops": {
-              "value": 57,
-              "api_type": "derived"
-            },
-            "total_requests": {
-              "value": 57,
-              "api_type": "derived"
-            },
-            "waitlist_count": {
-              "value": 0,
-              "api_type": "derived"
-            },
-            "unused_permission_codes": {
-              "value": 0,
-              "api_type": "derived"
-            }
-          }
-        ]
-      },
-      "add_permission_codes": {
+      "add_approved_students": {
         "links": [
           { "rel": "self",
             "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes",
@@ -718,7 +619,7 @@
           }
         ]
       },
-      "class_schedules": {
+      "assigned_schedules": {
         "links": [
           { "rel": "self",
             "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/class_schedules",
@@ -1270,6 +1171,189 @@
           }
         ]
       },
+      "size_mixes": {
+        "links": [
+          { "rel": "self",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/size-mixes",
+            "method": "GET"
+          },
+          { "rel": "size-mixes.filter",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/size-mixes?{query_parameters}",
+            "method": "GET"
+          },
+          { "rel": "size-mixes.add",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/size-mixes",
+            "method": "PUT"
+          }
+        ],
+        "metadata": {
+          "collection_size": 3,
+          "page_start": 1,
+          "page_end": 3,
+          "page_size": 50,
+          "default_page_size": 50,
+          "max_page_size": 1000
+        },
+        "values": [
+          { "links": [
+            { "rel": "self",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/size_mixes/?",
+              "method": "GET"
+            },
+            { "rel": "notes.delete",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/size_mixes/?",
+              "method": "DELETE"
+            },
+            { "rel": "notes.modify",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/size_mixes/?",
+              "method": "PUT"
+            }
+          ],
+            "credit_institution": {
+              "value": "BYU PROVO",
+              "api_type": "",
+              "key": true,
+              "description": "BYU Provo Campus",
+              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
+            },
+            "year_term": {
+              "value": "20151",
+              "api_type": "",
+              "key": true,
+              "description": "Winter 2015",
+              "long_description": "Winter Semester 2015",
+              "domain": "https://api.byu.edu/byuapi/meta/year_terms"
+            },
+            "curriculum_id": {
+              "value": "11463",
+              "api_type": "",
+              "key": true
+            },
+            "title_code": {
+              "value": "000",
+              "api_type": "",
+              "key": true
+            },
+            "section_number": {
+              "value": "001",
+              "api_type": "",
+              "key": true
+            },
+            "category": {
+              "value": "?",
+              "api_type": "?"
+            },
+            "type": {
+              "value": "?",
+              "api_type": "?"
+            },
+            "size": {
+              "value": "?",
+              "api_type": "?"
+            },
+            "total_enrolled": {
+              "value": "?",
+              "api_type": "?"
+            },
+            "number_of_adds": {
+              "value": "?",
+              "api_type": "?"
+            },
+            "number_of_drops": {
+              "value": "?",
+              "api_type": "?"
+            },
+            "total_requests": {
+              "value": "?",
+              "api_type": "?"
+            },
+            "updated_by_id": {
+              "value": "585241162",
+              "api_type": "operational",
+              "description": "Bugs Bunny Ithaca"
+            },
+            "date_time_updated": {
+              "value": "2014-05-11T13:45:53.20Z",
+              "api_type": "operational"
+            },
+            "updated_by_name": {
+              "value": "?",
+              "api_type": "?"
+            }
+          }
+        ]
+      },
+      "summary": {
+        "links": [
+          { "rel": "self",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/summary",
+            "method": "GET"
+          },
+          { "rel": "summary.filter",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/summary?{query_parameters}",
+            "method": "GET"
+          },
+          { "rel": "summary.add",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/summary",
+            "method": "PUT"
+          }
+        ],
+        "metadata": {
+          "collection_size": 3,
+          "page_start": 1,
+          "page_end": 3,
+          "page_size": 50,
+          "default_page_size": 50,
+          "max_page_size": 1000
+        },
+        "values": [
+          { "links": [
+            { "rel": "self",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/summary/?",
+              "method": "GET"
+            },
+            { "rel": "notes.delete",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/summary/?",
+              "method": "DELETE"
+            },
+            { "rel": "notes.modify",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/summary/?",
+              "method": "PUT"
+            }
+          ],
+            "credit_institution": {
+              "value": "BYU PROVO",
+              "api_type": "",
+              "key": true,
+              "description": "BYU Provo Campus",
+              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
+            },
+            "year_term": {
+              "value": "20151",
+              "api_type": "",
+              "key": true,
+              "description": "Winter 2015",
+              "long_description": "Winter Semester 2015",
+              "domain": "https://api.byu.edu/byuapi/meta/year_terms"
+            },
+            "curriculum_id": {
+              "value": "11463",
+              "api_type": "",
+              "key": true
+            },
+            "title_code": {
+              "value": "000",
+              "api_type": "",
+              "key": true
+            },
+            "section_number": {
+              "value": "001",
+              "api_type": "",
+              "key": true
+            }
+          }
+        ]
+      },
       "notes": {
         "links": [
           { "rel": "self",
@@ -1772,6 +1856,105 @@
             "date_time_updated": {
               "value": "2014-05-11T13:45:53.20Z",
               "api_type": "operational"
+            }
+          }
+        ]
+      },
+      "enrollment_counts": {
+        "links": [
+          { "rel": "self",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes",
+            "method": "GET"
+          },
+          { "rel": "add_permission_codes.filter",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes?{query_parameters}",
+            "method": "GET"
+          },
+          { "rel": "add_permission_codes.add",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes",
+            "method": "PUT"
+          }
+        ],
+        "metadata": {
+          "collection_size": 3,
+          "page_start": 1,
+          "page_end": 3,
+          "page_size": 50,
+          "default_page_size": 50,
+          "max_page_size": 1000
+        },
+        "values": [
+          { "links": [
+            { "rel": "self",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes/585241162",
+              "method": "GET"
+            },
+            { "rel": "add_permission_codes.delete",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes/585241162",
+              "method": "DELETE"
+            },
+            { "rel": "students.info",
+              "href": "https://api.byu.edu/byuapi/students/585241162",
+              "method": "GET"
+            }
+          ],
+            "credit_institution": {
+              "value": "BYU PROVO",
+              "api_type": "",
+              "key": true,
+              "description": "BYU Provo Campus",
+              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
+            },
+            "year_term": {
+              "value": "20151",
+              "api_type": "",
+              "key": true,
+              "description": "Winter 2015",
+              "long_description": "Winter Semester 2015",
+              "domain": "https://api.byu.edu/byuapi/meta/year_terms"
+            },
+            "curriculum_id": {
+              "value": "11463",
+              "api_type": "",
+              "key": true
+            },
+            "title_code": {
+              "value": "000",
+              "api_type": "",
+              "key": true
+            },
+            "section_number": {
+              "value": "001",
+              "api_type": "",
+              "key": true
+            },
+            "class_size": {
+              "value": 64,
+              "api_type": "modifiable"
+            },
+            "total_enrolled": {
+              "value": 57,
+              "api_type": "derived"
+            },
+            "total_adds": {
+              "value": 57,
+              "api_type": "derived"
+            },
+            "total_drops": {
+              "value": 57,
+              "api_type": "derived"
+            },
+            "total_requests": {
+              "value": 57,
+              "api_type": "derived"
+            },
+            "waitlist_count": {
+              "value": 0,
+              "api_type": "derived"
+            },
+            "unused_permission_codes": {
+              "value": 0,
+              "api_type": "derived"
             }
           }
         ]
