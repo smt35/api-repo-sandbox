@@ -662,36 +662,6 @@
               "method": "GET"
             }
           ],
-            "credit_institution": {
-              "value": "BYU PROVO",
-              "api_type": "",
-              "key": true,
-              "description": "BYU Provo Campus",
-              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
-            },
-            "year_term": {
-              "value": "20151",
-              "api_type": "",
-              "key": true,
-              "description": "Winter 2015",
-              "long_description": "Winter Semester 2015",
-              "domain": "https://api.byu.edu/byuapi/meta/year_terms"
-            },
-            "curriculum_id": {
-              "value": "11463",
-              "api_type": "",
-              "key": true
-            },
-            "title_code": {
-              "value": "000",
-              "api_type": "",
-              "key": true
-            },
-            "section_number": {
-              "value": "001",
-              "api_type": "",
-              "key": true
-            },
             "schedule_type": {
               "value": "CLS",
               "api_type": "read-only",
@@ -707,9 +677,30 @@
               "api_type": "read-only",
               "key": true
             },
+            "year_term": {
+              "value": "20151",
+              "api_type": "read-only",
+              "description": "Winter 2015",
+              "long_description": "Winter Semester 2015",
+              "domain": "https://api.byu.edu/byuapi/meta/year_terms"
+            },
+            "curriculum_id": {
+              "value": "11463",
+              "api_type": "read-only"
+            },
+            "title_code": {
+              "value": "000",
+              "api_type": "read-only"
+            },
+            "section_number": {
+              "value": "001",
+              "api_type": "read-only"
+            },
             "institution": {
               "value": "BYU PROVO",
-              "api_type": "modifiable"
+              "api_type": "modifiable",
+              "description": "BYU Provo Campus",
+              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
             },
             "building": {
               "value": "HFAC",
