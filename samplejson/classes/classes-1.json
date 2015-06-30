@@ -357,14 +357,14 @@
           ],
             "credit_institution": {
               "value": "BYU PROVO",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true,
               "description": "BYU Provo Campus",
               "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
             },
             "year_term": {
               "value": "20151",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true,
               "description": "Winter 2015",
               "long_description": "Winter Semester 2015",
@@ -372,22 +372,22 @@
             },
             "curriculum_id": {
               "value": "11463",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "title_code": {
               "value": "000",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "section_number": {
               "value": "001",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "person_id": {
               "value": "585241162",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "student_name": {
@@ -459,14 +459,14 @@
           ],
             "credit_institution": {
               "value": "BYU PROVO",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true,
               "description": "BYU Provo Campus",
               "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
             },
             "year_term": {
               "value": "20151",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true,
               "description": "Winter 2015",
               "long_description": "Winter Semester 2015",
@@ -474,42 +474,43 @@
             },
             "curriculum_id": {
               "value": "11463",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "title_code": {
               "value": "000",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "section_number": {
               "value": "001",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "instructor_type": {
-              "value": "?",
-              "api_type": "?"
+              "value": "PRIMARY",
+              "api_type": "read-only",
+              "key": true
             },
             "instructor_name": {
-              "value": "?",
-              "api_type": "?"
+              "value": "Hannible, Debbie S",
+              "api_type": "read-only"
             },
             "person_id": {
-              "value": "?",
-              "api_type": "?"
+              "value": "709208562",
+              "api_type": "read-only"
             },
             "byu_id": {
-              "value": "?",
-              "api_type": "?"
+              "value": "090472465",
+              "api_type": "read-only"
             },
             "net_id": {
-              "value": "?",
-              "api_type": "?"
+              "value": "debshan",
+              "api_type": "read-only"
             },
             "email_address": {
-              "value": "?",
-              "api_type": "?"
+              "value": "debshannible@byu.edu",
+              "api_type": "read-only"
             },
             "updated_by_id": {
               "value": "585241162",
