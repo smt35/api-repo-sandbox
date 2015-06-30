@@ -2264,17 +2264,20 @@
         "reg_end_date": {
           "$ref": "#/definitions/reg_end_date"
         },
+        "withdraw_deadline_date": {
+          "$ref": "#/definitions/withdraw_deadline_date"
+        },
         "control_mix_date": {
           "$ref": "#/definitions/control_mix_date"
         },
         "waitlist_status": {
           "$ref": "#/definitions/waitlist_status"
         },
-        "combine_rolls": {
-          "$ref": "#/definitions/combine_rolls"
+        "combine_linked_rolls": {
+          "$ref": "#/definitions/combine_linked_rolls"
         },
-        "combine_counts": {
-          "$ref": "#/definitions/combine_counts"
+        "combine_linked_counts": {
+          "$ref": "#/definitions/combine_linked_counts"
         },
         "link_relation": {
           "$ref": "#/definitions/link_relation"
@@ -4218,6 +4221,27 @@
         }
       }
     },
+    "withdraw_deadline_date": {
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable",
+            "derived"
+          ]
+        }
+      }
+    },
     "control_mix_date": {
       "type": "object",
       "required": [
@@ -4258,7 +4282,7 @@
         }
       }
     },
-    "combine_rolls": {
+    "combine_linked_rolls": {
       "type": "object",
       "required": [
         "value",
@@ -4278,7 +4302,7 @@
         }
       }
     },
-    "combine_counts": {
+    "combine_linked_counts": {
       "type": "object",
       "required": [
         "value",
