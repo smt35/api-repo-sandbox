@@ -914,16 +914,14 @@
               "method": "GET"
             }
           ],
-            "credit_institution": {
-              "value": "BYU PROVO",
-              "api_type": "",
-              "key": true,
-              "description": "BYU Provo Campus",
-              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
+            "person_id": {
+              "value": "009246042",
+              "api_type": "read-only",
+              "key": true
             },
             "year_term": {
               "value": "20151",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true,
               "description": "Winter 2015",
               "long_description": "Winter Semester 2015",
@@ -931,32 +929,67 @@
             },
             "curriculum_id": {
               "value": "11463",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "title_code": {
               "value": "000",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "section_number": {
               "value": "001",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
-            "student_id": {
-              "value": "?",
-              "api_type": "?"
-            },
-            "credit_hours": {
-              "value": "?",
-              "api_type": "?"
-            },
-            "grade": {
-              "value": "?",
-              "api_type": "?"
+            "credit_institution": {
+              "value": "BYU PROVO",
+              "api_type": "read-only",
+              "key": true,
+              "description": "BYU Provo Campus",
+              "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
             },
             "byu_id": {
+              "value": "595632384",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "student_name": {
+              "value": "Duck, Daisy Yolanda",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "class_standing": {
+              "value": "",
+              "api_type": "operational"
+            },
+            "credit_hours": {
+              "value": "2",
+              "api_type": "operational"
+            },
+            "major": {
+              "value": "",
+              "api_type": "related",
+              "related_resource": "identity",
+              "description": "",
+              "domain": ""
+            },
+            "email_address": {
+              "value": "ddaisy@byu.edu",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "phone": {
+              "value": "801-555-5555",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "address": {
+              "value": "56 Donald St, Toon Town, CA",
+              "api_type": "related",
+              "related_resource": "identity"
+            },
+            "grade": {
               "value": "?",
               "api_type": "?"
             },
@@ -964,40 +997,13 @@
               "value": "?",
               "api_type": "?"
             },
-            "student_name": {
-              "value": "Doug Walker",
-              "api_type": "related",
-              "related_resource": "students"
-            },
-            "email_address": {
-              "value": "?",
-              "api_type": "?"
-            },
-            "phone": {
-              "value": "?",
-              "api_type": "?"
-            },
-            "address": {
-              "value": "?",
-              "api_type": "?"
-            },
             "added_date_time": {
               "value": "?",
               "api_type": "system"
             },
-            "class_standing": {
-              "value": "?",
-              "api_type": "?"
-            },
             "gender": {
               "value": "",
               "api_type": "?"
-            },
-            "major": {
-              "value": "",
-              "api_type": "",
-              "description": "",
-              "domain": ""
             },
             "home_state": {
               "value": "",
