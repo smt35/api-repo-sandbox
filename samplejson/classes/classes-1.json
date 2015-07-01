@@ -1241,32 +1241,33 @@
               "key": true
             },
             "category": {
-              "value": "?",
-              "api_type": "?"
+              "value": "ENVELOPE",
+              "api_type": "read-only",
+              "key": true
             },
             "type": {
-              "value": "?",
-              "api_type": "?"
+              "value": "20407",
+              "api_type": "read-only"
             },
             "size": {
-              "value": "?",
-              "api_type": "?"
+              "value": "8",
+              "api_type": "modifiable"
             },
             "total_enrolled": {
-              "value": "?",
-              "api_type": "?"
+              "value": "7",
+              "api_type": "operational"
             },
             "number_of_adds": {
-              "value": "?",
-              "api_type": "?"
+              "value": "7",
+              "api_type": "operational"
             },
             "number_of_drops": {
-              "value": "?",
-              "api_type": "?"
+              "value": "0",
+              "api_type": "operational"
             },
             "total_requests": {
-              "value": "?",
-              "api_type": "?"
+              "value": "0",
+              "api_type": "operational"
             },
             "updated_by_id": {
               "value": "585241162",
@@ -1278,8 +1279,8 @@
               "api_type": "operational"
             },
             "updated_by_name": {
-              "value": "?",
-              "api_type": "?"
+              "value": "Duck, Daisy",
+              "api_type": "operational"
             }
           }
         ]
