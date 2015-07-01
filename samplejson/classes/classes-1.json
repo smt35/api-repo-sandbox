@@ -1440,6 +1440,10 @@
             "date_time_updated": {
               "value": "2014-05-11T13:45:53.20Z",
               "api_type": "operational"
+            },
+            "updated_by_name": {
+              "value": "Bugs Bunny Ithaca",
+              "api_type": "operational"
             }
           }
         ]
@@ -1508,21 +1512,33 @@
               "api_type": "",
               "key": true
             },
-            "group_number": {
-              "value": "?",
-              "api_type": "?"
+            "course_name": {
+              "value": "TMA   202",
+              "api_type": "read_only"
             },
-            "token_value": {
-              "value": "?",
-              "api_type": "?"
+            "code_value": {
+              "value": "2G6RQ-7H2X9-WPWFL",
+              "api_type": "read-only"
+            },
+            "group_number": {
+              "value": "1",
+              "api_type": "read-only"
+            },
+            "date_time_created": {
+              "value": "2014-05-11T13:45:53.20Z",
+              "api_type": "operational"
             },
             "created_by_id": {
               "value": "584584584",
               "api_type": "operational",
               "description": "Joe Faculty"
             },
-            "date_time_created": {
-              "value": "2014-05-11T13:45:53.20Z",
+            "created_by_name": {
+              "value": "Duck, Daisy",
+              "api_type": "read-only"
+            },
+            "date_time_redeemed": {
+              "value": "2014-05-14T13:45:53.20Z",
               "api_type": "operational"
             },
             "redeemed_by_id": {
@@ -1530,9 +1546,9 @@
               "api_type": "operational",
               "description": "Bugs Bunny Ithaca"
             },
-            "date_time_redeemed": {
-              "value": "2014-05-14T13:45:53.20Z",
-              "api_type": "operational"
+            "redeemed_by_name": {
+              "value": "Bunny, Bugs",
+              "api_type": "read-only"
             }
           }
         ]
