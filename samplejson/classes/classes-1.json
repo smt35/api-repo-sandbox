@@ -2017,14 +2017,14 @@
           ],
             "credit_institution": {
               "value": "BYU PROVO",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true,
               "description": "BYU Provo Campus",
               "domain": "https://api.byu.edu/byuapi/meta/credit_institutions"
             },
             "year_term": {
               "value": "20151",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true,
               "description": "Winter 2015",
               "long_description": "Winter Semester 2015",
@@ -2032,79 +2032,75 @@
             },
             "curriculum_id": {
               "value": "11463",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "title_code": {
               "value": "000",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "section_number": {
               "value": "001",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "person_id": {
-              "value": "?",
-              "api_type": "?"
+              "value": "047285462",
+              "api_type": "read-only",
+              "key": true
+            },
+            "byu_id": {
+              "value": "987654321",
+              "api_type": "read-only"
             },
             "student_name": {
-              "value": "?",
-              "api_type": "?"
+              "value": "Duck, Daisy",
+              "api_type": "read-only"
             },
-            "date_requested": {
-              "value": "?",
-              "api_type": "?"
+            "date_time_requested": {
+              "value": "10 Jun 2015 09:59:05",
+              "api_type": "read-only"
             },
             "sequencer": {
-              "value": "?",
-              "api_type": "?"
+              "value": 381702492618,
+              "api_type": "read-only"
             },
-            "teaching_area": {
-              "value": "NURS",
-              "api_type": "related",
+            "course_name": {
+              "value": "NURS 315 ",
+              "api_type": "read-only",
               "related_resource": "courses",
               "description": "Nursing",
               "domain": "https://api.byu.edu/byuapi/meta/teaching_areas"
             },
-            "catalog_number": {
-              "value": "295",
-              "api_type": "related",
-              "related_resource": "courses",
-              "domain": "https://api.byu.edu/byuapi/meta/catalog_numbers?year_term=20151&teaching_area=NURS"
-            },
-            "catalog_suffix": {
-              "value": "",
-              "api_type": "related",
-              "related_resource": "courses",
-              "description": "",
-              "domain": "https://api.byu.edu/byuapi/meta/catalog_suffixes"
-            },
             "credit_hours": {
-              "value": "?",
-              "api_type": "?"
+              "value": "3",
+              "api_type": "read-only"
             },
             "size_mix_category": {
-              "value": "?",
-              "api_type": "?"
+              "value": "OTHER",
+              "api_type": "read-only"
             },
             "added_by_id": {
               "value": "585241162",
               "api_type": "operational",
               "description": "Bugs Bunny Ithaca"
             },
+            "added_by_name": {
+              "value": "Eastwood, Clint",
+              "api-type": "read-only"
+            },
             "date_time_added": {
               "value": "2014-05-11T13:45:53.20Z",
               "api_type": "operational"
             },
             "add_error_message":{
-              "value": "?",
-              "api_type": "?"
+              "value": null,
+              "api_type": "read-only"
             },
             "date_time_error": {
-              "value": "2014-05-11T13:45:53.20Z",
-              "api_type": "operational"
+              "value": null,
+              "api_type": "read-only"
             }
           }
         ]
