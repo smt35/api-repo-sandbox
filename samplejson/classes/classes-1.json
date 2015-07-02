@@ -1881,15 +1881,15 @@
       "enrollment_counts": {
         "links": [
           { "rel": "self",
-            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/enrollment_counts",
             "method": "GET"
           },
-          { "rel": "add_permission_codes.filter",
-            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes?{query_parameters}",
+          { "rel": "enrollment_counts.filter",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/enrollment_counts?{query_parameters}",
             "method": "GET"
           },
-          { "rel": "add_permission_codes.add",
-            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes",
+          { "rel": "enrollment_counts.add",
+            "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/enrollment_counts",
             "method": "PUT"
           }
         ],
@@ -1904,11 +1904,11 @@
         "values": [
           { "links": [
             { "rel": "self",
-              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes/585241162",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/enrollment_counts/585241162",
               "method": "GET"
             },
             { "rel": "add_permission_codes.delete",
-              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/add_permission_codes/585241162",
+              "href": "https://api.byu.edu/byuapi/classes/20151,11463,000,001/enrollment_counts/585241162",
               "method": "DELETE"
             },
             { "rel": "students.info",
