@@ -2160,34 +2160,38 @@
             },
             "curriculum_id": {
               "value": "11463",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "title_code": {
               "value": "000",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "section_number": {
               "value": "001",
-              "api_type": "",
+              "api_type": "read-only",
               "key": true
             },
             "person_id": {
-              "value": "?",
-              "api_type": "?"
+              "value": "546372819",
+              "api_type": "read-only"
             },
-            "credit_hours": {
-              "value": "?",
-              "api_type": "?"
-            },
-            "grade": {
-              "value": "?",
-              "api_type": "?"
+            "byu_id": {
+              "value": "918273645",
+              "api_type": "read-only"
             },
             "student_name": {
-              "value": "?",
-              "api_type": "?"
+              "value": "Fry, Philip John",
+              "api_type": "read-only"
+            },
+            "credit_hours": {
+              "value": "3",
+              "api_type": "read-only"
+            },
+            "grade": {
+              "value": null,
+              "api_type": "read-only"
             },
             "log_action": {
               "value": "?",
