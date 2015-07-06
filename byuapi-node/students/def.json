@@ -15,8 +15,25 @@
     "max_page_size": 20,
     "field_sets_returned": [],
     "field_sets_available": [
-      "basic"
-      //List all other field sets available here comma and line separated
+      "basic",
+      "add_approved_students",
+      "assigned_instructors",
+      "assigned_schedules",
+      "class_limitations",
+      "course_limitations",
+      "room_preferences",
+      "enrolled_students",
+      "enrolled_student_logs",
+      "enrollment_counts",
+      "linked_classes",
+      "notes",
+      "permission_to_add_codes",
+      "prerequisites",
+      "priority_schedules",
+      "section_headers",
+      "size_mix",
+      "waitlisted_students",
+      "waitlisted_student_logs"
     ],
     "default_field_sets": [
       "basic"
@@ -40,13 +57,16 @@
         "permission_to_add_codes",
         "prerequisites",
         "section_headers",
-        "size_mixes"
+        "size_mix"
       ],
       "proof": [
-        "proof"
+        "course_proof"
       ],
       "summary": [
-        "summary"
+        "course_summary"
+      ],
+      "dummy": [
+        "basic"
       ]
     },
     "default_db": [
