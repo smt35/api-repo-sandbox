@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "basic": {
     "links": [
       {
@@ -52,3 +53,101 @@
   }
 }
 
+=======
+  "links": {
+    "assigned_teaching_areas.info": {
+      "rel": "self",
+      "href": "https://:domain/:api_path/academic_units/:academic_unit_id/assigned_teaching_areas?page_start=:page_start,page_size=:page_size",
+      "method": "GET",
+      "title": "academic_units.getAssignedTeachingAreas"
+    },
+    "assigned_teaching_areas.prev": {
+      "rel": "assigned_teaching_areas.prev",
+      "href": "https://:domain/:api_path/academic_units/:academic_unit_id/assigned_teaching_areas?page_start=:page_start,page_size=:page_size",
+      "method": "GET",
+      "title": "academic_units.getAssignedTeachingAreas"
+    },
+    "assigned_teaching_areas.next": {
+      "rel": "assigned_teaching_areas.next",
+      "href": "https://:domain/:api_path/academic_units/:academic_unit_id/assigned_teaching_areas?page_start=:page_start,page_size=:page_size",
+      "method": "GET",
+      "title": "academic_units.getAssignedTeachingAreas"
+    },
+    "assigned_teaching_areas.assign": {
+      "rel": "assigned_teaching_areas.assign",
+      "href": "https://:domain/:api_path/academic_units/:academic_unit_id/assigned_teaching_areas",
+      "method": "POST",
+      "title": "academic_units.assignTeachingArea"
+    }
+  },
+  "metadata": {
+    "collection_size": ,
+    "page_start": ,
+    "page_end": ,
+    "page_size": ,
+    "default_page_size": ,
+    "max_page_size": 
+  },
+  "values": [
+    {
+	"links": {
+	  "assigned_teaching_areas.info": {
+	    "rel": "self",
+	    "href": "https://:domain/:api_path/academic_units/:academic_unit_id/assigned_teaching_areas/IPT&amp;T",
+	    "method": "GET",
+	    "title": "assigned_teaching_areas.getAssignedTeachingArea"
+	  },
+	  "assigned_teaching_areas.modify": {
+	    "rel": "assigned_teaching_areas.modify",
+	    "href": "https://:domain/:api_path/academic_units/1115/assigned_teaching_areas/IPT&amp;T",
+	    "method": "PUT",
+	    "title": "assigned_teaching_areas.modifyAssignedTeachingArea"
+	  },
+	  "assigned_teaching_areas.delete": {
+	    "rel": "assigned_teaching_areas.delete",
+	    "href": "https://:domain/:api_path/academic_units/1115/assigned_teaching_areas/IPT&amp;T",
+	    "method": "DELETE",
+	    "title": "assigned_teaching_areas.deleteAssignedTeachingArea"
+	  },
+	  "identity.info": {
+	    "rel": "identity.info",
+	    "href": "https://:domain/:api_path/identity/111111111",
+	    "method": "GET",
+	    "title": "assigned_teaching_areas.getUpdatedBy"
+	  }
+	},
+        "name": {
+          "value": "IP&T",
+          "api_type": "modifiable",
+          "key": true
+        },
+        "long_name": {
+          "value": "Instructional Psychology and Technology",
+          "api_type": "modifiable"
+        },
+        "effective_date": {
+          "value": "1997-09-02",
+          "api_type": "modifiable"
+        },
+        "expired_date": {
+          "value": "2099-12-31",
+          "api_type": "modifiable"
+        },
+        "date_time_updated": {
+          "value": "2001-01-01",
+          "api_type": "read-only"
+        },
+        "updated_by_id": {
+          "value": "111111111",
+          "api_type": "related",
+          "related_resource": "identity"
+        },
+        "updated_by_name": {
+          "value": "John Smith",
+          "api_type": "related",
+          "related_resource": "identity"
+        }
+      }
+  ]
+}
+>>>>>>> 0a999965d75eb1ded4e482515afff9615d72ec35

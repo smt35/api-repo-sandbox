@@ -1,9 +1,12 @@
 {
   "links": [
     {
-      "rel": "self",
-      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/enrolled_students",
-      "method": "GET"
+      "enrolled_students.info": {
+         "rel": "self",
+         "href": "https://api.byu.edu/byuapi/classes/20155,01614,002,001/enrolled_students",
+         "method": "GET",
+         "title": "enrolled_students.getClassRoll"
+       }
     }
   ],
   "metadata": {
@@ -20,9 +23,12 @@
   "values": {
     "links": [
       {
-        "rel": "self",
-        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/enrolled_students",
-        "method": "GET"
+        "enrolled_students.info": {
+           "rel": "self",
+           "href": "https://api.byu.edu/byuapi/classes/20155,01614,002,001/enrolled_students/:person_id",
+           "method": "GET",
+           "title": "enrolled_students.getClassRoll"
+         }
       }
     ],
     "person_id": {

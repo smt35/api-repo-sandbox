@@ -1,12 +1,30 @@
 {
-  "basic": {
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.byu.edu/rest/byuapi/identities/:identity_id",
+      "method": "GET"
+    }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 100,
+    "default_page_size": 100,
+    "max_page_size": 100,
+    "default_db": [
+    "ces"
+    ]
+  },
+  "values": {
     "links": [
       {
         "rel": "self",
-        "href": "https://api.byu.edu/rest/v1/byuapi/identities/:identity_id"
+        "href": "https://api.byu.edu/rest/byuapi/identities/:identity_id/basic",
         "method": "GET"
-      },
-    ]
+      }
+    ],
     "created_by_id": {
       "value" : "",
       "api-type": "system",
@@ -46,4 +64,3 @@
     }
   }
 }
-{

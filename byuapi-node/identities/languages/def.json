@@ -54,6 +54,10 @@
       "value": "",
       "api_type": "read-only"
     },
+    "translator": {
+      "value": "",
+      "api_type": "read-only"
+    },
     "date_time_updated": {
       "value": "",
       "api_type": "read-only"
@@ -63,6 +67,18 @@
       "api_type": "read-only"
     },
     "updated_by_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "date_time_created": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "created_by_id": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "created_by_name": {
       "value": "",
       "api_type": "read-only"
     }

@@ -32,7 +32,10 @@ function buildDataRow(data, results) {
   var field;
 
   for(field in results) {
-    data[field].value = results[field];
+    if(field in data) {
+      data[field].value = results[field];
+    }
   }
+  data.parent_academic_unit_id.description = results.parent_official_name;
 }
 
