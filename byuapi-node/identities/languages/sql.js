@@ -1,0 +1,25 @@
+'use strict';
+
+exports.languageData =
+  "select"
+      + " l.identity_id        as \"identity_id\","
+      + " l.language_code      as \"language_code\","
+      + " c.description        as \"description\","
+      + " l.speak_proficiency  as \"speak_proficiency\","
+      + " l.read_proficiency   as \"read_proficiency\","
+      + " l.write_proficiency  as \"write_proficiency\","
+      + " l.native             as \"native\","
+      + " l.translator         as \"translator\","
+      + " l.date_time_updated  as \"date_time_updated\","
+      + " l.updated_by_id      as \"updated_by_id\","
+      + " p1.sort_name         as \"updated_by_name\","
+      + " l.date_time_created  as \"date_time_created\","
+      + " l.created_by_id      as \"created_by_id\","
+      + " p2.sort_name         as \"created_by_name\""
+      + " from iam.language l, code_edit_value c, person p1, person p2"
+      + " where identity_id = :1"
+      + " and l.language_code = c.domain_value"
+      + " and c.domain_name = 'LANGUAGE'"
+      + " and l.updated_by_id = p1.person_id"
+      + " and l.created_by_id = p2.person_id (+)"
+      + " order by description";

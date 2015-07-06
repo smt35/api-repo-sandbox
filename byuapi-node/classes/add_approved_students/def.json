@@ -2,7 +2,7 @@
   "links": [
     {
       "rel": "self",
-      "href": "https://api.byu.edu/rest/v1/byuapi/identities/:identity_id/languages",
+      "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/add_approved_students",
       "method": "GET"
     }
   ],
@@ -21,52 +21,46 @@
     "links": [
       {
         "rel": "self",
-        "href": "https://api.byu.edu/rest/v1/byuapi/identities/:identity_id/languages",
+        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/add_approved_students/:person_id",
         "method": "GET"
       }
     ],
-    "identity_id": {
+    "credit_institution": {
       "value": "",
       "api_type": "read-only",
       "key": true
     },
-    "language_code": {
+    "year_term": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true,
+      "desc": "",
+      "ext_desc": ""
+    },
+    "curriculum_id": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "title_code": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "section_number": {
+      "value": "",
+      "api_type": "read-only",
+      "key": true
+    },
+    "course_name": {
       "value": "",
       "api_type": "read-only"
     },
-    "description": {
+    "student_id": {
       "value": "",
       "api_type": "read-only"
     },
-    "speak_proficiency": {
-      "value": "",
-      "api_type": "read-only"
-    },
-    "read_proficiency": {
-      "value": "",
-      "api_type": "read-only"
-    },
-    "write_proficiency": {
-      "value": "",
-      "api_type": "read-only"
-    },
-    "native": {
-      "value": "",
-      "api_type": "read-only"
-    },
-    "translator": {
-      "value": "",
-      "api_type": "read-only"
-    },
-    "date_time_updated": {
-      "value": "",
-      "api_type": "read-only"
-    },
-    "updated_by_id": {
-      "value": "",
-      "api_type": "read-only"
-    },
-    "updated_by_name": {
+    "student_name": {
       "value": "",
       "api_type": "read-only"
     },
@@ -79,6 +73,14 @@
       "api_type": "read-only"
     },
     "created_by_name": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "date_time_redeemed": {
+      "value": "",
+      "api_type": "read-only"
+    },
+    "audit_flag": {
       "value": "",
       "api_type": "read-only"
     }

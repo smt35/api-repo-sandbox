@@ -3,7 +3,7 @@
     "links": [
       {
         "rel": "self",
-        "href": "https://api.byu.edu/rest/v1/byuapi/classes/:class_id/section_info",
+        "href": "https://api.byu.edu/rest/v1/byuapi/students/:person_id",
         "method": "GET"
       }
     ],

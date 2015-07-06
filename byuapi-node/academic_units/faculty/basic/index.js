@@ -6,7 +6,7 @@ var q = require('q');
 
 exports.get = function(connection, resources, request, response) {
   var params = [];
-  var sql_query = sql.academicUnitData;
+  var sql_query = sql.basicData;
   var data = {};
 
   if(request.params.resource_id) {
@@ -32,10 +32,7 @@ function buildDataRow(data, results) {
   var field;
 
   for(field in results) {
-    if(field in data) {
-      data[field].value = results[field];
-    }
+    data[field].value = results[field];
   }
-  data.parent_academic_unit_id.description = results.parent_official_name;
 }
 

@@ -1,0 +1,47 @@
+{
+  links: [
+    { rel: 'self',
+      href: 'https://api.byu.edu/rest/v1/byuapi/classes/:class_id/summary',
+      method: 'GET'
+    }
+  ],
+  metadata: {
+    collection_size: 0,
+    page_start: 1,
+    page_end: 3,
+    page_size: 100,
+    default_page_size: 100,
+    max_page_size: 100,
+    default_db: [
+      'ces'
+    ]
+  },
+  values: {
+    teaching_area_summary: {
+      year_term: [Object],
+      total_sections: [Object],
+      total_full_sections: [Object], 
+      total_seats_available: [Object],
+      total_seats_offered: [Object],
+      total_enrolled: [Object],
+      total_waitlisted: [Object]
+    },
+    course_number_summary: {
+      links: [],
+      teaching_area: [Object],
+      catalog_number: [Object],
+      catalog_suffix: [Object],
+      curriculum_id: [Object],
+      title_code: [Object],
+      course_title: [Object],
+      multiple_title_codes: [Object],
+      number_of_sections: [Object],
+      number_of_full_sections: [Object],
+      seats_available: [Object],
+      seats_offered: [Object],
+      total_enrolled: [Object],
+      number_waitlisted: [Object],
+      allow_add_codes: [Object]
+    }
+  }
+}

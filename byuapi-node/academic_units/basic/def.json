@@ -1,37 +1,41 @@
 {
   "basic": {
-    "links": [
-      {
+    "links": {
+      "academic_units.info": {
         "rel": "self",
-        "href": "https://api.byu.edu/rest/v1/byuapi/academic_units/:unit_id",
-        "method": "GET"
+        "href": "https://api.byu.edu/byuapi/academic_units/:academic_unit_id,:effective_date",
+        "method": "GET",
+        "title": "academic_units.getAcademicUnit"
+      },
+      "academic_units.modify": {
+        "rel": "self",
+        "href": "https://api.byu.edu/byuapi/academic_units/:academic_unit_id,:effective_date",
+        "method": "PUT",
+        "title": "academic_units.modifyAcademicUnit"
+      },
+      "academic_units.delete": {
+        "rel": "self",
+        "href": "https://api.byu.edu/byuapi/academic_units/:academic_unit_id,:effective_date",
+        "method": "DELETE",
+        "title": "academic_units.deleteAcademicUnit"
+      },
+      "academic_units.parent": {
+        "rel": "academic_units.parent",
+        "href": "https://api.byu.edu/byuapi/academic_units/:parent_academic_unit_id,:parent_effective_date",
+        "method": "GET",
+        "title": "academic_units.getAcademicUnitParent"
       }
-    ],
-    "credit_institution": {
-      "value": "",
-      "api_type": "modifiable",
-      "desc": ""
     },
-    "unit_id": {
+    "academic_unit_id": {
       "value": "",
-      "api_type": "read-only",
+      "api_type": "system",
       "key": true
     },
     "effective_date": {
       "value": "",
-      "api_type": "modifiable",
-      "key": true
-    },
-    "expired_date": {
-      "value": "",
-      "api_type": "modifiable",
-      "key": true
-    },
-    "unit_type": {
-      "value": "",
       "api_type": "modifiable"
     },
-    "unit_level": {
+    "expired_date": {
       "value": "",
       "api_type": "modifiable"
     },
@@ -43,26 +47,24 @@
       "value": "",
       "api_type": "modifiable"
     },
-    "parent_unit_id": {
+    "unit_type": {
+      "value": "",
+      "api_type": "modifiable",
+      "domain": "https://api.byu.edu/byuapi/meta/academic_unit_types"
+    },
+    "parent_academic_unit_id": {
+      "description": "",
       "value": "",
       "api_type": "modifiable"
+    },
+    "parent_effective_date": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "academic_units.parent"
     },
     "old_unit_id": {
       "value": "",
       "api_type": "modifiable"
-    },
-    "date_time_updated": {
-      "value": "",
-      "api_type": "operational"
-    },
-    "updated_by_id": {
-      "value": "",
-      "api_type": "operational"
-    },
-    "updated_by_name": {
-      "value": "",
-      "api_type": "related",
-      "related_resource": "identity"
     }
   }
 }
