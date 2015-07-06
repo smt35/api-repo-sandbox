@@ -2,7 +2,11 @@
   "links": [
     {
       "rel": "self",
+<<<<<<< HEAD
+      "href": "https://api.byu.edu/rest/v1/byuapi/identities/:identities_id",
+=======
       "href": "https://api.byu.edu/rest/v1/byuapi/identities/:identity_id",
+>>>>>>> 0a999965d75eb1ded4e482515afff9615d72ec35
       "method": "GET"
     }
   ],
@@ -36,6 +40,26 @@
       "basic"
     ],
     "contexts_available": {
+<<<<<<< HEAD
+      "example_context": [
+        "sub_resource",
+        "sub_resource",
+        "sub_resource"
+      ],
+      "example_context2": [
+        "sub_resource",
+        "sub_resource"
+
+      ],
+      "example_context3": [
+
+      ],
+      "summary": [
+        "course_summary"
+      ],
+      "dummy": [
+        "basic"
+=======
       "languages": [
         "basic",
         "speakers"
@@ -44,6 +68,7 @@
         "basic",
         "email_address",
         "security_email_address"
+>>>>>>> 0a999965d75eb1ded4e482515afff9615d72ec35
       ]
     },
     "default_db": [

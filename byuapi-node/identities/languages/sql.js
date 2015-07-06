@@ -1,5 +1,21 @@
 'use strict';
 
+<<<<<<< HEAD
+exports.languages =
+  "select language_code      as \"language_code    \","
+      + " description        as \"description      \","
+      + " speak_proficiency  as \"speak_proficiency\","
+      + " read_proficiency   as \"speak_proficiency\","
+      + " write_proficiency  as \"speak_proficiency\","
+      + " native             as \"native           \","
+      + " translator         as \"translator       \","
+      + " date_time_updated  as \"date_time_updated\","
+      + " updated_by_id      as \"updated_by_id    \","
+      + " date_time_created  as \"date_time_created\","
+      + " created_by_id      as \"created_by_id    \","
+      + " from iam.language" 
+      + " where identity_id = :1"
+=======
 exports.languageData =
   "select"
       + " l.identity_id        as \"identity_id\","
@@ -22,4 +38,5 @@ exports.languageData =
       + " and c.domain_name = 'LANGUAGE'"
       + " and l.updated_by_id = p1.person_id"
       + " and l.created_by_id = p2.person_id (+)"
+>>>>>>> 0a999965d75eb1ded4e482515afff9615d72ec35
       + " order by description";
