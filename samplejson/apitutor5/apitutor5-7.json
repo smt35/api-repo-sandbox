@@ -1,0 +1,113 @@
+[
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "trip_id": {
+      "value": "A148",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "destination": {
+      "value": "Seattle, Washington",
+      "api_type": "modifiable",
+      "display_label": "Trip Destination"
+    },
+    "start_date": {
+      "value": "2012-08-10",
+      "api_type": "modifiable",
+      "display_label": "Trip Start Date"
+    },
+    "end_date": {
+      "value": "2012-08-16",
+      "api_type": "modifiable",
+      "display_label": "Trip End Date"
+    },
+    "start_miles": {
+      "value": 10745,
+      "api_type": "modifiable",
+      "display_label": "Trip Beginning Mileage"
+    },
+    "end_miles": {
+      "value": 14826,
+      "api_type": "modifiable",
+      "display_label": "Trip Ending Mileage"
+    }
+  },
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "trip_id": {
+      "value": "C233",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "destination": {
+      "value": "Denver, Colorado",
+      "api_type": "modifiable",
+      "display_label": "Trip Destination"
+    },
+    "start_date": {
+      "value": "2013-02-04",
+      "api_type": "modifiable",
+      "display_label": "Trip Start Date"
+    },
+    "end_date": {
+      "value": "2013-02-09",
+      "api_type": "modifiable",
+      "display_label": "Trip End Date"
+    },
+    "start_miles": {
+      "value": 17386,
+      "api_type": "modifiable",
+      "display_label": "Trip Beginning Mileage"
+    },
+    "end_miles": {
+      "value": 18144,
+      "api_type": "modifiable",
+      "display_label": "Trip Ending Mileage"
+    }
+  },
+  {
+    "vin": {
+      "value": "73",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "trip_id": {
+      "value": "A432",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "destination": {
+      "value": "San Francisco, California",
+      "api_type": "modifiable",
+      "display_label": "Trip Destination"
+    },
+    "start_date": {
+      "value": "2013-06-22",
+      "api_type": "modifiable",
+      "display_label": "Trip Start Date"
+    },
+    "end_date": {
+      "value": "2013-06-26",
+      "api_type": "modifiable",
+      "display_label": "Trip End Date"
+    },
+    "start_miles": {
+      "value": 22354,
+      "api_type": "modifiable",
+      "display_label": "Trip Beginning Mileage"
+    },
+    "end_miles": {
+      "value": 24193,
+      "api_type": "modifiable",
+      "display_label": "Trip Ending Mileage"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "vin": {
+    "value": "73",
+    "api_type": "modifiable",
+    "key": true
+  },
+  "read_date": {
+    "value": "2014-05-11",
+    "api_type": "modifiable",
+    "key": true
+  },
+  "miles": {
+    "value": 32459,
+    "api_type": "modifiable",
+    "display_label": ""
+  },
+  "read_by_id": {
+    "value": "586586586",
+    "api_type": "modifiable",
+    "display_label": ""
+  },
+  "read_by_name": {
+    "value": "Daffy Duck",
+    "api_type": "related",
+    "display_label": ""
+  }
+}

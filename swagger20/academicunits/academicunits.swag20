@@ -1,0 +1,4079 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Academic Units",
+    "description": "Academic Unit Resource of the University API",
+    "version": "1.0.0"
+  },
+  "host": "api.byu.edu",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/v1/academic_units",
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Academic Units",
+        "description": "Returns a collection of Academic Units",
+        "operationId": "getAcademicUnits",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Effective date of the Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Expired date of the Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of the Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_official_name",
+            "in": "query",
+            "required": false,
+            "description": "Official name of the Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_type",
+            "in": "query",
+            "required": false,
+            "description": "Unit type of the Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "parent_academic_unit_id",
+            "in": "query",
+            "required": false,
+            "description": "academic_unit_id of the parent Academic Unit of an Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "old_academic_unit_id",
+            "in": "query",
+            "required": false,
+            "description": "Old academic_unit_id of an Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Effective Date",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Expired Date",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_type",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Type",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_description",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Description",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_diploma_description",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Diploma Description",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_long_description",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Long Description",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_degree",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Degree",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_admission_required",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program Long Description",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_is_teaching_program",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program is a teaching program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_has_limited_enrollment",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program has limited enrollment",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_committee_members_needed_count",
+            "in": "query",
+            "required": false,
+            "description": "Indicates the number of committee members an Academic Program requires",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_major_program_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic (emphasis) Program's associated Academic Program ID for its major",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_emphasis_required",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program requires an emphasis",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_minor_required",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program requires a minor",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_study_list_required",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program requires a study list",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_has_honors_recognition",
+            "in": "query",
+            "required": false,
+            "description": "Indicates whether Academic Program has honors recognition",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_years_to_complete",
+            "in": "query",
+            "required": false,
+            "description": "Indicates maximum number of years in which Academic Program must be completed",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_program_hours",
+            "in": "query",
+            "required": false,
+            "description": "Indicates the number of hours in an Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_minimum_program_hours",
+            "in": "query",
+            "required": false,
+            "description": "Indicates minimum number of hours in which Academic Program must be completed",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_program_hours",
+            "in": "query",
+            "required": false,
+            "description": "Indicates maximum number of hours in which Academic Program must be completed",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_requirement_hours",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_maximum_requirement_classes",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_prior_program_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic Program's prior Academic Program ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_comments",
+            "in": "query",
+            "required": false,
+            "description": "Comments about Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_date_time_updated",
+            "in": "query",
+            "required": false,
+            "description": "Date/Time Academic Program was last updated",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_updated_by_id",
+            "in": "query",
+            "required": false,
+            "description": "ID of person who last updated Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "academic_program_updated_by_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of person who last updated Academic Program",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_name",
+            "in": "query",
+            "required": false,
+            "description": "Teaching Area name",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_long_name",
+            "in": "query",
+            "required": false,
+            "description": "Long name of Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Effective date of Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Expired date of Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_date_time_updated",
+            "in": "query",
+            "required": false,
+            "description": "Date/Time Teaching Area was last updated",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_updated_by_id",
+            "in": "query",
+            "required": false,
+            "description": "ID of person who last updated Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area_updated_by_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of person who last updated Teaching Area",
+            "type": "string"
+          },
+          {
+            "name": "contact_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Effective date of Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Expired date of Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_person_id",
+            "in": "query",
+            "required": false,
+            "description": "ID of person associated with Contact information",
+            "type": "string"
+          },
+          {
+            "name": "contact_person_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of person associated with Contact information",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_id",
+            "in": "query",
+            "required": false,
+            "description": "Academic Unit ID of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_effective_date",
+            "in": "query",
+            "required": false,
+            "description": "Effective date of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_expired_date",
+            "in": "query",
+            "required": false,
+            "description": "Expired date of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_name",
+            "in": "query",
+            "required": false,
+            "description": "Name of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_official_name",
+            "in": "query",
+            "required": false,
+            "description": "Official name of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "sub_academic_unit_type",
+            "in": "query",
+            "required": false,
+            "description": "Type of subordinate Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": false,
+            "description": "Defines a group of field sets to be returned in collection",
+            "type": "string"
+          },
+          {
+            "name": "field_sets",
+            "in": "query",
+            "required": false,
+            "description": "List of field sets to be returned in collection",
+            "type": "string"
+          },
+          {
+            "name": "page_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip into the academic_units collection before starting to return items",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the academic_units collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "A collection of Academic Units",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "204": {
+            "description": "page_start is too large for the collection returned",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No Academic Units satisfy the query parameters - the collection is empty",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Academic Units",
+        "description": "Create a new Academic Unit",
+        "operationId": "createAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit",
+            "in": "body",
+            "description": "The Academic Unit to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "201": {
+            "description": "Returns the academic unit that was added",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to add a new Academic Unit",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied - not authorized to add the new Academic Unit",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Body of the request contains conflicting, malformed, or invalid data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Academic Units",
+        "description": "Modify a specific Academic Unit (defined by query parameters)",
+        "operationId": "modifyAcademicUnits",
+        "parameters": [
+          {
+            "name": "academic_unit",
+            "in": "body",
+            "description": "The Academic Unit to be modified",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          {
+            "name": "academic_unit_id",
+            "in": "query",
+            "required": true,
+            "description": "Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "required": false,
+            "description": "Defines a group of field sets used in updating the Academic Unit",
+            "type": "string"
+          },
+          {
+            "name": "field_sets",
+            "in": "query",
+            "required": false,
+            "description": "List of field sets used in updating the Academic Unit",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the Academic Unit that was modified",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to modify the Academic Unit",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied - not authorized to modify the Academic Unit",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Body of the request contains conflicting, malformed, or invalid data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Academic Units",
+        "description": "What can this endpoint do?",
+        "operationId": "getAcademicUnitsOptions",
+        "parameters": [
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}": {
+      "get": {
+        "summary": "An Academic Unit",
+        "description": "Returns a specific Academic Unit",
+        "operationId": "getAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "field_sets",
+            "in": "query",
+            "required": false,
+            "description": "List of field sets to be returned with the specific Academic Unit",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "A collection of Academic Units",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to retrieve specific Academic Unit",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Academic Units",
+        "description": "Expire a specific Academic Unit",
+        "operationId": "expireAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "The specific Academic Unit was successfully expired",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "204": {
+            "description": "No Academic Unit found that matches key value",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to expire an Academic Unit",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Unable to perform expire request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify Academic Units",
+        "description": "Modify a specific AIM Class",
+        "operationId": "modifyAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "academic_unit",
+            "in": "body",
+            "description": "The modified Academic Unit",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/academic_unit"
+            }
+          },
+          {
+            "name": "field_sets",
+            "in": "query",
+            "required": false,
+            "description": "List of field sets also used when modifying specific Academic Unit",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "The specific Academic Unit was successfully modified",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "204": {
+            "description": "No Academic Unit found that matches key value",
+            "schema": {
+              "$ref": "#/definitions/academic_units"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to modify Academic Unit",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Unable to perform update request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Academic Units",
+        "description": "What can this endpoint do?",
+        "operationId": "getAcademicUnitOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/assigned_programs": {
+      "get": {
+        "summary": "Academic Programs assigned to an Academic Unit",
+        "description": "Retrieves a collection of Academic Programs for a specific Academic Unit",
+        "operationId": "getAcademicPrograms",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "page_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip into pages of the Academic Programs collection before starting to return items",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the Academic Programs collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Collection Retrieved",
+            "schema": {
+              "$ref": "#/definitions/academic_programs"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No Academic Programs satisfy the query parameters - the collection is empty",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Academic Programs assigned to an Academic Unit",
+        "description": "Add an Academic Program to an Academic Unit by specifying the specific Academic Program ID",
+        "operationId": "addAcademicProgram",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "academic_program",
+            "in": "body",
+            "description": "The Academic Program to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/academic_program"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Academic Program Added",
+            "schema": {
+              "$ref": "#/definitions/academic_program"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Academic Programs",
+        "description": "What can this endpoint do?",
+        "operationId": "getAcademicProgramsOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/assigned_programs/{academic_program_id}": {
+      "get": {
+        "summary": "An Academic Program assigned to an Academic Unit",
+        "description": "Retrieves a specific Academic Program",
+        "operationId": "getAcademicProgram",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "academic_program_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Program ID",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Item Retrieved",
+            "schema": {
+              "$ref": "#/definitions/academic_program"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No Academic Programs satisfy the request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify Academic Programs assigned to an Academic Unit",
+        "description": "Modify a specific Academic Program",
+        "operationId": "addAcademicProgram",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "academic_program_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Program ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_program",
+            "in": "body",
+            "description": "The modified Academic Program",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/academic_program"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Academic Program Modified",
+            "schema": {
+              "$ref": "#/definitions/academic_program"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Academic Programs assigned to an Academic Unit",
+        "description": "Expire a specific Academic Program",
+        "operationId": "expireAcademicProgram",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "academic_program_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Program ID",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "204": {
+            "description": "Academic Program successfully removed"
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Academic Program",
+        "description": "What can this endpoint do?",
+        "operationId": "getAcademicProgramOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "academic_program_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Program ID",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/teaching_areas": {
+      "get": {
+        "summary": "Teaching Areas assigned to an Academic Unit",
+        "description": "Retrieves a collection of Teaching Areas for a specific Academic Unit",
+        "operationId": "getTeachingAreas",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "page_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip into pages of the Teaching Areas collection before starting to return items",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the Teaching Areas collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Collection Retrieved",
+            "schema": {
+              "$ref": "#/definitions/teaching_areas"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No Teaching Areas satisfy the query parameters - the collection is empty",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Teaching Areas assigned to an Academic Unit",
+        "description": "Add an Academic Program to an Academic Unit by specifying the specific Academic Program ID",
+        "operationId": "addAcademicProgram",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "teaching_area",
+            "in": "body",
+            "description": "The Teaching Area to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/teaching_area"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Teaching Area Added",
+            "schema": {
+              "$ref": "#/definitions/teaching_area"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Teaching Areas",
+        "description": "What can this endpoint do?",
+        "operationId": "getTeachingAreasOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/assigned_teaching_areas/{teaching_area_name}": {
+      "get": {
+        "summary": "A Teaching Area assigned to an Academic Unit",
+        "description": "Retrieves a specific Teaching Area",
+        "operationId": "getTeachingArea",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "teaching_area_name",
+            "in": "path",
+            "required": true,
+            "description": "The specific Teaching Area name",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Item Retrieved",
+            "schema": {
+              "$ref": "#/definitions/teaching_area"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No Teaching Areas satisfy the request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify a Teaching Areas assigned to an Academic Unit",
+        "description": "Modify a specific Teaching Area",
+        "operationId": "addTeachingArea",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "teaching_area_name",
+            "in": "path",
+            "required": true,
+            "description": "The specific Teaching Area name",
+            "type": "string"
+          },
+          {
+            "name": "teaching_area",
+            "in": "body",
+            "description": "The modified Teaching Area",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/teaching_area"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Teaching Area Modified",
+            "schema": {
+              "$ref": "#/definitions/teaching_area"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Teaching Areas assigned to an Academic Unit",
+        "description": "Expire a specific Teaching Area",
+        "operationId": "expireTeachingArea",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "teaching_area_name",
+            "in": "path",
+            "required": true,
+            "description": "The specific Teaching Area name",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "204": {
+            "description": "Teaching Area successfully removed"
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Teaching Area",
+        "description": "What can this endpoint do?",
+        "operationId": "getTeachingAreaOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "teaching_area_name",
+            "in": "path",
+            "required": true,
+            "description": "The specific Teaching Area name",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/contacts": {
+      "get": {
+        "summary": "Contacts assigned to an Academic Unit",
+        "description": "Retrieves a collection of Contacts for a specific Academic Unit",
+        "operationId": "getContacts",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "page_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip into pages of the Contacts collection before starting to return items",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the Contacts collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Collection Retrieved",
+            "schema": {
+              "$ref": "#/definitions/contacts"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No Contacts satisfy the query parameters - the collection is empty",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Contacts assigned to an Academic Unit",
+        "description": "Add an Contact to an Academic Unit by specifying the specific Contact ID",
+        "operationId": "addContact",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "contact",
+            "in": "body",
+            "description": "The Contact to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/contact"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Contact Added",
+            "schema": {
+              "$ref": "#/definitions/contact"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Contacts",
+        "description": "What can this endpoint do?",
+        "operationId": "getContactsOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/contacts/{contact_type},{contact_effective_date}": {
+      "get": {
+        "summary": "A contact assigned to an Academic Unit",
+        "description": "Retrieves a specific Contact",
+        "operationId": "getContact",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "contact_type",
+            "in": "path",
+            "required": true,
+            "description": "The contact type of the Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The effective date of the contact type",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Item Retrieved",
+            "schema": {
+              "$ref": "#/definitions/contacts"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No Contacts satisfy the request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify Contacts assigned to an Academic Unit",
+        "description": "Modify a specific Contact",
+        "operationId": "addContact",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "contact_type",
+            "in": "path",
+            "required": true,
+            "description": "The contact type of the Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The effective date of the contact type",
+            "type": "string"
+          },
+          {
+            "name": "contact",
+            "in": "body",
+            "description": "The modified Contact",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/contact"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Contact Modified",
+            "schema": {
+              "$ref": "#/definitions/contacts"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Contacts assigned to an Academic Unit",
+        "description": "Expire a specific Contact",
+        "operationId": "expireContact",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "contact_type",
+            "in": "path",
+            "required": true,
+            "description": "The contact type of the Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The effective date of the contact type",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "204": {
+            "description": "Contact successfully removed"
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Contact",
+        "description": "What can this endpoint do?",
+        "operationId": "getContactOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "contact_type",
+            "in": "path",
+            "required": true,
+            "description": "The contact type of the Contact",
+            "type": "string"
+          },
+          {
+            "name": "contact_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The effective date of the contact type",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/sub_units": {
+      "get": {
+        "summary": "Subordinate Academic Units assigned to an Academic Unit",
+        "description": "Retrieves a collection of subordinate Academic Units for a specific Academic Unit",
+        "operationId": "getSubordinateAcademicUnits",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "page_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip into pages of the subordinate Academic Units collection before starting to return items",
+            "type": "string"
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "required": false,
+            "description": "How many items of the subordinate Academic Units collection are returned?",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Collection Retrieved",
+            "schema": {
+              "$ref": "#/definitions/sub_units"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No subordinate Academic Units satisfy the query parameters - the collection is empty",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Subordinate Academic Units assigned to an Academic Unit",
+        "description": "Add an subordinate Academic Unit to an Academic Unit by specifying the specific subordinate Academic Unit ID",
+        "operationId": "addSubordinateAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "sub_unit",
+            "in": "body",
+            "description": "The subordinate Academic Unit to be added",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/sub_unit"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Subordinate Academic Unit Added",
+            "schema": {
+              "$ref": "#/definitions/sub_unit"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Subordinate Academic Units Options",
+        "description": "What can this endpoint do?",
+        "operationId": "getSubordinateAcademicUnitsOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/{academic_unit_id},{academic_unit_effective_date}/sub_units/{sub_unit_id}": {
+      "get": {
+        "summary": "A subordinate Academic Unit assigned to an Academic Unit",
+        "description": "Retrieves a specific subordinate Academic Unit",
+        "operationId": "getSubordinateAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "sub_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific subordinate Academic Unit ID",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Item Retrieved",
+            "schema": {
+              "$ref": "#/definitions/sub_unit"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "404": {
+            "description": "No subordinate Academic Units satisfy the request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Modify a specific subordinate Academic Unit of an Academic Unit",
+        "description": "Modify a specific subordinate Academic Unit",
+        "operationId": "addSubordinateAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "sub_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific subordinate Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "sub_unit",
+            "in": "body",
+            "description": "The modified subordinate Academic Unit",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/sub_unit"
+            }
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "The subordinate Academic Unit modified",
+            "schema": {
+              "$ref": "#/definitions/sub_unit"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Request Body conflicts or is malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove a specific subordinate Academic Unit assigned to an Academic Unit",
+        "description": "Remove a specific subordinate Academic Unit",
+        "operationId": "removeSubordinateAcademicUnit",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "sub_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific subordinate Academic Unit ID",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "204": {
+            "description": "The specific subordinate Academic Unit was successfully removed"
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to access data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "options": {
+        "summary": "Options for a subordinate Academic Unit",
+        "description": "What can this endpoint do?",
+        "operationId": "getSubordinateAcademicUnitOptions",
+        "parameters": [
+          {
+            "name": "academic_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit ID",
+            "type": "string"
+          },
+          {
+            "name": "academic_unit_effective_date",
+            "in": "path",
+            "required": true,
+            "description": "The specific Academic Unit effective date",
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "name": "sub_unit_id",
+            "in": "path",
+            "required": true,
+            "description": "The specific subordinate Academic Unit ID",
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "AcademicUnits"
+        ],
+        "responses": {
+          "200": {
+            "description": "Supported HTTP Methods",
+            "schema": {
+              "$ref": "#/definitions/methods"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "default": {
+            "description": "Unexpected error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "links": {
+      "description": "Hypermedia links format",
+      "type": "object",
+      "required": [
+        "rel",
+        "href",
+        "method",
+        "title"
+      ],
+      "properties": {
+        "rel": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string",
+          "format": "uri"
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "DELETE",
+            "GET",
+            "OPTIONS",
+            "POST",
+            "PUT"
+          ]
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "error": {
+      "description": "Error Information",
+      "type": "object",
+      "properties": {
+        "return_code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "explanation": {
+          "type": "string"
+        },
+        "error_data": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "collection_size",
+        "page_start",
+        "page_end",
+        "page_size",
+        "default_page_size",
+        "maximum_page_size"
+      ],
+      "properties": {
+        "collection_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_end": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "default_page_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maximum_page_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "field_sets_returned": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/field_sets_returned"
+          }
+        },
+        "field_sets_available": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/field_sets_available"
+          }
+        },
+        "default_field_sets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/default_field_sets"
+          }
+        },
+        "contexts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/contexts"
+          }
+        }
+      }
+    },
+    "submetadata": {
+      "type": "object",
+      "required": [
+        "collection_size",
+        "page_start",
+        "page_end",
+        "page_size",
+        "default_page_size",
+        "maximum_page_size"
+      ],
+      "properties": {
+        "collection_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_end": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "default_page_size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maximum_page_size": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "field_sets_returned": {
+      "description": "Field Sets Returned",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "basic",
+            "assigned_programs",
+            "assigned_teaching_areas",
+            "contacts",
+            "sub_units"
+          ]
+        }
+      }
+    },
+    "field_sets_available": {
+      "description": "Field Sets Available",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "basic",
+            "assigned_programs",
+            "assigned_teaching_areas",
+            "contacts",
+            "sub_units"
+          ]
+        }
+      }
+    },
+    "default_field_sets": {
+      "description": "Default Field Sets",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "basic",
+            "sub_units"
+          ]
+        }
+      }
+    },
+    "contexts": {
+      "description": "Contexts",
+      "type": "object",
+      "required": [
+        "values"
+      ],
+      "properties": {
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "academic_units": {
+      "description": "A collection of Academic Units",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Academic Units collection",
+          "type": "object",
+          "properties": {
+            "academic_units.info": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.next": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.create": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/metadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/academic_unit"
+          }
+        }
+      }
+    },
+    "academic_unit": {
+      "description": "An item in the Academic Units collection",
+      "type": "object",
+      "properties": {
+        "basic": {
+          "$ref": "#/definitions/basic"
+        },
+        "assigned_programs": {
+          "$ref": "#/definitions/academic_programs"
+        },
+        "assigned_teaching_areas": {
+          "$ref": "#/definitions/teaching_areas"
+        },
+        "contacts": {
+          "$ref": "#/definitions/contacts"
+        },
+        "sub_units": {
+          "$ref": "#/definitions/sub_units"
+        }
+      }
+    },
+    "basic": {
+      "description": "Basic data for an Academic Unit item",
+      "type": "object",
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the Academic Unit",
+          "type": "object",
+          "properties": {
+            "academic_units.info": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.modify": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.delete": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_unitsparent.info": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "academic_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        },
+        "effective_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "expired_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "unit_name": {
+          "$ref": "#/definitions/academic_unit_name"
+        },
+        "official_name": {
+          "$ref": "#/definitions/academic_unit_official_name"
+        },
+        "unit_type": {
+          "$ref": "#/definitions/academic_unit_type"
+        },
+        "parent_academic_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        },
+        "parent_academic_unit_name": {
+          "$ref": "#/definitions/academic_unit_name"
+        },
+        "parent_academic_unit_official_name": {
+          "$ref": "#/definitions/academic_unit_official_name"
+        },
+        "old_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        }
+      }
+    },
+    "academic_programs": {
+      "description": "A collection of Academic Programs",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Academic Programs collection",
+          "type": "object",
+          "properties": {
+            "assigned_programs.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.next": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/academic_program"
+          }
+        }
+      }
+    },
+    "academic_program": {
+      "description": "An Academic Program",
+      "type": "object",
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact a single Academic Program",
+          "type": "object",
+          "properties": {
+            "assigned_programs.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.modify": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_programs.delete": {
+              "$ref": "#/definitions/links"
+            },
+            "identity.info": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "academic_program_id": {
+          "$ref": "#/definitions/academic_program_id"
+        },
+        "effective_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "expired_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "program_type": {
+          "$ref": "#/definitions/academic_program_type"
+        },
+        "description": {
+          "$ref": "#/definitions/api_description"
+        },
+        "diploma_description": {
+          "$ref": "#/definitions/api_description"
+        },
+        "long_description": {
+          "$ref": "#/definitions/api_description"
+        },
+        "degree": {
+          "$ref": "#/definitions/academic_program_degree"
+        },
+        "admission_required": {
+          "$ref": "#/definitions/api_boolean"
+        },
+        "is_teaching_program": {
+          "$ref": "#/definitions/api_boolean"
+        },
+        "is_limited_enrollment_program": {
+          "$ref": "#/definitions/api_boolean"
+        },
+        "committee_members_needed_count": {
+          "$ref": "#/definitions/api_count"
+        },
+        "major_program_id": {
+          "$ref": "#/definitions/academic_program_id"
+        },
+        "ge_program_id": {
+          "$ref": "#/definitions/academic_program_id"
+        },
+        "core_program_id": {
+          "$ref": "#/definitions/academic_program_id"
+        },
+        "emphasis_required": {
+          "$ref": "#/definitions/api_boolean"
+        },
+        "minor_required": {
+          "$ref": "#/definitions/api_boolean"
+        },
+        "study_list_required": {
+          "$ref": "#/definitions/api_boolean"
+        },
+        "has_honors_recognition": {
+          "$ref": "#/definitions/api_boolean"
+        },
+        "maximum_years_to_complete": {
+          "$ref": "#/definitions/api_zero_positive_integer"
+        },
+        "program_hours": {
+          "$ref": "#/definitions/api_zero_positive_integer"
+        },
+        "minimum_program_hours": {
+          "$ref": "#/definitions/api_zero_positive_integer"
+        },
+        "maximum_program_hours": {
+          "$ref": "#/definitions/api_zero_positive_integer"
+        },
+        "maximum_requirement_hours": {
+          "$ref": "#/definitions/api_zero_positive_integer"
+        },
+        "maximum_requirement_classes": {
+          "$ref": "#/definitions/api_zero_positive_integer"
+        },
+        "prior_program_id": {
+          "$ref": "#/definitions/academic_program_id"
+        },
+        "comments": {
+          "$ref": "#/definitions/api_description"
+        },
+        "date_time_updated": {
+          "$ref": "#/definitions/api_read_only_date"
+        },
+        "updated_by_id": {
+          "$ref": "#/definitions/api_related_person_id"
+        }
+      }
+    },
+    "teaching_areas": {
+      "description": "A collection of Teaching Areas",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Teaching Areas collection",
+          "type": "object",
+          "properties": {
+            "assigned_teaching_areas.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.next": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/teaching_area"
+          }
+        }
+      }
+    },
+    "teaching_area": {
+      "description": "A Teaching Area",
+      "type": "object",
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact a single Teaching Area",
+          "type": "object",
+          "properties": {
+            "assigned_teaching_areas.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.modify": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.delete": {
+              "$ref": "#/definitions/links"
+            },
+            "identity.info": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "name": {
+          "$ref": "#/definitions/teaching_area_name"
+        },
+        "long_name": {
+          "$ref": "#/definitions/api_description"
+        },
+        "effective_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "expired_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "date_time_updated": {
+          "$ref": "#/definitions/api_read_only_date"
+        },
+        "updated_by_id": {
+          "$ref": "#/definitions/api_related_person_id"
+        }
+      }
+    },
+    "contacts": {
+      "description": "A collection of Academic Unit Contacts",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Academic Unit Contacts collection",
+          "type": "object",
+          "properties": {
+            "contacts.info": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.next": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/contact"
+          }
+        }
+      }
+    },
+    "contact": {
+      "description": "A Contact",
+      "type": "object",
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact a single Contact",
+          "type": "object",
+          "properties": {
+            "contacts.info": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.modify": {
+              "$ref": "#/definitions/links"
+            },
+            "contacts.delete": {
+              "$ref": "#/definitions/links"
+            },
+            "identity.info": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "contact_type": {
+          "$ref": "#/definitions/academic_unit_contact_type"
+        },
+        "effective_date": {
+          "$ref": "#/definitions/api_key_date"
+        },
+        "expired_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "person_id": {
+          "$ref": "#/definitions/api_related_person_id"
+        },
+        "person_name": {
+          "$ref": "#/definitions/api_related_string"
+        }
+      }
+    },
+    "sub_units": {
+      "description": "A collection of Subordinate Academic Units",
+      "type": "object",
+      "required": [
+        "links",
+        "metadata",
+        "values"
+      ],
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact the entire Subordinate Academic Units collection",
+          "type": "object",
+          "properties": {
+            "assigned_teaching_areas.info": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.prev": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.next": {
+              "$ref": "#/definitions/links"
+            },
+            "assigned_teaching_areas.add": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "metadata": {
+          "$ref": "#/definitions/submetadata"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/sub_unit"
+          }
+        }
+      }
+    },
+    "sub_unit": {
+      "description": "A subordinate Academic Unit",
+      "type": "object",
+      "properties": {
+        "links": {
+          "description": "Hypermedia Links that impact a single subordinate Academic Unit",
+          "type": "object",
+          "properties": {
+            "academic_units.info": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.modify": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_units.delete": {
+              "$ref": "#/definitions/links"
+            },
+            "academic_unitsparent.info": {
+              "$ref": "#/definitions/links"
+            }
+          }
+        },
+        "academic_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        },
+        "effective_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "expired_date": {
+          "$ref": "#/definitions/api_modifiable_date"
+        },
+        "unit_name": {
+          "$ref": "#/definitions/academic_unit_name"
+        },
+        "official_name": {
+          "$ref": "#/definitions/academic_unit_official_name"
+        },
+        "unit_type": {
+          "$ref": "#/definitions/academic_unit_type"
+        },
+        "parent_academic_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        },
+        "parent_academic_unit_name": {
+          "$ref": "#/definitions/academic_unit_name"
+        },
+        "parent_academic_unit_official_name": {
+          "$ref": "#/definitions/academic_unit_official_name"
+        },
+        "old_unit_id": {
+          "$ref": "#/definitions/academic_unit_id"
+        }
+      }
+    },
+    "academic_unit_id": {
+      "description": "Academic Unit ID",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_modifiable_date": {
+      "description": "BYU API date property that is modifiable",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_read_only_date": {
+      "description": "BYU API date property that is read only",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_related_person_id": {
+      "description": "A generic definition of a person ID for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{9}$"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        },
+        "related_resource": {
+          "type": "string"
+        }
+      }
+    },
+    "api_related_string": {
+      "description": "A generic definition of a person name for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        },
+        "related_resource": {
+          "type": "string"
+        }
+      }
+    },
+    "api_boolean": {
+      "description": "A generic definition of a boolean for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "display_label"
+      ],
+      "properties": {
+        "value": {
+          "type": "boolean"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_count": {
+      "description": "A generic definition of an integer count for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_description": {
+      "description": "A generic description field for the BYU University API",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "api_zero_positive_integer": {
+      "description": "An explanation about the puropose of this instance described by this schema.",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    },
+    "academic_unit_name": {
+      "description": "Academic Unit Name",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "academic_unit_official_name": {
+      "description": "Academic Unit Offical Name",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "academic_unit_type": {
+      "description": "Academic Unit Type",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "ACAD VP",
+            "COLLEGE",
+            "INSTITUTE",
+            "CENTER",
+            "DIVISION",
+            "PROGRAM",
+            "SCHOOL",
+            "DEPARTMENT"
+          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "academic_program_id": {
+      "description": "Academic Program ID",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "pattern": "^[0-9]{5}$"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        }
+      }
+    },
+    "academic_program_type": {
+      "description": "Academic Program Type",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "CERT",
+            "SPECIALIZATION",
+            "LICENSURE",
+            "EMPHASIS",
+            "GE",
+            "NONDEGREE",
+            "MAJOR",
+            "MINOR",
+            "UNIV",
+            "HONORS",
+            "PRE-MAJOR",
+            "POST-BACHELORS"
+          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "academic_program_degree": {
+      "description": "Academic Program Degree Abbreviation",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "2YC",
+            "6YC",
+            "AA",
+            "AIS",
+            "AS",
+            "BA",
+            "BES",
+            "BFA",
+            "BGS",
+            "BIS",
+            "BM",
+            "BMU",
+            "BS",
+            "CERT",
+            "CGN",
+            "DMA",
+            "DRE",
+            "EDD",
+            "EDS",
+            "EdS",
+            "JD",
+            "LLM",
+            "MA",
+            "MAC",
+            "MACC",
+            "MBA",
+            "MCD",
+            "MCE",
+            "MCH",
+            "MCL",
+            "ME",
+            "MED",
+            "MEM",
+            "MES",
+            "MFA",
+            "MFR",
+            "MHA",
+            "MHE",
+            "MIE",
+            "MIN",
+            "MISM",
+            "MLIS",
+            "MLS",
+            "MM",
+            "MMU",
+            "MN",
+            "MOB",
+            "MPA",
+            "MPH",
+            "MPP",
+            "MRE",
+            "MRED",
+            "MS",
+            "MSW",
+            "MTM",
+            "NDG",
+            "PBS",
+            "PHD",
+            "PRE",
+            "SPC",
+            "TC",
+            "TESL",
+            "TL"          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "teaching_area_name": {
+      "description": "Teaching Area Name",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        }
+      }
+    },
+    "academic_unit_contact_type": {
+      "description": "Academic Unit Contact Type",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key",
+        "domain"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "enum": [
+            "ADVISEMENT CENTER",
+            "ASSOCIATE DEAN GRADES",
+            "CADS",
+            "CHAIR",
+            "DEAN",
+            "GRAD COORDINATOR",
+            "GRAD SECRETARY",
+            "GRADE CONTACT",
+            "GRADE ROLL MONITOR",
+            "SCHED OFFICER",
+            "TEACHING AREA"          ]
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "domain": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "api_key_date": {
+      "description": "BYU API date property that is a key",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type",
+        "key"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        },
+        "key": {
+          "type": "boolean"
+        },
+        "display_label": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
