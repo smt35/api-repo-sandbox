@@ -1,0 +1,58 @@
+{
+  "links": [
+     {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/instructors/:instructor_id",
+        "method": "GET"
+     }
+  ],
+  "metadata": {
+    "collection_size": 0,
+    "page_start": 1,
+    "page_end": 1,
+    "page_size": 20,
+    "default_page_size": 20,
+    "max_page_size": 20,
+    "field_sets_returned": [],
+    "field_sets_available": [
+      "basic"
+      //List all other field sets available here comma and line separated
+    ],
+    "default_field_sets": [
+      "basic"
+    ],
+    "contexts_available": {
+      "class_roll": [
+        "basic",
+        "assigned_instructors",
+        "assigned_schedules",
+        "enrolled_students"
+      ],
+      "class_schedule_record": [
+        "basic",
+        "add_approved_students",
+        "assigned_instructors",
+        "assigned_schedules",
+        "class_limitations",
+        "course_limitations",
+        "linked_classes",
+        "notes",
+        "permission_to_add_codes",
+        "prerequisites",
+        "section_headers",
+        "size_mixes"
+      ],
+      "proof": [
+        "proof"
+      ],
+      "summary": [
+        "summary"
+      ]
+    },
+    "default_db": [
+      "ces"
+    ]
+  },
+  "values": []
+}
+
