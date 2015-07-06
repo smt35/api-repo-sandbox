@@ -1,0 +1,54 @@
+{
+  "basic": {
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.byu.edu/rest/v1/byuapi/academic_units/:unit_id/academic_teaching_areas/:dept_name",
+        "method": "GET"
+      }
+    ],
+    "credit_institution": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "dept_name": {
+      "value": "",
+      "api_type": "modifiable",
+      "key": true
+    },
+    "effective_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "expired_date": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "sort_name": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "parent_academic_unit_id": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "prev_dept_name": {
+      "value": "",
+      "api_type": "modifiable"
+    },
+    "date_time_updated": {
+      "value": "",
+      "api_type": "operational"
+    },
+    "updated_by_id": {
+      "value": "",
+      "api_type": "operational"
+    },
+    "updated_by_name": {
+      "value": "",
+      "api_type": "related",
+      "related_resource": "identity"
+    }
+  }
+}
+
