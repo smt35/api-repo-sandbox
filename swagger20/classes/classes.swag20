@@ -2455,6 +2455,9 @@
         "updated_by_id": {
           "$ref": "#/definitions/updated_by_id"
         },
+        "updated_by_name": {
+          "$ref": "#/definitions/updated_by_name"
+        },
         "date_time_updated": {
           "$ref": "#/definitions/date_time_updated"
         }
@@ -2730,8 +2733,10 @@
         "class_standing"
       ],
       "properties": {
-        "credit_institution": {
-          "$ref": "#/definitions/credit_institution"
+        "student_id": {
+          "description": "id of a student",
+          "type": "string",
+          "maxLength": 9
         },
         "year_term": {
           "$ref": "#/definitions/year_term"
@@ -2745,40 +2750,47 @@
         "section_number": {
           "$ref": "#/definitions/section_number"
         },
-        "student_id": {
-          "description": "id of a student",
+        "credit_institution": {
+          "$ref": "#/definitions/credit_institution"
+        },
+        "byu_id": {
+          "$ref": "#/definitions/byu_id"
+        },
+        "student_name": {
+          "$ref": "#/definitions/student_name"
+        },
+        "class_standing": {
+          "description": "",
           "type": "string",
-          "maxLength": 9
+          "maxLength": 20
         },
         "credit_hours": {
           "$ref": "#/definitions/credit_hours"
+        },
+        "major": {
+          "$ref": "#/definitions/major"
+        },
+        "email_address": {
+          "$ref": "#/definitions/email_address"
+        },
+        "phone": {
+          "$ref": "#/definitions/phone"
+        },
+        "address": {
+          "$ref": "#/definitions/address"
         },
         "grade": {
           "description": "grade",
           "type": "string",
           "maxLength": 5
         },
-        "byu_id": {
-          "$ref": "#/definitions/byu_id"
-        },
         "net_id": {
           "$ref": "#/definitions/net_id"
-        },
-        "student_name": {
-          "$ref": "#/definitions/student_name"
-        },
-        "email_address": {
-          "$ref": "#/definitions/email_address"
         },
         "date_time_added": {
           "description": "added date time",
           "type": "string",
           "maxLength": 23
-        },
-        "class_standing": {
-          "description": "",
-          "type": "string",
-          "maxLength": 20
         },
         "gender": {
           "description": "",
@@ -3033,6 +3045,9 @@
         },
         "date_time_updated": {
           "$ref": "#/definitions/date_time_updated"
+        },
+        "updated_by_name": {
+          "$ref": "#/definitions/updated_by_name"
         }
       }
     },
@@ -3068,26 +3083,36 @@
         "section_number": {
           "$ref": "#/definitions/section_number"
         },
+        "course_name": {
+          "$ref": "#/definitions/course_name"
+        },
+        "code_value": {
+          "description": "",
+          "type": "string"
+        },
         "group_number": {
           "description": "",
           "type": "string"
         },
-        "token_value": {
-          "description": "",
-          "type": "string"
+        "date_time_created": {
+          "$ref": "#/definitions/date_time_created"
         },
         "created_by_id": {
           "$ref": "#/definitions/created_by_id"
         },
-        "date_time_created": {
-          "$ref": "#/definitions/date_time_created"
+        "created_by_name": {
+          "$ref": "#/definitions/created_by_name"
+        },
+        "date_time_redeemed": {
+          "$ref": "#/definitions/date_time_redeemed"
         },
         "redeemed_by_id": {
           "description": "",
           "type": "string"
         },
-        "date_time_redeemed": {
-          "$ref": "#/definitions/date_time_redeemed"
+        "redeemed_by_name": {
+          "description": "",
+          "type": "string"
         }
       }
     },
@@ -3140,7 +3165,7 @@
         },
         "prerequisite_list": {
           "description": "",
-          "type": "string"
+          "type": "array"
         }
       }
     },
@@ -3306,6 +3331,34 @@
         },
         "section_number": {
           "$ref": "#/definitions/section_number"
+        },
+        "class_size": {
+          "description": "",
+          "type": "integer"
+        },
+        "total_enrolled": {
+          "description": "",
+          "type": "integer"
+        },
+        "total_adds": {
+          "description": "",
+          "type": "integer"
+        },
+        "total_drops": {
+          "description": "",
+          "type": "integer"
+        },
+        "total_requests": {
+          "description": "",
+          "type": "integer"
+        },
+        "waitlist_count": {
+          "description": "",
+          "type": "integer"
+        },
+        "unused_permission_codes": {
+          "description": "",
+          "type": "integer"
         }
       }
     },
@@ -3351,10 +3404,13 @@
         "person_id": {
           "$ref": "#/definitions/person_id"
         },
+        "byu_id": {
+          "$ref": "#/definitions/byu_id"
+        },
         "student_name": {
           "$ref": "#/definitions/student_name"
         },
-        "date_requested": {
+        "date_time_requested": {
           "description": "",
           "type": "string"
         },
@@ -3362,17 +3418,8 @@
           "description": "",
           "type": "string"
         },
-        "teaching_area": {
-          "description": "",
-          "type": "string"
-        },
-        "catalog_number": {
-          "description": "",
-          "type": "string"
-        },
-        "catalog_suffix": {
-          "description": "",
-          "type": "string"
+        "course_name": {
+          "$ref": "#/definitions/course_name"
         },
         "credit_hours": {
           "$ref": "#/definitions/credit_hours"
@@ -3381,6 +3428,10 @@
           "$ref": "#/definitions/size_mix_category"
         },
         "added_by_id": {
+          "description": "",
+          "type": "string"
+        },
+        "added_by_name": {
           "description": "",
           "type": "string"
         },
@@ -3434,15 +3485,18 @@
         "person_id": {
           "$ref": "#/definitions/person_id"
         },
+        "byu_id": {
+          "$ref": "#/definitions/byu_id"
+        },
+        "student_name": {
+          "$ref": "#/definitions/student_name"
+        },
         "credit_hours": {
           "$ref": "#/definitions/credit_hours"
         },
         "grade": {
           "description": "",
           "type": "string"
-        },
-        "student_name": {
-          "$ref": "#/definitions/student_name"
         },
         "log_action": {
           "description": "",
@@ -3478,6 +3532,9 @@
         "date_time_log"
       ],
       "properties": {
+        "person_id": {
+          "$ref": "#/definitions/person_id"
+        },
         "credit_institution": {
           "$ref": "#/definitions/credit_institution"
         },
@@ -3493,38 +3550,33 @@
         "section_number": {
           "$ref": "#/definitions/section_number"
         },
-        "person_id": {
-          "$ref": "#/definitions/person_id"
+        "byu_id": {
+          "$ref": "#/definitions/byu_id"
         },
         "student_name": {
           "$ref": "#/definitions/student_name"
         },
-        "teaching_area": {
+        "action": {
           "description": "",
           "type": "string"
         },
-        "catalog_number": {
+        "action_date_time": {
           "description": "",
           "type": "string"
         },
-        "catalog_suffix": {
+        "action_by_id": {
           "description": "",
           "type": "string"
+        },
+        "action_by_name": {
+          "description": "",
+          "type": "string"
+        },
+        "course_name": {
+          "$ref": "#/definitions/course_name"
         },
         "credit_hours": {
           "$ref": "#/definitions/credit_hours"
-        },
-        "log_action": {
-          "description": "",
-          "type": "string"
-        },
-        "log_by_id": {
-          "description": "",
-          "type": "string"
-        },
-        "date_time_log": {
-          "description": "",
-          "type": "string"
         }
       }
     },
