@@ -2768,7 +2768,9 @@
           "$ref": "#/definitions/credit_hours"
         },
         "major": {
-          "$ref": "#/definitions/major"
+          "description": "major",
+          "type": "string",
+          "maxLength": 30
         },
         "email_address": {
           "$ref": "#/definitions/email_address"
@@ -2969,8 +2971,7 @@
           "$ref": "#/definitions/date_time_updated"
         },
         "updated_by_name": {
-          "type": "string",
-          "maxLength": 50
+          "$ref": "#/definitions/updated_by_name"
         }
       }
     },
@@ -3061,7 +3062,6 @@
         "title_code",
         "section_number",
         "group_number",
-        "token_value",
         "created_by_id",
         "date_time_created",
         "redeemed_by_id",
@@ -3165,7 +3165,7 @@
         },
         "prerequisite_list": {
           "description": "",
-          "type": "array"
+          "type": "object"
         }
       }
     },
@@ -3373,11 +3373,9 @@
         "section_number",
         "person_id",
         "student_name",
-        "date_requested",
+        "date_time_requested",
         "sequencer",
-        "teaching_area",
-        "catalog_number",
-        "catalog_suffix",
+        "course_name",
         "credit_hours",
         "size_mix_category",
         "added_by_id",
@@ -3523,13 +3521,12 @@
         "section_number",
         "person_id",
         "student_name",
-        "teaching_area",
-        "catalog_number",
-        "catalog_suffix",
-        "credit_hours",
-        "log_action",
-        "log_by_id",
-        "date_time_log"
+        "action",
+        "action_by_id",
+        "action_date_time",
+        "action_by_name",
+        "course_name",
+        "credit_hours"
       ],
       "properties": {
         "person_id": {
@@ -4587,6 +4584,27 @@
         }
       }
     },
+    "created_by_name": {
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable",
+            "operational"
+          ]
+        }
+      }
+    },
     "date_time_created": {
       "type": "object",
       "required": [
@@ -4732,6 +4750,48 @@
         }
       }
     },
+    "address": {
+      "description": "main address",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
+    "phone": {
+      "description": "",
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 11
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable"
+          ]
+        }
+      }
+    },
     "updated_by_id": {
       "type": "object",
       "required": [
@@ -4742,6 +4802,27 @@
         "value": {
           "type": "string",
           "maxLength": 9
+        },
+        "api_type": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "modifiable",
+            "operational"
+          ]
+        }
+      }
+    },
+    "updated_by_name": {
+      "type": "object",
+      "required": [
+        "value",
+        "api_type"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 50
         },
         "api_type": {
           "type": "string",
