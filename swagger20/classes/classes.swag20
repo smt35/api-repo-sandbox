@@ -3460,9 +3460,9 @@
         "credit_hours",
         "grade",
         "student_name",
-        "log_action",
-        "log_by_id",
-        "date_time_log"
+        "action",
+        "updated_by_id",
+        "date_time_updated"
       ],
       "properties": {
         "credit_institution": {
@@ -3493,20 +3493,21 @@
           "$ref": "#/definitions/credit_hours"
         },
         "grade": {
+          "description": "grade",
+          "type": "string"
+        },
+        "action": {
           "description": "",
           "type": "string"
         },
-        "log_action": {
-          "description": "",
-          "type": "string"
+        "date_time_updated": {
+          "$ref": "#/definitions/date_time_updated"
         },
-        "log_by_id": {
-          "description": "",
-          "type": "string"
+        "updated_by_id": {
+          "$ref": "#/definitions/updated_by_id"
         },
-        "date_time_log": {
-          "description": "",
-          "type": "string"
+        "updated_by_name": {
+          "$ref": "#/definitions/updated_by_name"
         }
       }
     },
@@ -3522,9 +3523,9 @@
         "person_id",
         "student_name",
         "action",
-        "action_by_id",
-        "action_date_time",
-        "action_by_name",
+        "updated_by_id",
+        "date_time_updated",
+        "updated_by_name",
         "course_name",
         "credit_hours"
       ],
@@ -3557,17 +3558,14 @@
           "description": "",
           "type": "string"
         },
-        "action_date_time": {
-          "description": "",
-          "type": "string"
+        "date_time_updated": {
+          "$ref": "#/definitions/date_time_updated"
         },
-        "action_by_id": {
-          "description": "",
-          "type": "string"
+        "updated_by_id": {
+          "$ref": "#/definitions/updated_by_id"
         },
-        "action_by_name": {
-          "description": "",
-          "type": "string"
+        "updated_by_name": {
+          "$ref": "#/definitions/updated_by_name"
         },
         "course_name": {
           "$ref": "#/definitions/course_name"
