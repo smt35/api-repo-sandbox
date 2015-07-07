@@ -2,12 +2,8 @@
 
 var sql = require('./sql.js');
 var core = require("../../core.js");
-<<<<<<< HEAD
-//var common = require("../../commonAcademicUtils.js");
-=======
 var common = require("../../commonAcademicUtils.js");
->>>>>>> 0a999965d75eb1ded4e482515afff9615d72ec35
-var q = require('q');
+//var q = require('bluebird');
 
 exports.get = function(connection, resources, request, response) {
   var params = [];
@@ -39,7 +35,9 @@ function buildDataRow(data, results) {
   var field;
 
   for(field in results) {
-    data[field].value = results[field];
+    if(field in data) {
+      data[field].value = results[field];
+    }
   }
 }
 
@@ -54,11 +52,7 @@ function processData(data, results) {
     def2 = core.object.copy(def);
     data.values.push(def2);
     buildDataRow(def2, results.rows[x]);
-<<<<<<< HEAD
-//    common.buildYearTermDesc(def2.year_term);
-=======
     common.buildYearTermDesc(def2.year_term);
->>>>>>> 0a999965d75eb1ded4e482515afff9615d72ec35
   }
 }
 

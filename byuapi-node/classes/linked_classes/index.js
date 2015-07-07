@@ -2,10 +2,10 @@
 
 var sql = require('./sql.js');
 var core = require("../../core.js");
-var q = require('q');
+//var q = require('bluebird');
 
 exports.get = function(connection, resources, request, response) {
-  var promises = [], params = [];
+  var params = [];
   var sql_query1 = sql.linkedClassesFind;
   var sql_query2 = sql.linkedClassesData;
   var data = {};
@@ -48,7 +48,9 @@ function buildDataRow(data, results) {
   var field;
 
   for(field in results) {
-    data[field].value = results[field];
+    if(field in data) {
+      data[field].value = results[field];
+    }
   }
 }
 

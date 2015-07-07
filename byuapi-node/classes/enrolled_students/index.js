@@ -2,7 +2,7 @@
 
 var sql = require('./sql.js');
 var core = require("../../core.js");
-var q = require('q');
+var q = require('bluebird');
 
 exports.get = function(connection, resources, request, response) {
   var params = [];
@@ -67,5 +67,5 @@ function processData(connection, data, results) {
       promises.push(promise);
     })(def2);
   }
-  return q.allSettled(promises);
+  return q.settle(promises);
 }

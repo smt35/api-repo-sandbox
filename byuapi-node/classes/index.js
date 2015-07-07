@@ -1,7 +1,7 @@
 'use strict';
 
 var sql = require('./sql.js');
-var q = require('q');
+var q = require('bluebird');
 
 exports.get = function(connection, resources, request, response) {
   var sub_resource_name, store = {};
@@ -28,7 +28,7 @@ exports.get = function(connection, resources, request, response) {
         promises.push(promise);
       })(sub_resource_name);
     }
-    return q.allSettled(promises)
+    return q.settle(promises)
       .then(function() {
         data[resource_name].values[0] = store;
         return data;

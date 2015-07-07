@@ -3,7 +3,7 @@
 var sql = require('./sql.js');
 var core = require("../../core.js");
 var common = require("../../commonAcademicUtils.js");
-var q = require('q');
+var q = require('bluebird');
 
 exports.get = function(connection, resources, request, response) {
   var params = [];
@@ -24,19 +24,18 @@ exports.get = function(connection, resources, request, response) {
       data = resources.sub_resource_definitions.basic;
       if(results.rows.length === 0) return data;
 
-      buildDataRow(data.basic, results.rows[0]);
-      common.buildYearTermDesc(data.basic.year_term);
-      common.buildBlockCodeDesc(data.basic.year_term, data.basic.block_code);
-      if(data.basic.link_to_curriculum_id.value > " ") {
-        if((data.basic.link_to_curriculum_id.value === data.basic.curriculum_id.value)
-        && (data.basic.link_to_title_code.value === data.basic.title_code.value)
-        && (data.basic.link_to_section_number.value === data.basic.section_number.value)) {
-          data.basic.link_relation.value = "parent";
+      buildDataRow(data, results.rows[0]);
+      common.buildYearTermDesc(data.year_term);
+      common.buildBlockCodeDesc(data.year_term, data.block_code);
+      if(data.link_to_curriculum_id.value > " ") {
+        if((data.link_to_curriculum_id.value === data.curriculum_id.value)
+        && (data.link_to_title_code.value === data.title_code.value)
+        && (data.link_to_section_number.value === data.section_number.value)) {
+          data.link_relation.value = "parent";
         } else {
-          data.basic.link_relation.value = "child";
+          data.link_relation.value = "child";
         }
-      }
-
+      } 
       return data;
 
     });
@@ -46,7 +45,9 @@ function buildDataRow(data, results) {
   var field;
 
   for(field in results) {
-    data[field].value = results[field];
+    if(field in data) {
+      data[field].value = results[field];
+    }
   }
 }
 
