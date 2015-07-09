@@ -433,7 +433,7 @@
             }
           },
           "401": {
-            "description": "Authentication required to schedule a new class",
+            "description": "Authentication required to view data",
             "schema": {
               "$ref": "#/definitions/error"
             }
@@ -631,7 +631,7 @@
     "/{year_term},{curriculum_id},{title_code},{section_number}/add-approved-students": {
       "get": {
         "summary": "Classes",
-        "description": "Returns the add permission codes for a specific AIM Class",
+        "description": "Returns the add approved students for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -726,7 +726,7 @@
       },
       "put": {
         "summary": "Classes",
-        "description": "Add an add permission code for a specific AIM Class",
+        "description": "Add an approved student for a specific AIM Class",
         "parameters": [
           {
             "name": "year_term",
@@ -762,7 +762,7 @@
         ],
         "responses": {
           "200": {
-            "description": "A collection of Classes",
+            "description": "A collection of add approved students",
             "schema": {
               "$ref": "#/definitions/classes"
             }
