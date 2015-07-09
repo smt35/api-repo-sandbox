@@ -1123,6 +1123,36 @@
               "$ref": "#/definitions/assigned_instructors"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -1181,6 +1211,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/class_limitations"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
@@ -1243,6 +1303,36 @@
               "$ref": "#/definitions/assigned_schedules"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -1301,6 +1391,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/course_limitations"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
@@ -1363,6 +1483,36 @@
               "$ref": "#/definitions/enrolled_students"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -1421,6 +1571,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/linked_classes"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
@@ -1483,6 +1663,36 @@
               "$ref": "#/definitions/size_mixes"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -1541,6 +1751,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/summary"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
@@ -1603,6 +1843,36 @@
               "$ref": "#/definitions/notes"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -1661,6 +1931,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/permission_to_add_codes"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
@@ -1723,6 +2023,36 @@
               "$ref": "#/definitions/prerequisites"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -1781,6 +2111,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/section_headers"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
@@ -1843,6 +2203,36 @@
               "$ref": "#/definitions/supplemental_counts"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -1901,6 +2291,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/enrollment_counts"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
@@ -1963,6 +2383,36 @@
               "$ref": "#/definitions/waitlisted_students"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -2023,6 +2473,36 @@
               "$ref": "#/definitions/enrolled_student_logs"
             }
           },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
           "default": {
             "description": "Unexpected error",
             "schema": {
@@ -2081,6 +2561,36 @@
             "description": "Collection Retrieved",
             "schema": {
               "$ref": "#/definitions/waitlisted_student_logs"
+            }
+          },
+          "204": {
+            "description": "No class found that matches key values",
+            "schema": {
+              "$ref": "#/definitions/classes"
+            }
+          },
+          "400": {
+            "description": "Invalid Request - unable to interpret request",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "401": {
+            "description": "Authentication required to view data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "403": {
+            "description": "Access denied to protected data",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          },
+          "409": {
+            "description": "Query parameters conflict or are malformed",
+            "schema": {
+              "$ref": "#/definitions/error"
             }
           },
           "default": {
