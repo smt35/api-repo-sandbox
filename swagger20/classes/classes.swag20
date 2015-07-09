@@ -2728,7 +2728,7 @@
         "curriculum_id",
         "title_code",
         "section_number",
-        "student_id",
+        "person_id",
         "credit_hours",
         "grade",
         "byu_id",
