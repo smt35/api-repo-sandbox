@@ -8,12 +8,14 @@ exports.get = function(connection, resources, request, response) {
   var promises, data = {};
   var resource_name = request.params.resource_name;
 
+//if we have a subresource
   if(request.params.sub_resource_name) {
     return resources.sub_resources[request.params.sub_resource_name].get(connection, resources, request, response)
       .then(function (results) {
         store[request.params.sub_resource_name] = results;
         return store;
       });
+//no subresource
   } else {
     promises = [];
     data[resource_name] = resources.resource_definition;
